@@ -1,0 +1,375 @@
+% Sean $M$ y $N$ enteros positivos tales que $M\mid N$. Si $d$ es un divisor
+% de $N/M$ y $\alpha_{d}=\begin{bmatrix} d & \\ & 1 \end{bmatrix}$, la
+% transformaci\'{o}n $\iota_{d}:\,f\mapsto f\barra{k}{\alpha_{d}}$ determina
+% una inclusi\'{o}n del espacio $\spitz{k}{M}$ de formas cuspidales de peso
+% $k$ para el subgrupo de congruencia $\Gamma_{0}(M)\subset\SLZ$ en
+% $\spitz{k}{N}$, el espacio correspondiente a $\Gamma_{0}(N)$. Notemos que
+% \begin{align*}
+	% \Gamma_{0}(N) \,=\, & \begin{bmatrix} d & \\ & 1 \end{bmatrix}^{-1}
+	% \Gamma_{0}(M) \begin{bmatrix} d & \\ & 1 \end{bmatrix}
+	% \,\cap\,\Gamma_{0}(M)
+	% \text{ .}
+% \end{align*}
+% %
+% Dado un primo racional $l\geq 1$ divisor de $N$, el subespacio de
+% formas viejas en $l$ en $\spitz{k}{N}$ est\'{a} dado por
+% \begin{align*}
+	% \spitz{k}{N}^{l-\oude} \,=\, &
+	% \iota_{1}\left(\spitz{k}{N/l}\right) \,+\,
+	% \iota_{l}\left(\spitz{k}{N/l}\right)
+% \end{align*}
+% %
+% y el subespacio $\spitz{k}{N}^{l-\neue}$, de formas nuevas en $l$, se define
+% como el complemento ortogonal de $\spitz{k}{N}^{l-\oude}$ respecto del
+% producto interno de Petersson.
+% 
+% Sean ahora $\frak{M},\frak{q}\subset\oka{F}$ ideales \'{\i}ntegros y sea
+% $\frak{N}=\frak{q}\frak{M}$. Si $\hhat{q}\in\Idfin{F}$ es tal
+% $\frak{q}=\hhat{q}\Idfin{\oka{F}}\cap\oka{F}$,
+% 
+% 
+% Sea $f\in\modularH{k}{\frak{M}}$ una forma modular y sea $\phi=\phi_{f}$
+% la forma correspondiente definida en los id\`{e}les de
+% $B\simeq\MM_{2\times 2}(F)$.
+%%
+Las formas de Hilbert admiten una teor\'{\i}a de formas nuevas similar a la
+teor\'{\i}a para formas modulares el\'{\i}pticas. Aqu\'{\i} incluimos algunos
+resultados de esta teor\'{\i}a que sirven como fundamento para los m\'{e}todos
+expl\'{\i}citos descriptos m\'{a}s adelante. Tomamos como referencia principal
+\cite{ShemanskeWalling}. Otra referencia importante es
+\cite{MiyakeOnAutomorphicFormsOnGL}.
+%% EN SHEMANSKE-WALLING, SE CONSIDERA UN CAR\'ACTER M\'ODULO N. AC\'A SE ASUME
+%% QUE ESTE CAR\'ACTER ES TRIVIAL
+
+Dados dos subgrupos compactos y abiertos $K_{1}$ y $K_{2}$ de
+$\GL_{2}(\Adfin{F})$ y dado $\hhat{\pi}\in\GL_{2}(\Adfin{F})$, al igual que en
+el caso $K_{1}=K_{2}=\Idfin{\cal{O}}$, la coclase doble $K_{1}\hhat{\pi}K_{2}$
+es un conjunto compacto y, al ser $K_{1}$ abierto,
+$K_{1}\backslash K_{1}\hhat{\pi}K_{2}$ es finito. Esto quiere decir, como
+antes, que existe un conjunto finito $\{\hhat{\pi}_{i}\}_{i}$ tal que
+\begin{align*}
+	K_{1}\hhat{\pi}K_{2} & \,=\,\bigsqcup_{i}\,K_{1}\hhat{\pi}_{i}
+	\text{ .}
+\end{align*}
+%
+Si $\phi:\,\GL_{2}(\adeles{F})\rightarrow\bb{C}$ es una funci\'{o}n
+que verifica $\phi\operadormatrices{\peso{k}}{(1,\hhat{\beta})}=\phi$ para
+toda $\hhat{\beta}\in K_{1}$, entonces definimos una nueva funci\'{o}n
+\begin{math}
+	\phi\operadorcoclases{\peso{k}}{K_{1}\hhat{\pi}K_{2}}
+\end{math}
+por una expresi\'{o}n an\'{a}loga a \eqref{eq:operadordecoclasedobledehilbert}.
+
+\begin{obsDefinicionOperadorDeCoclaseDoble}%
+	\label{obs:definicionoperadordecoclasedoble}
+	Esta definici\'{o}n no depende de la elecci\'{o}n de los representantes
+	$\hhat{\pi}_{i}$. Adem\'{a}s, si $\hhat{\beta}\in K_{2}$, entonces
+	\begin{equation}
+		\label{eq:invarianzaaderechaluegodecolcasedoblematrices}
+		\Big(\phi\operadorcoclases{\peso{k}}{K_{1}\hhat{\pi}K_{2}}
+			\Big)\operadormatrices{\peso{k}}{(1,\hhat{\beta})}
+		\,=\,\phi\operadorcoclases{\peso{k}}{K_{1}\hhat{\pi}K_{2}}
+		\text{ .}
+	\end{equation}
+	%
+	La demostraci\'{o}n de esta afirmaci\'{o}n es an\'{a}loga a la de la
+	afirmaci\'{o}n correspondiente en la Proposici\'{o}n~%
+	\ref{propo:coclasedoblepreservaelespaciodeformascuspidales} (propiedad
+	(ii)). M\'{a}s aun, si $\phi:\,\GL_{2}(\adeles{F})\rightarrow\bb{C}$
+	verifica las propiedades (i) a (vi) de la Proposici\'{o}n~%
+	\ref{propo:equivalenciaautomorfasformascuspidales} (reemplazando (ii)
+	por la condici\'{o}n an\'{a}loga de que $\phi$ sea invariante a derecha
+	por $K_{1}$) entonces
+	$\phi\operadorcoclases{\peso{k}}{K_{1}\hhat{\pi}K_{2}}$ verifica (i) a
+	(vi). Si $\phi$ es, adem\'{a}s, cuspidal, entonces
+	$\phi\operadorcoclases{\peso{k}}{K_{1}\hhat{\pi}K_{2}}$ es cuspidal,
+	tambi\'{e}n.
+\end{obsDefinicionOperadorDeCoclaseDoble}
+
+% \begin{obsRepresentantesDeLasCoclases}\label{obs:representantesdelascoclases}
+	% Como en la demostraci\'{o}n de la Proposici\'{o}n
+	% \ref{thm:descomposiciondelacoclasedoblematrices}, para obtener los
+	% representantes $\hhat{\pi}_{i}$ tales que
+	% $K_{1}\hhat{\pi}K_{2}=\bigsqcup_{i}\,K_{1}\hhat{\pi}_{i}$,
+	% podemos, primero, elegir un sistema de representantes de las
+	% clases en $(\hhat{\pi}^{-1}K_{1}\hhat{\pi}\cap K_{2})\backslash K_{2}$
+	% y luego multiplicar a izquierda por $\hhat{\pi}$ para obtener un
+	% sistema de representantes de $K_{1}\backslash K_{1}\hhat{\pi}K_{2}$.
+% \end{obsRepresentantesDeLasCoclases}
+% 
+Sean, ahora, $\frak{N}$, $\frak{M}$ y $\frak{l}$ ideales \'{\i}ntegros de
+$\oka{F}$ con $\frak{l}$ primo y tales que $\frak{N}=\frak{l}\,\frak{M}$. Sean
+$\cal{O}_{0}(\frak{N})$ y $\cal{O}_{0}(\frak{M})$ los \'{o}rdenes de Eichler en
+$\MM_{2\times 2}(F)$ y sea $\phi:\,\GL_{2}(\adeles{F})\rightarrow\bb{C}$ una
+funci\'{o}n invariante a derecha por $\Idfin{\cal{O}_{0}(\frak{M})}$. Fijemos
+$\hhat{l}\in\Adfin{\oka{F}}$ tal que $\frak{l}=\hhat{l}\Adfin{\oka{F}}\cap F$ y
+\begin{math}
+	\hhat{\lambda}=\begin{bmatrix} \hhat{l} & \\ & 1 \end{bmatrix}
+\end{math}~.
+Para obtener una funci\'{o}n invariante por la acci\'{o}n del compacto
+$\Idfin{\cal{O}_{0}(\frak{N})}$ a partir de $\phi$, observamos que
+\begin{align*}
+	\Idfin{\cal{O}_{0}(\frak{N})} \,\subset\,
+		\Idfin{\cal{O}_{0}(\frak{M})} & \quad\text{y que}\quad
+	\Idfin{\cal{O}_{0}(\frak{N})} \,=\,
+		\hhat{\lambda}^{-1}\Idfin{\cal{O}_{0}(\frak{M})}\hhat{\lambda}
+		\,\cap\,\Idfin{\cal{O}_{0}(\frak{M})}
+	\text{ .}
+\end{align*}
+%
+Llamando $\hhat{1}$ al id\`{e}le que es la identidad en todos los lugares,
+\begin{align*}
+	\Idfin{\cal{O}_{0}(\frak{M})}\hhat{1}\Idfin{\cal{O}_{0}(\frak{N})}
+		\,=\, \Idfin{\cal{O}_{0}(\frak{M})}\hhat{1}
+	& \quad\text{y}\quad
+	\Idfin{\cal{O}_{0}(\frak{M})}\hhat{\lambda}
+			\Idfin{\cal{O}_{0}(\frak{N})}
+		\,=\,\Idfin{\cal{O}_{0}(\frak{M})}\hhat{\lambda}
+	\text{ .}
+\end{align*}
+%
+Definimos inclusiones $\iota_{1}$ y $\iota_{\frak{l}}$ respectivamente por
+\begin{align*}
+	\big(\iota_{1}\phi\big)(g,\hhat{\alpha}) & \,=\,\phi\operadorcoclases{\peso{k}}{%
+		\Idfin{\cal{O}_{0}(\frak{M})}\hhat{1}%
+			\Idfin{\cal{O}_{0}(\frak{N})}}
+				(g_{\infty},\hhat{\alpha})
+		\,=\, \phi(g_{\infty},\hhat{\alpha}) \quad\text{y} \\
+	\big(\iota_{\frak{l}}\phi\big)(g,\hhat{\alpha}) & \,=\,
+		\phi\operadorcoclases{\peso{k}}{%
+		\Idfin{\cal{O}_{0}(\frak{M})}\hhat{\lambda}%
+			\Idfin{\cal{O}_{0}(\frak{N})}}
+				(g_{\infty},\hhat{\alpha})
+		\,=\, \phi(g_{\infty},\hhat{\alpha}\hhat{\lambda}^{-1})
+	\text{ .}
+\end{align*}
+%
+
+Trasladando estas definiciones hacia el lado de las formas de Hilbert,
+identificamos funciones en $\spitzH{k}{\frak{N}}$ que vienen de niveles
+\emph{m\'{a}s bajos}. Si $f\in\spitzH{k}{\frak{M}}$ es una forma de Hilbert
+(cuspidal) de nivel $\frak{M}$ y $\frak{N}=\frak{l}\,\frak{M}$, con
+$\frak{l}$ un ideal primo de $\oka{F}$, entonces las expresiones
+\begin{align*}
+	\big(\iota_{1}f\big) (z,\hhat{\alpha}\Idfin{\cal{O}_{0}(\frak{N})})
+		& \,=\, \bigg(\prod_{i=1}^{n}\,J_{i}(g_{i},\sqrt{-1})\bigg)\,
+			\phi_{f}(g_{\infty},\hhat{\alpha}) \quad\text{e} \\
+	\big(\iota_{\frak{l}}f\big) (z,
+		\hhat{\alpha}\Idfin{\cal{O}_{0}(\frak{N})})
+		& \,=\, \bigg(\prod_{i=1}^{n}\,J_{i}(g_{i},\sqrt{-1})\bigg)\,
+			\phi_{f}(g_{\infty},\hhat{\alpha}\hhat{\lambda}^{-1})
+	\text{ ,}
+\end{align*}
+%
+donde $g_{\infty}\in\GL_{2}(\bb{R})^{n}$ es tal que
+$g_{\infty}\cdot\mathbf{i}=z$, determinan elementos del espacio
+$\spitzH{k}{\frak{N}}$.
+
+\begin{defFormasViejasFormasNuevas}\label{def:formasviejasformasnuevas}
+	Dado un ideal primo $\frak{l}\subset\oka{F}$ divisor de $\frak{N}$,
+	una forma de Hilbert cuspidal en $\spitzH{k}{\frak{N}}$ es una
+	\emph{forma vieja en $\frak{l}$}, si es combinaci\'{o}n lineal de
+	\index{forma vieja en l@forma vieja en $\frak{l}$}
+	formas del tipo $\iota_{1}f$ y $\iota_{\frak{l}}f$ con
+	$f\in\spitzH{k}{\frak{M}}$, donde $\frak{l}\,\frak{M}=\frak{N}$.
+	El \emph{subespacio de formas viejas en $\frak{l}$} se define como
+	\begin{align*}
+		\spitzH{k}{\frak{N}}^{\frak{l}-\oude} & \,:=\,
+			\iota_{1}\left(\spitzH{k}{\frak{M}}\right)\,+\,
+			\iota_{\frak{l}}\left(\spitzH{k}{\frak{M}}\right)
+		\text{ y}
+	\end{align*}
+	%
+	el \emph{subespacio de formas viejas} en $\spitzH{k}{\frak{N}}$ es
+	el subespacio
+	\begin{align*}
+		\spitzH{k}{\frak{N}}^{\oude} & \,:=\,
+			\sum_{\frak{l}\mid\frak{N}}\,
+			\spitzH{k}{\frak{N}}^{\frak{l}-\oude}
+		\text{ .}
+	\end{align*}
+	%
+	El \emph{subespacio de formas nuevas en $\frak{l}$} se define
+	como el complemento ortogonal
+	\begin{align*}
+		\spitzH{k}{\frak{N}}^{\frak{l}-\neue} &  \,:=\,
+			\Big(\spitzH{k}{\frak{N}}^{\frak{l}-\oude}\Big)^{\perp}
+	\end{align*}
+	%
+	respecto del producto interno de Petersson y el
+	\emph{subespacio de formas nuevas} es
+	\begin{align*}
+		\spitzH{k}{\frak{N}}^{\neue} & \,:=\,
+			\bigcap_{\frak{l}\mid\frak{N}}\,
+			\spitzH{k}{\frak{N}}^{\frak{l}-\neue}
+			\,=\,\Big(\spitzH{k}{\frak{N}}^{\oude}\Big)^{\perp}
+		\text{ .}
+	\end{align*}
+	%
+\end{defFormasViejasFormasNuevas}
+
+% Si $\frak{p}$ es un primo de $\oka{F}$ coprimo con el nivel $\frak{N}$,
+% y $\frak{N}=\frak{l}\frak{M}$ con $\frak{l}$ primo como en la definici\'{o}n
+% ???, entonces contamos con un operador $T_{\frak{p}}$ definido en
+% $\spitzH{k}{\frak{N}}$ y otro definido en $\spitzH{k}{\frak{M}}$. Ambos
+% se definen de manera similar como operadores de coclases dobles. Por otro
+% lado, como vimos, tenemos inclusiones
+% \begin{align*}
+	% \iota_{1},\,\iota_{\frak{l}} \,:\, &
+	% \spitzH{k}{\frak{M}}\,\hookrightarrow\,
+	% \spitzH{k}{\frak{N}}
+	% \text{ .}
+% \end{align*}
+% %
+Sean $\frak{l}$ y $\frak{M}$ como en la definici\'{o}n
+\ref{def:formasviejasformasnuevas} y sea $\frak{N}=\frak{l}\,\frak{M}$. Sea
+$\frak{p}\nmid\frak{N}$ y sean $T_{\frak{p}}^{\frak{N}}$ y
+$T_{\frak{p}}^{\frak{M}}$ los operadores de Hecke asociados al primo $\frak{p}$
+en $\spitzH{k}{\frak{N}}$ y en $\spitzH{k}{\frak{M}}$, respectivamente. Estos
+operadores est\'{a}n definidos de la misma manera. Es decir, dado que
+$\frak{p}$ es coprimo con $\frak{N}$, es coprimo con $\frak{M}$ y si
+$\{\hhat{\pi}_{i}\}_{i}$ es un sistema de representantes de
+$\frak{I}(\frak{p})$ en nivel $\frak{M}$, entonces el mismo conjunto es un
+sistema de representantes en nivel $\frak{N}$. As\'{\i}, si
+$f\in\spitzH{k}{\frak{M}}$, entonces
+\begin{align*}
+	T_{\frak{p}}^{\frak{N}}(\iota_{1}f) \,=\,
+		\iota_{1}(T_{\frak{p}}^{\frak{M}}f) & \quad\text{y}\quad
+	T_{\frak{p}}^{\frak{N}}(\iota_{\frak{l}}f) \,=\,
+		\iota_{\frak{l}}(T_{\frak{p}}^{\frak{M}}f)
+	\text{ ,}
+\end{align*}
+%
+ya que los id\`{e}les que aparecen en las definiciones de $\iota_{1}$,
+$\iota_{\frak{l}}$ y los operadores $T_{\frak{p}}$ conmutan entre s\'{\i}. Un
+argumento an\'{a}logo muestra que $S_{\frak{p}}$ tambi\'{e}n conmuta con las
+inclusiones $\iota_{1}$ e $\iota_{\frak{l}}$. De esto se deduce que los
+operadores de Hecke y sus adjuntos preservan los espacios de formas viejas. En
+consecuencia, los espacios de formas nuevas tambi\'{e}n son invariantes por los
+operadores de Hecke para todos los primos $\frak{p}\nmid\frak{N}$.
+
+% \begin{obsBaseDeAutoformasParaHecke}\label{obs:basedeautoformasparahecke}
+	% ?`Son normales los operadores de Hecke? La demostraci\'{o}n en 
+	% \cite{ShimuraSpecialValuesOfZetaAssociatedWithHilbert} no parece
+	% poder replicarse. En cada bloque, es decir, para cada par
+	% $\frak{a},\frak{b}$ tal que $[\frak{a}]=[\frak{b}\frak{p}]$, aparece un
+	% factor $\norma(\lambda)^{k_{0}-2}$ que viene de
+	% $\eta^\iota=\det(\eta)\eta^{-1}$ ($\det(\eta)=\lambda\xi$ con
+	% $\xi\in\oka{F,+}^{\times}$) y de que
+	% \begin{math}
+		% \langle f\operadormatrices{\peso{k}}{\eta},g\rangle=
+		% \langle f,g\operadormatrices{\peso{k}}{\eta^\iota}\rangle=
+		% \norma(\det(\eta))^{k_{0}-2}
+		% \langle f,g\operadormatrices{\peso{k}}{\eta^{-1}}\rangle
+	% \end{math}~.
+	% Sin este factor extra\~{n}o,
+	% \begin{align*}
+		% T_{\frak{p}}^{*} & \,=\, T_{\frak{p}^{-1}}
+			% \,=\, S_{\frak{p}}T_{\frak{p}}
+		% \text{ ,}
+	% \end{align*}
+	% %
+	% donde, si $T_{\frak{p}}=T_{\hhat{\pi}}$, entonces
+	% $T_{\frak{p}^{-1}}$ es $T_{\hhat{\pi}^{-1}}$, es decir, sumar sobre
+	% los representantes invertidos (esto viene de tomar un sistema de
+	% representantes $\{\hhat{\pi}_{i}\}_{i}$ tanto de
+	% $\Idfin{\cal{O}}\backslash\frak{I}(\frak{p})$ como de
+	% $\frak{I}(\frak{p})/\Idfin{\cal{O}}$, o, lo que es lo mismo, un sistema
+	% $\{\eta_{i}\}_{i}$ tal que
+	% \begin{math}
+		% \frak{I}(\frak{p})_{\frak{a},\frak{b}}=
+			% \bigsqcup_{i}\,\Gamma_{\frak{b}}\eta_{i}=
+			% \bigsqcup_{i}\,\eta_{i}\Gamma_{\frak{a}}
+	% \end{math}~.
+	% La igualdad de los cardinales de las \'{o}rbitas a izquierda y de las
+	% \'{o}rbitas a derecha se deduce de
+	% \begin{math}
+		% \mu\big(\Gamma_{\frak{b}}\backslash\hP\big)=
+			% \mu\big(\Gamma_{\frak{a}}\backslash\hP\big)
+	% \end{math}~).
+	% % Los operadores de Hecke $T_{\frak{p}}$ son autoadjuntos respecto del
+	% % producto interno de Petersson
+	% % (\cite[Prop.~2.4]{ShimuraSpecialValuesOfZetaAssociatedWithHilbert}) y
+	% % preservan los espacios de formas viejas. En consecuencia, preservan
+	% % tambi\'{e}n los espacios de formas nuevas. Como la familia de
+	% % operadores $\big\{T_{\frak{p}}\,:\,\frak{p}\nmid\frak{N}\big\}$ es
+	% % conmutativa y la dimensi\'{o}n de $\spitzH{k}{\frak{N}}$ es finita,
+	% % existe una base ortognal de autofunciones para todos los operadores
+	% % $T_{\frak{p}}$ coprimos con el nivel.
+% \end{obsBaseDeAutoformasParaHecke}
+
+\begin{teoCoeficientesNulosFormaVieja}[{\cite[Thm.~3.1]{ShemanskeWalling}}]%
+	\label{thm:coeficientesnulosformavieja}
+	Sea $f\in\spitz{k}{\frak{N},\omega}$ y sean $c(\frak{m},f)$ sus
+	coeficientes de Fourier. Si existe un ideal \'{\i}ntegro
+	$\frak{l}\subset\oka{F}$ tal que $c(\frak{m},f)=0$ siempre que
+	$(\frak{m},\frak{l})=1$, entonces
+	$f\in\spitzH{k}{\frak{N},\omega}^{\oude}$.
+\end{teoCoeficientesNulosFormaVieja}
+
+\begin{defFormaNueva}\label{def:formanueva}
+	% Decimos que una forma cuspidal $f\in\spitzH{k}{\frak{N},\omega}$ es
+	% una \emph{autoforma de Hecke}, si es una autoforma para todos los
+	% operadores $T_{\frak{p}}$ tales que $\frak{p}\nmid\frak{N}$.
+	%%EN GENERAL SE SUELE INCLUIR LA CONDICI\'ON DE SER AUTOFUNCI\'ON DE
+	%% *TODOS* LOS T_p
+	Decimos que una forma cuspidal $f$ es una \emph{forma nueva}, si
+	$f\in\spitzH{k}{\frak{N},\omega}^{\neue}$ y $f$ es una autofunci\'{o}n
+	de $T_{\frak{p}}$ para todo $\frak{p}\nmid\frak{N}$.
+\end{defFormaNueva}
+
+Si $f\in\spitzH{k}{\frak{N},\omega}$ es una forma nueva y
+$T_{\frak{p}}f=\lambda_{\frak{p}}f$, entonces los coeficientes de Fourier de
+$f$ verifican la relaci\'{o}n
+\begin{equation}
+	\label{eq:coeficientesdefourierformanueva}
+	c(\frak{p},f) \,=\,\lambda_{\frak{p}}\,c(\oka{F},f)
+	\text{ ,}
+\end{equation}
+%
+para todo $\frak{p}\nmid\frak{N}$. En particular, $c(\oka{F},f)\not=0$. Decimos
+que una forma nueva $f$ \emph{est\'{a} normalizada} (o que $f$ es una forma
+(nueva) \emph{normalizada}), si $c(\oka{F},f)=1$.
+
+\begin{coroCoeficientesNulosFormaVieja}%
+	\label{coro:coeficientesnulosformavieja}
+	Si $f,g\in\spitzH{k}{\frak{N},\omega}^{\neue}$ son dos formas nuevas
+	normalizadas y con los mismos autovalores, entonces $f=g$.
+\end{coroCoeficientesNulosFormaVieja}
+
+\begin{proof}
+	Es consecuencia de \ref{thm:coeficientesnulosformavieja} con
+	$\frak{l}=\frak{N}$.
+\end{proof}
+
+El resultado anterior se puede expresar diciendo que \emph{dentro de cada %
+espacio $\spitzH{k}{\frak{N},\omega}$} vale la propiedad de
+\emph{multiplicidad uno} para formas nuevas.
+% El espacio $\spitzH{k}{\frak{N},\omega}^{\neue}$ se descompone como suma
+% directa de autoespacios ortogonales para el \'{a}lgebra de Hecke; cada uno de
+% estos autoespacios tiene asociado un \emph{sistema de autovalores}:
+% $\{a_{\frak{p}}\}_{\frak{p}\nmid\frak{N}}$; dos autoespacios distintos
+% determinan sistemas de autovalores distintos. En t\'{e}rminos de una base de
+% autoformas, 
+El espacio $\spitzH{k}{\frak{N},\omega}^\neue$ admite una base ortogonal de
+formas nuevas que podemos asumir normalizadas; cada una de estas autofunciones
+tiene asociado un \emph{sistema de autovalores}:
+$\{a_{\frak{p}}(f)\}_{\frak{p}}$ (en principio, $\frak{p}\nmid\frak{N}$), donde
+$a_{\frak{p}}=c(\frak{p},f)$; dos formas nuevas determinan el mismo sistema de
+autovalores, si una es un m\'{u}ltiplo de la otra.
+Pero el Corolario~\ref{coro:coeficientesnulosformavieja} no dice nada en el
+caso en que $f$ y $g$ pertenezcan a espacios asociados a caracteres diferentes.
+El siguiente resultado resulve este problema.
+
+\begin{teoFormasNuevasMismosAutovalores}%
+	[ver {\cite[Thm.~3,6]{ShemanskeWalling}}]%
+	\label{thm:formasnuevasmismosautovalores}
+	Sean $\omega,\omega':\,\ideles{F}\rightarrow\bb{C}^{\times}$
+	cuasicaracteres triviales en $F^{\times}$. Sean
+	$f\in\spitzH{k}{\frak{N},\omega}$ y $g\in\spitzH{k}{\frak{N},\omega'}$
+	formas nuevas (normalizadas) con los mismos autovalores para
+	$T_{\frak{p}}$ para todo primo $\frak{p}\nmid\frak{N}$
+	(equivalentemente, $c(\frak{m},f)=c(\frak{m},g)$ para todo ideal
+	\'{\i}ntegro $\frak{m}$ tal que $(\frak{m},\frak{N})=1$). Entonces
+	$\omega=\omega'$ y $f=g$.
+\end{teoFormasNuevasMismosAutovalores}

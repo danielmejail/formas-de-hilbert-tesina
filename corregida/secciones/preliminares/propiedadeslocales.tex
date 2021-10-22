@@ -1,0 +1,161 @@
+Dado $X\subset B$, decimos que $X$ satisface una propiedad \emph{localmente},
+% \index{propiedad local}
+si todas las clausuras $X_{v}$, $v\in\lugares[f]{K}$, tienen la propiedad
+correspondiente.
+
+\begin{obsElementoLocalmenteIntegroEsIntegro}%
+	\label{obs:elementolocalmenteintegroesintegro}
+	Un elemento $x\in B$ es \'{\i}ntegro, si y s\'{o}lo si, para todo lugar
+	finito $v$, $x_{v}\in B_{v}$ es \'{\i}ntegro.
+\end{obsElementoLocalmenteIntegroEsIntegro}
+
+\begin{propoAlgunasPropiedadesLocales}\label{propo:algunaspropiedadeslocales}
+	Las propiedades de un ret\'{\i}culo de ser un ideal (ret\'{\i}culo
+	completo) o de ser un orden son propiedades locales. En consecuencia,
+	tambi\'{e}n lo son las propiedades de ser un orden maximal o de ser un
+	orden de Eichler.
+\end{propoAlgunasPropiedadesLocales}
+
+\begin{proof}
+	Sea $L$ un ret\'{\i}culo en $B$ tal que $L_{v}\subset B_{v}$ posee un
+	conjunto generador de $B_{v}$ sobre $K_{v}$. Dado un elemento $h\in B$,
+	si $h_{v}$ denota su imagen en $B_{v}$, se cumple que $h_{v}\in L_{v}$
+	para todo lugar $v$, salvo, posiblemente, una cantidad finita. Sea
+	$S\subset\lugares[f]{K}$ el conjunto conformado por dichos lugares. Aun
+	si $h_{w}\not\in L_{w}$, existe $D_{w}\in\oka{K,w}$ tal que
+	$D_{w}h_{w}\in L_{w}$. Como cada ret\'{\i}culo $L_{w}$ es abierto en
+	$B_{w}$,
+	% existe un entorno $U_{w}\subset\oka{K,w}$ de $0$ tal que
+	% \begin{math}
+		% \big(D_{w}+U_{w}\big)\cdot h_{w} \subset L_{w}
+	% \end{math}~.
+	por densidad, existe $D\in K$ tal que
+	% \begin{align*}
+		% D & \,\in\,K\,\cap\,\Big(\prod_{w\in S}\,(D_{w}+U_{w})\Big)
+			% \times\prod_{v\not\in S}\,\oka{K,v}
+		% \text{ .}
+	% \end{align*}
+	%
+	$D\,h\in L_{w}$. Entonces $D\,h$ (o un m\'{u}ltiplo) pertenece a
+	\begin{math}
+		\bigcap_{v\in\lugares[f]{K}}\,\big(B\cap L_{v}\big)=L
+	\end{math}~.
+
+	Sea $I\subset B$ un ret\'{\i}culo tal que, para cada lugar finito $v$,
+	$I_{v}$ es un orden en $B_{v}$. Por el p\'{a}rrafo anterior, $I$
+	contiene una $K$-base de $B$. Por la Observaci\'{o}n
+	\ref{obs:elementolocalmenteintegroesintegro}, los elementos de $I$ son
+	\'{\i}ntegros. Dado que tambi\'{e}n se cumple
+	$I_{v}\supset\oka{K,v}\supset\oka{K}$ para todo $v$, el ret\'{\i}culo
+	$I$ contiene a $\oka{K}$. Finalmente, $I\cdot I\subset I_{v}$ para todo
+	$v$ implica $I\cdot I\subset I$ y, por la Proposici\'{o}n
+	\ref{propo:equivalenciaorden}, $I$ es un orden.
+
+	Sea $\cal{O}$ un orden en $B$ tal que $\cal{O}_{v}$ es maximal para
+	todo lugar finito $v$ y $\cal{O}'\supset\cal{O}$ es un orden, entonces
+	$\cal{O}_{v}'=\cal{O}_{v}$ para todo $v$ y $\cal{O}=\cal{O}'$.
+
+	Sea $\cal{O}$ un orden de $B$. Sea $\cal{O}'$ un orden maximal que lo
+	contiene. Supongamos que, para cada lugar finito $v$, existen
+	\'{o}rdenes maximales tales que
+	\begin{math}
+		\cal{O}_{v}=\cal{O}_{1,v}\cap\cal{O}_{2,v}
+	\end{math}~,
+	entonces, para casi todo $v$,
+	\begin{align*}
+		\cal{O}_{v} & \,=\,
+			\cal{O}_{1,v}\,=\,\cal{O}_{2,v}\,=\,\cal{O}_{v}'
+	\end{align*}
+	%
+	y, en particular, existen \'{o}rdenes $\cal{O}_{1},\cal{O}_{2}$ de $B$
+	tales que $(\cal{O}_{i})_{v}=\cal{O}_{i,v}$. Adem\'{a}s, por unicidad,
+	$\cal{O}=\cal{O}_{1}\cap\cal{O}_{2}$.
+\end{proof}
+
+\begin{propoAlgunasOperacionesLocales}\label{propo:algunasoperacioneslocales}
+	Sea $I$ un ideal de $B$ y sea $v\in\lugares[f]{K}$ un lugar finito.
+	Entonces
+	\begin{align*}
+		\Oizq(I_{v}) \,=\,\Oizq(I)_{v} & \quad\text{,}\quad
+			\dual{(I_{v})}\,=\,(\dual{I})_{v}\quad\text{,}\quad
+			\nrd(I_{v})\,=\,\nrd(I)_{v}
+		\text{ .}
+	\end{align*}
+	%
+	Si $J$ es otro ideal de $B$, $I\cdot J$ es un producto coherente, si y
+	s\'{o}lo si $I_{v}\cdot J_{v}$ lo es para todo $v$. Si, adem\'{a}s, $I$
+	es invertible, entonces $I_{v}J_{v}=(IJ)_{v}$.
+\end{propoAlgunasOperacionesLocales}
+
+\begin{proof}
+	Veamos que $\nrd(I_{v})=\nrd(I)_{v}$. Sea $\{\alpha_{k}\}_{k}$ un
+	conjunto generador de $I$ como $\oka{K}$-m\'{o}dulo. La norma reducida
+	$\nrd(I)$ es el ideal en $K$ generado por las normas de los elementos
+	$\alpha_{k}$ y las sumas $\alpha_{i}+\alpha_{j}$. Como el ideal $I_{v}$
+	est\'{a} generado sobre $\oka{K,v}$ por el mismo conjunto, los ideales
+	$\nrd(I_{v})$ y $\nrd(I)_{v}$ en $K_{v}$ est\'{a}n generados por los
+	mismos elementos.
+
+	Con respecto al producto de ideales, asumiendo la validez de
+	$\Oizq(I_{v})=\Oizq(I)_{v}$ para todo ideal $I$ y todo lugar finito
+	$v$, si $I_{v}J_{v}$ es coherente para todo $v$, entonces $IJ$ es
+	coherente (y viceversa). Supongamos, ahora, que $I$ es invertible. Por
+	continuidad, $I_{v}J_{v}\subset(IJ)_{v}$. En particular, el inverso de
+	$I$ verifica $I_{v}(I_{v})^{-1}\subset(II^{-1})_{v}=\Oizq(I)_{v}$.
+	Dado que tambi\'{e}n $\Oizq(I)=II^{-1}\subset I_{v}(I^{-1})_{v}$, se
+	deduce que $I_{v}(I^{-1})_{v}=\Oizq(I_{v})$. Lo mismo es cierto tomando
+	el producto en el orden inverso. En particular, $I_{v}$ es invertible e
+	$(I_{v})^{-1}=(I^{-1})_{v}$. En definitiva,
+	$I_{v}^{-1}(IJ)_{v}\subset (I^{-1}IJ)_{v}=J_{v}$, de lo que se deduce,
+	por invertibilidad de $I_{v}$, que $(IJ)_{v}\subset I_{v}J_{v}$.
+\end{proof}
+
+\begin{coroLocalmenteInvertibleEsInvertible}%
+	\label{coro:localmenteinvertibleesinvertible}
+	Un ideal $I$ de $B$ es invertible, si y s\'{o}lo si es localmente
+	invertible; equivalentemente, un ideal es invertible, si y s\'{o}lo si
+	es localmente principal. En tal caso, $I^{-1}=\nrd(I)^{-1}\,\conj{I}$.
+\end{coroLocalmenteInvertibleEsInvertible}
+
+\begin{coroDiscriminante}\label{coro:discriminante}
+	Sea $\cal{O}$ un orden de $B$. Entonces
+	$\drd{\cal{O}_{v}}=(\drd{\cal{O}})_{v}$, para todo lugar finito $v$. En
+	particular, $\cal{O}$ es maximal, si y s\'{o}lo si
+	$\drd{\cal{O}}=\drd{B}$.
+\end{coroDiscriminante}
+%
+% Un resultado an\'{a}logo al anterior es cierto para los $\oka{K}(S)$-%
+% \'{o}rdenes en $B$, donde $S\subset\lugares{K}$ es un subconjunto finito que
+% contiene $\lugares[\infty]{K}$.
+% ; en ese caso hay que quitarle a $\drd{B}$ los
+% factores correspondientes a lugares finitos en $S$.
+
+Si $\cal{O}$ es de Eichler, su \emph{nivel}\index{orden!de Eichler!nivel de un}
+es el ideal $\frak{N}=\bigcap_{v\in\lugares[f]{K}}\,(K\cap\frak{N}_{v})$ de
+$K$, donde $\frak{N}_{v}$ denota el nivel del orden de Eichler $\cal{O}_{v}$,
+si $v$ es no ramificado, y $\frak{N}_{v}=\oka{K,v}$, si $B$ ramifica en $v$.
+El discriminante reducido de un orden de Eichler $\cal{O}$ de nivel $\frak{N}$
+es igual a $\drd{\cal{O}}=\frak{D}\cdot\frak{N}$, donde $\frak{D}=\drd{B}$.
+Notemos que $(\frak{N},\frak{D})=1$.
+
+% \begin{teoDeAproximacionDeLaNorma}[Teorema de aproximaci\'{o}n]%
+	% \label{thm:deaproximaciondelanorma}
+	% Sea $B/F$ un \'{a}lgebra de cuaterniones indefinida sobre un cuerpo
+	% de n\'{u}meros totalmente real. Sea $\cal{O}$ un orden \emph{maximal}
+	% en $B$ y sea $I\subset B$ un $\cal{O}$-ideal bil\'{a}tero e
+	% \'{\i}ntegro ($I\subset\cal{O}$). Sea $n\in\oka{F}\cap F_{(+)}$ y
+	% supongamos dados, para cada divisor primo $\frak{q}\mid I\cap\oka{F}$,
+	% elementos $\gamma_{\frak{q}}\in\cal{O}_{\frak{q}}$ tales que
+	% \begin{align*}
+		% n/\nrd(\gamma_{\frak{q}}) & \,\equiv\, 1\quad
+			% \modulo (I\cap\oka{F})\cdot\oka{F,\frak{q}}
+		% \text{ .}
+	% \end{align*}
+	% %
+	% Entonces existe $\gamma\in\cal{O}$ tal que
+	% $\gamma\equiv\gamma_{\frak{q}}\,\modulo I_{\frak{q}}$ y
+	% $\nrd(\gamma)=n$.
+% \end{teoDeAproximacionDeLaNorma}
+% 
+% \cite[Lemma~1.2]{ShimuraDirichletSeriesAndAbelianVarieties},
+% \cite[Ch.~5, Thm.~5.2.10]{MiyakeModular}

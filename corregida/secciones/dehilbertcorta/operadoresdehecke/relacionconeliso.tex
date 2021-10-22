@@ -1,0 +1,262 @@
+% Sea $\hhat{\pi}\in\GL_{2}(\Adfin{F})$ y sea
+% $\hhat{\pi}'\in\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}$. Como la norma
+% reducida de un elemento en el grupo $\Idfin{\cal{O}}$ es una unidad en el
+% anillo $\Adfin{\oka{F}}$, el ideal determinado por el id\`{e}le
+% $\nrd(\hhat{\pi}')$ es igual al ideal determinado por $\nrd(\hhat{\pi})$.
+% En particular, se puede decir que este ideal est\'{a} determinado por la
+% coclase doble $\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}$.
+%
+Supongamos elegidos un sistema de representantes $\{\frak{a}\}$ de las clases
+estrictas de $F$, $\hhat{a}\in\Idfin{F}$ tales que
+$\frak{a}=\hhat{a}\Adfin{\oka{F}}\cap F$ y elementos $\hhat{\alpha}$ como en
+\eqref{eq:matrizasociadaaidelematrices}, de manera que
+$\nrd(\hhat{\alpha})=\hhat{a}$. Dado un representante $\frak{a}$, definimos:
+\begin{align*}
+	\Adfin{\cal{O}}_{\frak{a}}\,=\,
+		\hhat{\alpha}\Adfin{\cal{O}}\hhat{\alpha}^{-1} & \text{ ,}\quad
+	\cal{O}_{\frak{a}}\,=\,\Adfin{\cal{O}}_{\frak{a}}\,\cap\,
+		\MM_{2\times 2}(F) \quad\text{y}\quad
+	\Gamma_{\frak{a}} \,=\,\Gamma_{0}(\frak{N},\frak{a})
+		\,=\,\Idfin{\cal{O}}_{\frak{a}}\,\cap\,\GLtp_{2}(F)
+	\text{ .}
+\end{align*}
+%
+
+Sean $\frak{a}$ un representante, $\frak{p}$ un primo que no divide al nivel
+$\frak{N}$ de $\cal{O}$ y $\frak{b}$ el ideal en el mismo conjunto de
+representantes de las clases estrictas tal que
+\begin{math}
+	[\frak{b}]=[\frak{a}][\frak{p}]^{-1}
+\end{math}
+en $\pClass{F}$. Sean $\hhat{b}$ y $\hhat{\beta}$ el id\`{e}le y la matriz
+correspondientes al ideal $\frak{b}$. Para cada representante $\hhat{\pi}$ de
+las \'{o}rbitas en $\frak{I}(\frak{p})$, se cumple que
+\begin{math}
+	[\nrd(\hhat{\alpha}\hhat{\pi}^{-1})]=[\frak{a}][\frak{p}]^{-1}=
+		[\frak{b}]
+\end{math}~.
+Por el Corolario~\ref{coro:normaclasesestrictas}, existe
+$\gamma\in\GLtp_{2}(F)$ tal que
+\begin{math}
+	\hhat{\alpha}\hhat{\pi}^{-1}\Idfin{\cal{O}}=
+		\gamma^{-1}\hhat{\beta}\Idfin{\cal{O}}
+\end{math}~.
+Dada $f\in\modularH{k}{\frak{N}}$, la forma $T_{\frak{p}}f$ est\'{a}
+determinada por sus proyecciones en cada uno de los espacios
+$\modularH{k}{\frak{N},\frak{a}}$. De lo mencionado anteriormente y de la
+invarianza de $f$, se deduce que
+\begin{align*}
+	\big(T_{\frak{p}}f\big)_{\frak{a}} (z) & \,=\,
+		\big(T_{\frak{p}}f\big)(z,\hhat{\alpha}\Idfin{\cal{O}}) \,=\,
+		\sum_{\hhat{\pi}}\,
+			f(z,\hhat{\alpha}\hhat{\pi}^{-1}\Idfin{\cal{O}}) \,=\,
+		\sum_{\gamma}\,f(z,\gamma^{-1}\hhat{\beta}\Idfin{\cal{O}}) \\
+	& \,=\,\sum_{\gamma}\,
+		\bigg(\prod_{i=1}^{n}\,J_{i}(\gamma_{i},z_{i})^{-1}\bigg)\,
+		f(\gamma z,\hhat{\beta}\Idfin{\cal{O}}) \,=\,
+		\sum_{\gamma}\,\big(f_{\frak{b}}\operadormatrices{\peso{k}}{%
+				\gamma}\big)(z)
+	\text{ ,}
+\end{align*}
+%
+donde $\hhat{\pi}$ recorre un sistema de representantes de $\Theta(\frak{p})$.
+Es decir, esencialmente, los operadores de Hecke permutan las componentes de
+una forma de Hilbert. Esto justifica considerar conjuntamente todas las
+variedades $Y_{0}(\frak{N},\frak{a})$.
+
+\begin{obsIdelesDeNormaPPorGlobales}\label{obs:idelesdenormapporglobales}
+	Dados $\frak{a}$ y $\frak{b}$ como arriba, sea
+	\begin{align*}
+		\frak{I}(\frak{p})_{\frak{a},\frak{b}} & \,=\,\Big\{
+			\delta\in\GLtp_{2}(F)\,:\,
+			\hhat{\beta}^{-1}\delta\hhat{\alpha}\in\Adfin{\cal{O}}
+			\text{ y }
+			\det(\delta)\frak{a}=\frak{b}\frak{p} \Big\}
+		\text{ .}
+	\end{align*}
+	%
+	Llamemos $\hhat{\pi}_{i}$ a los representantes de $\Theta(\frak{p})$ y
+	$\gamma_{i}$ a las matrices correspondientes en $\GLtp_{2}(F)$. Las
+	matrices $\delta\in\GLtp_{2}(F)$ que verifican
+	\begin{math}
+		\hhat{\alpha}\hhat{x}^{-1}\Idfin{\cal{O}}=
+			\delta^{-1}\hhat{\beta}\Idfin{\cal{O}}
+	\end{math}
+	para alg\'{u}n $\hhat{x}\in\frak{I}(\frak{p})$ son aquellas tales que
+	\begin{math}
+		\hhat{\beta}^{-1}\delta\hhat{\alpha}\in\frak{I}(\frak{p})
+	\end{math}~,
+	es decir, por la Observaci\'{o}n~\ref{obs:idelesdenormap},
+	$\hhat{\beta}^{-1}\delta\hhat{\alpha}\in\Adfin{\cal{O}}$ y
+	$\det(\delta)\frak{a}=\frak{b}\frak{p}$. Es decir,
+	\begin{align*}
+		\frak{I}(\frak{p})_{\frak{a},\frak{b}} & \,=\,
+			\hhat{\beta}\frak{I}(\frak{p})\hhat{\alpha}^{-1}\,\cap\,
+			\GLtp_{2}(F)
+		\text{ .}
+	\end{align*}
+	%
+	Las matrices $\gamma_{i}$ pertencen a este conjunto. Si
+	$\delta\in\frak{I}(\frak{p})_{\frak{a},\frak{b}}$, existe un
+	representante $\hhat{\pi}_{i}$ tal que
+	$\hhat{\beta}^{-1}\delta\hhat{\alpha}\in\Idfin{\cal{O}}\hhat{\pi}_{i}$.
+	Pero $\hhat{\beta}^{-1}\gamma_{i}\hhat{\alpha}$ tambi\'{e}n pertenece a
+	esta clase, lo que implica que
+	\begin{align*}
+		\delta & \,\in\,\big(\hhat{\beta}\Idfin{\cal{O}}
+			\hhat{\beta}^{-1}\big)\,\gamma_{i}\,\cap\,\GLtp_{2}(F)
+		\,=\,\Gamma_{\frak{b}}\gamma_{i}
+		\text{ .}
+	\end{align*}
+	%
+	Rec\'{\i}procamente, si $\gamma'\in\Gamma_{\frak{b}}$, entonces
+	\begin{math}
+		\hhat{\beta}^{-1}\gamma'\gamma_{i}\hhat{\alpha}\in
+		\Idfin{\cal{O}}\hhat{\beta}^{-1}\gamma_{i}\hhat{\alpha}
+	\end{math}~,
+	que est\'{a} contenido en el conjunto $\frak{I}(\frak{p})$. En
+	definitiva,
+	\begin{align*}
+		\frak{I}(\frak{p})_{\frak{a},\frak{b}} & \,=\,
+			\bigcup_{i}\Gamma_{\frak{b}}\gamma_{i}
+		\text{ .}
+	\end{align*}
+	%
+	La Proposici\'{o}n~\ref{propo:descomposicioninducedescomposicion}
+	garantiza que esta uni\'{o}n es, en realidad, disjunta e igual a una
+	coclase doble en $\GLtp_{2}(F)$.
+\end{obsIdelesDeNormaPPorGlobales}
+
+\begin{propoDescomposicionInduceDescomposicion}%
+	\label{propo:descomposicioninducedescomposicion}
+	Sea $\frak{p}\nmid\frak{N}$ un ideal primo. Sean $\frak{a}$ y
+	$\frak{b}$ dos representantes de las clases estrictas de $F$ tales que
+	$[\frak{a}][\frak{p}]^{-1}=[\frak{b}]$. Sea $\{\hhat{\pi}_{i}\}_{i}$
+	un sistema de representantes de las clases en
+	\begin{math}
+		\Idfin{\cal{O}}\backslash
+			\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}
+	\end{math}
+	y, para cada $i$, sea $\gamma_{i}\in\GLtp_{2}(F)$ tal que
+	\begin{math}
+		\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}}=
+			\gamma_{i}^{-1}\hhat{\beta}\Idfin{\cal{O}}
+	\end{math}~.
+	Entonces
+	\begin{align*}
+		\frak{I}(\frak{p})_{\frak{a},\frak{b}} & \,=\,
+			\bigsqcup_{i}\,\Gamma_{\frak{b}}\gamma_{i} \,=\,
+			\Gamma_{\frak{b}}\gamma\Gamma_{\frak{a}}
+		\text{ ,}
+	\end{align*}
+	%
+	donde $\gamma$ es cualquier elemento en el conjunto
+	$\frak{I}(\frak{p})_{\frak{a},\frak{b}}$.
+\end{propoDescomposicionInduceDescomposicion}
+
+\begin{proof}
+	Ver \cite[Thm.~5.3.5]{MiyakeModular} para el caso $F=\bb{Q}$,
+	% La demostraci\'{o}n se puede adaptar usando el Teorema de
+	% aproximaci\'{o}n \ref{thm:deaproximaciondelanorma}. Comparar
+	o bien \cite[Propo.~2.3]{ShimuraDirichletSeriesAbelianVarieties}.
+	% \input{./secciones/dehilbertcorta/operadoresdehecke/%
+	% demodecoclasedoble.tex}
+	%% EN CASO DE INCLUIRLA, DEJARLA PARA EL FINAL.
+\end{proof}
+
+Rec\'{\i}procamente, dada cualquier
+$\gamma\in\frak{I}(\frak{p})_{\frak{a},\frak{b}}$, si $\{\gamma_{i}\}_{i}$ es un
+sistema de representantes de las clases en
+\begin{math}
+	\Gamma_{\frak{b}}\backslash\Gamma_{\frak{b}}\gamma\Gamma_{\frak{a}}
+\end{math}~,
+entonces $\{\hhat{\pi}_{i}=\hhat{\beta}^{-1}\gamma_{i}\hhat{\alpha}\}_{i}$ es
+un sistema de representantes de las clases en
+\begin{math}
+	\Idfin{\cal{O}}\backslash\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}
+\end{math}~.
+Dicho de otra manera, el grupo de unidades $\Gamma_{\frak{b}}$ act\'{u}a a
+izquierda en $\frak{I}(\frak{p})_{\frak{a},\frak{b}}$ y la
+Proposici\'{o}n~\ref{propo:descomposicioninducedescomposicion} afirma que la
+aplicaci\'{o}n
+\begin{math}
+	\frak{I}(\frak{p})_{\frak{a},\frak{b}}\rightarrow
+		\frak{I}(\frak{p})
+\end{math}
+dada por $\delta\mapsto\hhat{\beta}^{-1}\delta\hhat{\alpha}$ induce una
+biyecci\'{o}n
+\begin{align*}
+	& \Gamma_{\frak{b}}\backslash\frak{I}(\frak{p})_{\frak{a},\frak{b}}
+		\,\xrightarrow{\sim}\,
+		\Idfin{\cal{O}}\backslash\frak{I}(\frak{p})
+	\text{ .}
+\end{align*}
+%
+Denotamos por $\Theta(\frak{p})_{\frak{a},\frak{b}}$ el conjunto de \'{o}rbitas
+$\Gamma_{\frak{b}}\backslash\frak{I}(\frak{p})_{\frak{a},\frak{b}}$.
+
+\begin{obsHeckeActuaPorBloquesMatrices}\label{obs:heckeactuaporbloquesmatrices}
+	Los operadores de Hecke
+	\begin{math}
+		T_{\frak{p}}:\,\modularH{k}{\frak{N}}\rightarrow
+			\modularH{k}{\frak{N}}
+	\end{math}
+	act\'{u}an por bloques permutando los sumandos de la descomposici\'{o}n
+	\eqref{eq:descomposicionmodularesmatrices}. Dado un ideal primo
+	$\frak{p}\nmid\frak{N}$ e ideales $\frak{a}$ y $\frak{b}$ tales que
+	$[\frak{b}]=[\frak{a}][\frak{p}]^{-1}$ en $\pClass{F}$, definimos
+	\begin{align*}
+		(T_{\frak{p}})_{\frak{a},\frak{b}} & \,:\,
+			\modularH{k}{\frak{N},\frak{b}}\,\rightarrow\,
+			\modularH{k}{\frak{N},\frak{a}}
+	\end{align*}
+	%
+	por
+	\begin{equation}
+		\label{eq:heckeporbloquesmatrices}
+		(T_{\frak{p}})_{\frak{a},\frak{b}}f \,=\,
+			\sum_{\gamma\in\Theta(\frak{p})_{\frak{a},\frak{b}}}\,
+				f\operadormatrices{\peso{k}}{\gamma}
+		\text{ ,}
+	\end{equation}
+	%
+	Entonces, dada $f=(f_{\frak{a}})_{\frak{a}}\in\modularH{k}{\frak{N}}$,
+	se cumple
+	\begin{math}
+		\big(T_{\frak{p}}f\big)_{\frak{a}}=
+			(T_{\frak{p}})_{\frak{a},\frak{b}}f_{\frak{b}}
+	\end{math}~.
+	El operador $T_{\frak{p}}$ act\'{u}a como la matriz de operadores
+	$\big[(T_{\frak{p}})_{\frak{a},\frak{b}}\big]_{\frak{a},\frak{b}}$,
+	donde $\frak{a}$ y $\frak{b}$ recorren los representantes de las clases
+	estrictas de $F$ y $(T_{\frak{p}})_{\frak{a},\frak{b}}$ es el operdor
+	definido por \eqref{eq:heckeporbloquesmatrices}, si
+	$[\frak{a}]=[\frak{b}\frak{p}]$, y es igual a cero, en otro caso.
+	En t\'{e}rminos de una descomposici\'{o}n
+	\begin{math}
+		\Gamma_{\frak{b}}\gamma\Gamma_{\frak{a}}=\bigsqcup_{i}\,
+			\Gamma_{\frak{b}}\gamma_{i}
+	\end{math}~,
+	vale que
+	\begin{math}
+		(T_{\frak{p}})_{\frak{a},\frak{b}}f=
+			f\operadorcoclases{\peso{k}}{%
+				\Gamma_{\frak{b}}\gamma\Gamma_{\frak{a}}}
+	\end{math}~,
+	donde
+	\begin{equation}
+		\label{eq:coclasedobleporbloquesmatrices}
+		f\operadorcoclases{\peso{k}}{%
+			\Gamma_{\frak{b}}\gamma\Gamma_{\frak{a}}} \,=\,
+			\sum_{i}\,f\operadormatrices{\peso{k}}{\gamma_{i}}
+		\text{ .}
+	\end{equation}
+	%
+\end{obsHeckeActuaPorBloquesMatrices}
+
+%% Realci\'on con ideales a izquierda o a derecha en O_a o en O_b.
+%% ?`Hay n(p)+1 de ellos en los cuatro casos, para p\nmid N?
+%% De ser as\'\i, se puede relacionar con el p.i. de Petersson y deducir que
+%% T_p es autoadjunto v\'\ia los (T_p)_a,b.
+%% En este lugar hab\'\ia una observaci\'on al respecto de esto (ver versiones
+%% anteriores).

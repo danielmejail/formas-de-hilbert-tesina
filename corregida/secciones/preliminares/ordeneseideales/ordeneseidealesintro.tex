@@ -1,0 +1,61 @@
+Sean $R$ un anillo de Dedekind, $K$ su cuerpo de fracciones, $B/K$ un
+\'{a}lgebra de cuaterniones sobre $K$ y $V/K$ un espacio vectorial sobre $K$.
+Un \emph{($R$-)ret\'{\i}culo} en $V$ es un\index{reticulo@ret\'{\i}culo}
+$R$-m\'{o}dulo $L\subset V$ finitamente generado. Un elemento $x\in V$ se dice
+\emph{\'{\i}ntegro}, si $R[x]$ es un ret\'{\i}culo.\index{integro@\'{\i}ntegro}
+Un ret\'{\i}culo $L\subset V$ se dice \emph{completo}, si
+$L\tensor[R]K=V$, si $L$ contiene una $K$-base de $V$.
+
+\begin{propoEquivalenciaIntegro}\label{propo:equivalenciaintegro}
+	Si $V=B$, $x\in B$ es \'{\i}ntegro, si y s\'{o}lo si
+	$\trd(x),\nrd(x)\in R$.
+\end{propoEquivalenciaIntegro}
+
+Un ret\'{\i}culo completo en $B$ se denomina \emph{ideal}. Un\index{ideal}
+\emph{orden} en $B$ es un ideal $I\subset B$ que cumple\index{orden}
+$I\cdot I\subset I$ y $1\in I$, es decir, un ideal que es, adem\'{a}s, un
+subanillo (con unidad) de $B$. Todo elemento perteneciente a un orden es
+\'{\i}ntegro ($R$ es noetheriano y los \'{o}rdenes son finitamente
+generados).
+
+\begin{propoEquivalenciaOrden}\label{propo:equivalenciaorden}
+	Un subconjunto $\cal{O}\subset B$ es un orden, si y s\'{o}lo si
+	$\cal{O}$ es subanillo de $B$, $R\subset\cal{O}$, los elementos de
+	$\cal{O}$ son \'{\i}ntegros y $\cal{O}\cdot K=B$.
+	% ($\cal{O}$ contiene una $K$-base de $B$).
+\end{propoEquivalenciaOrden}
+
+\begin{obsUnidadesDeUnOrden}\label{obs:unidadesdeunorden}
+	Sea $x\in\cal{O}$, un orden de $B$. En general,
+	$x^{-1}=\conj{x}\,nrd(x)^{-1}$ y $\conj{x}\in\cal{O}$ (por
+	\ref{propo:equivalenciaintegro}). Si $x\in\cal{O}^{\times}$,
+	$x^{-1}\in\cal{O}$ y $\nrd(x)^{-1}\in R$. Rec\'{\i}procamente, si
+	$\nrd(x^{-1})\in R$, $x^{-1}\in\cal{O}$. As\'{\i}, se deduce que
+	$x\in\cal{O}^{\times}$, si y s\'{o}lo si $\nrd(x)\in R^{\times}$.
+\end{obsUnidadesDeUnOrden}
+
+Si $L,L'\subset V$ son ret\'{\i}culos, $L\cap L'$ es un ret\'{\i}culo. Si
+$L'$ es completo,
+\begin{math}
+	\dim(L\cap L'\cdot K) =\dim(L\cdot K)
+\end{math}
+%
+(basta expresar los elementos de $L$ como combinaciones lineales de una
+$K$-base de $V$ contenida en $L'$).
+% $\{\beta_{i}\}_{i}\subset L$ algo, $\{\beta_{k}'\}_{k}\subset L'$ base de $V$.
+% $\beta_{i}=b^{k}_{i}\beta_{k}'$,
+% $b^{k}_{i}=\gamma^{k}_{i}/\delta^{k}_{i}\in K$,
+% $\tilde{\delta}_{i}=\prod_{k}\,\delta^{k}_{i}\in R$,
+% $\tilde{\gamma}^{k}_{i}=a^{k}_{i}\tilde{\delta}_{i}\in R$.
+% Entonces
+% $\tilde{\delta}_{i}\beta_{i}=\tilde{\gamma}^{k}_{i}\beta_{k}'$.
+% El lado izquierdo pertenece a $L$ y el lado derecho a $L'$.
+%
+En particular, la intersecci\'{o}n de dos
+ideales es un ideal y la intersecci\'{o}n de dos \'{o}rdenes es un orden. Un
+orden se dice \emph{maximal}, si no est\'{a} contenido\index{orden!maximal}
+propiamente en otro orden de $B$. Todo orden est\'{a} contenido en alg\'{u}n
+orden maximal (por \ref{propo:equivalenciaorden}). Un orden de la forma
+$\cal{O}\cap\cal{O}'$ con $\cal{O},\cal{O}'$ maximales en $B$ se denomina
+\emph{orden de Eichler}.\index{orden!de Eichler}
+

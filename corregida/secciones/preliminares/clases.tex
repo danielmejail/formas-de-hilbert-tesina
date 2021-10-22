@@ -1,0 +1,58 @@
+
+Dos ideales $I,J$ de $B$ se dicen \emph{equivalentes a izquierda},
+\index{ideales equivalentes a izquierda}
+si existe $b\in B^{\times}$ tal que $I=bJ$.
+Si $\cal{O}$ es un orden de $B$, esto determina una relaci\'{o}n de
+equivalencia en el conjunto de ideales cuyo orden \emph{a derecha} es
+$\cal{O}$ y dos $\cal{O}$-ideales a derecha son equivalentes a izquierda,
+si y s\'{o}lo si son isomorfos como $\cal{O}$-m\'{o}dulos a derecha.
+\index{clase a izquierda de ideales}
+Notemos que si $I$ es un ideal invertible con $\Oder(I)=\cal{O}$, todo
+ideal $J=bI$ equivalente a izquierda a $I$ es invertible, tambi\'{e}n.
+En tal caso, decimos que la \emph{clase} correspondiente a $I$ es
+\emph{invertible}.\index{clase a izquierda de ideales!invertible}
+El \emph{conjunto de clases a izquierda}\index{conjunto de clases a izquierda}
+del orden $\cal{O}$, denotado $\lClass{\cal{O}}$, es el conjunto de
+ideales $I$ tales que $\Oder(I)=\cal{O}$, m\'{o}dulo la relaci\'{o}n
+$I\sim J\Leftrightarrow I=bJ$ para alg\'{u}n $b\in B^{\times}$, y cuya clase
+es invertible. An\'{a}logamente, podemos definir las clases a derecha de
+$\cal{O}$ (y denotamos el conjunto de dichas clases por $\rClass{\cal{O}}$).
+Notemos que $\rClass{\cal{O}}$ y $\lClass{\cal{O}}$ son \emph{a priori}
+s\'{o}lo \emph{conjuntos}.
+% El conjunto $\lClass{\cal{O}}$ tiene un elemento distinguido: la clase de
+% $\cal{O}$.
+Como un \'{a}lgebra de cuaterniones cuenta con una involuci\'{o}n
+$x\mapsto\conj{x}$, la aplicaci\'{o}n $I\mapsto\conj{I}$ da una biyecci\'{o}n
+entre las clases a izquierda y las clases a derecha de un orden $\cal{O}$.
+
+Decimos que dos \'{o}rdenes $\cal{O},\cal{O}'$ \emph{est\'{a}n conectados},
+\index{ordenes@\'{o}rdenes!conectados}
+si existe un ideal $I$ de $B$ cuyo orden a izquierda es $\cal{O}$ y cuyo
+orden a derecha es $\cal{O}'$ y se dicen \emph{del mismo tipo},
+\index{ordenes@\'{o}rdenes!del mismo tipo}
+si son conjugados por un elemento de $B^{\times}$ (o, equivalentemente, si
+son isomorfos como $R$-\'{a}lgebras). Los \'{o}rdenes $\cal{O}$ y $\cal{O}'$
+son del mismo tipo, si y s\'{o}lo si est\'{a}n conectados por un ideal
+principal. Un isomorfismo $\cal{O}\simeq\cal{O}'$ (dado por conjugaci\'{o}n)
+induce una biyecci\'{o}n $\lClass{\cal{O}}\rightarrow\lClass{\cal{O}'}$.
+La existencia de una involuci\'{o}n en $B$ nos permite concluir
+que ``estar conectados'' es una relaci\'{o}n de equivalencia entre los
+\'{o}rdenes de $B$. El \emph{g\'{e}nero}
+\index{orden!genero de un@g\'{e}nero de un}
+de $\cal{O}$ es el conjunto de \'{o}rdenes conectados con $\cal{O}$, es
+decir, su clase respecto de esta relaci\'{o}n, lo denotamos $\Genus{\cal{O}}$.
+Si $\cal{O}$ y $\cal{O}'$ son \'{o}rdenes conectados
+y $J$ es un ideal que los conecta, la aplicaci\'{o}n $I\mapsto IJ$ determina
+una biyecci\'{o}n $\lClass{\cal{O}}\rightarrow\lClass{\cal{O}'}$;
+su inversa est\'{a} dada por $I'\mapsto I'J^{-1}$.
+%
+% Se puede ver que, sobre un cuerpo global, dos \'{o}rdenes est\'{a}n
+% conectados, si y s\'{o}lo si son isomorfos \emph{localmente} (pero
+% no necesariamente globalmente); dos \'{o}rdenes pueden pertenecer
+% al mismo g\'{e}nero pero no ser del mismo tipo.
+%
+%%---
+%
+% \subsection{Grupoide de Brandt}
+% \input{./secciones/grupoideDeBrandt.tex}
+

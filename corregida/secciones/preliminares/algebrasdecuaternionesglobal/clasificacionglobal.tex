@@ -1,0 +1,48 @@
+Sea $B/K$ un \'{a}lgebra de cuaterniones sobre $K$. Dado $v\in\lugares{K}$, se
+dice que \emph{$B$ ramifica en $v$}, si el \'{a}lgebra de cuaterniones
+$B_{v}/K_{v}$ pertenece a la clase de las \'{a}lgebras de divisi\'{o}n. El
+\emph{conjunto de ramificaci\'{o}n de $B$} es el conjunto de lugares $v$ de $K$
+en donde $B$ ramifica. Denotamos este conjunto por $\Ram(B)$.
+\index{ramificacion@ramificaci\'{o}n}
+\index{ramificacion@ramificaci\'{o}n!conjunto de}
+
+\begin{obsRamEsFinita}\label{obs:ramesfinita}
+	El conjunto $\Ram(B)$ es un conjunto finito. Sea $L$ el ret\'{\i}culo
+	en $B$ generado por una $K$-base. Entonces $L$ es un ret\'{\i}culo
+	completo. Por la Proposici\'{o}n~\ref{propo:localgloballattices}, para
+	casi todo lugar finito $v$, el ret\'{\i}culo local $L_{v}$ debe ser
+	igual a un orden maximal en la correspondiente \'{a}lgebra $B_{v}$. Por
+	otro lado, el ideal discriminante reducido $\drd{L}\subset K$ es un
+	ret\'{\i}culo completo en $K$ y, por lo tanto,
+	$(\drd{L})_{v}=\oka{K,v}$ (el orden maximal) para casi todo $v$.
+	Entonces, el discriminante del \'{a}lgebra $B_{v}$ es
+	$\drd{B_{v}}=\drd{L_{v}}=\oka{K,v}$ para casi todo $v$. En definitiva,
+	por lo visto en la Secci\'{o}n~\ref{subsec:ordeneseidealeslocal},
+	$B_{v}\simeq\MM_{2\times 2}(K_{v})$, salvo, posiblemente, en finitos
+	lugares.
+\end{obsRamEsFinita}
+
+El \emph{discriminante reducido de $B/K$}, denotado por $\drd{B}$, se define
+como el producto de los ideales primos correspondientes a los lugares finitos
+en donde $B$ ramifica. Se cumple
+\index{discriminante reducido!global!de un algebra@de un \'{a}lgebra}
+\begin{align*}
+	\drd{B} & \,=\,\prod_{v\in\Ram(B)\cap\lugares[f]{K}}\,\frak{p}_{v}
+		\,=\,\bigcap_{v\in\lugares[f]{K}}\,\big(K\cap\drd{B_{v}}\big)
+	\text{ ,}
+\end{align*}
+%
+o, lo que es lo mismo, $(\drd{B})_{v}=\drd{B_{v}}$.
+
+\begin{teoClassificationSurUnCorpsGlobal}[Clasificaci\'{o}n global]%
+	\label{thm:clasificacionglobal}
+	El cardinal del conjunto $\mathrm{Ram}(B)$ es par. Si $S$ es un
+	subconjunto de lugares de $K$ de cardinal par, existe, salvo
+	isomorfismo, una \'{u}nica \'{a}lgebra de cuaterniones cuyo conjunto de
+	ramificaci\'{o}n es $S$.
+\end{teoClassificationSurUnCorpsGlobal}
+
+En particular, el teorema de clasificaci\'{o}n nos dice que dos \'{a}lgebras de
+cuaterniones sobre un cuerpo de n\'{u}meros son isomorfas, si y s\'{o}lo si son
+isomorfas localmente.
+

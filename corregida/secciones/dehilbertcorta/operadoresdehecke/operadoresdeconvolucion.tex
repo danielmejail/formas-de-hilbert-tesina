@@ -1,0 +1,106 @@
+Temporariamente, para no sobrecargar la notaci\'{o}n, denotamos
+$\MM_{2\times 2}(F)$ por $B$. Las combinaciones usuales mantienen el mismo
+significado, por ejemplo, $B_{v}^{\times}=\GL_{2}(F_{v})$, en este caso.
+
+% DE MANTENER TODA LA EXPLICACI\'ON, SER\'A MEJOR INTRODUCIR LA NOTACI\'ON
+% PARA EL OPERADOR AL PRINCIPIO
+A continuaci\'{o}n reinterpretamos el operador asociado a
+$\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}$ como un operador de convoluci\'{o}n.
+Para cada lugar finito $v\in\lugares[f]{F}$, sea $du_{v}^{\times}$ una
+medida de Haar en $B_{v}^{\times}$. Por ejemplo, para fijar alguna referencia,
+podemos suponer que $du_{v}^{\times}=du_{v}/|\nrd(x)|_{v}^{2}$, donde $du_{v}$
+es la medida de Haar en $B_{v}$ que cumple con $|\cal{O}_{0}(1)_{v}|=1$, donde
+$\cal{O}_{0}(1)\subset B$ es el orden maximal dado por
+\eqref{eq:ordenmaximalmatrices}. Denotamos $d\hhat{u}^{\times}$ la medida de
+Haar $\prod_{v}\,du_{v}^{\times}$ en $\Idfin{B}$.
+
+Si $\hhat{\pi}=(\pi_{v})_{v}\in\Idfin{B}$, entonces
+\begin{align*}
+	[\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}] & \,=\,
+		\prod_{v}\,[\cal{O}_{v}^{\times}\pi_{v}\cal{O}_{v}^{\times}]
+	\text{ .}
+\end{align*}
+%
+Para todo lugar $v$ salvo finitos, $\pi_{v}\in\cal{O}_{v}^{\times}$ y
+$\cal{O}_{v}^{\times}=\cal{O}_{0}(1)_{v}^{\times}$ para casi todo $v$,
+tambi\'{e}n. En particular,
+\begin{align*}
+	\cal{O}_{v}^{\times}\pi_{v}\cal{O}_{v}^{\times} & \,=\,
+		\cal{O}_{v}^{\times}\,=\,
+		\cal{O}_{0}(1)_{v}^{\times}
+\end{align*}
+%
+para casi todo lugar finito $v$. Esto implica que, dada una forma modular
+$\phi$, la convoluci\'{o}n
+\begin{equation}
+	\label{eq:operadordecoclasedobledehilbertconvolucion}
+	\phi * [\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}] (g,\hhat{\alpha})
+		\,=\, \int_{\Idfin{B}}\,\phi(g,\hhat{\alpha}\hhat{u}^{-1})\,
+			[\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}](\hhat{u})\,
+			d\hhat{u}^{\times}
+\end{equation}
+%
+est\'{e} definida. De la descomposici\'{o}n
+\eqref{eq:descomposiciondecoclasedoble}, se deduce que
+\begin{align*}
+	\phi * [\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}](g,\hhat{\alpha})
+	& \,=\,\sum_{i}\,\int_{\Idfin{B}}\,
+		\phi(g,\hhat{\alpha}\hhat{u}^{-1})
+			[\Idfin{\cal{O}}\hhat{\pi}_{i}](\hhat{u})\,
+			d\hhat{u}^{\times} \\
+	& \,=\, \sum_{i}\,\phi(g,\hhat{\alpha}\hhat{\pi}_{i}^{-1})
+		|\Idfin{\cal{O}}\hhat{\pi}_{i}|
+	\text{ ,}
+\end{align*}
+%
+donde la medida $|\Idfin{\cal{O}}\hhat{\pi}_{i}|$ del trasladado es
+independiente de $\hhat{\pi}_{i}$ e igual a $|\Idfin{\cal{O}}|$ y, en
+definitiva,
+\begin{equation}
+	\label{eq:igualdadentreoperadordecoclasedobleyconvolucion}
+	\phi\operadorcoclases{\peso{k}}{%
+			\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}}
+		\,=\,\frac{1}{|\Idfin{\cal{O}}|}\,
+			\phi * [\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}]
+	\text{ .}
+\end{equation}
+%
+
+Los operadores de convoluci\'{o}n $[\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}]$,
+se factorizan como producto de operadores que act\'{u}an en lugares distintos.
+Dado un lugar $v$ y un elemento $\pi_{v}\in B_{v}^{\times}$, sea
+$\hhat{\pi_{v}}\in\Idfin{B}$, el id\`{e}le dado por $(\hhat{\pi_{v}})_{w}=1$,
+si $w\not=v$, e igual a $\pi_{v}$ en $v$. Dado $\hhat{\pi}\in\Idfin{B}$,
+escribimos
+\begin{math}
+	\tilde{T}_{\hhat{\pi}}\phi=\phi\operadorcoclases{\peso{k}}{%
+		\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}}
+\end{math}~.
+Si $\hhat{\pi}=(\pi_{v})_{v}$, sean $\lista{w}{t}\in\lugares[f]{F}$ los lugares
+finitos para los cuales $\pi_{w_{i}}\not\in\cal{O}_{w_{i}}^{\times}$ o
+$\cal{O}_{w_{i}}^{\times}\not=\cal{O}_{0}(1)_{w_{i}}^{\times}$. Para todo
+$v\in\lugares[f]{F}$, se cumple que
+\begin{align*}
+	\big(\tilde{T}_{\hhat{\pi_{v}}}\phi\big)(g,\hhat{\alpha}) & \,=\,
+		\frac{1}{|\cal{O}_{v}^{\times}|}\,\int_{%
+			\cal{O}_{v}^{\times}\pi_{v}\cal{O}_{v}^{\times}}\,
+			\phi(g,\hhat{\alpha}h_{v}^{-1})\,dh_{v}^{\times}
+	\text{ .}
+\end{align*}
+%
+Si $v\not= w$, vale que
+\begin{math}
+	\tilde{T}_{\hhat{\pi_{v}}}\circ\tilde{T}_{\hhat{\pi_{w}}}=
+		\tilde{T}_{\hhat{\pi_{w}}}\circ\tilde{T}_{\hhat{\pi_{v}}}
+\end{math}~, porque $\tilde{T}_{\hhat{\pi_{v}}}$ y $\tilde{T}_{\hhat{\pi_{w}}}$
+act\'{u}an en coordenadas distintas. Adem\'{a}s, si $v\not\in\{\lista{w}{t}\}$,
+$T_{\hhat{\pi_{v}}}=\id$. As\'{\i},
+\begin{align*}
+	\tilde{T}_{\hhat{\pi}} & \,=\,\tilde{T}_{\hhat{\pi_{w_{1}}}}
+		\circ\,\cdots\,\,\circ\tilde{T}_{\hhat{\pi_{w_{t}}}}
+	\text{ .}
+\end{align*}
+%
+No volveremos a utilizar la notaci\'{o}n $\tilde{T}_{\hhat{\pi}}$ para
+referirnos a estos operadores.
+

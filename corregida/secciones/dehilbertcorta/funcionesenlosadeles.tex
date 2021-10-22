@@ -1,0 +1,528 @@
+A continuaci\'{o}n enunciamos la correspondencia entre formas modulares de
+Hilbert y formas automorfas en el grupo $\GL_{2}(\adeles{F})$. Su
+demostraci\'{o}n es an\'{a}loga a la de la Proposici\'{o}n~%
+\ref{propo:introequivformaglq}.
+% (ver \cite[\S~3]{GelbartAutomorphicOnAdeles}).
+Para cada lugar arquimediano $v\in\lugares[\infty]{F}$, definimos
+$K_{v}=\SO{2}$. El producto $K_{\infty}=\prod_{v\in\lugares[\infty]{F}}\,K_{v}$
+es el subgrupo compacto y conexo maximal del estabilizador
+del punto $\mathbf{i}=(\sqrt{-1},\,\dots,\,\sqrt{-1})\in(\hP^{\pm})^{n}$ por la
+acci\'{o}n de $\GL_{2}(\bb{R})^{n}$.
+
+\begin{propoEquivalenciaAutomorfasFormasCuspidales}
+	\label{propo:equivalenciaautomorfasformascuspidales}
+	La aplicaci\'{o}n $f\mapsto\phi_{f}$ que a una forma de Hilbert
+	cuspidal le asigna la funci\'{o}n
+	\begin{equation}
+		\label{eq:funcionadelicacorrespondientedehilbert}
+		\phi_{f}(g_{\infty},\hhat{\alpha}) \,=\,
+		\bigg(\prod_{i=1}^{n}\,J_{i}(g_{i},\sqrt{-1})^{-1}\bigg)\,
+		f(g_{\infty}\cdot\mathbf{i},\hhat{\alpha}\Idfin{\cal{O}})
+	\end{equation}
+	%
+	determina una correspondencia entre el espacio $\spitzH{k}{\frak{N}}$
+	y el espacio de funciones $\phi:\,\GL_{2}(\adeles{F})%
+	\rightarrow\bb{C}$ que cumplen con:
+	\begin{itemize}
+		\item[(i)] $\phi(\gamma g)=\phi(g)$ para toda
+			$\gamma\in\GL_{2}(F)$;
+		\item[(ii)] $\phi(g\hhat{\beta})=\phi(g)$ si
+			\begin{math}
+				\hhat{\beta}\in\Idfin{\cal{O}}=
+					\prod_{\frak{p}}\,
+					\cal{O}_{\frak{p}}^{\times}
+			\end{math}~;
+		\item[(iii)]
+			\begin{math}
+				\phi(gh)=\prod_{i=1}^{n}\,
+					e^{\sqrt{-1}k_{i}\theta_{i}}\,\phi(g)
+			\end{math}
+			si
+			\begin{math}
+				h=(\lista[\theta_{1}]{r}{\theta_{n}})
+					\in K_{\infty}
+			\end{math}~;
+		\item[(iv)]
+			\begin{math}
+				\phi(\tau_{\infty}g)=\prod_{i=1}^{n}\,
+				\tau_{i}^{k_{0}-2}\phi(g)
+			\end{math}
+			si
+			\begin{math}
+				\tau_{\infty}=\bigg(
+				\left[\begin{matrix} \tau_{1} & \\
+					& \tau_{1} \end{matrix}\right],
+					\,\dots,\,
+				\left[\begin{matrix} \tau_{n} & \\
+					& \tau_{n}\end{matrix}\right]
+				\bigg)\in\centre(\bb{R})
+			\end{math}~;
+			% no hace falta el valor absoluto, porque los k_{i}
+			% son todos de igual paridad y no hay problema con las
+			% potencias.
+		% \item[v.b] $\phi(\hhat{\eta}g)=\prod_{i=1}^{n}\,%
+			% t_{i}^{-(k_{0}-2)}%
+			% \phi(g\hhat{a})$ si $\hhat{\eta}=t\hhat{a}\hhat{r}\in%
+			% F_{+}^{\times}\hhat{a}\Idfin{\oka{F}}\subset%
+			% \centre(\Idfin{F})$;
+		\item[(v)] $\phi$ es de \emph{crecimiento moderado}: si
+			\index{crecimiento moderado}
+			$\Omega\subset\GL_{2}(\adeles{F})$ es un subconjunto
+			compacto y $c>0$, existen constantes $C$ y $N$ tales
+			que
+			\begin{align*}
+				\left|\phi\bigg(
+				\begin{bmatrix} a & \\ & 1 \end{bmatrix}
+					g\bigg)\right| & \,\leq\,
+					C\left|a\right|^{N}
+			\end{align*}
+			%
+			para toda $g\in\Omega$ y $a\in\ideles{F}$ con $|a|>c$;
+			y
+		\item[(vi)] como funci\'{o}n de $\GLtp_{2}(\bb{R})^{n}$,
+			$\phi$ es $C^{\infty}$ y verifica la ecuaci\'{o}n
+			diferencial
+			\begin{align*}
+				\Delta_{i}\phi\,=\, & -\frac{k_{i}}{2}
+				\left(\frac{k_{i}}{2}\,-\,1\right)\phi
+				\text{ ;}
+			\end{align*}
+		\item[(vii)] $\phi$ es \emph{cuspidal}, es decir,
+			\index{forma automorfa!cuspidal}
+			\begin{align*}
+				\int_{F\backslash\adeles{F}}\,
+				\phi\bigg(
+				\begin{bmatrix} 1 & x \\ & 1 \end{bmatrix}
+					g\bigg)\,dx & \,=\, 0
+			\end{align*}
+			%
+			para casi todo $g$.
+	\end{itemize}
+\end{propoEquivalenciaAutomorfasFormasCuspidales}
+
+% \begin{proof}
+	% Los puntos \textit{(i)}, \textit{(ii)}, \textit{(iii)} y \textit{(v)}
+	% son consecuencia de la invarianza de una forma $f$ respecto de la
+	% acci\'{o}n de $\GL_{2}(F)$. Los puntos restantes se demuestran de
+	% manera similar al caso $F=\bb{Q}$. Para ver \textit{(iv)}, sea
+	% $f\in\spitzH{k}{\frak{N}}$ y sea $\phi_{f}$ la funci\'{o}n ad\'{e}lica
+	% correspondiente. Para ver que satisface \emph{(iv)}, sea
+	% $g_{\infty}=(\lista{g}{n})\in\GLtp_{2}(\bb{R})^{n}$ y sea
+	% $\hhat{\alpha}\in\GL_{2}(\Adfin{F})$ arbitrario. Cada matriz $g_{i}$ se
+	% puede escribir como
+	% \begin{equation}
+		% \label{eq:iwasawa}
+		% g_{i} \,=\,
+		% \begin{bmatrix} u_{i} & \\ & u_{i} \end{bmatrix}
+		% \begin{bmatrix} y^{1/2} & xy^{-1/2} \\ & y^{-1/2} \end{bmatrix}
+		% \begin{bmatrix} \cos(\theta_{i}) & \sin(\theta_{i}) \\
+			% -\sin(\theta_{i}) & \cos(\theta_{i}) \end{bmatrix}
+		% \text{ .}
+	% \end{equation}
+	% %
+	% Entonces, llamando $s=k_{0}-2$,
+	% \begin{align*}
+		% \phi_{f}(g_{\infty},\hhat{\alpha}) & \,=\,
+			% \bigg(\prod_{i=1}^{n}\,
+			% \frac{\det(g_{i})^{m_{i}+k_{i}-1}}{%
+				% j(g_{i},\sqrt{-1})^{k_{i}}}\bigg)\,
+			% f(g_{\infty}\cdot\mathbf{i},
+				% \hhat{\alpha}\Idfin{\cal{O}}) \\
+		% & \,=\,\bigg(\prod_{i=1}^{n}\,\det(g_{i})^{s/2}\bigg)\,
+			% \bigg(\prod_{i=1}^{n}\,
+			% \frac{\det(g_{i})^{k_{i}/2}}{%
+				% j(g_{i},\sqrt{-1})^{k_{i}}}\bigg)\,
+			% f((x_{i}+\sqrt{-1}y_{i})_{i},
+				% \hhat{\alpha}\Idfin{\cal{O}}) \\
+		% & \,=\, \bigg(\prod_{i=1}^{n}\,u_{i}^{s}\bigg)\,
+			% \bigg(\prod_{i=1}^{n}\,y_{i}^{k_{i}/2}\,
+				% e^{\sqrt{-1}k_{i}\theta_{i}}\bigg)\,
+			% f((x_{i}+\sqrt{-1}y_{i})_{i},
+				% \hhat{\alpha}\Idfin{\cal{O}})
+		% \text{ .}
+	% \end{align*}
+	% %
+	% El operador de Casimir $\Delta_{j}$ est\'{a} dado por
+	% \begin{align*}
+		% \Delta_{j} & \,=\,
+			% -y_{j}^{2}\left(\frac{\partial^{2}}{\partial x_{j}^{2}}
+			% \,+\,\frac{\partial^{2}}{\partial y_{j}^{2}}\right)
+			% \,-\, y_{j}
+			% \frac{\partial^{2}}{\partial x_{j}\partial\theta_{j}}
+		% \text{ .}
+	% \end{align*}
+	% %
+	% En la introducci\'{o}n, mencionamos que el factor de automorf\'{\i}a
+	% suele estar definido de una manera levemente distinta (la potencia en
+	% el determinante de la matriz involucrada suele ser $k/2$, en lugar de
+	% algo de la forma $m+k-1$, como en nuestra definici\'{o}n). Esta
+	% diferencia tiene como consecuencia la aparici\'{o}n de un factor
+	% correspondiente a la parte central en la descomposici\'{o}n
+	% \eqref{eq:descomposiciondegldos} de $\GLtp_{2}(\bb{R})$,
+	% $\prod_{i=1}^{n}\,u_{i}^{s}$, que no estar\'{\i}a presente, si
+	% hubi\'{e}semos definido $\phi_{f}$ como en
+	% \eqref{eq:funcionadelicacorrespondienteelipticas}. Aun as\'{\i}, como
+	% se hizo en la introducci\'{o}n, se deduce que $\phi_{f}$ es una
+	% autofunci\'{o}n para $\Delta_{j}$ con autovalor
+	% $-\frac{k_{j}}{2}\Big(\frac{k_{j}}{2}-1\Big)$.
+% \end{proof}
+%
+% \paragraph{Formas automorfas}
+% \input{./secciones/comentarioFormasAutomorfas.tex}
+
+Teniendo en cuenta la correspondencia entre formas cuspidales y formas
+automorfas, si $f\in\spitzH{k}{\frak{N}}$, llamaremos tambi\'{e}n forma de
+Hilbert cuspidal a la correspondiente funci\'{o}n $\phi_{f}$ dada por
+\eqref{eq:funcionadelicacorrespondientedehilbert}.
+
+\subsection{Funciones de cuadrado integrable}%
+	\label{subsec:enlosadelescuadradointegrable}
+Usando el lenguaje ad\'{e}lico, definimos un producto interno
+$\langle f,g\rangle$ para formas cuspidales. Fijamos un sistema de
+representantes $\{\frak{a}\}$ del grupo de clases estrictas de $F$ y denotamos
+por $\hhat{\alpha}$ las matrices dadas por
+\eqref{eq:matrizasociadaaidelematrices}.
+
+Si bien, puede parecer natural definir un producto interno usando el
+isomorfismo \eqref{eq:descomposicioncuspidalesmatrices} y la expresi\'{o}n
+\eqref{eq:productodepeterssongamacero} para los grupos
+$\Gamma_{0}(\frak{N},\frak{a})$, una definici\'{o}n as\'{\i} depender\'{\i}a
+del sistema de representantes de $\pClass{F}$ que parametriza las componentes
+de la variedad $Y_{0}(\frak{N})$. Para llegar a una definici\'{o}n adecuada,
+observamos, en primer lugar, que dicha parametrizaci\'{o}n est\'{a} relacionada
+con una descomposici\'{o}n similar del grupo $\GL_{2}(\adeles{F})$. Por
+aproximaci\'{o}n fuerte (ver tambi\'{e}n
+\S~\ref{sec:cuaternionicasvariedadesdeshimura}),
+\begin{align*}
+	\GL_{2}(\adeles{F}) & \,=\,\bigsqcup_{\frak{a}}\,\centre(\adeles{F})\,
+		\GL_{2}(F)\,\GLtp_{2}(\bb{R})^{n}\,\hhat{\alpha}\Idfin{\cal{O}}
+	\text{ .}
+\end{align*}
+%
+Entonces hay una identificaci\'{o}n
+\begin{equation}
+	\label{eq:variedadmodularycocienteadelico}
+	\centre(\adeles{F})\,\GL_{2}(F)\backslash\GL_{2}(\adeles{F})/
+		K_{\infty}\Idfin{\cal{O}} \,\simeq\,\bigsqcup_{\frak{a}}\,
+			\Gamma_{0}(\frak{N},\frak{a})\backslash\hP^{n}
+		\,=\,Y_{0}(\frak{N})
+	\text{ .}
+\end{equation}
+%
+En segundo lugar, para cada representante $\frak{a}$, si
+$f,g\in\spitzH{k}{\frak{N}}$ el producto interno
+$\langle f_{\frak{a}},g_{\frak{a}}\rangle_{\frak{a}}$ se define en t\'{e}rminos
+de una integral sobre la componente correspondiente de la variedad
+$Y_{0}(\frak{N})$. Del lado ad\'{e}lico, teniendo en cuenta la
+identificaci\'{o}n \eqref{eq:variedadmodularycocienteadelico}, debemos poder
+integrar sobre el cociente
+\begin{math}
+	\centre(\adeles{F})\,\GL_{2}(F)\backslash\GL_{2}(\adeles{F})
+\end{math}~.
+El problema es que, si bien las funciones $\phi_{f}$ y $\phi_{g}$ son
+invariantes por $\GL_{2}(F)$, no es obvio c\'{o}mo obtener a partir de ellas un
+integrando definido m\'{o}dulo el centro $\centre(\adeles{F})$.
+
+Sea $f\in\spitzH{k}{\frak{N}}$ y sea $\phi=\phi_{f}$ la funci\'{o}n definida
+por \eqref{eq:funcionadelicacorrespondientedehilbert}. Seg\'{u}n el \'{\i}tem
+(iv) de la Proposici\'{o}n~\ref{propo:equivalenciaautomorfasformascuspidales},
+sabemos que
+\begin{math}
+	\phi(\tau_{\infty}g)=\Big(\prod_{i=1}^{n}\,\tau_{i}^{k_{0}-2}\Big)\,
+		\phi(g)
+\end{math}~, si $\tau_{\infty}\in\centre(\bb{R})=(\bb{R}^{\times})^{n}$. Pero
+no hemos dicho nada acerca de c\'{o}mo afecta multiplicar por un elemento
+central de la parte no arquimediana. Para poder describir esta acci\'{o}n,
+definimos, para cada $\tau\in\centre(\adeles{F})$ y cada $\phi$, una
+funci\'{o}n $\rho(\tau)\phi$ por
+\begin{align*}
+	\big(\rho(\tau)\phi\big)(g) & \,=\,|\tau|_{\adeles{F}}^{-(k_{0}-2)}\,
+		\phi(\tau g)
+	\text{ ,}
+\end{align*}
+%
+donde $|\tau|_{\adeles{F}}$ denota el valor absoluto del ad\`{e}le $\tau$.%
+\footnote{
+	Recordemos que este valor absoluto est\'{a} dado por
+	$|\tau|_{\adeles{F}}=\prod_{v}\,|\tau_{v}|_{v}$, donde $|\cdot|_{v}$
+	denota el valor absoluto en la completaci\'{o}n $F_{v}$.
+}
+
+Sea $\{\hhat{a}\}\subset\Idfin{F}$ un sistema de representantes de las clases
+en $\pClass{F}$ y sea $\hhat{\tau}\in\Idfin{F}$. Existen
+$\lambda\in F_{+}^{\times}$, $\hhat{r}\in\Idfin{\oka{F}}$ y un representante
+$\hhat{a}$ tales que $\hhat{\tau}=\lambda_{0}\hhat{a}\hhat{r}$, donde
+$\lambda_{0}$ denota la parte finita de $\lambda$. La parte arquimediana la
+denotamos $\lambda_{\infty}$. Entonces, dado que
+\begin{math}
+	\Idfin{\oka{F}}\subset\Idfin{\cal{O}}\cap\centre(\adeles{F})
+\end{math}~, $\phi(\lambda g)=\phi(g)=\phi(g\hhat{r})$,
+$|\lambda|_{\adeles{F}}=1=|\hhat{r}|_{\adeles{F}}$ y $\lambda\gg 0$, podemos
+deducir que
+\begin{align*}
+	\big(\rho(\hhat{\tau})\phi\big)(g) & \,=\,
+		|\lambda_{0}\hhat{a}\hhat{r}|_{\adeles{F}}^{-(k_{0}-2)}\,
+			\phi(\lambda_{0}\hhat{a}\hhat{r}g) \,=\,
+		|\lambda_{\infty}|_{\adeles{F}}^{k_{0}-2}
+			|\hhat{a}|_{\adeles{F}}^{-(k_{0}-2)}\,
+			\phi(\lambda\lambda_{\infty}^{-1}\hhat{a}g\hhat{r}) \\
+	& \,=\,|\norma(\lambda)|^{k_{0}-2}
+		|\hhat{a}|_{\adeles{F}}^{-(k_{0}-2)}\,
+			\phi(\lambda_{\infty}^{-1}\hhat{a}g) \,=\,
+		\signo(\norma(\lambda))^{-(k_{0}-2)}
+		|\hhat{a}|_{\adeles{F}}^{-(k_{0}-2)}\,\phi(\hhat{a}g) \\
+	& \,=\,\big(\rho(\hhat{a})\phi\big)(g)
+	\text{ .}
+\end{align*}
+%
+Si llamamos
+\begin{math}
+	\chi_{\infty}(\tau_{\infty})=\prod_{i=1}^{n}\,
+		\signo(\tau_{i})^{k_{0}-2}
+\end{math}~, entonces, dado $\tau=(\tau_{\infty},\hhat{\tau})$, vale que
+\begin{math}
+	\rho(\tau)=\chi_{\infty}(\tau_{\infty})\rho(\hhat{\tau})
+\end{math}~. De lo anterior, se deduce que la restricci\'{o}n de $\rho$ a la
+parte finita $\Idfin{F}$ es, en otras palabras, una representaci\'{o}n del
+grupo abeliano finito $\pClass{F}$. Podemos concluir que $\spitzH{k}{\frak{N}}$
+se descompone como suma directa de subrepresentaciones irreducibles, cada una
+de grado $1$:%
+\footnote{Ver, por ejemplo, \cite{Etingof} o \cite{SerreScott}}
+\begin{equation}
+	\label{eq:descomposicioncuspidalescuasicaracteres}
+	\spitzH{k}{\frak{N}} \,=\,\bigoplus_{\omega}\,
+		\spitzH{k}{\frak{N},\omega}
+	\text{ ,}
+\end{equation}
+%
+donde
+\begin{math}
+	\omega:\,\ideles{F}\rightarrow\bb{C}^{\times}
+\end{math} es el cuasicar\'{a}cter
+\begin{math}
+	\omega=|\cdot|_{\adeles{F}}^{k_{0}-2}\,\chi_{\infty}\chi_{0}
+\end{math}~, $\chi_{0}$ recorre los caracteres del grupo $\pClass{F}$ y
+\begin{align*}
+	\spitzH{k}{\frak{N},\omega} & \,=\,\Big\{\phi\in\spitzH{k}{\frak{N}}
+		\,:\,\phi(\tau g)=\omega(\tau)\cdot\phi(g)
+			\text{ , si }\tau\in\centre(\adeles{F})
+		\Big\}
+	\text{ .}
+\end{align*}
+%
+Notamos que
+\begin{math}
+	|\omega|=|\cdot|_{\adeles{F}}^{k_{0}-2}
+\end{math} y que
+\begin{math}
+	|\omega|^{-1}\omega=\chi_{\infty}\chi_{0}:\,
+		\ideles{F}\rightarrow S^1
+\end{math} es un car\'{a}cter de $\ideles{F}$ trivial en $F^{\times}$ y en
+$\Idfin{\oka{F}}$. En general, escribiremos $\chi$ para denotar dicho
+car\'{a}cter. Si $\hhat{\tau}\in\Idfin{F}$ y
+\begin{math}
+	\frak{t}=\hhat{\tau}\Adfin{\oka{F}}\,\cap\,F
+\end{math} es el ideal fraccionario determinado por $\hhat{\tau}$, podemos
+definir
+\begin{align*}
+	\chi(\frak{t}) \,:=\,\chi(\hhat{\tau})
+		& \quad\text{y}\quad\omega(\frak{t})\,:=\,\omega(\hhat{\tau})
+	\text{ .}
+\end{align*}
+%
+El valor de $\chi(\frak{t})$ depende \'{u}nicamente de la clase de $\frak{t}$
+en $\pClass{F}$ y
+\begin{math}
+	|\omega(\frak{t})|=\idnorm(\frak{t})^{-(k_{0}-2)}
+\end{math}~, donde $\idnorm(\frak{t})$ denota la norma del ideal.
+%%
+% \{\{\{
+% Observaci\'{o}n al margen. Si $f=(f_{\frak{a}})_{\frak{a}}$ es una forma
+% modular,
+% \begin{align*}
+	% \rho(\hhat{\tau})f(z,\hhat{\alpha}\Idfin{\cal{O}}) & \,:=\,
+		% f(z,\hhat{\tau}\hhat{\alpha}\Idfin{\cal{O}})
+	% \text{ .}
+% \end{align*}
+% %
+% Entonces $\rho(\hhat{\tau})f$ tambi\'{e}n es una forma modular, del mismo peso
+% que $f$. Sea $\frak{t}\subset F$ el ideal correspondiente a $\hhat{\tau}$.
+% Tomando norma reducida, el ideal fraccionario determinado por
+% $\nrd(\hhat{\tau}\hhat{\alpha}\Idfin{\cal{O}})$ es $\frak{t}^{2}\frak{a}$. Sea
+% $\frak{b}$ el \'{u}nico representante de las clases estrictas tal que
+% $[\frak{t}^{2}\frak{a}]=[\frak{b}]$. Por aproximaci\'{o}n fuerte, existe
+% $\gamma\in\GLtp_{2}(F)$ tal que
+% $\gamma\hhat{\tau}\hhat{\alpha}\Idfin{\cal{O}}=\hhat{\beta}\Idfin{\cal{O}}$ y,
+% por lo tanto,
+% \begin{align*}
+	% \big(\rho(\hhat{\tau})f\big)_{\frak{a}}(z) & \,=\,
+		% f(z,\gamma^{-1}\hhat{\beta}\Idfin{\cal{O}})\,=\,
+		% f_{\frak{b}}\operadormatrices{\peso{k}}{\gamma}
+	% \text{ .}
+% \end{align*}
+% %
+% La relaci\'{o}n entre los representantes del grupo de clases estrictas est\'{a}
+% dada por
+% \begin{align*}
+	% \lambda\frak{t}^{2}\frak{a} & \,=\,\frak{b}
+	% \text{ ,}
+% \end{align*}
+% %
+% para alg\'{u}n elemento totalmente positivo $\lambda\gg 0$. La
+% representaci\'{o}n $\rho$ permuta las componentes de $f$ correspondientes a
+% ideales pertenecientes al mismo ``g\'{e}nero''.
+% \}\}\}
+%%
+
+Dado un cuasicar\'{a}cter $\omega:\,\ideles{F}\rightarrow\bb{C}^{\times}$
+(trivial en $F^{\times}$), escribimos $f\in\spitzH{k}{\frak{N},\omega}$, si
+$f\in\spitzH{k}{\frak{N}}$ es tal que $\phi_{f}\in\spitzH{k}{\frak{N},\omega}$.
+Denotamos por $\cuadradointegrables{\omega}$ el espacio de funciones medibles
+$\phi:\,\GL_{2}(\adeles{F})\rightarrow\bb{C}^{\times}$ tales que:%
+\footnote{Comparar con \cite[Ch.~3]{Bump}}
+\begin{itemize}
+	\item[(i)] $\phi(\tau g)=\omega(\tau)\cdot\phi(g)$ para todo
+		$\tau\in\centre(\adeles{F})$,
+	\item[(ii)] $\phi(\gamma g)=\phi(g)$ para toda $\gamma\in\GL_{2}(F)$ y
+	\item[(iii)] $\phi$ es de \emph{cuadrado integrable m\'{o}dulo el %
+		centro}, es decir,
+		\begin{align*}
+			\int_{\centre(\adeles{F})\,\GL_{2}(F)\backslash%
+				\GL_{2}(\adeles{F})}\,|\omega(\det\,g)|^{-1}
+				|\phi(g)|^{2}\,dg & \,<\,\infty
+			\text{ .}
+		\end{align*}
+		%
+\end{itemize}
+%
+Si $\omega=\psi\cdot\chi$ y si $f\in\spitzH{k}{\frak{N},\omega}$, entonces
+$\phi=\phi_{f}$ pertenece a este espacio; lo \'{u}nico que hay que verificar es
+la \'{u}ltima condici\'{o}n. Para ver esto, sean $f_{\frak{a}}$ las componentes
+dadas por el isomorfismo \eqref{eq:descomposicioncuspidalesmatrices}. El
+integrando $|\omega(\det(g))|^{-1}|\phi(g)|^{2}$ es invariante por la
+acci\'{o}n del centro, es decir, por $\rho$, con lo cual, la integral anterior
+est\'{a} bien definida. Llamemos temporariamente
+$\tilde{Y}_{\hhat{\alpha}}(\Idfin{\cal{O}})$ a la componente
+\begin{align*}
+	\tilde{Y}_{\hhat{\alpha}}(\Idfin{\cal{O}}) & \,=\,
+		\centre(\adeles{F})\,\GL_{2}(F)\,\GLtp_{2}(\bb{R})^{n}\,
+			\hhat{\alpha}\Idfin{\cal{O}}
+\end{align*}
+%
+de $\GL_{2}(\adeles{F})$. Con $g_{\infty}\in\GLtp_{2}(\bb{R})^{n}$, $\hhat{u}$
+variando en $\Idfin{\cal{O}}$, $d\theta$ y $d\hhat{u}$ las medidas que cumplen
+$d\theta(\SO{2}^{n})=1$ y $d\hhat{u}(\Idfin{\cal{O}})=1$ y usando la
+descomposici\'{o}n de Iwasawa \eqref{eq:descomposiciondegldos},
+\begin{align*}
+	& \int_{\centre(\adeles{F})\,\GL_{2}(F)\backslash%
+		\tilde{Y}_{\hhat{\alpha}}(\Idfin{\cal{O}})}\,
+		|\omega(\det(g_{\infty}\hhat{\alpha}\hhat{u}))|^{-1}
+		|\phi(g_{\infty},\hhat{\alpha}\hhat{u})|^{2}\,
+		dg_{\infty}\,d\hhat{u} \\
+	& \qquad\,=\, \frac{1}{|\omega(\frak{a})|}\,
+		\int_{\centre(\adeles{F})\,\GL_{2}(F)\backslash%
+		\tilde{Y}_{\hhat{\alpha}}(\Idfin{\cal{O}})}\,
+			\Big|\phi\Big(
+			\left[\begin{smallmatrix}
+				y^{1/2} & xy^{-1/2} \\
+				& y^{-1/2}
+			\end{smallmatrix}\right]\,h(\theta),
+			\hhat{\alpha}\hhat{u}
+			\Big)\Big|^{2}
+		d\mu\,d\theta\,d\hhat{u} \\[5pt]
+	& \qquad\,=\,\idnorm(\frak{a})^{k_{0}-2}\,
+		\int_{\Gamma_{0}(\frak{N},\frak{a})\backslash%
+		\GLtp_{2}(\bb{R})^{n}/\centre(\bb{R})\,\SO{2}^{n}}\,
+		\big|f_{\frak{a}}(x+y\mathbf{i})\big|^{2}\,y^{\peso{k}}\,d\mu
+	\text{ .}
+\end{align*}
+%
+Pero este \'{u}ltimo t\'{e}rmino es finito, porque la forma cuspidal
+$f_{\frak{a}}$ es de cuadrado integrable. Esto demuestra que $\phi_{f}$
+pertenece al espacio $\cuadradointegrables{\omega}$. En realidad,
+$\phi\in\cuadradocuspidales{\omega}$, el subespacio de funciones
+\emph{cuspidales}.%
+\footnote{
+	Ver (vii) de la Proposici\'{o}n~%
+	\ref{propo:equivalenciaautomorfasformascuspidales}
+}
+El producto interno en este espacio est\'{a} dado por
+\begin{equation}
+	\label{eq:peterssonenadelesmatrices}
+	\langle \phi,\phi'\rangle \,:=\,
+	\int_{\centre(\adeles{F})\,\GL_{2}(F)\backslash\GL_{2}(\adeles{F})}\,
+		|\omega(\det\,g)|^{-1}\,\phi(g)\lconj{\phi'(g)}\,dg
+	\text{ ,}
+\end{equation}
+%
+
+Finalmente, observamos que
+\begin{math}
+	\phi(g_{\infty},\hhat{g}) =\sum_{\frak{a}}\,
+		\phi(g_{\infty},\hhat{g})\,
+		[\hhat{\alpha}\Idfin{\cal{O}}](\hhat{g})
+\end{math}~,
+donde $[\hhat{\alpha}\Idfin{\cal{O}}]$ denota la funci\'{o}n
+caracter\'{\i}stica del conjunto $\hhat{\alpha}\Idfin{\cal{O}}$. De esto
+deducimos que, dadas $f,g\in\spitzH{k}{\frak{N},\omega}$, se cumple
+\begin{align*}
+	\langle f,g\rangle & \,\equiv\,\langle\phi_{f},\phi_{g}\rangle\,=\,
+		\sum_{\frak{a}}\,\idnorm(\frak{a})^{k_{0}-2}\,
+		\langle f_{\frak{a}},g_{\frak{a}}\rangle_{\frak{a}}
+	\text{ .}
+\end{align*}
+%
+
+\subsection{Una acci\'{o}n a derecha}%
+	\label{subsec:operadoresdepesokadelesmatrices}
+Ser\'{a} \'{u}til, tambi\'{e}n, traducir y extender la definici\'{o}n de los
+operadores de peso $\peso{k}$ de $\modularH{k}{\frak{N}}$ a funciones
+ad\'{e}licas. Dada $\phi:\,\GL_{2}(\adeles{F})\rightarrow\bb{C}$ y
+$(h,\hhat{\beta})\in\GL_{2}(\adeles{F})$, con $h\in\GL_{2}(\bb{R})^{n}$ y
+$\hhat{\beta}\in\GL_{2}(\Adfin{F})$, definimos
+\begin{equation}
+	\label{eq:operadordepesokenadelesmatrices}
+	\big(\phi\operadormatrices{\peso{k}}{(h,\hhat{\beta})}\big)
+		(g_{\infty},\hhat{\alpha}) \,=\,
+			% \big|\omega(\det(h\hhat{\beta}))\big|^{1/2}\,
+		\bigg(\prod_{i=1}^{n}\,J_{i}(h_{i},\sqrt{-1})^{-1}\bigg)\,
+		\phi(g_{\infty}h^{-1},\hhat{\alpha}\hhat{\beta}^{-1})
+	\text{ .}
+\end{equation}
+%
+Esta expresi\'{o}n define una acci\'{o}n del grupo $\GL_{2}(\Adfin{F})$. La
+propiedad (ii) en la Proposici\'{o}n~%
+\ref{propo:equivalenciaautomorfasformascuspidales} se puede expresar entonces
+\begin{equation}
+	\label{eq:matricesinvariantedepesokadelicas}
+	\phi\operadormatrices{\peso{k}}(1,\hhat{\beta}) \,=\, \phi
+\end{equation}
+%
+para toda $\hhat{\beta}\in\Idfin{\cal{O}}$.
+% (notemos que el peso es irrelevante en esta expresi\'{o}n).
+Si una funci\'{o}n $\phi$ cumple \eqref{eq:matricesinvariantedepesokadelicas}
+con $\hhat{\beta}$ variando en alg\'{u}n subgrupo $K\subset\GL_{2}(\Adfin{F})$,
+decimos que es invariante a derecha por el grupo $K$.
+
+\begin{obsOperadorDePesoKAdjunto}\label{obs:operadordepesokadjunto}
+	En relaci\'{o}n con el producto interno, dado un id\`{e}le finito
+	$\hhat{\pi}\in\GL_{2}(\Adfin{F})$ y dadas
+	$\phi,\phi'\in\cuadradointegrables{\omega}$, se deduce de
+	\eqref{eq:peterssonenadelesmatrices} y de
+	\eqref{eq:operadordepesokenadelesmatrices} que
+	\begin{align*}
+		\langle \phi\operadormatrices{\peso{k}}{(1,\hhat{\pi})},
+			\phi'\rangle
+			& \,=\,|\omega(\det\,\hhat{\pi})|^{-1}\,
+				\langle\phi,\phi'\operadormatrices{\peso{k}}{%
+				(1,\hhat{\pi}^{-1})}\rangle
+			\,=\,\lconj{\chi(\det\,\hhat{\pi})}\,
+			\langle\phi,\phi'\operadormatrices{\peso{k}}{%
+				(1,\hhat{\pi}^\iota)}\rangle
+		\text{ ,}
+	\end{align*}
+	%
+	donde $\chi=|\omega|^{-1}\,\omega$. La \'{u}ltima igualdad es
+	consecuencia de que el conjugado del id\`{e}le $\hhat{\pi}$ est\'{a}
+	dado por $\hhat{\pi}^\iota=\det(\hhat{\pi})\,\hhat{\pi}^{-1}$.
+\end{obsOperadorDePesoKAdjunto}

@@ -1,0 +1,82 @@
+Todo ideal $I\subset B$ tiene asociados dos \'{o}rdenes:
+\begin{align*}
+	\Oizq(I) \,=\,\big\{h\in B\,:\,h\cdot I\subset I\big\}
+		&\quad\text{y}\quad
+	\Oder(I) \,=\,\big\{h\in B\,:\,I\cdot h\subset I\big\}
+	\text{ ,}
+\end{align*}
+%
+su \emph{orden a izquierda} y su \emph{orden a derecha}.\index{orden!izquierda}
+Los conjuntos $\Oizq(I)$ y $\Oder(I)$ son \'{o}rdenes de $B$. Se dice que un
+ideal $I$ es un \emph{ideal a izquierda} de un orden\index{ideal!a izquierda}
+$\cal{O}$, si $\Oizq(I)=\cal{O}$; an\'{a}logamente, $I$ se dice ser un
+\emph{ideal a derecha} de $\cal{O}$, si $\Oder(I)=\cal{O}$; si
+$\Oizq(I)=\Oder(I)=\cal{O}$, se dice que $I$ es un
+\emph{(\cal{O}-)ideal bil\'{a}tero}.\index{ideal!bilatero@bil\'{a}tero}
+
+Dados ideales $I,J\subset B$, el \emph{producto de $I$ con $J$} se define como
+el $R$-m\'{o}dulo generado por los porductos de la forma $a\cdot b$, $a\in I$,
+$b\in J$:\index{producto de ideales}
+\begin{align*}
+	I\cdot J & \,=\,\generado[R]{a\cdot b\,:\,a\in I,\,b\in J}
+	\text{ .}
+\end{align*}
+%
+El producto de ideales es un ideal
+% (basta expresar un elemento cualquiera de $B$ en t\'{e}rminos de una base en
+% $I$ y el neutro $1$ con respecto a una base en $J$ y notar que los productos
+% de elementos de las bases pertenecen al producto).
+% $h=a^k\alpha_k$, $1=1_{B}=b^l\beta_l$, entonces
+% $h=h\cdot 1=a^i b^j\alpha_i\beta_j$.
+y la operaci\'{o}n $(I,J)\mapsto I\cdot J$ es asociativa. Se dice que un
+producto $I\cdot J$ es \emph{coherente}, si $\Oder(I)=\Oizq(J)$.
+\index{producto de ideales!coerente}
+El \emph{(pseudo-)inverso} de un ideal $I$ es el conjunto
+\index{ideal!pseudo-inverso}
+\begin{align*}
+	I^{-1} & \,=\,\big\{h\in B\,:\,I\,h\,I\subset I\big\}
+	\text{ .}
+\end{align*}
+%
+Este conjunto es un ideal de $B$
+% tomar $m\in R$ tal que $mI\subset\cal{O}\subset m^{-1}I$
+y se cumple que:
+\begin{equation}
+	\label{eq:idealpseudoinverso}
+	\Oizq(I^{-1})\,\supset\,\Oder(I)\,\supset\,I^{-1}I
+		\quad\text{y}\quad
+	\Oder(I^{-1})\,\supset\,\Oizq(I)\,\supset\,II^{-1}
+	\text{ .}
+\end{equation}
+%
+Un ideal $I$ se dice \emph{invertible a derecha}, si existe un ideal $J$ tal
+que el producto $I\cdot J$ es coherente y, adem\'{a}s, $I\cdot J=\Oizq(I)$ y,
+en tal caso, decimos que $J$ es un \emph{inverso a derecha} de $I$;
+similarmente, $I$ se dice \emph{invertible a izquierda}, si existe un producto
+coherente $J\cdot I=\Oder(I)$; el ideal $I$ se dice \emph{invertible}, si
+existe un ideal $J$ que es, a la vez, inverso a derecha e inverso a izquierda
+de $I$, es decir, tal que las inclusiones en \eqref{eq:idealpseudoinverso} son
+igualdades, reemplazando $I^{-1}$ por $J$. Un ideal es invertible, si y
+s\'{o}lo si es invertible a derecha y a izquierda.
+
+Un ideal se dice \emph{normal}, si $\Oizq(I)$ y $\Oder(I)$ son maximales; se
+dice \emph{\'{\i}ntegro}, si $I\subset\Oizq(I)$ e $I\subset\Oder(I)$; y se
+dice \emph{principal}, si $I=h\cal{O}'$ e $I=\cal{O}h$, para cierto $h\in B$
+(en ese caso, $\Oizq(I)=\cal{O}$ y $\Oder(I)=\cal{O}'$).
+\index{ideal!normal}\index{ideal!integro@\'{\i}ntegro}\index{ideal!principal}
+
+\begin{obsNormalIntegroPrincipal}\label{obs:normalintegroprincipal}
+	Para garantizar que un ideal $I$ es, respectivamente, principal o
+	\'{\i}ntegro, es suficiente verificar s\'{o}lo una de las dos
+	correspondientes condiciones. Si $h\in B$ y $\cal{O}\subset B$,
+	$\cal{O}h=h\cal{O}'$, donde $\cal{O}'=h^{-1}\cal{O}h$, el orden a
+	izquierda de este ideal es $\cal{O}$ y su orden a derecha es
+	$\cal{O}'$. Si $I\subset\Oizq(I)$, $I\cdot I\subset I$ e
+	$I\subset\Oder(I)$, y viceversa. Lo mismo es cierto en cuanto a la
+	propiedad de un ideal de ser normal: $\Oder(I)$ es maximal, si y
+	s\'{o}lo si $\Oizq(I)$ es maximal.%
+	\footnote{
+		\cite[Satz~12, \S~2]{Deuring}
+	}
+\end{obsNormalIntegroPrincipal}
+

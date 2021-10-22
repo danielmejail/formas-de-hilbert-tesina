@@ -1,0 +1,68 @@
+\section*{\null}
+El objetivo de este trabajo ha sido presentar los fundamentos te\'{o}ricos
+detr\'{a}s de dos m\'{e}todos utilizados para el c\'{a}lculo de formas de
+Hilbert. Estos m\'{e}todos son conocidos como el \emph{m\'{e}todo definido} y
+el \emph{m\'{e}todo indefinido}, debido al uso que hacen de las \'{a}lgebras de
+cuaterniones denominadas \emph{definidas} e \emph{indefinidas},
+respectivamente. Nos hemos enfocado \'{u}nicamente en los puntos que hemos
+considerado m\'{a}s importantes para entender la relevancia y el funcionamiento
+de dichos m\'{e}todos. Hemos intentado responder a la siguientes preguntas:
+?`qu\'{e} es una forma de Hilbert? ?`qu\'{e} quiere decir ``calcular'' en este
+contexto? y ?`c\'{o}mo hacemos para calcular formas de Hilbert?
+
+Vale la pena aclarar que, en cuanto a la \'{u}ltima de estas tres preguntas, el
+``c\'{o}mo'', la respuesta que damos aqu\'{\i} es una respuesta parcial; nos
+hemos restringido a mostrar que nuestros objetos de inter\'{e}s tienen diversas
+realizaciones, siendo algunas de ellas m\'{a}s amenas al estudio mediante
+m\'{e}todos computacionales. No nos hemos detenido, sin embargo, en
+proporcionar una descripci\'{o}n detallada de los algoritmos involucrados en
+estos c\'{a}lculos. Los mismos se pueden hallar en las referencias;
+mencionamos, particularmente, los trabajos \cite{DembeleExplicitOnQQsqrt5,
+DembeleManinSymbols,DembeleDonnellyNontrivial,DembeleVoight,
+GreenbergVoight,VoightComputingOverArbitrary}.
+
+En el Cap\'{\i}tulo~\ref{cap:intro}, mencionamos algunas definiciones
+b\'{a}sicas e intentamos, dentro de lo posible, ilustrar algunos puntos a
+desarrollar en los cap\'{\i}tulos subsiguientes, con el caso del cuerpo de
+n\'{u}meros racionales.
+
+El Cap\'{\i}tulo~\ref{cap:preliminares} est\'{a} dedicado a proporcionar
+resultados generales de la teor\'{\i}a de las \'{a}lgebras de cuaterniones. Nos
+interesar\'{a}, especialmente, entender el caso en el que el cuerpo de base es
+un cuerpo de n\'{u}meros. Para poder tratar este caso, repasamos brevemente el
+lenguaje de los ad\`{e}les y, utilizando esta herramienta, podremos enunciar
+los teoremas de clasificaci\'{o}n (Teorema~\ref{thm:clasificacionglobal}), de
+aproximaci\'{o}n fuerte (Teorema~\ref{thm:aproxfuerte}) y de la norma
+(Teorema~\ref{thm:eichlernorma}). Dada un \'{a}lgebra de cuaterniones y un
+orden en este \'{a}lgebra podemos definir un objeto an\'{a}logo al grupo de
+clases de un cuerpo de n\'{u}meros, el \emph{conjunto} de clases del orden. Los
+elementos de este conjunto son clases de ideales \emph{invertibles} y, en el
+caso de un orden de Eichler, la cantidad de dichas clases es finita. Hacia el
+final del cap\'{\i}tulo enunciamos un resultado que relaciona el conjunto de
+clases de un orden de Eichler con un grupo de clases del cuerpo de base.
+
+En el Cap\'{\i}tulo~\ref{cap:dehilbert}, introducimos las formas de Hilbert
+sobre un cuerpo totalmente real $F$; daremos una definici\'{o}n
+``cl\'{a}sica'', como funciones en el producto $\hP^{n}$ de copias del
+semiplano complejo superior, y una definici\'{o}n ``ad\'{e}lica'', como
+funciones en el grupo $\GL_{2}(\adeles{F})$. Este cap\'{\i}tulo tambi\'{e}n
+tiene por ojetivo introducir los operadores de Hecke y mostrar en qu\'{e}
+sentido es posible diagonalizarlos simult\'{a}neamente y caracterizarlos por
+los sistemas de autovalores asociados. Calcular los espacios de formas
+de Hilbert, se reduce entonces a determinar los posibles sistemas de
+autovalores para los operadores de Hecke.
+
+Los \'{u}ltimos dos cap\'{\i}tulos est\'{a}n dedicados a las formas modulares
+cuaterni\'{o}nicas. En el Cap\'{\i}tulo~\ref{cap:cuaternionicas} definimos
+formas modulares para un \'{a}lgebra de cuaterniones arbitraria y enunciamos la
+correspondencia de Jacquet-Langlands. Finalmente, en el Cap\'{\i}tulo~%
+\ref{cap:metodos}, nos restringimos a las \'{a}lgebras definidas y a las
+\'{a}lgebras indefinidas ramificadas en todos salvo un \'{u}nico lugar
+arquimediano, describiendo en mayor detalle los objetos utiizados en la
+pr\'{a}ctica para calcular efectivamente formas de Hilbert.
+
+\section*{Notaci\'{o}n}
+\input{./secciones/notacion.tex}
+
+\section*{Agradecimientos}
+\input{./secciones/agradecimientos.tex}

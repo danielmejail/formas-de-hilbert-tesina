@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+
+%Page dimensions
+\usepackage{geometry}
+\geometry{a4paper}
+
+\usepackage{graphicx}
+\usepackage{makeidx}
+
+%More packages
+\usepackage{formato_general}
+\usepackage{nombres}
+\usepackage{abreviaciones}
+
+
+\title{C\'{a}lculo de formas de Hilbert}
+\author{Daniel Mejail}
+%\date{} % Activate to display a given date or no date (if empty),
+	% otherwise the current date is printed
+
+\makeindex
+
+\begin{document}
+\maketitle
+
+\section*{Introducci\'{o}n}
+\input{./secciones/intro.tex}
+
+\pagebreak
+
+%--------
+
+\section{Formas modulares de Hilbert}\label{sec:dehilbert}
+\input{./secciones/dehilbertcorta.tex}
+
+\pagebreak
+
+\section{Formas modulares cuaterni\'{o}nicas}\label{sec:cuaternionicas}
+\input{./secciones/cuaternionicas.tex}
+
+\pagebreak
+
+\section{M\'{e}todos para el c\'{a}lculo de formas de Hilbert}\label{sec:metodos}
+\input{./secciones/metodos.tex}
+
+%--------
+
+\pagebreak
+\appendix
+
+\section{\'{A}lgebras de cuaterniones}\label{sec:algsdecuaterniones}
+\input{./secciones/algsdecuaterniones.tex}
+
+%--------
+
+\pagebreak
+\tableofcontents
+
+\pagebreak
+\printindex
+
+\pagebreak
+\begin{thebibliography}{99}
+\input{biblio.tex}
+\end{thebibliography}
+
+\end{document}
+
+

@@ -1,0 +1,40 @@
+#Quaternion Algebras
+
+##Basics of Quaternion Algebras
+###Definitions and examples
+definition; reduced trace and reduced norm
+
+###Classification
+local classification; global classification.
+
+##Orders and Ideals in Quaternion Algebras
+###Some general remarks
+multiplicability of the reduced norm; definition of the dual lattice; the
+different and codifferent of an order; the presence of an involution.
+
+###Some local remarks
+orders in quaternion algebras over local nonarchimedian
+fields; maximal orders are conjugate; invertible ideals and principal ideals;
+Eichler orders and their ideals.
+
+##Adele Groups
+###Definitions and notational convention
+restricted product; ring of adeles; the group of ideles of a quaternion
+algebra.
+
+###Measure
+additive and multiplicative measures; measure on the restricted product;
+measurable and integrable functions; convergence theorems and the product
+formula.
+
+##Orders and Ideals in Quaternion Algebras
+###Some global remarks
+local-global principle for lattices
+Kaplanski's Main Theorem; invertibility and the conjugate
+lattice (under involution); invertibility of the codifferent of Eichler orders;
+(sated) Eichler-order ideals are invertible / locally principal.
+
+###Results regarding reduced norms
+the norm theorem of Eichler; strong approximation; correspondence between
+ideals and ideles; ideal classes and ideal classes; another approximation
+theorem involving reduced norms.

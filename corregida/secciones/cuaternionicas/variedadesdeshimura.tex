@@ -1,0 +1,360 @@
+Sea $F$ un cuerpo de n\'{u}meros totalmente real de grado $[F:\bb{Q}]=n$ y
+sea $B/F$ un \'{a}lgebra de cuaterniones. Cada una de las completaciones
+$F_{v}$ con $v\in\lugares[\infty]{F}$ se identifica con $\bb{R}$ y $B_{v}$
+con un \'{a}lgebra de cuaterniones real. Entonces, o bien
+\begin{math}
+	B_{v}\simeq\MM_{2\times 2}(\bb{R})
+\end{math}
+es un \'{a}lgebra de matrices, o bien $B_{v}\simeq\bb{H}$; en el primer caso,
+decimos que el lugar \emph{$v$ es no ramificado}, o que $B$ no ramifica en $v$,
+y, en el segundo, decimos que \emph{$v$ es ramificado}, o que $B$ ramifica en
+$v$. Sean $\lista{v}{n}$ los lugares arquimedianos de $F$ y supongamos que
+est\'{a}n ordenados de manera que, entre ellos, los lugares en donde $B$
+ramifica son $\lista[r+1]{v}{n}$. Sea $\cal{O}$ un orden de $B$ y sea
+$\ideles{B}$ el grupo de id\`{e}les de $B$. Entonces
+\begin{math}
+	\ideles{B}=\Idinf{B}\times\Idfin{B}
+\end{math}~,
+donde
+\begin{equation}
+	\label{eq:cuaternionesinfinitounidades}
+	\Idinf{B} \,=\,\GL_{2}(\bb{R})^{r}\times (\bb{H}^{\times})^{n-r}
+\end{equation}
+%
+y $\Idfin{B}$ es el producto restringido de $B_{v}^{\times}$ respecto de
+los subgrupos compactos y abiertos $\cal{O}_{v}^{\times}$, donde $v$
+recorre el conjunto de lugares finitos de $F$. Notemos que, si
+en vez de $\cal{O}$, eligi\'{e}semos otro orden $\cal{O}'$ de $B$ en principio
+distinto, por la Proposici\'{o}n \ref{propo:localgloballattices},
+$\cal{O}_{v}=\cal{O}'_{v}$ para casi todo $v\in\lugares[f]{F}$, con lo cual
+obtendr\'{\i}amos la misma \'{a}lgebra $\Idfin{B}$.
+
+Supongamos que $B/F$ es un \'{a}lgebra indefinida distinta del \'{a}lgebra
+de matrices, es decir, $r\geq 1$ y
+\begin{math}
+	B\not\simeq\MM_{2\times 2}(F)
+\end{math}~.
+La acci\'{o}n de $\GL_{2}(\bb{R})$ sobre $\hP^{\pm}$ se extiende a una
+acci\'{o}n de $\Idinf{B}$ sobre el producto cartesiano $(\hP^{\pm})^{r}$: si
+\begin{math}
+	g_{\infty}=(\lista[v_{1}]{g}{v_{n}})\in\Idinf{B}
+\end{math}
+y $z=(\lista{z}{r})\in(\hP^{\pm})^{r}$ definimos
+\begin{equation}
+	\label{eq:acciondeidinf}
+	g_{\infty}\cdot z \,=\, (g_{v_{1}}z_{1},\,\dots,\,g_{v_{r}}z_{r})
+	\text{ .}
+\end{equation}
+%
+Sea
+\begin{math}
+	C^{B}_{\mathbf{i}}\subset\Idinf{B}
+\end{math}
+el estabilizador del punto
+\begin{math}
+	\mathbf{i}=(\sqrt{-1},\,\dots,\,\sqrt{-1})\in(\hP^{\pm})^{r}
+\end{math}~.
+Como la acci\'{o}n \eqref{eq:acciondeidinf} es transitiva, podemos identificar
+$(\hP^{\pm})^{r} =\Idinf{B}/C^{B}_{\mathbf{i}}$ v\'{\i}a
+\begin{align*}
+	& g_{\infty}\in\Idinf{B}\,\mapsto\, g_{\infty}\cdot\mathbf{i}
+	\text{ .}
+\end{align*}
+%
+El subgrupo estabilizador del punto $\mathbf{i}$ viene dado por
+\begin{align*}
+	C^{B}_{\mathbf{i}} & \,=\,\centre(\bb{R})\,
+		\big( \SO{2}^{r}\times
+		(\bb{H}^{1})^{n-r} \big)
+	\text{ ,}
+\end{align*}
+%
+donde
+\begin{math}
+	\centre(\bb{R})=\bb{R}^{\times}\times\,\cdots\,\times\bb{R}^{\times}
+\end{math} --%
+un factor por cada lugar arriba de $\infty$-- es el centro de $\Idinf{B}$,
+\begin{math}
+	\bb{H}^{1}=\{x\in\bb{H}:\conj{x}x=x\conj{x}=1\}
+\end{math}~es el grupo de unidades de norma $1$ en el \'{a}lgebra de Hamilton
+y $\SO{2}$ es el grupo ortogonal especial.
+
+% Sea $K\subset\Idfin{B}$ un subgrupo compacto abierto de los id\`{e}les finitos.
+% Como con ${\GL_{2}}_{/\bb{Q}}$, queremos estudiar un cociente de la forma
+% \begin{align*}
+	% \centre(\adeles{F})B^{\times}\backslash\ideles{B}/C^{B}_{\mathbf{i}}K
+	% \text{ ,}
+% \end{align*}
+% %
+% donde ahora $\ideles{B}$ juega el rol de $\GL_{2}(\adeles{\bb{Q}})$ (los
+% puntos ad\'{e}licos del centro, $\centre(\adeles{F})$, se identifican con
+% el grupo $\ideles{F}$ de ideles de $F$, siendo $B$ un \'{a}lgebra central).
+% 
+Sea $\cal{O}\subset B$ un orden de Eichler. Entonces
+% Por aproximaci\'{o}n fuerte (Teorema \ref{thm:aproxfuerte}), [[NO]]
+\begin{equation}
+	\label{eq:descomposicionidelescuaterniones}
+	\ideles{B} \,=\,\Idinf{B}\,\times\,\Idfin{B}
+		\,=\, \bigsqcup_{g}\,
+		B^{\times}g\Idinf{B}\Idfin{\cal{O}}
+	\text{ ,}
+\end{equation}
+%
+donde $g=(g_{v})_{v}\in\Idfin{B}$ recorre un sistema de representantes en
+correspondencia con el conjunto de clases $\lClass{\cal{O}}$
+--que es finito, seg\'{u}n el Corolario \ref{thm:numerodeclasesfinito}.
+% Ese corolario s\'{\i} depende de aproximaci\'{o}n fuerte
+%
+% Pasando al cociente
+% \begin{align*}
+	% B^{\times}\backslash\Idinf{B}\times\Idfin{B}/
+	% C^{B}_{\mathbf{i}}\Idfin{\cal{O}}
+	% \,\simeq\, & \bigsqcup_{g}\,\Gamma_{g}\backslash (\hP^{\pm})^{r}
+	% \text{ ,}
+% \end{align*}
+% %
+% donde $\Gamma_{g}=g(\Idinf{B}\Idfin{\cal{O}})g^{-1}\cap B^{\times}$ es un
+% subgrupo discreto de $\Idinf{B}$ actuando en $(\hP^{\pm})^{r}$. Dado que
+% $B^{\times}/B_{+}^{\times}\simeq\{\pm\}^{r}$,
+Sea $B_{\infty,+}^{\times}\subset\Idinf{B}$ el subgrupo de elementos cuyas
+coordenadas tienen norma reducida positiva, es decir,
+\begin{equation}
+	\label{eq:cuaternionesinfinitounidadestotalmentepositivas}
+	B_{\infty,+}^{\times} \,=\,
+		\GLtp_{2}(\bb{R})^{r}\times (\bb{H}^{\times})^{n-r}
+		\subset\Idinf{B}
+	\text{ .}
+\end{equation}
+%
+Por \eqref{eq:cuaternionesinfinitounidades},
+\eqref{eq:cuaternionesinfinitounidadestotalmentepositivas} y la igualdad
+\begin{math}
+	\nrd(B^{\times})=F_{(+)}^{\times}
+\end{math}
+(ver el Teorema \ref{thm:eichlernorma}), pasando al cociente en
+\eqref{eq:descomposicionidelescuaterniones}, se deduce, reemplazando
+$\Idinf{B}$ por $B_{\infty,+}^{\times}$ (y $\hP^{\pm}$ por $\hP$), que
+\begin{align*}
+	B^{\times}\backslash
+		\Idinf{B}\times\Idfin{B}/C^{B}_{\mathbf{i}}\Idfin{\cal{O}}
+		& \,\simeq\,B_{+}^{\times}\backslash
+		(\hP^{r}\times (\Idfin{B}/\Idfin{\cal{O}})) \\
+	& \,=\,\bigsqcup_{g}\,\Gamma_{g}\backslash g\hP^{r}
+	\text{ ,}
+\end{align*}
+%
+donde ahora $g$ recorre un sistema de representantes en correspondencia
+con $\pClass{F}$ el grupo de clases estrictas de $F$ y
+\begin{math}
+	\Gamma_{g}=g(\Idinf{B}\Idfin{\cal{O}})g^{-1}\cap B_{+}^{\times}
+\end{math}
+es un subgrupo discreto de $B_{\infty,+}^{\times}$ actuando en $\hP^{r}$.
+Este cociente es la \emph{variedad de Shimura cuaterni\'{o}nica %
+(de nivel $\frak{N}$)}\index{variedad de Shimura}
+asociada a $B$ y al orden de Eichler $\cal{O}$. Es una variedad compleja
+de dimensi\'{o}n $r$ y, salvo que $\#\pClass{F}=1$, no es conexa.
+La denotaremos $\shimura[B]{\frak{N}}$. Si el n\'{u}mero de lugares del
+infinito no ramificados es $r=1$, entonces se obtiene una curva. En general, si
+$B$ es de divisi\'{o}n, $\shimura[B]{\frak{N}}$ es una variedad compacta.
+
+\begin{obsGruposYOrdenesAsociadosAUnaClaseEstricta}%
+	\label{obs:gruposyordenesasociadosaunaclaseestricta}
+	Dado un ideal de $F$, $\frak{a}$, se puede elegir un elemento
+	$\hhat{a}\in\Adfin{\oka{F}}$ tal que
+	\begin{equation}
+		\label{eq:ideleintegroasociado}
+		\frak{a} \,=\,\hhat{a}\Adfin{\oka{F}}\,\cap\,F
+		\text{ .}
+	\end{equation}
+	%
+	Este id\`{e}le est\'{a} determinado salvo una unidad en
+	$\Idfin{\oka{F}}$. Luego, existe $\hhat{\alpha}\in\Idfin{B}$ tal que
+	$\nrd(\hhat{\alpha})=\hhat{a}$, pues la norma reducida es sobreyectiva
+	en las componentes no arquimedeanas. A $\hhat{\alpha}$ le asociamos,
+	una familia de ret\'{\i}culos locales
+	$\Adfin{\cal{O}}_{\hhat{\alpha}}$, un ret\'{\i}culo global
+	$\cal{O}_{\hhat{\alpha}}$ y un grupo $\Gamma_{\hhat{\alpha}}$ de la
+	siguiente manera:
+	\begin{equation}
+		\label{eq:ordenasociadocuaterniones}
+		\Adfin{\cal{O}}_{\hhat{\alpha}} \,=\,
+			\hhat{\alpha}\Adfin{\cal{O}}\hhat{\alpha}^{-1}
+			\text{ ,}\quad
+		\cal{O}_{\hhat{\alpha}}\,=\,\Adfin{\cal{O}}_{\hhat{\alpha}}
+			\,\cap\, B
+			\quad\text{y}\quad
+		\Gamma_{\hhat{\alpha}}\,=\,
+			\cal{O}_{\hhat{\alpha},+}^{\times}\,=\,
+			\cal{O}_{\hhat{\alpha}}^{\times}\cap B_{+}^{\times}
+		\text{ .}
+	\end{equation}
+	%
+	El ret\'{\i}culo $\cal{O}_{\hhat{\alpha}}$ es un orden de Eichler
+	de nivel igual al nivel de $\cal{O}$; ambos \'{o}rdenes son
+	\emph{localmente} conjugados, pero no necesariamente conjugados por un
+	elemento de $B^{\times}$. El grupo $\cal{O}_{\hhat{\alpha},+}^{\times}$
+	es el grupo de unidades ``totalmente positivas'' del orden
+	$\cal{O}_{\hhat{\alpha}}$. Cambiando $\hhat{\alpha}$ por otro elemento
+	perteneciente a la misma clase en
+	\begin{math}
+		B_{+}^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}
+	\end{math}~,
+	se obtiene un orden de $B$ conjugado a $\cal{O}_{\hhat{\alpha}}$ por un
+	elemento de $B_{+}^{\times}$. Por esta raz\'{o}n, utilizaremos,
+	principalmente, un sub\'{\i}ndice $\frak{a}$ en lugar de
+	$\hhat{\alpha}$.
+\end{obsGruposYOrdenesAsociadosAUnaClaseEstricta}
+
+La elecci\'{o}n de los representantes $g$ en la descomposici\'{o}n de
+$\shimura[B]{\frak{N}}$ se puede hacer expl\'{\i}cita en el siguiente sentido.
+En primer lugar, se determina un sistema de representantes de $\pClass{F}$,
+$\{\frak{a}\}_{[\frak{a}]\in\pClass{F}}$. Quedan determinados conjuntos
+\begin{math}
+	\{\hhat{a}\}_{\frak{a}}\subset\Adfin{\oka{F}}
+\end{math}
+y
+\begin{math}
+	\{\hhat{\alpha}\}_{\frak{a}}\subset\Idfin{B}
+\end{math}~,
+los \'{o}rdenes $\cal{O}_{\frak{a}}$ y los grupos $\Gamma_{\frak{a}}$
+seg\'{u}n la Observaci\'{o}n
+\ref{obs:gruposyordenesasociadosaunaclaseestricta}. Realizadas estas
+elecciones, la variedad de Shimura $\shimura[B]{\frak{N}}$ se identifica con
+una uni\'{o}n disjunta de variedades conexas:
+\begin{equation}
+	\label{eq:descomposicionvariedaddeshimuraindefinida}
+\begin{aligned}
+	\shimura[B]{\frak{N}} \,=\,
+		\bigsqcup_{[\frak{a}]\in\pClass{F}}\,
+			B_{+}^{\times}\backslash\big(\hP^{r}\times
+				\hhat{\alpha}\Idfin{\cal{O}}\big)
+		& \,\simeq\,
+		\bigsqcup_{[\frak{a}]\in\pClass{F}}\,
+		\Gamma_{\frak{a}}\backslash\hP^{r} \\
+	B_{+}^{\times}(z,\hhat{\alpha}\Idfin{\cal{O}}) & \,\mapsto\,
+		\Gamma_{\frak{a}}z
+	\text{ .}
+\end{aligned}
+\end{equation}
+%
+Cada una de estas componentes es compacta, lo que implica que
+$\shimura[B]{\frak{N}}$ es compacta.
+
+\begin{obsVariedadDeShimuraEsCompacta}\label{obs:variedaddeshimuraescompacta}
+	De hecho, si
+	\begin{math}
+		\cal{O}_{\hhat{\alpha}}^{1}=
+			\{x\in\cal{O}_{\hhat{\alpha}}\,:\,\nrd(x)=1\}
+	\end{math}~,
+	el cociente
+	$\cal{O}_{\hhat{\alpha}}^{1}\backslash\hP^{r}$ es compacto.
+	Definimos
+	\begin{align*}
+		\adeles{B}^{(1)} \,=\,\big\{x\in\ideles{B}\,:\,
+			|\nrd(x)|_{\adeles{F}}=1\big\}\text{ ,}\quad
+		\adeles{B}^{1} \,=\,\big\{x\in\ideles{B}\,:\,\nrd(x)=1\big\}
+	\end{align*}
+	%
+	y, dado un subgrupo $H\subset\ideles{B}$, subgrupos
+	$H^{(1)}=H\cap\adeles{B}^{(1)}$ y $H^{1}=H\cap\adeles{B}^{1}$.
+	Recordemos, tambi\'{e}n, el siguiente hecho: dados un grupo
+	topol\'{o}gico $G$, un subgrupo abierto $H$ y un subconjunto arbitrario
+	$A\subset G$, el producto $A\cdot H$ y su complemento son abiertos,
+	puedi\'{e}ndose escribir como uniones de aquellas coclases $x\cdot H$
+	que los intersecan:
+	\begin{math}
+		A\cdot H=\bigcup_{x\in A\cdot H}\,x\cdot H
+	\end{math}~y
+	\begin{math}
+		G\setmin\big(A\cdot H\big)=
+			\bigcup_{x\not\in A\cdot H}\,x\cdot H
+	\end{math}~. Ahora, dado que $B$ es un \'{a}lgebra indefinida,
+	$\lugares[\infty]{F}$ contiene, al menos, un lugar en donde el
+	\'{a}lgebra no ramifica. En particular, por aproximaci\'{o}n fuerte
+	(Teorema~\ref{thm:aproxfuerte}), el producto $B^{1}\cdot\Adinf{B}^{1}$
+	es denso en $\adeles{B}^{1}$ y, puesto que
+	\begin{math}
+		\Adinf{B}^{1}\,\Adfin{\cal{O}}^{1}_{\hhat{\alpha}}=
+			\adeles{B}^{1}\cap\big(B^{\times}_{\infty,+}\,
+				\Idfin{\cal{O}}_{\hhat{\alpha}}\big)
+	\end{math}
+	es un subgrupo abierto de $\adeles{B}^{1}$, el complemento
+	\begin{math}
+		\adeles{B}^{1}\setmin B^{1}\cdot\big(\Adinf{B}^{1}\,
+			\Adfin{\cal{O}}^{1}_{\hhat{\alpha}}\big)
+	\end{math}
+	es abierto y
+	\begin{align*}
+		\adeles{B}^{1} & \,=\, B^{1}\Adinf{B}^{1}
+			\Adfin{\cal{O}}^{1}_{\hhat{\alpha}}
+		\text{ .}
+	\end{align*}
+	%
+	En consecuencia, la aplicaci\'{o}n $\adeles{B}^{1}\rightarrow\hP^{r}$
+	dada por $g=(g_{\infty},\hhat{g})\mapsto g_{\infty}\cdot\mathbf{i}$
+	induce una correspondencia
+	\begin{align*}
+		B^{1}\backslash\adeles{B}^{1}/K_{\infty}
+			\Adfin{\cal{O}}^{1}_{\hhat{\alpha}} & \,\simeq\,
+			\cal{O}^{1}_{\hhat{\alpha}}\backslash\hP^{r}
+		\text{ ,}
+	\end{align*}
+	%
+	donde $K_{\infty}=\SO{2}^{r}\times(\bb{H}^{1})^{n-r}$ es el subgrupo
+	compacto maximal en $\Adinf{B}^{1}$. Ahora, como $B$ es de
+	divisi\'{o}n, el cociente $B^{\times}\backslash\adeles{B}^{(1)}$ es
+	compacto.%
+	\footnote{
+		\cite[Ch.~III, \S~1]{Vigneras}
+		%(teorema de Fujisaki)
+	}
+	El subgrupo
+	\begin{math}
+		B^{(1)}_{\infty,+}\,\Idfin{\cal{O}}_{\hhat{\alpha}}=
+			\adeles{B}^{(1)}\cap\big(B^{\times}_{\infty,+}\,
+				\Idfin{\cal{O}}_{\hhat{\alpha}}\big)
+	\end{math}
+	es abierto, lo que implica que
+	\begin{math}
+		W=\adeles{B}^{(1)}\setmin B^{\times}\cdot\big(
+			B^{(1)}_{\infty,+}\,
+				\Idfin{\cal{O}}_{\hhat{\alpha}}\big)
+	\end{math}
+	sea abierto. En particular, $B^{\times}\backslash W$ es abierto en el
+	cociente y su complemento,
+	\begin{math}
+		B^{\times}\backslash B^{\times}\cdot\big(B^{(1)}_{\infty,+}\,
+			\Idfin{\cal{O}}_{\hhat{\alpha}}\big)
+	\end{math}
+	es compacto. Pero
+	\begin{math}
+		B_{\infty,+}^{(1)}=
+			\big(\centre(\bb{R})\cap\adeles{B}^{(1)}\big)\cdot
+				B_{\infty}^{1}
+	\end{math}
+	y, a fin de cuentas,
+	\begin{align*}
+		\big(\centre(\bb{R})\cap\adeles{B}^{(1)}\big)\,B^{\times}
+			\backslash B^{\times}\cdot\big(B_{\infty,+}^{(1)}\,
+				\Idfin{\cal{O}}_{\hhat{\alpha}}\big)/
+				K_{\infty}\Idfin{\cal{O}}_{\hhat{\alpha}}
+			& \,=\,
+			B^{1}\backslash B^{1}\cdot\big(\Adinf{B}^{1}\,
+				\Adfin{\cal{O}}^{1}_{\hhat{\alpha}}\big)/
+				K_{\infty}\Adfin{\cal{O}}^{1}_{\hhat{\alpha}}
+	\end{align*}
+	%
+	es compacto.
+\end{obsVariedadDeShimuraEsCompacta}
+
+Cuando $B/F$ es un \'{a}lgebra definida, $r=0$, no tenemos una acci\'{o}n sobre
+$\hP$ y el cociente ad\'{e}lico
+\begin{math}
+	B^{\times}\backslash\Idinf{B}\times\Idfin{B}/\Idinf{B}\Idfin{\cal{O}}=
+	B^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}
+\end{math}
+es simplemente un conjunto finito de puntos en correspondencia con el conjunto
+$\lClass{\cal{O}}$ de clases de ideales cuyo orden a derecha es $\cal{O}$
+(Teorema \ref{thm:numerodeclasesfinito}).
+% En este caso, la variedad de Shimura asociada es una variedad compacta de
+% dimensi\'{o}n $0$, que seguimos denotando $\shimura[B]{\frak{N}}$.

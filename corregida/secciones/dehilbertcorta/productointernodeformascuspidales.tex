@@ -1,0 +1,120 @@
+Dado $z\in\hP^{n}$, definimos
+\begin{math}
+	\Im(z)^{\peso{k}}:=
+		\prod_{i=1}^{n}\,\Im(z_{i})^{k_{i}}
+\end{math}~.
+Sea $\Gamma\subset\GLtp_{2}(F)$ un subgrupo de congruencia y sea
+$f\in\modularH{k}{\Gamma}$. Definimos una funci\'{o}n
+\begin{equation}
+	\label{eq:funcionmodularasociadadehilbert}
+	\varphi(z) \,:=\,f(z)\,\Im(z)^{\peso{k}/2}
+\end{equation}
+%
+y vemos que, si $\gamma\in\Gamma$,
+\begin{align*}
+	\varphi(\gamma z) & \,=\,
+		\bigg(\prod_{i=1}^{n}\frac{j(\gamma_{i},z_{i})^{k_{i}}}%
+		{\det(\gamma_{i})^{m_{i}+k_{i}-1}}\bigg)\, f(z)
+	\prod_{i=1}^{n}\,\frac{\Im(z)^{k_{i}/2}}{|j(\gamma_{i},z_{i})|^k_{i}}\,
+		\det(\gamma_{i})^{k_{i}/2} \\
+	& \,=\, \bigg(\prod_{i=1}^{n}\,\frac{1}{\det(\gamma_{i})^{k_{0}/2-1}}
+	\Big(\frac{j(\gamma_{i},z_{i})}{|j(\gamma_{i},z_{i})|}\Big)^{k_{i}}
+		\bigg)\,f(z)\Im(z)^{\peso{k}/2} \\
+	& \,=\, \frac{1}{\norma(\det\,\gamma)^{k_{0}/2-1}}\,
+	\bigg(\prod_{i=1}^{n}\,\Big(\frac{j(\gamma_{i},z_{i})}{%
+			|j(\gamma_{i},z_{i})|}\Big)^{k_{i}}\bigg)\,\varphi(z)
+	\text{ .}
+\end{align*}
+%
+En particular, como $\det(\gamma)\in\oka{F,+}^{\times}$,
+$\norma(\det\,\gamma)=1$ y $|\varphi(z)|$ es constante en las \'{o}rbitas
+de $\Gamma$ en $\hP^{n}$. Entonces $|\varphi(z)|$ define una funci\'{o}n
+continua en el cociente $\Gamma\backslash\hP^{n}$.
+% Si, adem\'{a}s, $f$ es una
+% forma cuspidal, entonces $|\varphi(z)|$ se extiende por cero a la
+% compactificaci\'{o}n $X(\Gamma)$.
+
+Sean $f,g\in\spitzH{k}{\Gamma}$ dos formas cuspidales y sean $\varphi_{f}$ y
+$\varphi_{g}$ las funciones asociadas a $f$ y a $g$ por
+\eqref{eq:funcionmodularasociadadehilbert}. El producto
+\begin{math}
+	\varphi_{f}\overline{\varphi_{g}}=
+		f(z)\overline{g(z)}\,\Im(z)^{\peso{k}}
+\end{math}
+es $\Gamma$-invariante y acotado en $\hP^{n}$.
+% De acuerdo con la \'{u}ltima afirmaci\'{o}n del p\'{a}rrafo anterior, este
+% producto determina una funci\'{o}n en la variedad $X(\Gamma)$.
+Definimos
+\begin{equation}
+	\label{eq:productodepeterssongamacero}
+	\langle f,g\rangle_{\Gamma}\,:=\,
+		%\frac{1}{\mu\big(\Gamma\backslash\hP^{n}\big)}
+		\int_{\Gamma\backslash\hP^{n}}\,f(z)\overline{g(z)}\,
+		\Im(z)^{\peso{k}}\,d\mu
+	\text{ ,}
+\end{equation}
+%
+donde $d\mu$ es la medida invariante \eqref{eq:medidaenelsemiplanodehilbert}.
+Con respecto a esta medida, $\Gamma\backslash\hP^{n}$ tiene volumen
+finito y la integral anterior define un producto interno en el espacio
+$\spitzH{k}{\Gamma}$ de formas cuspidales que llamamos \emph{producto interno %
+de Petersson}.\index{producto interno de Petersson}%
+\footnote{
+	\cite[Ch.~II]{FreitagForms}
+}
+En particular, las formas cuspidales son de cuadrado integrable:
+\begin{align*}
+	\int_{\Gamma\backslash\hP^{n}}\,|f(z)|^{2}|\Im(z)|^{\peso{k}}
+		\,d\mu & \,<\, \infty
+	\text{ .}
+\end{align*}
+%
+
+\begin{propoPeterssonPropiedades}\label{propo:peterssonpropiedades}
+	Sean $\Gamma'\subset\Gamma$ subgrupos de congruencia y sea
+	$A\in\GLtp_{2}(F)$.
+	\begin{itemize}
+		\item[(i)] si $f\in\spitzH{k}{\Gamma}$ y
+			$g\in\spitzH{k}{A^{-1}\,\Gamma\,A}$, entonces
+			\begin{align*}
+				\langle f\operadormatrices{\peso{k}}{A},
+					g\rangle_{A^{-1}\Gamma A} & \,=\,
+				\langle f,g\operadormatrices{\peso{k}}{A^\iota}
+					\rangle_{\Gamma}
+				\text{ ,}
+			\end{align*}
+			%
+			donde $A^\iota = (\det\,A)\,A^{-1}$;
+		\item[(ii)] si $f,g\in\spitzH{k}{\Gamma}$, entonces
+			$f,g\in\spitzH{k}{\Gamma'}$ y
+			\begin{align*}
+				\langle f,g\rangle_{\Gamma'} & \,=\,
+				|\Gamma:\Gamma'|\,\langle f,g\rangle_{\Gamma}
+				\text{ ;}
+			\end{align*}
+			%
+		\item[(iii)] si $f\in\spitzH{k}{\Gamma}$,
+			$g\in\spitzH{k}{\Gamma'}$ y
+			$\Gamma=\bigsqcup_{i}\,\Gamma'\delta_{i}$ es una
+			descomposici\'{o}n en coclases, entonces
+			\begin{math}
+				h=\sum_{i}\,g\operadormatrices{\peso{k}}{%
+						\delta_{i}}\in
+					\spitzH{k}{\Gamma}
+			\end{math}
+			y
+			\begin{align*}
+				\langle f,h\rangle_{\Gamma} & \,=\,
+					%|\Gamma:\Gamma'|\,
+					\langle f,g\rangle_{\Gamma'}
+				\text{ .}
+			\end{align*}
+			%
+	\end{itemize}
+	%
+\end{propoPeterssonPropiedades}
+
+\begin{proof}
+	Es an\'{a}loga al caso de formas modulares sobre $\bb{Q}$. Se puede
+	consultar, por ejemplo, \cite[\S\S~5.4 y 5.5]{DiamondShurman}.
+\end{proof}

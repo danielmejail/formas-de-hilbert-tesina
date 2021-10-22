@@ -1,0 +1,291 @@
+
+Al igual que las formas modulares el\'{\i}pticas, las funciones
+holomorfas que satisfacen esta condici\'{o}n de invarianza tambi\'{e}n
+admiten un desarrollo de Fourier. Para poder entender esto, necesitamos
+analizar el grupo de isotrop\'{\i}a de la c\'{u}spide en infinito.
+
+Sea $\infty=[1:0]\in\bb{P}^{1}(F)$. Entonces la matriz
+$\gamma=\begin{bmatrix} a & b \\ c & d \end{bmatrix}$ deja fija la
+c\'{u}spide $\infty$ exactamente cuando $c=0$. Es decir,
+\begin{align*}
+	\Gamma_{0}(\frak{N},\frak{a})_{\infty} \,=\, &
+	\left\lbrace
+	\begin{bmatrix} a & b \\ & d \end{bmatrix}\,:\,
+		a,\,d\in\oka{F},\,b\in\frak{a},\,ad\in\oka{F,+}^{\times}
+		\right\rbrace\text{ ,}
+\end{align*}
+%
+cuyos elementos act\'{u}an por $z\mapsto\epsilon z+\mu$, donde
+$\mu\in\frak{a}$ y $\epsilon$ es una unidad totalmente positiva del
+anillo de enteros de $F$. En particular, si
+$f\in\modularH{k}{\frak{N},\frak{a}}$, entonces
+\begin{align*}
+	f(z+\mu) \,=\, & f(z)
+\end{align*}
+%
+para todo $\mu\in\frak{a}$. La funci\'{o}n $f$ admite una expansi\'{o}n
+de Fourier:
+\begin{align*}
+	f(z) \,=\, & \sum_{\nu\in\frak{a}^{\perp}}\,
+	a_{\nu}(f)e^{2\pi i\Tr(\nu z)}
+	\text{ ,}
+\end{align*}
+%
+donde
+\begin{math}
+	\Tr(\nu z):=\nu_{1}z_{1}+\,\cdots\,+\nu_{n}z_{n}
+\end{math}
+y la suma se realiza sobre el ret\'{\i}culo dual de $\frak{a}$ respecto de
+la forma traza. Nos referiremos a los coeficientes $a_{\nu}= a_{\nu}(f)$
+como \emph{los coeficientes de Fourier de $f$}.
+
+Diremos que $f$ es \emph{holomorfa en $\infty$}, si $a_{\nu}(f)\not =0$
+imploca $\nu\gg 0$ o $\nu=0$ y que \emph{se anula en $\infty$}, si,
+adem\'{a}s, $a_{0}(f)=0$.
+
+\begin{obsReticuloDual}[El ret\'{\i}culo dual $\frak{a}^{\perp}$]
+	Recordemos que los elementos de $F$ se pueden ver como
+	vectores en $\bb{R}^{n}$ v\'{\i}a
+	\begin{math}
+		\mu\mapsto(\mu_{1},\,\dots,\,\mu_{n})
+	\end{math} .
+	A trav\'{e}s de esta identificaci\'{o}n, los ideales de $F$ pasan
+	a ser ret\'{\i}culos en $\bb{R}^{n}$ y, dados $\mu,\nu\in F$, la
+	traza $\Tr:\,F\rightarrow\bb{Q}$ del producto $\nu\mu$ est\'{a}
+	dada por
+	\begin{math}
+		\Tr(\nu\mu)=\nu_{1}\mu_{1}+\,\cdots\,+\nu_{n}\mu_{n}
+	\end{math} ,
+	es decir, el producto interno usual de los vectores correspondientes
+	a $\nu$ y a $\mu$. El ret\'{\i}culo dual a $\frak{a}$ es entonces:
+	\begin{align*}
+		\frak{a}^{\perp} & \,=\,
+			\left\lbrace \nu\in F\,:\,\Tr(\nu\mu)\in\bb{Z}\,
+			\forall\mu\in\frak{a}\right\rbrace
+			\,=\,\frak{a}^{-1}\diferente^{-1}
+		\text{ ,}
+	\end{align*}
+	%
+	donde $\diferente=(\oka{F}^{*})^{-1}$ es el diferente (absoluto)
+	de $F$.
+\end{obsReticuloDual}
+
+Veamos que la noci\'{o}n de que una funci\'{o}n como $f$ sea holomorfa y
+que la noci\'{o}n de que se anule en $\infty$ est\'{a}n bien definidas.
+Sea $f$ una funci\'{o}n que
+satisface $f\barra{\peso{k}}{\gamma}=f$ para toda matriz $\gamma$ en alg\'{u}n
+subgrupo $\Gamma\subset\GLtp_{2}(F)$ y sea $A\in\GLtp_{2}(F)$.
+Entonces $f\barra{\peso{k}}{A}$ verifica la misma condici\'{o}n que $f$ con
+$A^{-1}\Gamma A$ en lugar de $\Gamma$. Supongamos que $A$ fija la
+c\'{u}spide en $\infty$. Esto implica que $A$ es de la forma
+$\begin{bmatrix} a & b \\ & d \end{bmatrix}$. Podemos deducir que $f$ es
+invariante por una traslaci\'{o}n $z\mapsto z + \mu$ si y s\'{o}lo si
+$f\barra{\peso{k}}{A}$ es invariante por la traslaci\'{o}n correspondiente
+a $\frac{d}{a}\mu$. En particular, $f$ es invariante por las traslaciones
+en un ret\'{\i}culo $M$, si y s\'{o}lo si $f\barra{\peso{k}}{A}$ es
+invariante por las traslaciones en $\frac{d}{a}M$. En cuanto a los duales,
+$\left(\frac{d}{a}M\right)^{\perp}=\frac{a}{d}M^{\perp}$. En definitiva,
+si $f$ es invariante por $M$,
+\begin{align*}
+	f\barra{\peso{k}}{A}(z) \,=\, &
+	\bigg(\prod_{i=1}^{n}\,\det\,(A_{i})^{m_{i}+k_{i}-1}\bigg)
+	\bigg(\prod_{i=1}^{n}\,(c_{i}z_{i}+d_{i})^{-k_{i}}\bigg)
+	f(Az) \\
+	\,=\, &
+	\bigg(\prod_{i=1}^{n}\,(a_{i}d_{i})^{m_{i}+k_{i}-1}\bigg)
+	\bigg(\prod_{i=1}^{n}\,d_{i}^{-k_{i}}\bigg)
+	\sum_{\nu\in M^{\perp}}\,a_{\nu}(f)
+	e^{2\pi i\Tr(\nu Az)} \\
+	\,=\, & \sum_{\nu\in M^{\perp}}\,Ca_{\nu}(f)
+	e^{2\pi i\Tr(\nu(b/d))}e^{2\pi i\Tr(\nu(a/d)z)}
+	\text{ .}
+\end{align*}
+%
+Vemos que el coenficiente  $a_{\nu}(f\barra{\peso{k}}{A})$ en la
+expansi\'{o}n de Fourier de $f\barra{\peso{k}}{A}$ es igual a
+$Ca_{\frac{d}{a}\nu}(f)$ con $C\not = 0$ (que depende de $\nu$). En
+particular, $a_{\nu}(f\barra{\peso{k}}{A})=0$, si y s\'{o}lo si
+$a_{\frac{d}{a}\nu}(f)=0$. Como el factor $a/d$ es totalmente positivo, se
+deduce que la noci\'{o}n de que $f$ sea holomorfa o se anule en
+$\infty$, est\'{a} bien defnida.
+
+El grupo $\GLtp_{2}(F)$ permuta las c\'{u}spides de
+$X_{0}(\frak{N},\frak{a})$ y toda forma modular de Hilbert para
+$\Gamma_{0}(\frak{N},\frak{a})$ admite un desarrollo en serie de Fourier
+alrededor de cada una de ellas. Si $s$ es una c'{u}spide,
+tomamos $A\in\GLtp_{2}(F)$ tal que $A\infty=s$. Decimos que $f$ es
+holomorfa o que se anula en la c\'{u}spide $s=A\infty\in\bb{P}^{1}(F)$,
+si $f\barra{\peso{k}}{A}$ es holomorfa o, respectivamente, se anula en
+$\infty$. Esto no depende de la matriz $A$ elegida.
+
+Hemos visto que el grupo de isotrop\'{\i}a de la c\'{u}spide en
+infinito consta de dos partes: traslaciones $z\mapsto z+\mu$ por
+elementos $\mu$ de un ideal (fraccionario) de $\oka{F}$ y
+homotecias $z\mapsto \epsilon z$ por unidades totalmente positivas.
+Hasta ahora, solamente analizamos las consecuencias de la invarianza
+por traslaciones. La presencia de las unidades juega un papel
+importante en la teor\'{\i}a de formas de Hilbert:
+
+\begin{teoPrincipioDeKoecher}\label{thm:principiodekoecher}
+	Sea $f:\,\hP^{n}\rightarrow\bb{C}$ una funci\'{o}n holomorfa
+	tal que $f\barra{\peso{k}}{\gamma}=f$ para toda matriz $\gamma$
+	de la forma $\begin{bmatrix} \epsilon & \mu \\ %
+	& \epsilon^{-1} \end{bmatrix}$ con $\mu\in\frak{a}$ y
+	$\epsilon\in\oka{F}^{\times}$. Sean $a_{\nu}$,
+	$\nu\in\frak{a}^{\perp}$, los coeficientes de la correspondiente
+	expansi\'{o}n de Fourier de $f$. Entonces
+	\begin{itemize}
+		\item[i] $a_{\epsilon^{2}\nu} =%
+			\epsilon_{1}^{k_{1}}\,\cdots\,%
+			\epsilon_{n}^{k_{n}}a_{\nu}$ para todo
+			$\nu\in\frak{a}^{-1}\diferente^{-1}$ y
+			$\epsilon\in\oka{F}^{\times}$;
+		\item[ii] $a_{\nu}\not =0\Rightarrow\nu = 0\text{ o }%
+			\nu\gg 0$.
+	\end{itemize}
+\end{teoPrincipioDeKoecher}
+
+Si tomamos $\gamma=\begin{bmatrix} \epsilon & \\ %
+& \epsilon^{-1}\end{bmatrix}$,
+\begin{align*}
+	f\barra{\peso{k}}{\gamma}(z) \,=\, &
+	\prod_{i=1}^{n}\,(\epsilon_{i}^{-1})^{-k_{i}}
+	\sum_{\nu\in\frak{a}^{-1}\diferente^{-1}}\,
+	a_{\nu}e^{2\pi i\Tr(\nu\epsilon^{2}z)}\quad\text{y} \\
+	f(z) \,=\, & \sum_{\nu\in\frak{a}^{-1}\diferente^{-1}}\,
+	a_{\nu}e^{2\pi i\Tr(\nu z)}
+	\text{ ,}
+\end{align*}
+%
+de donde se deduce \textit{i}, comparando los coeficientes de Fourier.
+Para probar \textit{ii}, supongamos que $\nu\in\frak{a}^{-1}%
+\diferente^{-1}$ es tal que $a_{\nu}\not = 0$ y $\nu_{i}<0$.
+Existe $\epsilon\in\oka{F}^{\times}$ con $0<\epsilon_{j}<1$ para
+$j\not =i$, $\Tr(\epsilon\nu)<0$ y, necesariamente, $\epsilon_{i}>1$.
+Evaluando $f(z)=\sum_{\nu}\,a_{\nu}e^{2\pi i\Tr(\nu z)}$ en
+$\mathbf{i}$, como la serie de Fourier de $f$ converge absolutamente,
+la serie
+\begin{align*}
+	\sum_{m\geq 1}\,a_{\nu\epsilon^{2m}}
+	e^{2\pi i\Tr(\nu\epsilon^{2m}\mathbf{i})}
+\end{align*}
+%
+tambi\'{e}n converge absolutamente. Pero, por \textit{i},
+\begin{align*}
+	\sum_{m\geq 1}\,\left|a_{\nu\epsilon^{2m}}
+	e^{2\pi i\Tr(\nu\epsilon^{2m}\mathbf{i})}\right|
+	\,=\, &|a_{\nu}|\sum_{m\geq 1}\,
+	\big(\epsilon_{1}^{k_{1}m}\,\cdots\,\epsilon_{n}^{k_{n}m}\big)
+	e^{-2\pi\Tr(\nu\epsilon^{2m})}
+\end{align*}
+%
+diverge.
+
+Si $f\in\modularH{k}{\frak{N},\frak{a}}$, entonces $f$ es invariante
+por la acci\'{o}n de las matrices
+$\begin{bmatrix} \epsilon & \\ & 1 \end{bmatrix}$ con
+$\epsilon\in\oka{F,+}^{\times}$. En este caso, deducimos tambi\'{e}n
+la igualdad
+\begin{align*}
+	a_{\epsilon\nu} \,=\, & \bigg(\prod_{i=1}^{n}\,
+	\epsilon_{i}^{m_{i}+k_{i}-1}\bigg)a_{\nu}
+	\text{ .}
+\end{align*}
+%
+% Esto implica que $\norma(\epsilon)^{k_{0}-2}=1$ para toda unidad
+% $\epsilon$ del anillo de enteros (pues $\epsilon^{2}\gg 0$), con lo cual
+% $\modularH{k}{\frak{N},\frak{a}}=0$, si $2\nmid k_{0}$ y $\oka{F}$ contiene
+% una unidad cuya norma es negativa.
+%% No, no lo implica, aparece un m\'{o}dulo en la productoria.
+
+\begin{obsPrincipioDeKoecher}
+	Podemos expresar \textit{ii} de la siguiente manera: toda
+	funci\'{o}n holomorfa $f:\,\hP^{n}\rightarrow\bb{C}$ ($n\geq 2$)
+	de peso $\peso{k}$ invariante para $\Gamma_{0}(\frak{N},\frak{a})$
+	es autom\'{a}ticamente holomorfa en las c\'{u}spides.
+	Este es el denominado \emph{principio de Koecher}.
+\end{obsPrincipioDeKoecher}
+
+\begin{defHilbertCuspFormForGamma}
+	Una forma modular $f\in\modularH{k}{\frak{N},\frak{a}}$
+	se dice \emph{forma cuspidal}, si $f\barra{\peso{k}}{A}$ se anula
+	en $\infty$ para toda matriz $A\in\GLtp_{2}(F)$, es decir,
+	el coeficiente de la correspondiente expansi\'{o}n de Fourier
+	es nulo. Las formas cuspidales para $\Gamma_{0}(\frak{N},\frak{a})$
+	constituyen un subespacio de $\modularH{k}{\frak{N},\frak{a}}$
+	que denotamos $\spitzH{k}{\frak{N},\frak{a}}$.
+\end{defHilbertCuspFormForGamma}
+
+\begin{defHilbertModularHilbertCuspForm}
+	Una \emph{forma de Hilbert} de peso $\peso{k}$ y nivel $\frak{N}$
+	es una funci\'{o}n
+	\begin{align*}
+		f\,:\, & (\hP^{\pm})^{n}\,\times\,
+		(\GL_{2}(\Adfin{F})/\Idfin{\cal{O}})\,\rightarrow\,\bb{C}
+	\end{align*}
+	%
+	holomorfa en la primera variable y localmente constante en la
+	segunda tal que $f\barra{\peso{k}}{\gamma}=f$ para toda matriz
+	$\gamma\in\GL_{2}(F)$. Denotamos este espacio con
+	$\modularH{k}{\frak{N}}$.
+\end{defHilbertModularHilbertCuspForm}
+
+Al igual que sucede con las formas modulares para un \'{a}lgebra de
+divisi\'{o}n indefinida, hay un isomorfismo
+%
+	% Una \emph{forma de Hilbert} de peso $\peso{k}$ y nivel $\frak{N}$
+	% es una tira de funciones $f=(f_{\frak{a}})_{\frak{a}}$,
+	% donde $f_{\frak{a}}\in\modularH{k}{\frak{N},\frak{a}}$ es una
+	% forma de Hilbert de peso $\peso{k}$ y nivel $\frak{N}$ para
+	% $\Gamma_{0}(\frak{N},\frak{a})$ y donde $\frak{a}$ recorre un
+	% sistema de representantes de las clases estrictas en
+	% $\pClass{F}$. Al espacio de formas de Hilbert lo denotamos
+	% $\modularH{k}{\frak{N}}$ Por definici\'{o}n,
+\begin{align*}
+	\modularH{k}{\frak{N}} \,\simeq\, & \bigoplus_{\frak{a}}\,
+	\modularH{k}{\frak{N},\frak{a}}
+	\text{ ,}
+	% \text{ .}
+\end{align*}
+%
+donde $\frak{a}$ recorre un sistema de representantes de las clases
+estrictas en $\pClass{F}$.
+
+\begin{defHilbertModularHilbertCuspForm}
+	Una forma de Hilbert $f=(f_{\frak{a}})_{\frak{a}}\in%
+	\modularH{k}{\frak{N}}$ es una \emph{forma cuspidal}, si
+	$f_{\frak{a}}\in\spitzH{k}{\frak{N},\frak{a}}$ para cada
+	representante $\frak{a}$ de las clases estrictas de $F$.
+	Al subespacio de formas cuspidales lo denotamos
+	$\spitzH{k}{\frak{N}}$ y vale
+	\begin{align*}
+		\spitzH{k}{\frak{N}} \,=\, & \bigoplus_{\frak{a}}\,
+		\spitzH{k}{\frak{N},\frak{a}}
+		\text{ .}
+	\end{align*}
+	%
+\end{defHilbertModularHilbertCuspForm}
+
+\begin{obsCuandoNoEsParalelo}
+	Decimos que el peso $\peso{k}$ de una forma modular es
+	\emph{paralelo}, si $\peso{k}=(k,\,\dots,\,k)$ para
+	alg\'{u}n entero $k$. Del \'{\i}tem \textit{i} con $\nu=0$
+	se deduce que, si el peso no es paralelo, entonces toda forma
+	es cuspidal. Si el peso es paralelo, debe ser
+	$\norma(\epsilon)^{k_{0}}=1$ para toda unidad de $\oka{F}$, a
+	menos que $a_{0}=0$, con lo cual, toda forma es cuspidal
+	tambi\'{e}n cuando el peso es paralelo e impar y el anillo de
+	enteros de $F$ contiene una unidad de norma negativa.
+\end{obsCuandoNoEsParalelo}
+
+\begin{teoLaDimEsFinitaHilbert}
+	Dado un ideal \'{\i}ntegro $\frak{N}\subset\oka{F}$ y un peso
+	$\peso{k}$, el espacio de formas modulares $\modularH{k}{\frak{N}}$
+	es de dimensi\'{o}n finita.
+\end{teoLaDimEsFinitaHilbert}
+
+\begin{proof}[Demostraci\'{o}n]
+	Ver [Bruinier], [Freitag] (\S I.6 y cap\'{\i}tulo II) y
+	[van der Geer].
+\end{proof}
+

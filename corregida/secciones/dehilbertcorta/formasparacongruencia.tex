@@ -1,0 +1,573 @@
+Entenderemos por \emph{peso} un vector\index{peso}
+\begin{math}
+	\peso{k}=(\lista{k}{n})\in(\bb{Z}_{\geq 2})^{n}
+\end{math}
+tal que $k_{i}\equiv k_{j}\,(\modulo\,2)$. Dado un peso $\peso{k}$, definimos
+\begin{equation}
+	\label{eq:pesomatrices}
+	k_{0} \,=\,\mathrm{max}_{i}\,k_{i} \text{ ,}\quad
+		m_{i} \,=\,\frac{k_{0} - k_{i}}{2}\quad\text{y}\quad
+		w_{i} \,=\,k_{i}-2
+	\text{ .}
+\end{equation}
+%
+
+\begin{defPesoKInvariante}\label{def:pesokinvariante}
+	Sea $\peso{k}$ un peso y sea
+	\begin{math}
+		J_{i}:\,\GL_{2}(\bb{R})\times\hP^{\pm}\rightarrow\bb{C}
+	\end{math}
+	el factor de automorf\'{\i}a
+	\index{factor de automorfia@factor de automorf\'{\i}a}
+	\begin{equation}
+		\label{eq:factordeautomorfiamatrices}
+		J_{i}(\gamma,z) \,=\, \frac{j(\gamma,z)^{k_{i}}}{%
+			\det(\gamma)^{m_{i}+k_{i}-1}}
+		\text{ .}
+	\end{equation}
+	%
+	Dado un subgrupo $\Gamma\subset\GLtp_{2}(F)$, una funci\'{o}n
+	$f:\,\hP^{n}\rightarrow\bb{C}$ ($n>1$) se dice \emph{de peso %
+	$\peso{k}$ invariante para $\Gamma$}, si, para toda $\gamma\in\Gamma$,
+	satisface
+	\index{peso k invariante@peso $\peso{k}$ invariante}
+	\begin{align*}
+		f(\gamma z) & \,=\,\bigg(
+			\prod_{i=1}^{n}\,J_{i}(\gamma_{i},z_{i})\bigg)\,f(z)
+		\text{ ,}
+	\end{align*}
+	%
+	donde $z=(\lista{z}{n})\in\hP^{n}$ y $\gamma_{i}\in\GL_{2}(\bb{R})$
+	es la matriz que se obtiene aplicando la $i$-\'{e}sima inmersi\'{o}n
+	a las coordenadas de $\gamma$.
+\end{defPesoKInvariante}
+
+Las funciones $J_{i}$ verifican
+\begin{equation}
+	\label{eq:factordeautomorfiacociclomatrices}
+	J_i(\gamma\gamma',z) \,=\,J_i(\gamma,\gamma'z)\,J_i(\gamma',z)
+\end{equation}
+%
+para todo $z\in\hP^{n}$ y todas $\gamma,\gamma'\in\GL_{2}(\bb{R})$.
+
+\begin{defOperadorDePesoKMatrices}\label{def:operadordepesokmatrices}
+	Dada una matriz $\gamma\in\GLtp_{2}(F)$, definimos el \emph{operador %
+	de peso $\peso{k}$} actuando en una funci\'{o}n
+	$f:\,\hP^{n}\rightarrow\bb{C}$ como
+	\begin{equation}
+		\label{eq:matricesoperadordepesok}
+		\big(f\operadormatrices{\peso{k}}{\gamma}\big) (z)\,=\,
+			\bigg(\prod_{i=1}^{n}\,J_{i}(\gamma_{i},z_{i})^{-1}
+			\bigg)\,f(\gamma z)
+		\text{ .}
+	\end{equation}
+	%
+\end{defOperadorDePesoKMatrices}
+
+Entonces, una funci\'{o}n $f$ es de peso $\peso{k}$ invariante para un subgrupo
+de congruencia $\Gamma$, si $f\operadormatrices{\peso{k}}{\gamma}=f$ para toda
+matriz $\gamma\in\Gamma$ y la relaci\'{o}n
+\eqref{eq:factordeautomorfiacociclomatrices} implica que
+\begin{math}
+	\big(f\operadormatrices{\peso{k}}{\gamma}\big)
+		\operadormatrices{\peso{k}}{\gamma'}=
+		f\operadormatrices{\peso{k}}{(\gamma\gamma')}
+\end{math}~. En particular, si $f$ es invariante de peso $\peso{k}$ para un
+subgrupo $\Gamma$, entonces $f\operadormatrices{\peso{k}}{A}$ es de peso
+$\peso{k}$ invariante para el conjugado $A^{-1}\Gamma A$.
+
+\begin{obsEleccionDelFactor}\label{obs:elecciondelfactor}
+	Un comentario acerca de la elecci\'{o}n de los factores
+	\eqref{eq:factordeautomorfiamatrices}. Si $\Gamma\subset\GLtp_{2}(F)$
+	es un subgrupo de congruencia, entonces $\Gamma$ contiene un subgrupo
+	de \'{\i}ndice finito en el grupo de unidades del cuerpo:
+	espec\'{\i}ficamente,
+	\begin{math}
+		|\oka{F}^{\times}:\Gamma\cap\oka{F}^{\times}|<\infty
+	\end{math}~, identificando $x\in F^{\times}$ con
+	\begin{math}
+		\left[\begin{smallmatrix}
+			x & \\ & x
+		\end{smallmatrix}\right]\in
+			\GL_{2}(F)
+	\end{math}~.
+	% \footnote{
+		% Porque, por ejemplo,
+		% $\oka{F}^{\times}\subset\Gamma_{0}(\frak{N},\frak{a})$ y
+		% $\Gamma$ y $\Gamma_{0}(\frak{N},\frak{a}) son conmesurables.
+	% }
+	Consideremos la siguiente variaci\'{o}n de la Definici\'{o}n~%
+	\ref{def:pesokinvariante}. Llamamos \emph{peso} a un par
+	$(\peso{k},\peso{m})$, donde $\peso{k}\in\bb{Z}^{n}$ y
+	$\peso{m}\in\bb{R}^{n}$ y definimos una acci\'{o}n a derecha de
+	$\GLtp_{2}(F)$ en funciones $f:\,\hP^{n}\rightarrow\bb{C}$ torcida por
+	un peso $(\peso{k},\peso{m})$: dada $\gamma\in\GLtp_{2}(F)$ y
+	$z\in\hP^{n}$,
+	\begin{align*}
+		\big(f\operadormatrices{\peso{k},\peso{m}}{\gamma}\big)(z)
+			& \,=\,\bigg(\prod_{i=1}^{n}\,
+				\frac{\det(\gamma_{i})^{k_{i}+m_{i}-1}}{%
+					j(\gamma_{i},z_{i})^{k_{i}}}\bigg)\,
+			f(\gamma\cdot z)
+		\text{ .}
+	\end{align*}
+	%
+	Los elementos centrales
+	\begin{math}
+		x=\left[\begin{smallmatrix}
+			x & \\ & x
+		\end{smallmatrix}\right]\in F^{\times}
+	\end{math} act\'{u}an por multiplicaci\'{o}n por escalares:
+	\begin{math}
+		f\operadormatrices{\peso{k},\peso{m}}{x}=
+			x^{(\peso{k}+2\cdot\peso{m})-2\cdot\peso{1}}\,f
+	\end{math}~, donde
+	\begin{math}
+		x^{(\lista{v}{n})}=\prod_{i}\,x_{i}^{v_{i}}
+	\end{math} y $\peso{1}=(\lista[\null]{1}{\null})$ es el vector de peso
+	$1$ en todas las componentes. Decimos que $f$ es
+	\emph{de peso $(\peso{k},\peso{m})$ invariante para $\Gamma$}, si
+	$f\operadormatrices{\peso{k},\peso{m}}{\gamma}=f$ para toda
+	$\gamma\in\Gamma$. Recuperamos la Definici\'{o}n~%
+	\ref{def:pesokinvariante} eligiendo $m_i=\frac{k_{0}-k_{i}}{2}$, con
+	$k_{0}=\max_{i}\,k_{i}$ y recuperamos la definici\'{o}n usual
+	mencionada en la introducci\'{o}n, determinada por la regla de
+	transformaci\'{o}n \eqref{eq:operadormatricesusual}, tomando
+	$m_i=1-\frac{k_i}{2}$. Notamos que, en ambos casos, $x\in F^{\times}$
+	act\'{u}a por multiplicaci\'{o}n por una potencia de la norma
+	$\norma[F/\bb{Q}](x)$, pues el valor de $k_i+2m_i$ es independiente de
+	de la inmersi\'{o}n $i$. Un peso $(\peso{k},\peso{m})$ tal que
+	$k_i+2m_i$ no depende de $i$ se dice \emph{razonable}.%
+	\footnote{Ver \cite{DembeleLoefflerPacettiNonparitious}.}
+
+	En general, dados un subgrupo de congruencia $\Gamma$ y un peso
+	$(\peso{k},\peso{m})$, las \'{u}nicas funciones de peso
+	$(\peso{k},\peso{m})$ invariantes para $\Gamma$ son las funciones
+	nulas, a menos que el peso sea razonable; esto es consecuencia de que,
+	si $f\operadormatrices{\peso{k},\peso{m}}{\gamma}=f$ para toda
+	$\gamma\in\Gamma$ con $f\not=0$, entonces
+	\begin{math}
+		\varepsilon^{(\peso{k}+2\cdot\peso{m})-2\cdot\peso{1}}=1
+	\end{math} para toda unidad
+	\begin{math}
+		\varepsilon\in U=\Gamma\cap\oka{F}^{\times}
+	\end{math}~, pero $|\oka{F}^{\times}:U|<\infty$ implica que $U$ es un
+	subgrupo de rango m\'{a}ximo en $\oka{F}^{\times}$ y esto, a su vez,
+	fuerza que el valor $k_i+2m_i$ sea independiente de $i$.
+
+	Dos pesos razonables $(\peso{k},\peso{m})$ y $(\peso{k},\peso{m}')$
+	asociados al mismo vector de enteros $\peso{k}$ difieren en un vector
+	constante $\peso{m}-\peso{m}'=h\cdot\peso{1}$, con $h\in\bb{R}$. Si
+	$\gamma\in\GLtp_{2}(F)$, la relaci\'{o}n entre las correspondientes
+	acciones a derecha est\'{a} dada por:
+	\begin{align*}
+		f\operadormatrices{\peso{k},\peso{m}+h\cdot\peso{1}}{\gamma}
+			& \,=\,\norma(\det\,\gamma)^h\,
+				f\operadormatrices{\peso{k},\peso{m}}{\gamma}
+		\text{ .}
+	\end{align*}
+	%
+	En particular, si $\gamma\in\Gamma$ entonces
+	$\det(\gamma)\in\oka{F,+}^{\times}$ y su norma es $1$, con lo que las
+	definiciones de invarianza para un subgrupo de congruencia $\Gamma$ no
+	se ve modificada por aplicar una traslaci\'{o}n constante a la
+	componente $\peso{m}$ del peso.
+	Al pasar a la interpretaci\'{o}n
+	ad\'{e}lica (\S~\ref{sec:dehilbertformasmodulares}), podremos observar
+	que los espacios de formas modulares asociados a pesos
+	$(\peso{k},\peso{m})$ y $(\peso{k},\peso{m}')$ son isomorfos; desde un
+	punto de vista anal\'{\i}tico, no habr\'{a} raz\'{o}n para preferir uno
+	sobre el otro.
+
+	La diferencia surge del lado algebraico, al observar que los subgrupos
+	de congruencia contienen matrices de la forma
+	\begin{math}
+		\left[\begin{smallmatrix}
+			\varepsilon & \\ & 1
+		\end{smallmatrix}\right]
+	\end{math}~, donde $\varepsilon$ es cualquier unidad totalmente
+	positiva perteneciente a cierto subgrupo de \'{\i}ndice finito (rango
+	m\'{a}ximo) en $\oka{F,+}^{\times}$ dependiendo del subgrupo de
+	congruencia. Por ejemplo, supongamos que $f$ verifica
+	\begin{math}
+		f(\gamma\cdot z)=\bigg(\prod_{i=1}^{n}\,
+			\frac{j(\gamma_{i},z_{i})^{k_{i}}}{%
+				\det(\gamma_{i})^{k_{i}/2}}\bigg)\,f(z)
+	\end{math}~, para toda $\gamma\in\Gamma$, entonces, para toda unidad
+	totalmente positiva $\varepsilon$ perteneciente a un subgrupo de
+	\'{\i}ndice finito en $\oka{F,+}^{\times}$, la ecuaci\'{o}n funcional
+	es
+	\begin{math}
+		f(\varepsilon\,z)=\varepsilon^{\peso{k}/2}\,f(z)
+	\end{math}~; si ls enteros $k_{i}$ son impares, aparecen ra\'{\i}ces
+	cuadradas de estas unidades. Si queremos ``corregir'' esto, necesitamos
+	elegir $h$ tal que $k_{i}/2 +h\in\bb{Z}$ para todo $i$; y esto s\'{o}lo
+	se puede hacer, si los $k_{i}$ \emph{tienen todos la misma paridad}.
+	Podemos tomar $h=k_{0}/2 -1$ (y obtenemos el factor en la
+	Definici\'{o}n~\ref{def:pesokinvariante}) o una traslaci\'{o}n de
+	\'{e}ste por cualquier entero $t$: $(k_{0}/2 - 1)+t$. Esto corresponde
+	a tomar pesos de la forma $(\peso{k},\peso{m})$, con
+	$m_{i}=\frac{k_{0}-k_{i}}{2}+t$, $t\in\bb{Z}$ independiente de $i$. La
+	ecuaci\'{o}n funcional que cumple $f$ se lee
+	\begin{align*}
+		f(\varepsilon\,z) & \,=\,\bigg(\prod_{i=1}^{n}\,
+			\varepsilon_{i}^{1-\big(\frac{k_{0}-k_{i}}{2}+t\big)}
+			\bigg)\,f(z)
+		\text{ .}
+	\end{align*}
+	%
+	Con cualquier elecci\'{o}n de entero $t$ (y $h=k_{0}/2 -1 +t$), los
+	vectores $\peso{m}$ son enteros;%
+	\footnote{
+		Ver \cite{DembeleLoefflerPacettiNonparitious} para una
+		discusi\'{o}n m\'{a}s detallada de los pesos.
+	}
+	tomando $t=0$, se consigue que, adem\'{a}s, $m_{i}\geq 0$ para todo
+	$i$ y $m_{j}=0$ para, al menos, alg\'{u}n $j$.
+	% En la introducci\'{o}n, se mencionaron dos posibles convenciones al
+	% momento de definir qu\'{e} se entiende por funci\'{o}n de peso
+	% $\peso{k}$ invariante. Para cada $i\in[\![1,n]\!]$, llamemos,
+	% temporariamente,
+	% $I_{i}:\GL_{2}(\bb{R})\times\hP^{\pm}\rightarrow\bb{C}$ a la
+	% funci\'{o}n dada por la expresi\'{o}n
+	% \begin{equation}
+		% \label{eq:factordeautomorfiamatricesfalso}
+		% I_{i}(\gamma,z) \,=\,\frac{j(\gamma,z)^{k_{i}}}{%
+			% \det(\gamma)^{k_{i}/2}}
+	% \end{equation}
+	% %
+	% y sea $f\doblebarra{\peso{k}}{\gamma}$ el ``operdor de peso
+	% $\peso{k}$'' definido usando \eqref{eq:factordeautomorfiamatricesfalso}
+	% en lugar de \eqref{eq:factordeautomorfiamatrices}.
+\end{obsEleccionDelFactor}
+
+De ahora en adelante, a menos que indiquemos otra cosa, consideraremos
+funciones invariantes en el sentido de la Definici\'{o}n~%
+\ref{def:pesokinvariante}.
+
+Al igual que las formas modulares el\'{\i}pticas, las funciones
+holomorfas que satisfacen esta condici\'{o}n de invarianza tambi\'{e}n
+admiten desarrollos en series de Fourier. Para poder entender esto, necesitamos
+analizar el grupo de isotrop\'{\i}a de la c\'{u}spide en infinito. Nos
+restringimos, en primer lugar, al caso $\Gamma=\Gamma_{0}(\frak{N},\frak{a})$.
+
+Sea $\infty=[1:0]\in\bb{P}^{1}(F)$. Entonces una matriz
+\begin{math}
+	\gamma=\left[\begin{smallmatrix} a & b \\
+		c & d \end{smallmatrix}\right]
+\end{math}
+deja fija la c\'{u}spide $\infty$ exactamente cuando $c=0$. En particular,
+\begin{align*}
+	\Gamma_{0}(\frak{N},\frak{a})_{\infty} & \,=\,\left\lbrace
+		\begin{bmatrix} a & b \\ & d \end{bmatrix}\,:\,
+		a,\,d\in\oka{F},\,b\in\frak{a},\,ad\in\oka{F,+}^{\times}
+		\right\rbrace
+	\text{ ,}
+\end{align*}
+%
+cuyos elementos act\'{u}an por $z\mapsto\epsilon z+\mu$, donde $\mu\in\frak{a}$
+y $\epsilon$ es una unidad totalmente positiva del anillo de enteros de $F$. En
+general, si $\Gamma\subset\GLtp_{2}(F)$ es un subgrupo de congruencia, entonces
+existe un ret\'{\i}culo $M\subset F$ y existe un subgrupo de unidades
+totalmente positivas $V\subset\oka{F,+}^{\times}$ de rango m\'{a}ximo, $n-1$,
+que preservan $M$ y tales que%
+\footnote{
+	Ver \cite[Ch.~I.3]{FreitagForms} o \cite[Ch.~II.1]{vanDerGeerSurfaces}.
+}
+\begin{align*}
+	G(M,V) & \,=\,\bigg\{\begin{bmatrix}\epsilon & \mu \\ & 1\end{bmatrix}
+			\,:\, \mu\in M,\,\epsilon\in V\bigg\}
+		\,\subset\,\Gamma
+\end{align*}
+%
+El subgrupo $G(M,V)$ es isomorfo al producto semidirecto $M\rtimes V$ y es un
+subgrupo del grupo de isotrop\'{\i}a $\Gamma_{\infty}$. El grupo $V$
+podr\'{\i}a ser un subgrupo propio del grupo completo de elementos de $F$
+(necesariamente unidades) totalmente positivos que preservan el ret\'{\i}culo
+$M$. Esto es consecuencia de la conmensurabilidad de los subgrupos de
+congruencia. Toda funci\'{o}n $f:\,\hP^{n}\rightarrow\bb{C}$ de peso $\peso{k}$
+invariante para $\Gamma$ es, pues, invariante por las traslaciones
+$z\mapsto z+\mu$ en un ret\'{\i}culo $M$ y admitir\'{a}, en consecuencia, una
+expansi\'{o}n de Fourier:\index{desarrollo de Fourier}
+\begin{equation}
+	\label{eq:expansiondefourier}
+	f(z) \,=\,\sum_{\nu\in M^{\perp}}\,a_{\nu}(f)\,e^{2\pi i\traza(\nu z)}
+	\text{ ,}
+\end{equation}
+%
+donde $\traza(\nu z):=\nu_{1}z_{1}+\cdots+\nu_{n}z_{n}$ y la suma se realiza
+sobre el ret\'{\i}culo dual de $M$ respecto de la forma traza.
+\index{reticulo@ret\'{\i}culo!dual}
+Nos referiremos a los coeficientes $a_{\nu}= a_{\nu}(f)$ como \emph{los %
+coeficientes de Fourier de $f$}.\index{coeficientes de Fourier}
+Diremos que $f$ es \emph{holomorfa en $\infty$}, si $a_{\nu}(f)\not =0$ implica
+$\nu\gg 0$ o $\nu=0$ y que \emph{se anula en $\infty$}, si, adem\'{a}s,
+$a_{0}(f)=0$.
+\index{holomorfa en infinito@holomorfa en $\infty$}
+\index{se anula en infinito@se anula en $\infty$}
+\index{en infinito@en $\infty$!holomorfa}
+\index{en infinito@en $\infty$!se anula}
+
+\begin{obsReticuloDual}[El ret\'{\i}culo dual $M^{\perp}$]
+	Recordemos que los elementos de $F$ se pueden ver como vectores en
+	$\bb{R}^{n}$ v\'{\i}a $\mu\mapsto(\lista{\mu}{n})$. A trav\'{e}s de
+	esta identificaci\'{o}n, los ideales de $F$ pasan a ser ret\'{\i}culos
+	en $\bb{R}^{n}$ y, dados $\mu,\nu\in F$, la traza
+	$\traza:\,F\rightarrow\bb{Q}$ del producto $\nu\mu$ est\'{a} dada por
+	\begin{math}
+		\traza(\nu\mu)=\nu_{1}\mu_{1}+\,\cdots\,+\nu_{n}\mu_{n}
+	\end{math}~,
+	es decir, el producto interno usual de los vectores correspondientes a
+	$\nu$ y a $\mu$. El ret\'{\i}culo dual a $\frak{a}$ es entonces:
+	\begin{align*}
+		M^{\perp} & \,=\,
+			\left\lbrace \nu\in F\,:\,\traza(\nu\mu)\in\bb{Z}\,
+			\forall\mu\in M\right\rbrace
+		\text{ .}
+	\end{align*}
+	%
+	Si $M=\frak{a}$, entonces
+	$\frak{a}^{\perp}=\frak{a}^{-1}\diferente^{-1}$, donde
+	$\diferente=(\oka{F}^{*})^{-1}$ es el diferente (absoluto) de $F$.
+\end{obsReticuloDual}
+
+Hemos visto que el grupo de isotrop\'{\i}a de la c\'{u}spide en infinito consta
+de dos partes: traslaciones $z\mapsto z+\mu$ por elementos $\mu$ de un
+ret\'{\i}culo en $F$ y homotecias $z\mapsto \epsilon z$ por unidades totalmente
+positivas. Hasta ahora, solamente hemos analizado las consecuencias de la
+invarianza por traslaciones. La presencia de las unidades juega un papel
+importante en la teor\'{\i}a de formas de Hilbert:
+
+\begin{teoPrincipioDeKoecher}\label{thm:principiodekoecher}
+	Sea $M$ un ret\'{\i}culo (completo) en $F$ y sea
+	$V\subset\oka{F,+}^{\times}$ un subgrupo de unidades totalmente
+	positivas, de rango m\'{a}ximo, tales que $\epsilon M=M$. Si
+	$f:\,\hP^{n}\rightarrow\bb{C}$ es una funci\'{o}n holomorfa tal que
+	$f\operadormatrices{\peso{k}}{\gamma}=f$ para toda matriz $\gamma$ de
+	la forma
+	\begin{align*}
+		\gamma & \,=\,\begin{bmatrix} \epsilon & \mu \\
+					& 1 \end{bmatrix}
+	\end{align*}
+	%
+	con $\mu\in M$ y $\epsilon\in V$, entonces
+	\begin{itemize}
+		\item[(i)]
+			\begin{math}
+				a_{\nu\epsilon}(f) =\big(\prod_{i=1}^{n}\,
+					\epsilon_{i}^{m_{i}+k_{i}-1}\big)\,
+					a_{\nu}(f)
+			\end{math}
+			para todo $\nu\in M^{\perp}$ y $\epsilon\in V$;
+		\item[(ii)]
+			\begin{math}
+				a_{\nu}(f)\not =0\Rightarrow\nu = 0\text{ o }
+					\nu\gg 0
+			\end{math}~.
+	\end{itemize}
+	%
+\end{teoPrincipioDeKoecher}
+
+Si tomamos
+\begin{math}
+	\gamma=\begin{bmatrix} \epsilon & \\ & 1\end{bmatrix}
+\end{math}~,
+entonces
+\begin{math}
+	f(z)=\sum_{\nu\in M^{\perp}}\,a_{\nu}e^{2\pi i\traza(\nu z)}
+\end{math}
+y
+\begin{align*}
+	\big(f\operadormatrices{\peso{k}}{\gamma}\big) (z) & \,=\,
+		\bigg(\prod_{i=1}^{n}\,\epsilon_{i}^{m_{i}+k_{i}-1}\bigg)\,
+		\sum_{\nu\in M^{\perp}}\,a_{\nu}e^{2\pi i\traza(\nu\epsilon z)}
+	\text{ ,}
+\end{align*}
+%
+de donde se deduce \textit{(i)}, comparando los coeficientes de Fourier
+($\nu\epsilon\in M^{\perp}$). Para probar \textit{(ii)}, supongamos que
+$\nu\in M^{\perp}$ es tal que $\nu_{1}<0$. Dado que $V$ es de rango $n-1$,
+existe $\epsilon\in V$ con $0<\epsilon_{j}<1$ para $j\not =1$ y,
+necesariamente, $\epsilon_{1}>1$. Evaluando en $\mathbf{i}$, como la serie de
+Fourier de $f$ es absolutamente convergente, tambi\'{e}n lo es
+\begin{math}
+	\sum_{m\geq 1}\,a_{\nu\epsilon^{m}}\,
+		e^{2\pi i\traza(\nu\epsilon^{m}\mathbf{i})}
+\end{math}~.
+Pero, por \textit{(i)},
+\begin{align*}
+	\sum_{m\geq 1}\,\big|a_{\nu\epsilon^{m}}\,
+		e^{2\pi i\traza(\nu\epsilon^{m}\mathbf{i})}\big|
+		& \,=\, \sum_{m\geq 1}\,|a_{\nu}|\,
+		\Big(\prod_{i=1}^{n}\,\epsilon_{i}^{m(m_{i}+k_{i}-1)}\Big)\,
+			e^{-2\pi\traza(\nu\epsilon^{m})}
+	\text{ .}
+\end{align*}
+%
+Fijada alguna constante $\delta>0$ tal que $\delta<|\nu_{1}|$, para $m$
+suficientemente grande, se cumple
+\begin{math}
+	\traza(\nu\epsilon^{m})<\epsilon_{1}^{m}\,(\nu_{1}+\delta)
+\end{math}~.
+En particular, el t\'{e}rmino general de la serie diverge, a menos que
+$a_{\nu}$ sea nulo.
+
+\begin{obsPrincipioDeKoecher}
+	\label{obs:principiodekoecher}
+	Podemos expresar \textit{(ii)} de la siguiente manera: toda funci\'{o}n
+	holomorfa $f:\,\hP^{n}\rightarrow\bb{C}$ ($n>1$) de peso $\peso{k}$
+	invariante para $\Gamma$ es autom\'{a}ticamente holomorfa en $\infty$.
+	Este es el denominado \emph{principio de Koecher}.
+	\index{principio de Koecher}
+\end{obsPrincipioDeKoecher}
+
+\begin{defFormaModularDeHilbertParaCongruencia}%
+	\label{def:formamodulardehilbertparacongruencia}
+	Sea $\Gamma\subset\GLtp_{2}(F)$ un subgrupo de congruencia. Emulando la
+	definici\'{o}n de forma modular el\'{\i}ptica, decimos que una
+	funci\'{o}n $f:\,\hP^{n}\rightarrow\bb{C}$ es una
+	\emph{forma modular de Hilbert de peso $\peso{k}$ para $\Gamma$}, si
+	es holomorfa y satisface:
+	\index{forma modular!de Hilbert}
+	\begin{itemize}
+		\item[(i)] $f$ es de peso $\peso{k}$ invariante para $\Gamma$ y
+		\item[(ii)] $f\operadormatrices{\peso{k}}{A}$ es holomorfa en
+			$\infty$ para toda $A\in\GLtp_{2}(F)$.
+	\end{itemize}
+	%
+	Denotamos por $\modularH{k}{\Gamma}$ el espacio de formas modulares de
+	peso $\peso{k}$ para $\Gamma$.
+\end{defFormaModularDeHilbertParaCongruencia}
+
+\begin{obsDefinicionFormasParaCongruencia}%
+	\label{obs:definicionformasparacongruencia}
+	La condici\'{o}n \textit{(ii)} de la definici\'{o}n anterior tiene
+	sentido: si $\Gamma$ es de congruencia,
+	$A^{-1}\,\Gamma\,A\conmensurable\Gamma$ para toda $A\in\GLtp_{2}(F)$ y
+	la transformada $f\operadormatrices{\peso{k}}{A}$ admite un desarrollo
+	de Fourier en $\infty$. Pero, por la misma raz\'{o}n, el principio de
+	Koecher es v\'{a}lido para el conjugado y la condici\'{o}n
+	\textit{(ii)} es redundante.
+\end{obsDefinicionFormasParaCongruencia}
+
+\begin{defFormaDeHilbertCuspidalParaCongruencia}%
+	\label{def:formadehilbertcuspidalparacongruencia}
+	Una forma modular $f$ de peso $\peso{k}$ invariante para $\Gamma$
+	se dice \emph{forma cuspidal},\index{forma modular!de Hilbert!cuspidal}
+	si $f\operadormatrices{\peso{k}}{A}$ se anula en $\infty$ para toda
+	matriz $A\in\GLtp_{2}(F)$, es decir, el coeficiente
+	$a_{0}\big(f\operadormatrices{\peso{k}}{A}\big)$ de la
+	correspondiente expansi\'{o}n de Fourier es nulo. Las formas cuspidales
+	constituyen un subespacio de $\modularH{k}{\Gamma}$, el cual ser\'{a}
+	denotado por $\spitzH{k}{\Gamma}$.
+\end{defFormaDeHilbertCuspidalParaCongruencia}
+
+Si $\Gamma=\Gamma_{0}(\frak{N},\frak{a})$, escribimos
+$\modularH{k}{\frak{N},\frak{a}}$ y $\spitzH{k}{\frak{N},\frak{a}}$ en lugar de
+$\modularH{k}{\Gamma_{0}(\frak{N},\frak{a})}$ y de
+$\spitzH{k}{\Gamma_{0}(\frak{N},\frak{a})}$, respectivamente.
+
+\begin{obsCuandoNoEsParalelo}\label{obs:cuandonoesparalelo}
+	Decimos que el peso $\peso{k}$ de una forma modular es
+	\emph{paralelo},\index{peso paralelo} si $\peso{k}=(k,\,\dots,\,k)$
+	para alg\'{u}n entero $k$. Del \'{\i}tem \textit{(i)} con $\nu=0$
+	se deduce que, si el peso no es paralelo, entonces toda forma
+	es cuspidal.
+	% Si el peso es paralelo, debe ser
+	% $\norma(\epsilon)^{k_{0}}=1$ para toda unidad de $\oka{F}$, a
+	% menos que $a_{0}=0$, con lo cual, toda forma es cuspidal
+	% tambi\'{e}n cuando el peso es paralelo e impar y el anillo de
+	% enteros de $F$ contiene una unidad de norma negativa.
+\end{obsCuandoNoEsParalelo}
+
+\begin{teoLaDimEsFinita}\label{thm:ladimensionesfinita}
+	El espacio de formas modulares $\modularH{k}{\Gamma}$ es de
+	dimensi\'{o}n finita.
+\end{teoLaDimEsFinita}
+
+\begin{proof}[Demostraci\'{o}n]
+	Ver \cite{BruinierFormsAndApplications},
+	\cite[\S~I.6 y Ch.~II]{FreitagForms} o
+	\cite{vanDerGeerSurfaces}.
+\end{proof}
+
+% \begin{propoDeCongruenciaReticuloYUnidades}%
+	% \label{propo:decongruenciareticuloyunidades}
+	% Sea $\Gamma\subset\GLtp_{2}(F)$ un subgrupo de congruencia. Existe un
+	% ret\'{\i}culo $M\subset F$ y un subgrupo $V\subset\oka{F,+}^{\times}$
+	% de unidades totalmente positivas que preservan $M$ de rango m\'{a}ximo,
+	% tales que $G(M,V)\subset\Gamma$.
+% \end{propoDeCongruenciaReticuloYUnidades}
+% 
+% \begin{proof}
+	% Sea $\Gamma'=\Gamma_{0}(\frak{N},\frak{a})\cap\Gamma$. Consideramos el
+	% subgrupo de matrices triangulares superiores
+	% \begin{align*}
+		% \Delta & \,=\,\bigg\{\begin{bmatrix} 1 & \mu \\
+				% & 1 \end{bmatrix}\,:\,\mu\in F\bigg\}
+			% \,\subset\,\GLtp_{2}(F)
+		% \text{ .}
+	% \end{align*}
+	% %
+	% El subgrupo de traslaciones de $\Gamma_{0}(\frak{N},\frak{a})$ est\'{a}
+	% representado por el subgrupo de matrices triangulares superiores con
+	% $\mu\in\frak{a}$. Abusando de la notaci\'{o}n, denotaremos,
+	% temporariamente, $\frak{a}$ a este subgrupo. Notamos que
+	% $\frak{a}=\Gamma_{0}(\frak{N},\frak{a})\cap\Delta$. Sean
+	% $M=\Gamma\cap\Delta$ y $M'=\Gamma'\cap\Delta$. Al igual que $\frak{a}$,
+	% los grupos $M$ y $M'$ representan traslaciones en $\Gamma$ y en
+	% $\Gamma'$, respectivamente, y son subgrupos aditivos de $F$ (de
+	% $\bb{R}^{n}$). Por otro lado, dado que
+	% $\big|\Gamma_{0}(\frak{N},\frak{a}):\Gamma'\big|$ es finito,
+	% $\big|\frak{a}:\Gamma'\cap\frak{a}\big|$ es finito, tambi\'{e}n. Pero
+	% $\frak{a}$ es un grupo abeliano libre y $\Gamma'\cap\frak{a}=M'$, con
+	% lo que $M'$ tambi\'{e}n es un grupo abeliano libre y del mismo rango
+	% que $\frak{a}$. An\'{a}logamente, $\big|\Gamma:\Gamma'\big|<\infty$
+	% implica $\big|M:\Gamma'\cap M\big|<\infty$, $\Gamma'\cap M=M'$ y $M$ es
+	% un grupo abeliano libre del mismo rango que $M'$ (y, en particular, que
+	% $\frak{a}$). En definitiva, $M$ es un ret\'{\i}culo completo en $F$.
+% 
+	% El grupo $\Gamma_{0}(\frak{N},\frak{a})$ contiene un subgrupo isomorfo
+	% a $\oka{F,+}^{\times}$:
+	% \begin{align*}
+		% U & \,=\,\bigg\{\begin{bmatrix} \epsilon & \\
+			% & 1 \end{bmatrix}\,:\,\epsilon\in\oka{F,+}^{\times}
+			% \bigg\}\,\subset\,\Gamma_{0}(\frak{N},\frak{a})
+		% \text{ .}
+	% \end{align*}
+	% %
+	% Manteniendo la notaci\'{o}n del p\'{a}rrafo anterior, definimos
+	% $V=\Gamma\cap U$ y $V'=\Gamma'\cap U$. La relaci\'{o}n entre los grupos
+	% $\frak{a}$, $M$ y $M'$ es similar a la relaci\'{o}n entre $U$, $V$ y
+	% $V'$: el hecho de que
+	% $\Gamma\conmensurable\Gamma_{0}(\frak{N},\frak{a})$ implica que los
+	% \'{\i}ndices $|U:V'|$ y $|V:V'|$ sean finitos. En particular, como $U$
+	% es un grupo abeliano de rango $n-1$, tambi\'{e}n lo son $V'$ y, por lo
+	% tanto, $V$. Es decir, $V$ se identifica con un subgrupo de unidades
+	% totalmente positivas de rango m\'{a}ximo. Por otro lado, la
+	% relaci\'{o}n
+	% \begin{align*}
+		% \begin{bmatrix} \lambda & \\ & 1 \end{bmatrix}
+			% \begin{bmatrix} 1 & \mu \\ & 1 \end{bmatrix}
+			% \begin{bmatrix} \lambda^{-1} & \\ & 1 \end{bmatrix}
+		% & \,=\,\begin{bmatrix} 1 & \lambda\mu \\ & 1 \end{bmatrix}
+	% \end{align*}
+	% %
+	% muestra que $U$ se identifica con el grupo de elementos totalmente
+	% positivos $\lambda\in F_{+}$ tales que $\lambda\frak{a}=\frak{a}$.
+	% Notemos que cualquier elemento con esta propiedad debe ser una unidad
+	% y, si la matriz correspondiente ha de pertenecer a $\GLtp_{2}(F)$,
+	% entonces debe ser una unidad totalmente positiva. El grupo $V$ se puede
+	% describir, de manera an\'{a}loga, como un subgrupo de unidades
+	% totalmente positivas de rango $n-1$ que preserva el ret\'{\i}culo $M$
+	% (pero $V$ podr\'{\i}a ser un subgrupo propio del grupo de todas las
+	% unidades totalmente positivas que preservan $M$). Dado que
+	% $M=\Gamma\cap\Delta$, si un elemento de $\mu\in M$ se conjuga por un
+	% elemento $\epsilon\in V$, se obtiene un matriz en $\Gamma$ que,
+	% adem\'{a}s, pertenece a $\Delta$: espec\'{\i}ficamente, se obtiene la
+	% matriz correspondiente a la traslaci\'{o}n por $\epsilon\mu$ (conjugar
+	% las matrices se corresponde con aplicar una homotecia, con lo que la
+	% matriz que se obtiene es triangular, con $1$ en la diagonal y
+	% $\epsilon\mu$ en la esquina superior derecha). Por definici\'{o}n,
+	% $\epsilon\mu\in M$.
+% \end{proof}

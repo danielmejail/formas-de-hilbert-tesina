@@ -1,0 +1,360 @@
+A continuaci\'{o}n explicamos brevemente la correspondencia entre las formas
+modulares el\'{\i}pticas ``cl\'{a}sicas'' y sus contrapartes ad\'{e}licas. En
+esta secci\'{o}n, la expresi\'{o}n $f\operadormatrices{k}{\gamma}$ estar\'{a}
+dada por \eqref{eq:operadormatricesusual} con $n=1$.
+
+A una funci\'{o}n $f:\,\hP\rightarrow\bb{C}$, le podemos asociar, bajo ciertas
+condiciones, una nueva funci\'{o}n
+\begin{math}
+	\phi_{f}:\,\GL_{2}(\adeles{\bb{Q}})\rightarrow\bb{C}
+\end{math}~. Una funci\'{o}n definida en $\GL_{2}(\adeles{\bb{Q}})$ se denomina
+\emph{funci\'{o}n ad\'{e}lica}. Si $g\in\GL_{2}(\adeles{\bb{Q}})$, por
+\eqref{eq:aproximacionfuerteintro}, existen $\gamma\in\GL_{2}(\bb{Q})$,
+$g_{\infty}\in\GLtp_{2}(\bb{R})$ y $\hhat{\alpha}\in K_{0}(N)$ tales que
+$g=\gamma g_{\infty}\hhat{\alpha}$. Si $f\operadormatrices{k}{\gamma}=f$ para
+toda $\gamma\in\Gamma_{0}(N)$, entonces
+\begin{equation}
+	\label{eq:funcionadelicacorrespondientesobreq}
+	\phi_{f}(g) \,=\, \det(g_{\infty})^{k/2}j(g_{\infty},i)^{-k}
+		f(g_{\infty}\cdot i)
+\end{equation}
+%
+es independiente de la descomposici\'{o}n
+\begin{math}
+	g=\gamma g_{\infty}\hhat{\alpha}
+\end{math}~. Se puede comprobar que $\phi_f$ verifica \textit{(i)} a
+\textit{(iv)} de la Proposici\'{o}n~\ref{propo:introequivformaglq}. Queremos
+ver qu\'{e} otras propiedades tiene esta funci\'{o}n.
+
+Adem\'{a}s de estas condiciones de invarianza, $\phi_{f}$ satisface ciertas
+condiciones de regularidad. Si $f$ es una funci\'{o}n meromorfa y de peso $k$
+invariante para $\Gamma_{0}(N)$, entonces $f\in\spitz{k}{\Gamma_{0}(N)}$, si y
+s\'{o}lo si la funci\'{o}n $\Gamma_{0}(N)$-invariante $f(z)\,\Im(z)^{k/2}$
+est\'{a} acotada en $\hP$.%
+\footnote{
+	\cite[Ch.~2, \S~1]{MiyakeModular}
+}
+%En general, si $f$ es holomorfa en $\hP$ y de peso $k$
+%invariante y satisface la condici\'{o}n de crecimiento moderado entonces $f$
+%es modular.
+En ese caso, la igualdad
+\begin{align*}
+	\big|\phi_{f}(\gamma g_{\infty}\hhat{\alpha})\big| & \,=\,
+		\big|f(g_{\infty}\cdot i)\,j(g_{\infty},i)^{-k}\,
+			\det(g_{\infty})^{k/2}\big|
+		\,=\, \big|f(z)\,\Im(z)^{k/2}\big|
+\end{align*}
+%
+($z=g_{\infty}\cdot i$) muestra que $\phi_{f}$ est\'{a} acotada.
+Dado que el cociente
+\begin{math}
+	Z(\adeles{\bb{Q}})\,\GL_{2}(\bb{Q})\backslash
+		\GL_{2}(\adeles{\bb{Q}})
+\end{math}
+tiene medida finita,%
+\footnote{
+	El cociente \eqref{eq:curvamodularglqadeles} se identifica con la curva
+	modular $Y_{0}(N)$, que tiene volumen finito, y el grupo
+	$K_{0}(N)\,\SO{2}$ es compacto.
+}
+se deduce que la integral de $|\phi_{f}|^{2}$ sobre este espacio es finita.
+
+Ahora bien, la definici\'{o}n de forma cuspidal est\'{a} dada en t\'{e}rminos
+de las expansiones de Fourier: si $f\in\modular{k}{\Gamma_{0}(N)}$ y
+\begin{math}
+	\sum_{n\geq 0}\,a_{n}(f\operadormatrices{k}{\gamma})\,q^{n}
+\end{math}
+es la expansi\'{o}n de Fourier de $f\operadormatrices{k}{\gamma}$, entonces
+$f$ es cuspidal, si $a_{0}(f\operadormatrices{k}{\gamma})=0$ para toda
+$\gamma\in\GLtp_{2}(\bb{Q})$. Podemos expresar los coeficientes de la siguiente
+manera:
+\begin{align*}
+	a_{n}\big(f\operadormatrices{k}{\gamma}\big) & \,=\,\int_{-1/2}^{1/2}\,
+		\big(f\operadormatrices{k}{\gamma}\big)(z+t)\,
+			e^{-2\pi i n (z+t)}\,dt
+\end{align*}
+%
+para cualquier $z\in\hP$. Para relacionar esto con el comportamiento de la
+funci\'{o}n $\phi_{f}$, tomamos $x\in\adeles{\bb{Q}}$ y
+$g\in\GL_{2}(\adeles{\bb{Q}})$. Sea $\Phi$ la funci\'{o}n
+\begin{align*}
+	\Phi(x) & \,=\,\phi_{f}\left(
+		\left[\begin{matrix} 1 & x \\ & 1 \end{matrix}\right]\,g\right)
+\end{align*}
+%
+y notemos que, si $a\in\bb{Q}$, entonces $\Phi(x+a)=\Phi(x)$. Podemos
+considerarla como funci\'{o}n en el grupo compacto
+$\bb{Q}\backslash\adeles{\bb{Q}}$ y admite una expansi\'{o}n de Fourier:
+\begin{align*}
+	\Phi(x) & \,=\,\sum_{a\in\bb{Q}}\,c_{a}\,\psi(ax)
+	\text{ ,}
+\end{align*}
+%
+donde $\psi$ es un car\'{a}cter de $\adeles{\bb{Q}}$ trivial en $\bb{Q}$.
+El coeficiente $c_{a}$ est\'{a} dado por
+\begin{align*}
+	c_{a} & \,=\,\int_{\bb{Q}\backslash\adeles{\bb{Q}}}\,
+		\phi_{f}\left(
+			\begin{bmatrix} 1 & x \\ & 1 \end{bmatrix}\,g\right)\,
+		\psi(-ax)\,dx
+	\text{ .}
+\end{align*}
+%
+Nos interesa, en particular, $c_{0}$. Sean
+\begin{math}
+	\gamma,\gamma'\in\GL_{2}(\bb{Q})
+\end{math}~,
+\begin{math}
+	g_{\infty},g_{\infty}'\in\GLtp_{2}(\bb{R})
+\end{math}
+y
+\begin{math}
+	\hhat{\alpha},\hhat{\alpha}'\in K_{0}(N)
+\end{math}
+tales que
+\begin{align*}
+	g \,=\,\gamma g_{\infty}\hhat{\alpha} & \quad\text{y}\quad
+	\begin{bmatrix} 1 & x \\ & 1 \end{bmatrix}\,
+		\gamma g_{\infty}\hhat{\alpha} \,=\,
+		\gamma' g_{\infty}'\hhat{\alpha}'
+	\text{ .}
+\end{align*}
+%
+En particular,
+\begin{align*}
+	g_{\infty}' & \,=\,(\gamma_{\infty}')^{-1}
+		\begin{bmatrix} 1 & x_{\infty} \\ & 1 \end{bmatrix}
+		\gamma_{\infty}g_{\infty}
+	\text{ ,}
+\end{align*}
+%
+donde $x_{\infty}$ denota la componente arquimediana de $x$ y
+$\gamma_{\infty}=\inc[\infty](\gamma)\in\GL_{2}(\bb{R})$. Entonces
+\begin{align*}
+	\phi_{f}\left(\begin{bmatrix} 1 & x \\ & 1 \end{bmatrix}
+		\gamma g_{\infty}\hhat{\alpha}\right) & \,=\,
+		\phi_{f}(\gamma' g_{\infty}'\hhat{\alpha}') \,=\,
+		f(g_{\infty}'\cdot i)\,
+			j(g_{\infty}',i)^{-k}\det(g_{\infty}')^{k/2}
+	\text{ .}
+\end{align*}
+%
+Pero esto es igual a
+\begin{align*}
+	&
+	\big(f\operadormatrices{k}{\gamma_{\infty}'^{-1}}\big)
+		\big((\gamma_{\infty}g_{\infty}\cdot i)+x_{\infty}\big)\,
+	j\left(\begin{bmatrix} 1 & x_{\infty} \\ & 1 \end{bmatrix}
+		\gamma_{\infty} g_{\infty},i\right)^{-k}\,
+		\det\left(\begin{bmatrix} 1 & x_{\infty} \\ & 1 \end{bmatrix}
+		\gamma_{\infty} g_{\infty}\right)^{k/2} \\
+	& \qquad\,=\,
+	\big(f\operadormatrices{k}{\gamma_{\infty}'^{-1}}\big)
+		\big((\gamma_{\infty}g_{\infty}\cdot i)+x_{\infty}\big)\,
+		j(\gamma_{\infty} g_{\infty},i)^{-k}\,
+		\det(\gamma_{\infty} g_{\infty})^{k/2}
+	\text{ ,}
+\end{align*}
+%
+por la propiedad de cociclo de $j$ y porque la matriz asociada a $x$ tiene
+determinante $1$. Para recuperar los coeficientes de la expansi\'{o}n de
+$\Phi$, integramos sobre el compacto
+\begin{math}
+	\big[-\frac{1}{2},\frac{1}{2}\big]\times\prod_{p}\,\bb{Z}_{p}
+\end{math}~:
+\begin{align*}
+	c_{0} & \,=\,\int_{\bb{Q}\backslash\adeles{\bb{Q}}}\,
+		\phi_{f}\left(
+			\begin{bmatrix} 1 & x \\ & 1 \end{bmatrix} g\right)\,dx
+		\,=\,C\,\int_{\left[-\frac{1}{2},\frac{1}{2}\right]\times%
+					\prod_{p}\,\bb{Z}_{p}}\,
+		\left(f\operadormatrices{k}{\gamma_{\infty}'^{-1}}\right)
+		\big((\gamma_{\infty}g_{\infty}\cdot i)+x_{\infty}\big)\,dx \\
+	& \,=\,C\,\int_{-1/2}^{1/2}\,
+		f\operadormatrices{k}{\gamma_{\infty}'^{-1}} (z+t)\,dt
+		\,=\,C\,a_{0}(f\operadormatrices{k}{\gamma_{\infty}'^{-1}})
+		\,=\, 0
+\end{align*}
+%
+($C$ es simplemente alguna constante y $z=\gamma_{\infty}g_{\infty}\cdot i$).
+En definitiva, hemos demostrado que la funci\'{o}n $\phi_{f}$ asociada a una
+$f$ cuspidal es \emph{de cuadrado integrable (m\'{o}dulo el centro)}:
+\index{funcion de cuadrado integrable@funci\'{o}n de cuadrado integrable}
+\begin{align*}
+	\int_{Z(\adeles{\bb{Q}})\GL_{2}(\bb{Q})\backslash%
+		\GL_{2}(\adeles{\bb{Q}})}\,|\phi_{f}(g)|^{2}\,dg & \,<\,\infty
+\end{align*}
+%
+y es \emph{cuspidal} en tanto que
+\index{funcion cuspidal@funci\'{o}n cuspidal}
+\begin{align*}
+	\int_{\bb{Q}\backslash\adeles{\bb{Q}}}\,
+		\phi_{f}\left(\begin{bmatrix} 1 & x \\ & 1 \end{bmatrix} g
+			\right)\,dx
+		& \,=\,0
+\end{align*}
+%
+para $g\in\GL_{2}(\adeles{\bb{Q}})$.
+
+Esto no es suficiente para caracterizar la imagen de $\spitz{k}{\Gamma_{0}(N)}$
+por la aplicaci\'{o}n $f\mapsto\phi_{f}$. Para ello, introducimos el operador
+de Casimir. Usando la \emph{descomposici\'{o}n de Iwasawa}, si
+$g_{\infty}\in\GLtp_{2}(\bb{R})$ entonces existen $x,\theta\in\bb{R}$,
+$y,u\in\bb{R}_{>0}$ tales que
+\index{descomposicion de Iwasawa@descomposici\'{o}n de Iwasawa}
+\begin{equation}
+	\label{eq:descomposiciondegldos}
+	g_{\infty} \,=\,\begin{bmatrix} u & \\ & u \end{bmatrix}\,
+		\begin{bmatrix} y^{1/2} & xy^{-1/2} \\
+		& y^{-1/2} \end{bmatrix}\,
+			\begin{bmatrix} \cos\,\theta & \sin\,\theta \\
+			-\sin\,\theta & \cos\,\theta\end{bmatrix}
+	\text{ .}
+\end{equation}
+%
+Teniendo en cuenta esta descomposici\'{o}n, definimos el
+\emph{operador de Casimir} como\index{operador de Casimir}
+\begin{align*}
+	\Delta & \,=\, -y^{2}\left(
+		\frac{\partial^{2}}{\partial x^{2}}+
+		\frac{\partial^{2}}{\partial y^{2}} \right)\,-\,
+		y\frac{\partial^{2}}{\partial x\partial\theta}
+	\text{ .}
+\end{align*}
+%
+La funci\'{o}n $\phi_{f}$ satisface la ecuaci\'{o}n diferencial:
+\begin{align*}
+	\Delta\phi_{f} & \,=\, -\frac{k}{2}\,
+		\left(\frac{k}{2}-1\right)\,\phi_{f}
+	\text{ ,}
+\end{align*}
+%
+es decir, vista como funci\'{o}n en $\GLtp_{2}(\bb{R})$, es $C^{\infty}$ y
+es soluci\'{o}n de esta ecuaci\'{o}n. Dada $g_{\infty}\in\GLtp_{2}(\bb{R})$,
+por \eqref{eq:descomposiciondegldos}, se cumple que
+\begin{equation}
+	\label{eq:funcioncorrespondientefactorizacionelipticas}
+	\phi_{f}(g_{\infty}) \,=\,f(x+iy)\,y^{k/2}\,e^{ik\theta}
+	\text{ .}
+\end{equation}
+%
+Derivando respecto de las variables $x,y,\theta$,
+\begin{align*}
+	\frac{\partial^{2}}{\partial x^{2}}\,\phi_{f}(g_{\infty})
+		& \,=\,\frac{\partial^{2}f}{\partial x^{2}}(x+iy)\,
+			y^{k/2}\,e^{ik\theta}\text{ ,} \\
+	\frac{\partial^{2}}{\partial x\partial\theta}\,\phi_{f}(g_{\infty})
+		& \,=\,\frac{\partial f}{\partial x}(x+iy)\,
+			y^{k/2}(ik)\,e^{ik\theta}\text{ ,} \\
+	\frac{\partial^{2}}{\partial y^{2}}\,\phi_{f}(g_{\infty})
+		& \,=\,\left(\frac{\partial^{2}f}{\partial y^{2}}(x+iy)\,
+			y^{k/2}\,+\,\frac{\partial f}{\partial y}(x+iy)\,
+			k\,y^{k/2-1}\right. \\
+		& \qquad\,+\,\left. f(x+iy)\,
+			\tfrac{k}{2}\,\big(\tfrac{k}{2}-1\big)\,
+			y^{k/2-2}\right)\,e^{ik\theta}
+	\text{ .}
+\end{align*}
+%
+Al ser $f$ una funci\'{o}n holomorfa, se deduce que $\phi_{f}$ es
+autofunci\'{o}n de $\Delta$ con autovalor
+\begin{math}
+	-\frac{k}{2}\left(\frac{k}{2}-1\right)
+\end{math}~.
+
+Diremos que una funci\'{o}n en
+\begin{math}
+	\GL_{2}(\adeles{\bb{Q}})=
+		\GL_{2}(\bb{R})\times\GL_{2}(\Adfin{\bb{Q}})
+\end{math}
+a valores complejos es \emph{suave},
+\index{funcion suave@funci\'{o}n suave en los ad\`{e}les}
+si es $C^{\infty}$ en la primera variable y localmente constante en la segunda.
+
+\begin{propoEquivFormaGLQIntro}[{\cite[\S~3]{GelbartAutomorphicOnAdeles}}]%
+	\label{propo:introequivformaglq}
+	La aplicaci\'{o}n que a una funci\'{o}n $f:\,\hP\rightarrow\bb{C}$
+	le asigna la funci\'{o}n
+	$\phi_{f}:\,\GL_{2}(\adeles{\bb{Q}})\rightarrow\bb{C}$ dada por
+	\begin{equation}
+		\label{eq:funcionadelicacorrespondienteelipticas}
+		\phi_{f}(\gamma g_{\infty}\hhat{\alpha})
+			\,=\,\det(g_{\infty})^{k/2}j(g_{\infty},i)^{-k}\,
+				f(g_{\infty}\cdot i)
+	\end{equation}
+	%
+	determina un isomorfismo entre el espacio de formas cuspidales
+	$\spitz{k}{\Gamma_{0}(N)}$ y el espacio de funciones suaves
+	\begin{math}
+		\phi:\,\GL_{2}(\adeles{\bb{Q}})\rightarrow\bb{C}
+	\end{math}
+	que satisfacen
+	\begin{itemize}
+		\item[(i)] $\phi(\gamma g)=\phi(g)$ para toda
+			$\gamma\in\GL_{2}(\bb{Q})$,
+		\item[(ii)] $\phi(g\hhat{\beta})=\phi(g)$ para toda
+			$\hhat{\beta}\in K_{0}(N)$,
+			%\hhat{\cal{O}}^{\times}$,
+		\item[(iii)] $\phi(gr_{\theta})=e^{ik\theta}\,\phi(g)$ para
+			toda
+			\begin{math}
+				r_{\theta}=
+				\left[\begin{smallmatrix}
+					\cos\,\theta & \sin\,\theta\\[5pt]
+					-\sin\,\theta & \cos\,\theta
+				\end{smallmatrix}\right]
+				\in\SO{2}
+			\end{math}
+			y
+		\item[(iv)] $\phi(\eta g)=\phi(g)$ para toda
+			$\eta\in Z(\adeles{\bb{Q}})$,
+	\end{itemize}
+	%
+	y adem\'{a}s
+	\begin{itemize}
+		\item[(v)] $\phi$ es de \emph{crecimiento moderado}:
+\index{funcion de crecimiento moderado@funci\'{o}n de crecimiento moderado}
+			para todo
+			compacto $\Omega\subset\GL_{2}(\adeles{\bb{Q}})$ y
+			toda $c>0$, existen constantes $C$ y $N$ positivas
+			tales que, para	$g\in\Omega$ y $a\in\ideles{\bb{Q}}$
+			tal que $\left|a\right|>c$
+			\begin{align*}
+				\left|\phi\left(
+					\begin{bmatrix} a & \\ & 1
+						\end{bmatrix} g\right)\right|
+					& \,\leq\,C|a|^{N}
+				\text{ ,}
+			\end{align*}
+			%
+		\item[(vi)] $\phi$, como funci\'{o}n de $\GLtp_{2}(\bb{R})$,
+			es soluci\'{o}n de la ecuaci\'{o}n diferencial
+			\begin{align*}
+				\Delta\phi & \,=\, -\frac{k}{2}
+					\left(\frac{k}{2}-1\right)\phi
+				\text{ ,}
+			\end{align*}
+			%
+		\item[(vii)] $\phi$ es \emph{cuspidal}, es decir,
+			\begin{align*}
+				\int_{\bb{Q}\backslash\adeles{\bb{Q}}}\,
+					\phi\left(\begin{bmatrix} 1 & x \\ & 1
+						\end{bmatrix} g\right)\,dx
+					& \,=\,0
+		  	\end{align*}
+			%
+			para casi todo $g$.
+	\end{itemize}
+	%
+\end{propoEquivFormaGLQIntro}
+
+% \begin{defFormaGLQIntro}\label{thm:defformaglqintro}
+	% Diremos que una funci\'{o}n
+	% \begin{math}
+		% \phi:\,\GL_{2}(\adeles{\bb{Q}})\rightarrow\bb{C}
+	% \end{math}
+	% es una forma modular de peso $k$ y nivel $N$ para
+	% ${\GL_{2}}_{/\bb{Q}}$, si cumple con las condiciones \textit{i} a
+	% \textit{vi}. Diremos que es cuspidal, si adem\'{a}s cumple con
+	% \textit{vii}.
+% \end{defFormaGLQIntro}

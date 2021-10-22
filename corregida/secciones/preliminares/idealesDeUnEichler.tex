@@ -1,0 +1,62 @@
+
+\paragraph{Ideales de un orden de Eichler}
+Queremos ver c\'{o}mo son los ideales de un orden de Eichler. Sea
+$\cal{O}:=\cal{O}_{0}(\pi^{e}R)$ el orden de Eichler est\'{a}ndar de nivel
+$\pi^{e}R$.
+%, como ya mencionamos, el discriminante reducido de $\cal{O}$
+%es $\drd{\cal{O}}=\pi^{e}R$ igual al nivel.
+Recordando que estamos sobre un cuerpo local,
+$\ideales{\cal{O}}=\ppales{\cal{O}}$, con lo cual
+\begin{align*}
+ K^{\times}\backslash\normalizador[B^{\times}]{\cal{O}}/\cal{O}^{\times}
+	\,\simeq\, & \ppales{\cal{O}}/\ppales{R}
+	\,=\, \ideales{\cal{O}}/\ppales{R}
+	\text{ .}
+\end{align*}
+%
+Definimos un elemento $\varpi\in B$ por
+\begin{align*}
+	\varpi\,:=\, & \begin{bmatrix} & 1 \\ \pi^{e} & \end{bmatrix}
+		\text{ .}
+\end{align*}
+%
+El orden de Eichler es igual a la intersecci\'{o}n
+\begin{align*}
+ \cal{O} \,=\, & \MM_{2\times 2}(R)\,\cap\,
+	\varpi^{-1}\MM_{2\times 2}(R)\varpi
+	\text{ .}
+\end{align*}
+%
+Identificando $K$ con las matrices escalares, vemos que $\varpi^{2}=\pi^{e}$
+y que $\varpi$ pertenece a $\cal{N}:=\normalizador[B^{\times}]{\cal{O}}$.
+Sea $I:=\cal{O}\varpi$. Es decir, $\cal{O}\varpi=\varpi\cal{O}$ e $I$ es un
+ideal principal cuyos \'{o}rdenes a izquierda y a derecha coinciden y son
+iguales a $\cal{O}$. Si $e=0$, $I=\cal{O}$. Supongamos que $e\geq 1$.
+
+Sea $\alpha\in\cal{N}$. De acuerdo con la proposici\'{o}n
+???, los \'{o}rdenes $\MM_{2\times 2}(R)$ y su conjugado constituyen el
+\'{u}nico par de \'{o}rdenes maximales cuya intersecci\'{o}n es $\cal{O}$.
+Como conjugar por $\alpha$ estabiliza $\cal{O}$, los elementos del grupo
+$\cal{N}$ permutan los dos \'{o}rdenes y queda determinado un morfismo
+sobreyectivo $\cal{N}\rightarrow C_{2}$ en el grupo c\'{\i}clico de orden
+$2$. El n\'{u}cleo del morfismo est\'{a} incluido en el normalizador
+$\normalizador[B^{\times}]{\MM_{2\times 2}(R)}$, que es igual a
+$K^{\times}\GL_{2}(R)$. Entonces
+\begin{align*}
+ \ker(\cal{N}\rightarrow C_{2}) \,=\, &
+	\normalizador[B^{\times}]{\MM_{2\times 2}(R)}\,\cap\,
+	\varpi^{-1}\normalizador[B^{\times}]{\MM_{2\times 2}(R)}\varpi \\
+ \,=\, & K^{\times}
+	\left(\GL_{2}(R)\,\cap\,\varpi^{-1}\GL_{2}(R)\varpi\right) \\
+ \,=\, & K^{\times}\cal{O}^{\times}
+	\quad\text{y} \\
+	\ideales{\cal{O}}/\ppales{R}\,=\, & \langle\varpi\rangle\,\simeq\,
+	C_{2}
+	\text{ .}
+\end{align*}
+%
+Concluimos, as\'{\i}, que el grupo $\ideales{\cal{O}}$ es abeliano,
+generado por $I=\varpi\cal{O}$ y $P=\pi\cal{O}$ con la \'{u}nica relaci\'{o}n
+$I^{2}=\pi^{e}\cal{O}=P^{e}$. En particular, si $e=0$,
+$\cal{O}=\MM_{2\times 2}(R)$ es maximal y los ideales bil\'{a}teros
+forman un grupo libre generado por $P$.

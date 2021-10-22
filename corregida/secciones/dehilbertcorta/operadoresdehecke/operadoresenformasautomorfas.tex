@@ -1,0 +1,234 @@
+% Un operador de coclase doble es, simplemente, una transformaci\'{o}n
+% determinada por/asociada a un objeto de la forma $K_{1}\hhat{\pi}K_{2}$ y
+% calculada/expresada en t\'{e}rminos de una descomposici\'{o}n de la forma
+% $K_{1}\hhat{\pi}K_{2}=\bigsqcup_{i}\,K_{1}\hhat{\pi}_{i}$.
+%%
+%% NO S\'E SI LLAMAR A ESTOS OPERADORES `DE COCLASE DOBLE'. LOS DE COCLASE
+%% DOBLE SON, MEJOR DICHO LOS \Gamma_b\gamma\Gamma_a
+% 
+Sea $\cal{O}=\cal{O}_{0}(\frak{N})$ el orden dado por la expresi\'{o}n
+\eqref{eq:ordendeeichlermatrices} y sea $\hhat{\pi}\in\GL_{2}(\Adfin{F})$. El
+grupo de unidades $\Idfin{\cal{O}}$ act\'{u}a a izquierda en el conjunto
+$\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}$ por multiplicaci\'{o}n. En
+particular, eligiendo un sistema de representantes, $\{\hhat{\pi}_{i}\}_{i}$,
+es posible descomponer $\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}$ en una
+uni\'{o}n disjunta:
+\begin{equation}
+	\label{eq:descomposiciondecoclasedoble}
+	\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}} \,=\,\bigsqcup_{i}\,
+		\Idfin{\cal{O}}\hhat{\pi}_{i}
+	\text{ .}
+\end{equation}
+%
+Ahora bien, la multiplicaci\'{o}n
+\begin{math}
+	(\hhat{\alpha},\hhat{\beta})\mapsto\hhat{\alpha}\hhat{\beta}
+\end{math} en $\GL_{2}(\Adfin{F})$ es una aplicaci\'{o}n continua, las
+traslaciones $\hhat{\alpha}\mapsto\hhat{\alpha}\hhat{\beta}$ son homeomorfismos
+y el grupo de unidades $\Idfin{\cal{O}}$ es un subespacio abierto y compacto.
+Por lo tanto, el conjunto $\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}$, producto
+de los compactos $\Idfin{\cal{O}}$ y $\hhat{\pi}\Idfin{\cal{O}}$, es compacto y
+$\big\{\Idfin{\cal{O}}\hhat{\pi}_{i}\big\}_{i}$ es un cubrimiento por abiertos
+disjuntos. En consecuencia, la uni\'{o}n
+\eqref{eq:descomposiciondecoclasedoble} es finita.
+
+Dada una forma de Hilbert $\phi:\,\GL_{2}(\adeles{F})\rightarrow\bb{C}$ (no
+necesariamente cuspidal) de peso $\peso{k}$ y nivel $\frak{N}$, se define una
+nueva funci\'{o}n en $\GL_{2}(\adeles{F})$ por la expresi\'{o}n
+\begin{equation}
+	\label{eq:operadordecoclasedobledehilbert}
+	\phi\operadorcoclases{\peso{k}}{%
+		\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}}(g,\hhat{\alpha})
+	\,=\,\sum_{i}\,\big(
+		\phi\operadormatrices{\peso{k}}{(1,\hhat{\pi}_{i})}
+			\big)(g,\hhat{\alpha})
+	\,=\, \sum_{i}\,\phi(g,\hhat{\alpha}\hhat{\pi}_{i}^{-1})
+	\text{ .}
+\end{equation}
+%
+Como $\phi$ es invariante por la acci\'{o}n de $\Idfin{\cal{O}}$ a derecha,
+esta nueva funci\'{o}n est\'{a} bien definida en el sentido de que la suma es
+finita y no depende de los representantes $\hhat{\pi}_{i}$ elegidos.
+
+\begin{propoCoclaseDoblePreservaElEspacioDeFormasCuspidales}
+	\label{propo:coclasedoblepreservaelespaciodeformascuspidales}
+	Sea $\phi:\,\GL_{2}(\adeles{F})\rightarrow\bb{C}$ una funci\'{o}n
+	con las propiedades (i) a (vi) de la
+	Proposici\'{o}n~\ref{propo:equivalenciaautomorfasformascuspidales} y
+	sea $\hhat{\pi}\in\GL_{2}(\Adfin{F})$. Entonces la funci\'{o}n
+	ad\'{e}lica
+	\begin{math}
+		\phi\operadorcoclases{\peso{k}}{%
+			\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}}
+	\end{math}
+	tambi\'{e}n verifica (i) a (vi). Si, adem\'{a}s, $\phi$ verifica
+	(vii), es decir, es cuspidal, entonces la nueva funci\'{o}n tambi\'{e}n
+	es cuspidal.
+\end{propoCoclaseDoblePreservaElEspacioDeFormasCuspidales}
+
+En otras palabras,
+\begin{math}
+	\phi\mapsto\phi\operadorcoclases{\peso{k}}{%
+		\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}}
+\end{math}
+define un operador en el espacio $\modularH{k}{\frak{N}}$ de formas modulares
+de Hilbert que se restringe a un operador en el subespacio
+$\spitzH{k}{\frak{N}}$ de formas cuspidales. Estos operadores tambi\'{e}n
+respetan la descomposici\'{o}n
+\eqref{eq:descomposicioncuspidalescuasicaracteres} en t\'{e}rminos de los
+cuasicaracteres $\omega:\,\ideles{F}/F^{\times}\rightarrow\bb{C}^{\times}$.
+
+\begin{proof}
+	Sea $\phi:\,\GL_{2}(\adeles{F})\rightarrow\bb{C}$ una
+	funci\'{o}n que satisface las propiedades (i) a (vi) de
+	\ref{propo:equivalenciaautomorfasformascuspidales}. Sea
+	$\gamma\in\GL_{2}(F)$. Entonces
+	\begin{align*}
+		\phi\operadorcoclases{\peso{k}}{%
+			\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}}
+			(\gamma g,\gamma\hhat{\alpha}) & \,=\,
+			\sum_{i}\,\phi(\gamma g,
+				\gamma\hhat{\alpha}\hhat{\pi}_{i}^{-1})
+			\,=\,\sum_{i}\,\phi(g,\hhat{\alpha}\hhat{\pi}_{i}^{-1})
+		\text{ ,}
+	\end{align*}
+	%
+	de lo que se deduce que se cumple (i). Por otro lado, de
+	\eqref{eq:operadordecoclasedobledehilbert}, se deduce que la
+	aplicaci\'{o}n
+	\begin{math}
+		\phi\mapsto\phi\operadorcoclases{\peso{k}}{%
+			\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}}
+	\end{math}
+	solamente afecta las coordenadas no arquimedianas de $\phi$. Por lo
+	tanto, las propiedades (iii), (iv) y (vi) se preservan. En cuanto a
+	(ii), si $\hhat{\beta}\in\Idfin{\cal{O}}$, entonces
+	\begin{align*}
+		\phi\operadorcoclases{\peso{k}}{%
+			\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}}
+			(g,\hhat{\alpha}\hhat{\beta}^{-1}) & \,=\,
+			\sum_{i}\,\phi(g,\hhat{\alpha}\hhat{\beta}^{-1}
+				\hhat{\pi}_{i}^{-1})
+			\,=\,\sum_{i}\,\phi(g,\hhat{\alpha}
+				(\hhat{\pi}_{i}\hhat{\beta})^{-1})
+		\text{ .}
+	\end{align*}
+	%
+	Pero el conjunto $\{\hhat{\pi}_{i}\hhat{\beta}\}_{i}$ sigue siendo un
+	conjunto de representantes de las clases en
+	\begin{math}
+		\Idfin{\cal{O}}\backslash
+			\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}
+	\end{math}~,
+	ya que $\hhat{\pi}_{i}\hhat{\beta}$ pertenece a
+	$\Idfin{\cal{O}}\hhat{\pi}_{j}\hhat{\beta}$, si y s\'{o}lo si
+	$\hhat{\pi}_{i}\hhat{\pi}_{j}^{-1}$ pertenece a $\Idfin{\cal{O}}$ y la
+	finitud de la descomposici\'{o}n
+	\eqref{eq:descomposiciondecoclasedoble} implica que la aplicaci\'{o}n
+	inyectiva
+	\begin{math}
+		\Idfin{\cal{O}}\hhat{\pi}_{i}\mapsto
+			\Idfin{\cal{O}}\hhat{\pi}_{i}\hhat{\beta}
+	\end{math}
+	sea, tambi\'{e}n, sobreyectiva. Por otra parte, la finitud de la
+	sumatoria correspodiente \eqref{eq:operadordecoclasedobledehilbert}
+	implica (v) y, si, adem\'{a}s, $\phi$ cumple con (vii) entonces
+	\begin{math}
+		\phi\operadorcoclases{\peso{k}}{%
+			\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}}
+	\end{math}
+	tambi\'{e}n posee esta propiedad.
+\end{proof}
+
+\begin{obsOperadorCoclaseAdelesAdjunto}%
+	\label{obs:operadorcoclaseadelesadjunto}
+	Sea $\hhat{\pi}\in\GL_{2}(\Adfin{F})$. Sea $\omega$ un
+	cuasicar\'{a}cter de $\ideles{F}$ trivial en $F^{\times}$ y sean
+	$\phi,\phi'\in\spitzH{k}{\frak{N},\omega}$. Entonces
+	\begin{align*}
+		\Big\langle \phi\operadorcoclases{\peso{k}}{%
+			\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}},\phi'
+			\Big\rangle & \,=\,|\omega(\det\,\hhat{\pi})|^{-1}\,
+		\Big\langle\phi,\phi'\operadorcoclases{\peso{k}}{%
+				\Idfin{\cal{O}}\hhat{\pi}^{-1}\Idfin{\cal{O}}}
+			\Big\rangle \\
+		& \,=\,\lconj{\chi(\det\,\hhat{\pi})}\,
+			\Big\langle\phi,\phi'\operadorcoclases{\peso{k}}{%
+				\Idfin{\cal{O}}\hhat{\pi}^\iota\Idfin{\cal{O}}}
+			\Big\rangle
+		\text{ .}
+	\end{align*}
+	%
+	Esto se deduce de la expresi\'{o}n
+	\eqref{eq:operadordecoclasedobledehilbert} para el operador, de la
+	Observaci\'{o}n~\ref{obs:operadordepesokadjunto}, elegiendo un sistema
+	de representantes $\{\hhat{\pi}_{i}\}_{i}$ tal que
+	\begin{math}
+		\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}=
+		\bigsqcup_{i}\,\Idfin{\cal{O}}\hhat{\pi}_{i}=
+		\bigsqcup_{i}\,\hhat{\pi}_{i}\Idfin{\cal{O}}
+	\end{math}~, y de que $\omega(\det\,\hhat{x})=\omega(\det\,\hhat{\pi})$
+	para todo
+	\begin{math}
+		\hhat{x}\in\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}
+	\end{math}~.
+	% Recordando que el conjugado de un elemento $\hhat{x}$ es
+	% $\hhat{x}^\iota=\det(\hhat{x})\,\hhat{x}^{-1}$, deducimos que
+	% (si $\chi=|\omega|^{-1}\,\omega$),
+	% \begin{align*}
+		% \Big\langle\phi\operadorcoclases{\peso{k}}{%
+			% \Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}},
+				% \phi'\Big\rangle & \,=\,
+		% \chi(\det\,\hhat{\pi})\,
+			% \Big\langle\phi,\phi'\operadorcoclases{\peso{k}}{%
+				% \Idfin{\cal{O}}\hhat{\pi}^\iota\Idfin{\cal{O}}}
+				% \Big\rangle
+		% \text{ .}
+	% \end{align*}
+	% %
+\end{obsOperadorCoclaseAdelesAdjunto}
+
+Usando el isomorfismo de la Proposici\'{o}n~%
+\ref{propo:equivalenciaautomorfasformascuspidales}, se traducen las
+definiciones anteriores al contexto de formas de Hilbert cl\'{a}sicas. Sea
+$f\in\modularH{k}{\frak{N}}$ una forma de Hilbert y sea $\phi_{f}$ la
+funci\'{o}n ad\'{e}lica correspondiente. Entonces
+\begin{align*}
+	\phi_{f}\operadorcoclases{\peso{k}}{%
+		\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}} (g,\hhat{\alpha})
+	& \,=\, \sum_{i}\,\phi_{f}(g,\hhat{\alpha}\hhat{\pi}_{i}^{-1})
+	\,=\, \sum_{i}\,\bigg(\prod_{t=1}^{n}\,
+			J_{t}(g_{t},\sqrt{-1})^{-1}\bigg)\,
+		f(g\cdot\mathbf{i},
+			\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}})
+	\text{ .}
+\end{align*}
+%
+Se define una funci\'{o}n
+\begin{math}
+	T_{\hhat{\pi}}f:\,(\hP^{\pm})^{n}\times\big(
+			\GL_{2}(\Adfin{F})/\Idfin{\cal{O}}\big)
+		\rightarrow\bb{C}
+\end{math}
+por
+\begin{align*}
+	\big(T_{\hhat{\pi}}f\big)(z,\hhat{\alpha}\Idfin{\cal{O}}) & \,=\,
+		\sum_{i}\,f(z,\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}})
+	\text{ .}
+\end{align*}
+%
+Entonces $T_{\hhat{\pi}}f$ es una forma de Hilbert tambi\'{e}n y
+$f\mapsto T_{\hhat{\pi}}f$ define un operador en $\modularH{k}{\frak{N}}$.
+% Dicho de otra manera, $T_{\hhat{\pi}}f$ es la forma modular correspondiente a
+% \begin{math}
+	% \phi\operadorcoclases{\peso{k}}{%
+			% \Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}}
+% \end{math}~.
+Por la Observaci\'{o}n~\ref{obs:operadorcoclaseadelesadjunto}, el adjunto del
+operador $T_{\hhat{\pi}}$ est\'{a} dado por
+\begin{equation}
+	\label{eq:operadorcoclaseformasadjunto}
+	T_{\hhat{\pi}}^{*}\,=\,\chi(\det\,\hhat{\pi})\,T_{\hhat{\pi}^\iota}
+	\text{ .}
+\end{equation}
+%

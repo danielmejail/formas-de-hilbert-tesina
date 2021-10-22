@@ -1,0 +1,226 @@
+Nuevamemnte, supongamos dados un sistema de representantes $\{\frak{a}\}$ de
+las clases estrictas de $F$ y elementos $\hhat{a}$ y $\hhat{\alpha}$ como en
+\S~\ref{subsec:relacionconeliso}. A continuaci\'{o}n describimos la
+acci\'{o}n de los operadores $T_{\frak{p}}$ en t\'{e}rminos de los coeficientes
+de Fourier de $f\in\spitzH{k}{\frak{N},\omega}$ (definidos por
+\eqref{eq:coeficientesdefourierformamodular}).
+
+Elegimos un sistema de representantes $\{x_{j}\}_{j}\subset\oka{F}$ del cuerpo
+residual $\oka{F}/\frak{p}$. As\'{\i},
+\begin{align*}
+	\bigg\{\begin{bmatrix} p & \\ & 1 \end{bmatrix}\bigg\}\,\cup\,
+		\bigg\{\begin{bmatrix} 1 & x_{j} \\ & p \end{bmatrix}
+			\bigg\}_{j}
+\end{align*}
+%
+es un sistema de representantes de
+$\cal{O}_{\frak{p}}^{\times}\pi\cal{O}_{\frak{p}}^{\times}$ por la acci\'{o}n
+a izquierda de $\cal{O}_{\frak{p}}^{\times}$, como en la Secci\'{o}n
+\S~\ref{subsec:elalgebradehecke}. Identificamos estos elementos con sus
+im\'{a}genes por la inclusi\'{o}n en $\GL_{2}(\Adfin{F})$ y prescindimos de la
+notaci\'{o}n $\hhat{\cdot}$ para indicar la parte finita.
+% pues todos los id\`{e}les son finitos
+Notamos que
+\begin{align*}
+	\begin{bmatrix} a & \\ & 1 \end{bmatrix}\,
+		\begin{bmatrix} 1 & x_{j} \\ & p \end{bmatrix}^{-1} & \,=\,
+	p^{-1}\,\begin{bmatrix} pa & -ax_{j} \\ & 1 \end{bmatrix}
+\end{align*}
+%
+y afirmamos que la matriz del lado derecho se puede descomponer de la siguiente
+manera
+\begin{equation}
+	\label{eq:descomposicionfouriermatrices}
+	\begin{bmatrix} pa & -ax_{j} \\ & 1 \end{bmatrix} \,=\,
+		\begin{bmatrix} \lambda_{0} & -\mu_{0} \\ & 1 \end{bmatrix}\,
+		\begin{bmatrix} a' & \\ & 1 \end{bmatrix}\,
+		\begin{bmatrix} u & v \\ & 1 \end{bmatrix} \,=\,
+			\begin{bmatrix}
+				\lambda_{0}a'u & \lambda_{0}a'v-\mu_{0} \\ & 1
+			\end{bmatrix}
+	\text{ ,}
+\end{equation}
+%
+donde $\lambda_{0},\mu_{0}$ son las partes finitas de ciertos
+$\lambda\in F^{\times}_{+}$ y $\mu\in F$, respectivamente,
+$u\in\Idfin{\oka{F}}$ y $v\in\Adfin{\oka{F}}$. Por un lado, existe un \'{u}nico
+representante $\frak{a}'$ tal que $[\frak{p}\frak{a}]=[\frak{a}']$. En
+particular, existen $\lambda\in F_{+}^{\times}$ y $u\in\Idfin{\oka{F}}$ tales
+que $pa=\lambda_{0}a'u$, donde $a'$ es el id\`{e}le correspondiente a
+$\frak{a}'$.
+% (dado que los id\`{e}les son todos finitos, hemos
+% prescindido de la notaci\'{o}n $\hhat{\cdot}$ para indicar la parte finita de
+% un elemento).
+Por otro lado, un elemento $\mu\in F$ satisface
+$\mu_{0}=ax_{j}+(pau^{-1})\,v$, con $v\in\Adfin{\oka{F}}$, si y s\'{o}lo si
+$\mu\in\frak{a}$ y $\mu_{\frak{p}}\equiv ax_{j}\,\big(\modulo\,\frak{p}\big)$.
+Esto equivale a poder elegir representantes de $\frak{a}/\frak{p}\frak{a}$.
+Esto muestra que la descomposici\'{o}n
+\eqref{eq:descomposicionfouriermatrices} es v\'{a}lida.
+
+Sea $\frak{a}$ un representante arbitrario de las clases estrictas de $F$ y
+sean $\frak{b},\frak{a}'$ los \'{u}nicos representantes que verifican
+$[\frak{a}\frak{p}^{-1}]=[\frak{b}]$ y $[\frak{a}\frak{p}]=[\frak{a}']$.
+Fijamos, para cada $\frak{a}$, elementos totalmente positivos
+$\lambda_{\frak{a},\frak{b}},\lambda_{\frak{a}',\frak{a}}\in F^{\times}_{+}$
+tales que $\lambda_{\frak{a},\frak{b}}\frak{a}\frak{p}^{-1}=\frak{b}$ y
+$\lambda_{\frak{a}',\frak{a}}\frak{a}'=\frak{a}\frak{p}$. Para cada
+representante $x_{j}$ de $\oka{F}/\frak{p}$, sea $\mu_{j}\in F$ tal que
+$(\mu_{j})_{0}=(\lambda_{\frak{a}',\frak{a}})_{0}a'v+ax_{j}$, como en
+\eqref{eq:descomposicionfouriermatrices}. Dada
+$f\in\spitzH{k}{\frak{N},\omega}$,
+\begin{align*}
+	& \big(T_{\frak{p}}f\big)_{\frak{a}}(z) \,=\,
+		f\Big(z,
+		\left[\begin{matrix}
+			a & \\ & 1
+		\end{matrix}\right]
+		\left[\begin{matrix}
+			p & \\ & 1
+		\end{matrix}\right]^{-1}\Idfin{\cal{O}}\Big)\,+\,
+		\sum_{j}\,f\Big(z,
+		\left[\begin{matrix}
+			a & \\ & 1
+		\end{matrix}\right]
+		\left[\begin{matrix}
+			1 & x_{j} \\ & p
+		\end{matrix}\right]^{-1}\Idfin{\cal{O}}\Big) \\
+	& \qquad\,=\,f\Big(z,
+		\left[\begin{matrix}
+			(\lambda_{\frak{a},\frak{b}})_{0} & \\ & 1
+		\end{matrix}\right]^{-1}
+		\left[\begin{matrix}
+			b & \\ & 1
+		\end{matrix}\right]\Idfin{\cal{O}}\Big)\,+\,
+		\sum_{j}\,f\Big(z,p^{-1}
+		\left[\begin{matrix}
+			(\lambda_{\frak{a}',\frak{a}})_{0} & -(\mu_{j})_{0} \\
+			& 1
+		\end{matrix}\right]
+		\left[\begin{matrix}
+			a' & \\ & 1
+		\end{matrix}\right]\Idfin{\cal{O}}\Big) \\
+	& \qquad\,=\,\Big(f_{\frak{b}}\operadormatrices{\peso{k}}{%
+			\left[\begin{matrix}
+				\lambda_{\frak{a},\frak{b}} & \\ & 1
+			\end{matrix}\right]}\Big)(z)\,+\,
+		\sum_{j}\,\omega(\frak{p})^{-1}\,\Big(
+			f_{\frak{a}'}\operadormatrices{\peso{k}}{%
+			\left[\begin{matrix}
+				\lambda_{\frak{a}',\frak{a}}^{-1} &
+				\lambda_{\frak{a}',\frak{a}}^{-1}\mu_{j} \\
+				& 1
+			\end{matrix}\right]}\Big)(z)
+	\text{ .}
+\end{align*}
+%
+Expandiendo el operador de peso $\peso{k}$ y reemplazando cada funci\'{o}n por
+su desarrollo de Fourier,
+\begin{align*}
+	\big(T_{\frak{p}}f\big)_{\frak{a}}(z) & \,=\,\Big(\prod_{i=1}^{n}\,
+		(\lambda_{\frak{a},\frak{b}})_{i}^{k_{i}+m_{i}-1}\Big)\,
+		\sum_{\nu\in\frak{b}^{\perp}_{+}}\,a_{\nu}(f_{\frak{b}})\,
+		e^{2\pi i\traza(\nu\lambda_{\frak{a},\frak{b}}z)} \\
+	& \qquad\,+\,\omega(\frak{p})^{-1}\,\sum_{j}\,\Big(\prod_{i=1}^{n}\,
+		(\lambda_{\frak{a}',\frak{a}})_{i}^{k_{i}+m_{i}-1}\Big)^{-1}\,
+		\sum_{\nu\in\frak{a}'\null^{\perp}_{+}}\,
+		a_{\nu}(f_{\frak{a}'})\,e^{2\pi i\traza(\nu%
+			\lambda_{\frak{a}',\frak{a}}^{-1}(z+\mu_{j}))}
+	\text{ .}
+\end{align*}
+%
+Ahora bien, $\nu\in\frak{b}^{\perp}$, si y s\'{o}lo si
+$\nu\lambda_{\frak{a},\frak{b}}\in(\frak{a}\frak{p}^{-1})^{\perp}$ y
+$\nu\in\frak{a}'\null^{\perp}$, si y s\'{o}lo si
+$\nu\lambda_{\frak{a}',\frak{a}}^{-1}\in(\frak{a}\frak{p})^{\perp}$. De esta
+manera, por la expresi\'{o}n \eqref{eq:coeficientesdefouriertilde} para los
+coeficientes de Fourier,
+\begin{align*}
+	\big(T_{\frak{p}}f\big)_{\frak{a}}(z) & \,=\,
+		\sum_{\xi\in(\frak{a}\frak{p}^{-1})^{\perp}_{+}}\,
+		\Big(\prod_{i=1}^{n}\,\xi_{i}^{k_{i}+m_{i}-1}\Big)\,
+		\tilde{c}(\xi\lambda_{\frak{a},\frak{b}}^{-1},f_{\frak{b}})\,
+		e^{2\pi i\traza(\xi z)} \\
+	& \qquad\,+\,\omega(\frak{p})^{-1}\,
+		\sum_{\xi\in(\frak{a}\frak{p})^{\perp}_{+}}\,
+		\Big(\prod_{i=1}^{n}\,\xi_{i}^{k_{i}+m_{i}-1}\Big)\,
+		\tilde{c}(\xi\lambda_{\frak{a}',\frak{a}},f_{\frak{a}'})\,
+		S(\xi)\,e^{2\pi i\traza(\xi z)}
+	\text{ ,}
+\end{align*}
+%
+donde $S(\xi)=\sum_{j}\,e^{2\pi i\traza(\xi\mu_{j})}$. Dado que los elementos
+$\mu_{j}$ son representantes de $\frak{a}/\frak{p}\frak{a}$, si
+$\xi\in\frak{a}^{\perp}$, entonces $\traza(\xi\mu_{j})\in\bb{Z}$ y
+$S(\xi)=|\oka{F}/\frak{p}|=\idnorm(\frak{p})$.
+
+Sea, ahora, $\frak{m}\subset\oka{F}$ un ideal \'{\i}ntegro. Existen
+$\nu\in F^{\times}_{+}$ y $\frak{a}$ tales que
+$\frak{m}=\nu\cdot\frak{a}\diferente$. Como hab\'{\i}amos observado al definir
+los coeficientes de Fourier, esto implica que
+$\nu\in (\frak{a}\diferente)^{-1}=\frak{a}^{\perp}$ y que $\nu\gg 0$. Para
+determinar el coeficiente $c(\frak{m},T_{\frak{p}}f)$ ser\'{a} necesario hallar
+$a_{\nu}(\big(T_{\frak{p}}f\big)_{\frak{a}})$. Recordamos que
+$\frak{a}^{\perp}=\frak{a}^{-1}\diferente^{-1}$. Entonces, se puede verificar
+que el elemento $\nu$ pertenece a
+$(\frak{a}\frak{p}^{-1})^{\perp}=\frak{p}\frak{a}^{\perp}$, si y s\'{o}lo si
+$\frak{m}\subset\frak{p}$. Por otra parte, $(\frak{a}\frak{p})^{\perp}$ siempre
+contiene a $\frak{a}^{\perp}$, independientemente de $\frak{m}$. De la
+expresi\'{o}n para $\big(T_{\frak{p}}f\big)_{\frak{a}}$, se deduce que
+\begin{align*}
+	c(\frak{m},T_{\frak{p}}f) & \,=\,
+		\tilde{c}(\nu,\big(T_{\frak{p}}f\big)_{\frak{a}}) \,=\,
+		\tilde{c}(\nu\lambda_{\frak{a},\frak{b}}^{-1},f_{\frak{b}})\,
+			\indica(\frak{p}\mid\frak{m})
+		\,+\,\omega(\frak{p})^{-1}\,S(\nu)\,
+		\tilde{c}(\nu\lambda_{\frak{a}',\frak{a}},f_{\frak{a}'})
+	\text{ ,}
+\end{align*}
+%
+donde $\indica(\frak{p}\mid\frak{m})$ toma el valor $1$, si
+$\frak{p}\supset\frak{m}$, y el valor $0$ en otro caso. Pero
+$\nu\in\frak{a}^{\perp}$ implica $S(\nu)=\idnorm(\frak{p})$. Tambi\'{e}n,
+\begin{align*}
+	\tilde{c}(\nu\lambda_{\frak{a},\frak{b}}^{-1},f_{\frak{b}}) & \,=\,
+		c(\nu\lambda_{\frak{a},\frak{b}}^{-1}\frak{b}\diferente,f)\,=\,
+		c(\frak{p}^{-1}\nu\frak{a}\diferente,f)\,=\,
+		c(\frak{p}^{-1}\frak{m},f) \quad\text{y} \\
+	\tilde{c}(\nu\lambda_{\frak{a}',\frak{a}},f_{\frak{a}'}) & \,=\,
+		c(\nu\lambda_{\frak{a}',\frak{a}}\frak{a}'\diferente,f)\,=\,
+		c(\frak{p}\nu\frak{a}\diferente,f)\,=\,
+		c(\frak{p}\frak{m},f)
+	\text{ .}
+\end{align*}
+%
+En definitiva,
+\begin{equation}
+	\label{eq:heckeenloscoeficientes}
+	c(\frak{m},T_{\frak{p}}f) \,=\,c(\frak{p}^{-1}\frak{m},f)\,+\,
+		\omega(\frak{p})^{-1}\,\idnorm(\frak{p})\,
+		c(\frak{p}\frak{m},f)
+	\text{ .}
+\end{equation}
+%
+El t\'{e}rmino $c(\frak{p}^{-1}\frak{m},f)$ es nulo, si $\frak{p}$ no divide a
+$\frak{m}$.%
+\footnote{
+% \begin{obsShimuraDiferenciaEnLosCoeficientes}%
+	\label{obs:shimuradiferenciaenloscoeficientes}
+	Si se compara la expresi\'{o}n \eqref{eq:heckeenloscoeficientes} con la
+	f\'{o}rmula (2.20) en
+	\cite{ShimuraSpecialValuesOfZeta}, se puede
+	observar otra diferencia, adem\'{a}s de la mencionada en la nota
+	\ref{obs:shimuradiferenciaenelautovalor} (p\'{a}g.~%
+	\pageref{obs:shimuradiferenciaenelautovalor}). En la f\'{o}rmula
+	obtenida m\'{a}s arriba, el cuasicar\'{a}cter $\omega$ aparece
+	multiplicando el coeficiente $c(\frak{p}\frak{m},f)$, mientras que, en
+	\cite{ShimuraSpecialValuesOfZeta}, Shimura muestra
+	que el factor an\'{a}logo aparece junto al coeficiente
+	$c(\frak{p}^{-1}\frak{m},f)$. En este caso, la diferencia est\'{a} en
+	la elecci\'{o}n de id\`{e}les $\hhat{\alpha}\in\GL_{2}(\adeles{F})$
+	asociados a cada representante $\frak{a}$ de las clases estrictas.
+	Si en lugar de $\hhat{\alpha}$ hubi\'{e}semos elegido los adjuntos
+	$\hhat{\alpha}^\iota$, se hubiese llegado a una expresi\'{o}n m\'{a}s
+	parecida la ecuaci\'{o}n citada.
+% \end{obsShimuraDiferenciaEnLosCoeficientes}
+}

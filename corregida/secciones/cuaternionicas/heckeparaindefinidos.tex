@@ -1,0 +1,171 @@
+Los operadores de Hecke en los espacios de formas de Hilbert cuspidales se
+definen como operadores de coclases dobles. Si $B/F$ es un \'{a}lgebra de
+cuaterniones indefinida, la definici\'{o}n de la estructura de m\'{o}dulo de
+Hecke en $\spitzH[B]{k}{\frak{N}}$ es similar, teniendo en cuenta los lugares
+(finitos) en donde $B$ ramifica. Sea $\frak{D}$ el discriminante de $B$ y sea
+$\cal{O}$ un orden de Eichler de nivel $\frak{N}$.
+
+\begin{defHeckeParaIndefinidos}\label{def:heckeparaindefinidos}
+	Si $\frak{p}\subset\oka{F}$ es un ideal primo tal que
+	$\frak{p}\nmid\frak{D}\frak{N}$, elegimos un generador
+	$p\in\oka{F,\frak{p}}$ del ideal maximal en el anillo de enteros de
+	la completaci\'{o}n $F_{\frak{p}}$. Sea $\hhat{\pi}\in\Idfin{B}$ el
+	id\`{e}le definido por $\hhat{\pi}_{v}=1$, si $v\not =\frak{p}$, y
+	\begin{math}
+		\hhat{\pi}_{\frak{p}}=\begin{bmatrix} p & \\ & 1 \end{bmatrix}
+	\end{math}~.
+	Entonces el \emph{operador de Hecke} en $\frak{p}$ es
+	$T_{\frak{p}}:=T_{\hhat{\pi}}$, donde
+	\begin{align*}
+		(T_{\hhat{\pi}}f)(z,\hhat{\alpha}\Idfin{\cal{O}})
+			& \,=\,\sum_{i}\,f(z,\hhat{\alpha}\hhat{\pi}_{i}^{-1}
+							\Idfin{\cal{O}})
+		\text{ ,}
+	\end{align*}
+	%
+	habiendo elegido un conjunto (finito) $\{\hhat{\pi}_{i}\}_{i}$ tal que
+	\begin{math}
+		\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}=
+			\bigsqcup_{i}\,\Idfin{\cal{O}}\hhat{\pi}_{i}
+	\end{math}~.
+\end{defHeckeParaIndefinidos}
+
+Esto equivale a considerar el conjunto
+\begin{align*}
+	\Theta(\frak{p}) & \,=\, \Idfin{\cal{O}}\backslash
+		\Big\{\hhat{\pi}\in\Adfin{\cal{O}}\,:\,
+			\nrd(\hhat{\pi})\in\hhat{p}\Idfin{\oka{F}}\Big\}
+	\text{ ,}
+\end{align*}
+%
+donde $\hhat{p}\in\Adfin{\oka{F}}$ es tal que
+$\hhat{p}\Adfin{\oka{F}}\cap F=\frak{p}$, elegir un conjunto de representantes
+y sumar
+\begin{math}
+	\sum_{\hhat{\pi}\in\Theta(\frak{p})}\,
+		f(z,\hhat{\alpha}\hhat{\pi}^{-1}\Idfin{\cal{O}})
+\end{math}
+sobre dicho conjunto (comparar con la observaci\'{o}n
+\ref{obs:idelesdenormap}).
+% Notemos que, si $\hhat{\alpha}$ se corresponde con un ideal \'{\i}ntegro
+% $\frak{a}$, el producto $\hhat{\alpha}\hhat{\pi}^{-1}$ deber\'{\i}a
+% correponderse con el ideal $\frak{a}\frak{p}^{-1}$.
+Dado que la sumatoria es finita, $T_{\frak{p}}f$ es una funci\'{o}n holomorfa
+en la primera variable, localmente constante en la segunda y se verifica
+$(T_{\frak{p}}f)\barra{\peso{k}}{\gamma}=T_{\frak{p}}f$ para todo
+$\gamma\in B^{\times}$. Es decir que $T_{\frak{p}}$ define un operador en
+$\spitzH[B]{k}{\frak{N}}$. Adem\'{a}s, dado que para distintos ideales primos
+$\frak{p},\frak{q}$ los operadores correspondientes $T_{\frak{p}}$ y
+$T_{\frak{q}}$ act\'{u}an en distintas coordenadas, se deduce inmediatamente
+que conmutan. El \emph{\'{a}lgebra de Hecke} actuando en
+$\spitzH[B]{k}{\frak{N}}$ es el \'{a}lgebra de endomorfismos generada por el
+conjunto $\big\{ T_{\frak{p}}\,:\,\frak{p}\nmid\frak{D}\frak{N}\big\}$.
+
+El espacio $\spitzH[B]{k}{\frak{N}}$ se descompone como suma directa de
+$\spitzH[B]{k}{\frak{N},\frak{a}}$ v\'{\i}a el isomorfismo
+$f\mapsto(f_{\frak{a}})_{\frak{a}}$ donde
+$f_{\frak{a}}(z)=f(z,\hhat{\alpha}\Idfin{\cal{O}})$ y
+$\nrd(\hhat{\alpha})=\hhat{a}\in\Adfin{\oka{F}}$ es tal que
+$\hhat{a}\Adfin{\oka{F}}\cap F=\frak{a}$. Los operadores de Hecke act\'{u}an
+permutando estos subespacios. Sea $\frak{b}$ un ideal \'{\i}ntegro de $\oka{F}$
+cuya clase estricta es $[\frak{b}]=[\frak{a}\frak{p}^{-1}]$, sea
+$\hhat{b}\in\Adfin{\oka{F}}$ tal que $\hhat{b}\Adfin{\oka{F}}\cap F=\frak{b}$ y
+sea $\hhat{\beta}\in\Idfin{B}$ tal que $\nrd(\hhat{\beta})=\hhat{b}$. Entonces,
+para cada representante $\hhat{\pi}$ de las \'{o}rbitas en $\Theta(\frak{p})$,
+el ret\'{\i}culo
+\begin{math}
+	\hhat{\alpha}\hhat{\pi}^{-1}\Adfin{\cal{O}}\hhat{\beta}^{-1}\cap B
+\end{math}
+es un ideal de $B$ cuyo orden a derecha es
+\begin{math}
+	\cal{O}_{\frak{b}}=\hhat{\beta}\Adfin{\cal{O}}\hhat{\beta}^{-1}\cap B
+\end{math}
+y su norma reducida es un ideal en la clase (estricta) principal. En
+consecuencia, %por aproximaci\'{o}n fuerte,
+existe $\varpi\in B_{+}^{\times}$ tal que
+\begin{math}
+	\hhat{\alpha}\hhat{\pi}^{-1}\Adfin{\cal{O}}\hhat{\beta}^{-1}\cap B=
+		\varpi^{-1}\cal{O}_{\frak{b}}
+\end{math}
+y una unidad $\hhat{u}\in\Idfin{\cal{O}}$ tal que
+\begin{math}
+	\hhat{\alpha}\hhat{\pi}^{-1}\hhat{u}\hhat{\beta}^{-1}=\varpi^{-1}
+\end{math}~.
+Si ahora miramos las componentes de la forma $T_{\frak{p}}f$ se deduce que,
+usando la invarianza de $f$,
+\begin{align*}
+	(T_{\frak{p}}f)_{\frak{a}}(z) & \,=\,
+		(T_{\frak{p}}f)(z,\hhat{\alpha}\Idfin{\cal{O}}) \,=\,
+		\sum_{\hhat{\pi}\in\Theta(\frak{p})}\,
+			f(z,\hhat{\alpha}\hhat{\pi}^{-1}\Idfin{\cal{O}})
+		\,=\, \sum_{\varpi}\,
+			f(z,\varpi^{-1}\hhat{\beta}\Idfin{\cal{O}}) \\
+	& \,=\, \bigg(\prod_{i=1}^{r}\,J_{i}(\varpi_{i},z_{i})^{-1}\bigg)\,
+		f(\varpi z,\hhat{\beta}\Idfin{\cal{O}})^{\varpi}
+	\,=\, \sum_{\varpi}\,(f_{\frak{b}}\barra{\peso{k}}{\varpi})(z)
+	\text{ .}
+\end{align*}
+%
+% As\'{\i}, $T_{\frak{p}}:\,\spitzH[B]{k}{\frak{N},\frak{b}}\rightarrow%
+% \spitzH[B]{k}{\frak{N},\frak{a}}$.
+Si bien esto muestra que la descripci\'{o}n de $T_{\frak{p}}$ en t\'{e}rminos
+de la descomposici\'{o}n de $\spitzH[B]{k}{\frak{N}}$ es sencilla, la utilidad
+de la igualdad
+\begin{math}
+	\big(T_{\frak{p}}f\big)_{\frak{a}}=
+		\sum_{\varpi}\,f_{\frak{b}}\barra{\peso{k}}{\varpi}
+\end{math}
+depende de poder hallar todos aquellos elementos $\varpi$ cuya existencia
+est\'{a} garantizada por aproximaci\'{o}n fuerte. Estos elementos se pueden
+caracterizar globalmente. La sumatoria se realiza sobre un sistema de
+representantes de
+\begin{align*}
+	\Theta(\frak{p})_{\frak{a},\frak{b}} & \,=\,
+		\Gamma_{\frak{b}}\backslash\Big\{\varpi\in
+			I_{\frak{b}}I_{\frak{a}}^{-1}\cap B_{+}^{\times}\,:\,
+			\nrd(\varpi)\frak{a}\frak{p}^{-1}=\frak{b}
+		\Big\}
+	\text{ ,}
+\end{align*}
+%
+donde $I_{\frak{a}}=\hhat{\alpha}\Adfin{\cal{O}}\cap B$ e
+$I_{\frak{b}}=\hhat{\beta}\Adfin{\cal{O}}\cap B$. El argumento es similar al
+dado en la observaci\'{o}n \ref{obs:idelesdenormapporglobales}. El resultado
+\ref{propo:descomposicioninducedescomposicion} tambi\'{e}n es v\'{a}lido en
+este caso, es decir, siendo $B$ un \'{a}lgebra de divisi\'{o}n indefinida (ver
+\cite[Propo.~2.3]{ShimuraDirichletSeriesAndAbelianVarieties}).
+
+\begin{obsHeckeParaIndefinidosPorBloques}%
+	\label{obs:heckeparaindefinidosporbloques}
+	Los operadores de Hecke act\'{u}an por bloques en
+	$\spitzH[B]{k}{\frak{N}}$, permutando en cierto sentido los sumandos
+	$\spitzH[B]{k}{\frak{N},\frak{a}}$: dados
+	$\frak{p}\nmid\frak{D}\frak{N}$ primo y $\frak{a}$ y $\frak{b}$ tales
+	que $[\frak{b}]=[\frak{a}\frak{p}^{-1}]$, definimos
+	\begin{align*}
+		\big(T_{\frak{p}}\big)_{\frak{a},\frak{b}} & \,:\,
+			\spitzH[B]{k}{\frak{N},\frak{b}}\,\rightarrow\,
+			\spitzH[B]{k}{\frak{N},\frak{a}}
+	\end{align*}
+	%
+	por
+	\begin{align*}
+		\big(T_{\frak{p}}\big)_{\frak{a},\frak{b}}f_{\frak{b}} & \,=\,
+		\sum_{\varpi\in\Theta(\frak{p})_{\frak{a},\frak{b}}}\,
+			f_{\frak{b}}\operadormatrices{\peso{k}}{\varpi}
+		\text{ .}
+	\end{align*}
+	%
+	Entonces el operador $T_{\frak{p}}$ act\'{u}a como la matriz de
+	operadores
+	\begin{math}
+		\big[\big(T_{\frak{p}}\big)_{\frak{a},\frak{b}}
+			\big]_{\frak{a},\frak{b}}
+	\end{math}~,
+	donde $\frak{a}$ y $\frak{b}$ recorren los representantes de las
+	clases estrictas de $F$ y $(T_{\frak{p}})_{\frak{a},\frak{b}}$ es
+	el operador reci\'{e}n definido, si $[\frak{a}]=[\frak{b}\frak{p}]$, y
+	es igual a $0$, en caso contrario.
+\end{obsHeckeParaIndefinidosPorBloques}
+
+

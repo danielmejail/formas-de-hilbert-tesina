@@ -1,0 +1,126 @@
+Para definir los subespacios de formas cuspidales sobre un \'{a}lgebra de
+cuaterniones arbitraria, distinguimos dos casos. Si $B/F$ es un \'{a}lgebra
+indefinida, distinta de matrices, entonces la variedad de Shimura
+$\shimura[B]{\frak{N}}$ es compacta y no tiene c\'{u}spides. En este caso,
+tiene sentido decir que toda forma modular para $B$ es cuspidal, es decir,
+definimos $\spitzH[B]{k}{\frak{N}}:=\modularH[B]{k}{\frak{N}}$.
+
+Cuando $B/F$ es un \'{a}lgebra totalmente definida, la variedad de Shimura
+asociada es simplemente un conjunto finito de puntos. Si $\cal{O}\subset B$ un
+orden de Eichler, una forma modular cuaterni\'{o}nica para $B$ de nivel
+$\cal{O}$ y peso $\peso{k}$ es una funci\'{o}n
+$f:\,\Idfin{B}/\Idfin{\cal{O}}\rightarrow W_{\peso{k}}(\bb{C})$ tal que
+\begin{math}
+	f(\gamma\hhat{\alpha}\Idfin{\cal{O}})=
+		f(\hhat{\alpha}\Idfin{\cal{O}})^{\gamma^{-1}}
+\end{math}~.
+Ac\'{a} tambi\'{e}n distinguimos dos casos. Si $\peso{k}\not =(2,\,\dots,\,2)$,
+definimos $\spitzH[B]{k}{\frak{N}}:=\modularH[B]{k}{\frak{N}}$.
+
+% \paragraph{$\peso{k}=(2,\,\dots,\,2)$}
+Sea $\ideales{\cal{O}}$ el conjunto de ideales $I$ de $B$ con
+$\Oder(I)=\cal{O}$. Si $\peso{k}=(2,\,\dots,\,2)$, el $\GL_{2}(\bb{C})^{n}$%
+-m\'{o}dulo $W_{\peso{k}}(\bb{C})$ es trivial y una forma modular
+$f\in\modular[B]{(2,\,\dots,\,2)}{\frak{N}}$ es una funci\'{o}n
+$f:\,\ideales{\cal{O}}\rightarrow\bb{C}$ constante en clases de isomorfismo
+(dos ideales de $B$ son isomorfos, si uno es un m\'{u}ltiplo del otro por un
+elemento de $B^{\times}$), es decir, $f(bI)=f(I)$ para todo $b\in B^{\times}$.
+
+Dado un ideal $I\in\ideales{\cal{O}}$, denotamos por $[I]$, tanto la clase
+de $I$ en $\lClass{\cal{O}}$, como la funci\'{o}n car\'{a}cteristica de su
+clase. Las funciones $[I]$ son formas modulares y, si $\{\lista{I}{H}\}$ es un
+sistema de representantes de las clases a izquierda, el conjunto
+$\{[I_{1}],\,\dots,\,[I_{H}]\}$ constituye una base de
+$\modular[B]{(2,\,\dots,\,2)}{\frak{N}}$. Si $I\in\ideales{\cal{O}}$, existe
+$\hhat{\alpha}\in\Idfin{B}$ tal que $I=\hhat{\alpha}\Idfin{\cal{O}}\cap B$. El
+grupo
+\begin{math}
+	\Gamma_{I}:=\Gamma_{\hhat{\alpha}}=
+		(\hhat{\alpha}\Idfin{\cal{O}}\hhat{\alpha})\cap B^{\times}
+\end{math}
+es el estabilizador de $I$ y los elementos centrales son
+$\Gamma_{I}\cap F^{\times}=\oka{F}^{\times}$. Las inmersiones reales de $F$
+determinan una inclusi\'{o}n discreta en un compacto:
+\begin{align*}
+	& \Gamma_{I}/\oka{F}^{\times}\,\hookrightarrow\,
+		\Idinf{B}/\centre(\bb{R})
+		% \,\simeq\,(\bb{H}^{\times}/\bb{R}^{\times})^{n}
+		\,\simeq\,(S^{3})^{n}
+	\text{ ,}
+\end{align*}
+%
+de donde se deduce que
+\begin{align*}
+	w_{I} & \,:=\, \left|\Gamma_{I}/\oka{F}^{\times}\right|\,<\,\infty
+	\text{ .}
+\end{align*}
+%
+
+Se define un producto interno (\emph{producto interno de Petersson}) en
+$\modular[B]{(2,\,\dots,\,2)}{\frak{N}}$ por
+\begin{align*}
+	\langle [I],[J]\rangle & \,:=\,
+	\begin{cases}
+		w_{I} & \quad\text{si } [I] = [J]\text{ ,} \\
+		0 & \quad\text{si } [I]\not = [J]\text{ .}
+	\end{cases}
+\end{align*}
+%
+Con esta definici\'{o}n, la base $\{[I_{1}],\,\dots,\,[I_{H}]\}$ es una base
+ortogonal.
+
+Por otro lado, para cada ideal $\frak{a}\in\ideales{\oka{F}}$ del cuerpo $F$,
+denotamos con $[\frak{a}]$ tanto la clase estricta de $\frak{a}$, como la
+funci\'{o}n caracter\'{\i}stica de la clase. Como ya mencionamos, la norma
+reducida $\nrd:\,B^{\times}\rightarrow F^{\times}$ induce una funci\'{o}n
+sobreyectiva
+\begin{align*}
+	n & \,:\, B^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}
+		\,\twoheadrightarrow\,
+		F_{+}^{\times}\backslash\Idfin{F}/\Idfin{\oka{F}}
+\end{align*}
+%
+dada por $n([I])=[\nrd(I)]$. Dado un ideal $\frak{a}$, definimos una
+funci\'{o}n $e_{\frak{a}}:\,\ideales{\cal{O}}\rightarrow\bb{C}$ por
+\begin{align*}
+	e_{\frak{a}}(I) & \,=\,
+	\begin{cases}
+		\frac{1}{w_{I}} & \quad\text{si } [\nrd(I)]=[\frak{a}]
+								\text{ ,}\\
+		0 & \quad\text{si } [\nrd(I)]\not =[\frak{a}] \text{ .}
+	\end{cases} \\
+	%e_{\frak{a}} \,=\, & \bigg(
+	%\sum_{i=1}^{H}\,\frac{1}{w_{I_{i}}}[I_{i}]\bigg)\cdot
+	%\left([\frak{a}]\circ\nrd\right)
+	e_{\frak{a}} & \,=\, \sum_{[\nrd(I_{i})]=[\frak{a}]}\,
+				\frac{1}{w_{I_{i}}}\,[I_{i}]
+	\text{ .}
+\end{align*}
+%
+Si $\grado[\frak{a}](f):=\langle f,e_{\frak{a}}\rangle$, entonces
+\begin{align*}
+	\grado[\frak{a}] \,=\, & [\frak{a}]\circ\nrd
+	\text{ .}
+\end{align*}
+%
+
+\begin{defFormaCuspidalDefinida}\label{def:formacuspidaldefinida}
+	Una forma modular cuaterni\'{o}nica
+	$f\in\modular[B]{(2,\,\dots,\,2)}{\frak{N}}$ se dice \emph{cuspidal},
+	\index{forma modular!cuaternionica@cuaterni\'{o}nica!cuspidal}
+	si $f$ es ortogonal al subespacio generado por las funciones en
+	$\modular[B]{(2,\,\dots,\,2)}{\frak{N}}$ que se factorizan por $\nrd$.
+	Denotamos $\spitz[B]{(2,\,\dots,\,2)}{\frak{N}}$ a este subespacio. Es
+	decir,
+	\begin{align*}
+		\spitz[B]{(2,\,\dots,\,2)}{\frak{N}} & \,=\,
+			\Big\{ f\in\modular[B]{(2,\,\dots,\,2)}{\frak{N}}
+				\,:\,\grado[\frak{a}](f)
+						%=\langle f,e_{\frak{a}}\rangle
+					=0\,\forall\frak{a}\subset F
+					\text{ ideal}%\in\ideales{\oka{F}}
+			\Big\}
+		\text{ .}
+	\end{align*}
+	%
+\end{defFormaCuspidalDefinida}

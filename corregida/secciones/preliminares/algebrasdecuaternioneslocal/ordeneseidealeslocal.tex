@@ -1,0 +1,162 @@
+% Dado que estaremos interesados principalmente en \'{a}lgebras de cuaterniones
+% sobre cuerpos de n\'{u}meros, ser\'{a} fundamental entender las \'{a}lgebras
+% sobre cuerpos locales. Si $B/K$ es un \'{a}lgebra de cuaterniones
+% sobre un cuerpo de n\'{u}meros $K$, entender los \'{o}rdenes y los ideales
+% en las \'{a}lgebras $B_{v}=B\otimes_{K}K_{v}$ nos ayudar\'{a} a entender
+% los \'{o}rdenes e ideales de $B$.
+% 
+En esta secci\'{o}n asumimos que $K$ es un cuerpo local. Como antes, denotamos
+por $R$ su anillo de enteros y fijamos un \'{a}lgebra de cuaterniones $B/K$.
+Dividiremos la descripci\'{o}n en dos casos: $B$ es isomorfa a un \'{a}lgebra
+de matrices, o bien $B$ es de divisi\'{o}n. Pero antes hacemos una
+observaci\'{o}n v\'{a}lida en ambos.
+
+Sabemos que, si un ideal $I$ es principal, entonces es invertible. Sobre un
+cuerpo local estas dos nociones coinciden.
+
+\begin{propoInvertibleImplicaPrincipal}[{\cite[Thm.~2]{Kaplansky}}]%
+	\label{propo:invertibleimplicaprincipal}
+	Sea $B$ un \'{a}lgebra de cuaterniones sobre un cuerpo local. Si $I$ es
+	un ideal invertible de $B$, entonces $I$ es principal. En particular,
+	$\Oder(I)$ y $\Oizq(I)$ son conjugados.
+\end{propoInvertibleImplicaPrincipal}
+
+Es decir, en las \'{a}lgebras de cuaterniones sobre un cuerpo local,
+$\ideales{\cal{O},\cal{O}'}=\ppales{\cal{O},\cal{O}'}$, para todo par de
+\'{o}rdenes; adem\'{a}s, $\ideales{\cal{O},\cal{O}'}\not=\varnothing$ implica
+$\cal{O}=h\cal{O}'h^{-1}$ para cierto $h\in B$. En general, dados \'{o}rdenes
+$\cal{O}$ y $\cal{O}'$ de $B$, $I=\cal{O}\cdot\cal{O}'$ es un ideal. Si dichos
+\'{o}rdenes son maximales, entonces $I\in\ideales{\cal{O},\cal{O}'}$. Esto
+demuestra el siguiente corolario.
+
+\begin{coroOrdenesMaximalesSonConjugados}%
+	\label{coro:ordenesmaximalessonconjugados}
+	Sea $B$ un \'{a}lgebra de cuaterniones sobre un cuerpo local. Si
+	$\cal{O}$ y $\cal{O}'$ son \'{o}rdenes maximales en $B$, entonces son
+	conjugados.
+\end{coroOrdenesMaximalesSonConjugados}
+
+Llamamos \emph{discriminante reducido de $B/K$} al ideal $\drd{B}$ de $K$ igual
+al discriminante reducido de cualquiera de sus \'{o}rdenes maximales:
+\begin{align*}
+	\drd{B} & \,=\,\drd{\cal{O}}
+	\text{ .}
+\end{align*}
+%
+Por el Corolario \ref{coro:ordenesmaximalessonconjugados}, este ideal est\'{a}
+bien definido.
+
+% \begin{coroOrdenMaximalIdealInvertibleCuerpoLocal}%
+	% \label{coro:ordenmaximalidealinvertiblecuerpolocal}
+	% Sea $I$ un ideal. Si alguno de $\Oizq(I)$ u $\Oder(I)$ es maximal,
+	% entonces $I$ es invertible. En tal caso, $I$ es principal y ambos
+	% \'{o}rdenes son maximales y, m\'{a}s aun, conjugados.
+% \end{coroOrdenMaximalIdealInvertibleCuerpoLocal}
+%
+En lo que resta de esta secci\'{o}n, suponemos que $K$ es una extensi\'{o}n
+finita de $\bb{Q}_{p}$ y elegimos un uniformizador local, al cual tambi\'{e}n
+denotaremos por $p$. Sea $R$ su anillo de enteros y sea $P=R\,p$ el \'{u}nico
+ideal maximal. 
+
+\subsubsection{$B\simeq\MM_{2\times 2}(K)$}
+Sea $V/K$ un espacio vectorial de dimensi\'{o}n $2$. Eligiendo una base de $V$,
+$B$ se identifica con el \'{a}lgebra de endomorfismos de $V$, $\Endo(V)$. Bajo
+esta identificaci\'{o}n, los \'{o}rdenes maximales de $B$ son de la forma
+$\Endo[R](L)$, donde $L$ es un ret\'{\i}culo completo de $V$. En particular,
+todos los \'{o}rdenes maximales de $B$ son conjugados al orden
+\begin{align*}
+	\begin{bmatrix} R & R \\ R & R \end{bmatrix} & \,=\,
+		\MM_{2\times 2}(R)
+	\text{ ,}
+\end{align*}
+%
+%(por un elemento de $B$^{\times}$)
+cuyo discriminante reducido es igual a $\drd{\MM_{2\times 2}(R)}=R$.
+
+Sea $L\subset V$ un ret\'{\i}culo. Si $x\in K^{\times}$, se cumple que
+$\Endo[R](xL)=\Endo[R](L)$. Si $L'$ es un ret\'{\i}culo completo, porque $L$
+es finitamente generado y $L'$ contiene una $K$-base de $V$, existe $D\in R$
+tal que $D\cdot L\subset L'$. Supongamos, entonces, que $L\subset L'$ y que
+ambos son completos. Existen una $R$-base $\{f',g'\}$ de $L'$ y enteros
+$a,b\in\bb{Z}$ tales que $\{f'p^{a},g'p^{b}\}$ es una $R$-base de $L$. En la
+direcci\'{o}n opuesta, si $\{f,g\}$ es una $R$-base de $L$, existe una
+\'{u}nica $R$-base de $L'$ de la forma $\{fp^{m},fr+gp^{n}\}$, con $m,n$
+enteros y $r$ perteneciente a un sistema de representantes de $R/R\,p^n$ dado.
+De esto se deduce que los ideales a izquierda de $\MM_{2\times 2}(R)$ e
+\'{\i}ntegros son los ideales de la forma
+\begin{align*}
+	& \MM_{2\times 2}(R)\,\begin{bmatrix} p^m & r \\ & p^n \end{bmatrix}
+	\text{ ,}
+\end{align*}
+%
+donde $m,n\geq 0$ y $r$ pertenece a un sistema de representantes de $R/R\,p^n$
+dado. Todos estos ideales son distintos y, en paritcular, la cantidad de
+ideales de norma reducida igual a $R\,p$ es $1+|R/R\,p|$.
+
+Sean $\cal{O}=\Endo[R](L)$ y $\cal{O}'=\Endo[R](L')$ dos \'{o}rdenes maximales.
+Asumiendo que $L\subset L'$, existen bases $\{f',g'\}$ y $\{f'p^{a},g'p^{b}\}$
+de $L'$ y de $L$, respectivamente. La \emph{distancia} entre $\cal{O}$ y
+$\cal{O}'$ es\index{orden@!distancia entre ordenes!distancia entre \'{o}rdenes}
+\begin{align*}
+	\mathrm{dist}(\cal{O},\cal{O}') & \,:=\, |b-a|
+	\text{ .}
+\end{align*}
+%
+El \emph{nivel} del orden de Eichler $\cal{O}\cap\cal{O}'$ es la distancia
+$\mathrm{dist}(\cal{O},\cal{O}')$ entre los \'{o}rdenes maximales.
+\index{orden!nivel de un}
+
+\begin{propoOrdenDeEichlerMatrices}\label{propo:ordendeeichlermatrices}
+	Sea $\cal{O}$ un orden de $\MM_{2\times 2}(K)$. Las propiedades
+	siguientes son equivalentes: \textit{(i)} existe un \'{u}nico par
+	$\cal{O}_{1},\cal{O}_{2}$ de \'{o}rdenes maximales tales que
+	$\cal{O}=\cal{O}_{1}\cap\cal{O}_{2}$; \textit{(ii)} $\cal{O}$ es de
+	Eichler; \textit{(iii)} existe un \'{u}nico entero $e\geq 0$ tal que
+	$\cal{O}$ es conjugado a
+	\begin{equation}
+		\label{eq:ordendeeichlermatriceslocal}
+		\begin{bmatrix} R & R \\ R\,p^{e} & R \end{bmatrix}
+		\text{ .}
+	\end{equation}
+	%
+\end{propoOrdenDeEichlerMatrices}
+
+El entero $e$ en la proposici\'{o}n anterior es igual al nivel del orden de
+Eichler $\cal{O}$. Decimos tambi\'{e}n que el nivel de $\cal{O}$ es $R\,p^e$.
+Se verifica que el discriminante reducido del orden
+\eqref{eq:ordendeeichlermatriceslocal} es $R\,p^e$. A este orden en
+$\MM_{2\times 2}(K)$ lo llamamos \emph{orden de Eichler est\'{a}ndar de nivel %
+$R\,p^e$}\index{orden!de Eichler!estandar@est\'{a}ndar}
+y lo denotamos $\cal{O}_{0}(R\,p^e)$. En general, el discriminante reducido de
+un orden de Eichler de nivel $R\,p^e$ en $B$ es $R\,p^e$.
+
+\subsubsection{$B\not\simeq\MM_{2\times 2}(K)$}
+La valuaci\'{o}n $v$ en $K$ se extiende a una valuaci\'{o}n en $B$ componiendo
+con la norma reducida. Si $v:\,K^{\times}\rightarrow\bb{Z}$ con $v(p)=1$,
+definimos $w:\,B^{\times}\rightarrow\bb{Z}$ por
+\begin{align*}
+	w & \,=\,v\circ\nrd
+	\text{ .}
+\end{align*}
+%
+que es una valuaci\'{o}n discreta en $B$. Como
+$\nrd:\,B^{\times}\rightarrow K^{\times}$ es sobreyectiva,%
+\footnote{
+	\cite[Ch.~X \S~2]{WeilBasic}
+}
+existe $\pi\in B^{\times}$ cuya norma reducida es igual a $\nrd(\pi)=p$.
+Entonces, si
+\begin{align*}
+	\cal{O}\,:=\, \big\{ w\geq 0\big\} & \quad\text{y}\quad
+		\cal{P}\,:=\, \big\{ w>0 \big\}
+	\text{ ,}
+\end{align*}
+%
+el \'{u}nico orden maximal de $B$ es $\cal{O}$, cuyo \'{u}nico ideal
+bil\'{a}tero e \'{\i}ntegro maximal es $\cal{P}$, que es principal
+($\cal{P}=\cal{O}\pi=\pi\cal{O}$). Hay un \'{u}nico orden de Eichler y es igual
+a $\cal{O}$. Todo $\cal{O}$-ideal a izquierda es un $\cal{O}$-ideal a derecha
+y, por lo tanto, bil\'{a}tero. Los ideales de $\cal{O}$ (a derecha o a
+izquierda) son todos de la forma $\cal{P}^{i}$ con $i\in\bb{Z}$ y, en
+particular, son todos principales. Adem\'{a}s, $(\cal{O}^{*})^{-1}=\cal{P}$ y
+$\drd{\cal{O}}=\nrd(\cal{P})=R\,p$.

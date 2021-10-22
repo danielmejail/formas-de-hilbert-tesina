@@ -1,0 +1,847 @@
+\newtheorem*{teoClassificationSurUnCorpsLocal}{Teorema}
+\newtheorem*{teoClassificationSurUnCorpsGlobal}{Teorema}
+\newtheorem*{propoMaxOrdInvertible}{Proposici\'{o}n}
+\newtheorem*{propoInvertibleImplicaPrincipal}{Proposici\'{o}n}
+\newtheorem*{propoLatticesSplitAlg}{Proposici\'{o}n}
+\newtheorem*{propoLatticesSplitAlgCont}{Proposici\'{o}n}
+\newtheorem*{teoMaxOrdsSplitAlg}{Teorema}
+\newtheorem*{propoOrdEichlerSplitAlg}{Proposici\'{o}n}
+
+\theoremstyle{remark}
+\newtheorem*{obsConjugadosEInversos}{Observaci\'{o}n}
+
+En esta secci\'{o}n repasamos algunos resultados de la teor\'{\i}a de
+\'{a}lgebras de cuaterniones. Tomamos como referencia [Vign\'{e}ras].
+
+Sea $K$ un cuerpo. Un \emph{\'{a}lgebra de cuaterniones sobre $K$} es un
+\'{a}lgebra $B$ central de dimensi\'{o}n cuatro sobre $K$ tal que existen
+$L\subset B$ un \'{a}lgebra separable de dimensi\'{o}n dos sobre $K$ y
+$\theta\in K^{\times}$ de manera que $B=L\oplus uL$, donde $u\in B$ satisface
+\begin{align*}
+ u^{2} \,=\, & \theta\quad\text{y} \\
+ ux \,=\, & \conj{x}u
+\end{align*}
+%
+para todo $x\in L$, donde $x\mapsto \conj{x}$ es el $K$-automorfismo
+no trivial de $L$. Equivalentemente, $B/K$ es un \'{a}lgebra central simple
+de dimensi\'{o}n cuatro.
+
+Manteniendo la notaci\'{o}n del p\'{a}rrafo anterior, la
+\emph{conjugaci\'{o}n} en $B$ se define como el $K$-morfismo de $B$ que
+extiende el automorfismo de $L$ determinado por
+\begin{align*}
+ \conj{\conj{b}} \,=\, & b\text{ ,} \\
+ \conj{bb_{1}} \,=\, & \conj{b_{1}}\conj{b}\quad\text{y} \\
+ \conj{u} \,=\, & -u\text{ .}
+\end{align*}
+%
+para $b\in B$. Definimos la \emph{traza reducida} y la \emph{norma reducida}
+de $b$ por, respectivamente,
+\begin{align*}
+ \trd(b)\,=\, & b+\conj{b}\text{ ,}\\
+ \nrd(b)\,=\, & b\conj{b}\text{ .}
+\end{align*}
+%
+Se verifica que $\trd(b),\nrd(b)\in K$ para todo $b$ y que $b$ es
+soluci\'{o}n del polinomio $X^{2}-\trd(b)X+\nrd(b)\in K[X]$, denominado
+\emph{polinomio minimal (reducido) de $b$}. La norma reducida es
+multiplicativa y un elemento $b\in B$ es invertible, si y s\'{o}lo si
+$\nrd(b)\not =0$. En particular, la norma reducida induce un morfismo de
+grupos multiplicativos
+\begin{align*}
+ \nrd\,:\, & B^{\times}\rightarrow K^{\times}
+ \text{ .}
+\end{align*}
+%
+Adem\'{a}s,
+\begin{align*}
+ \conj{b} \,=\, & \trd(b)\,-\,b\quad\text{y}\\
+ b^{-1} \,=\, & \conj{b}/\nrd(b)\text{ .}
+\end{align*}
+%
+La traza reducida es una transformaci\'{o}n $K$-lineal $\trd :\,B\rightarrow K$
+y la aplicaci\'{o}n $(b,b_{1})\mapsto \trd(bb_{1})$ es una forma bilineal
+no degenerada.
+
+\paragraph{Ejemplo}
+El \'{a}lgebra de matrices $B=\MM_{2\times 2}(K)$ con coeficientes en un
+cuerpo $K$ es un \'{a}lgebra de cuaterniones sobre $K$. El cuerpo $K$ se
+identifica con
+\begin{math}
+ I\cdot K=\left\lbrace \begin{bmatrix} a & \\ & a \end{bmatrix}\,:\,
+ a\in K\right\rbrace
+\end{math}~.
+Elegimos $\alpha=\begin{bmatrix} a_{1} & \\ & a_{2} \end{bmatrix}$ con
+$a_{1}\not = a_{2}$ y definimos $L:=K(\alpha)$. El $K$-automorfismo no trivial
+de $L$ est\'{a} dado por el automorfismo interior $x\mapsto uxu^{-1}$,
+donde $u=\begin{bmatrix} & 1 \\ 1 & \end{bmatrix}$. Eligiendo $L$ y $u$
+de esta manera, vemos que $B$ es un \'{a}lgebra de cuaterniones. Si
+$\gamma=\begin{bmatrix} a & b \\ c & d \end{bmatrix}\in\MM_{2\times 2}(K)$,
+entonces
+\begin{align*}
+ \conj{\gamma} \,=\, & \begin{bmatrix} d & -b \\ -c & a \end{bmatrix} \\
+ \trd(\gamma) \,=\, & a\,+\,d \\
+ \nrd(\gamma) \,=\, & ad\,-\,bc\text{ .}
+\end{align*}
+%
+En particular, la traza y la norma reducidas est\'{a}n dadas por la traza
+y el determinante usuales.
+
+
+Si $K$ es un cuerpo contenido en otro cuerpo $K'$ y $B$ es un \'{a}lgebra
+de cuaterniones sobre $K$, el producto tensorial (sobre $K$)
+$K'\otimes B$ es un \'{a}lgebra de cuaterniones sobre el cuerpo m\'{a}s
+grande que se obtiene por extensi\'{o}n de escalares.
+
+Si la caracter\'{\i}stica del cuerpo $K$ es distinta de $2$, entonces
+el \'{a}lgebra $B$ se puede definir como la $K$-\'{a}lgebra con base
+$\{1,i,j,k=ij\}$, donde los elementos $i,j\in B$ verifican
+\begin{align*}
+ i^{2} \,=\, & a \text{ ,} \\
+ j^{2} \,=\, & b \quad\text{y} \\
+ ji \,=\, & -ij
+\end{align*}
+%
+con $a,b\in K$. Recuperamos la definici\'{o}n anterior tomando
+$L=K(i)$, $u=j$ y $\theta=b$. Cuando un \'{a}lgebra de cuaterniones
+es definida de esta manera, escribimos $B=(a,b)_{K}$.
+Si $a$ es un cuadrado en $K^{\times}$, queda $B\simeq\MM_{2\times 2}(K)$.
+Si no, tomamos $L=K(\alpha)$ con $\alpha^{2}=a$ y $(a,b)_{K}$ es
+una sub\'{a}lgebra de $(a,b)_{L}=L\otimes (a,b)_{K}$. Entonces podemos
+describir a $(a,b)_{K}$ de la siguiente manera:
+\begin{align*}
+ (a,b)_{K} \,\simeq\, & \left\lbrace \begin{bmatrix} u & v \\
+					b\conj{v} & \conj{u} \end{bmatrix}
+	\,:\, u,v\in L\right\rbrace
+	\text{ .}
+\end{align*}
+%
+
+Si $x=x_{0}+x_{1}i+x_{2}j+x_{3}k\in B$, entonces
+\begin{align*}
+ \conj{x} \,=\, & x_{0} - x_{1} i - x_{2} j - x_{3} k \text{ ,} \\
+ \trd(x) \,=\, & 2x_{0} \quad\text{y} \\
+ \nrd(x) \,=\, & x_{0}^{2} - a x_{1}^{2} - b x_{2}^{2} + ab x_{3}^{2}
+ \text{ .}
+\end{align*}
+%
+
+\paragraph{Ejemplo}
+Los cuaterniones de Hamilton, $\bb{H}$, constituyen un \'{a}lgebra de
+cuaterniones sobre $\bb{R}$: $\bb{H}\simeq (-1,-1)_{\bb{R}}$. Sobre $\bb{C}$
+se obtiene una representaci\'{o}n como sub\'{a}lgebra de un \'{a}lgebra de
+marices:
+\begin{align*}
+ \bb{H}\,\simeq\, & \left\lbrace \begin{bmatrix} z & w \\
+					-\conj{w} & \conj{z} \end{bmatrix}
+	\,:\,z,w\in\bb{C}\right\rbrace\text{ .}
+\end{align*}
+%
+
+\subsection{Clasificaci\'{o}n de las \'{a}lgebras de cuaterniones}
+En general, un \'{a}lgebra central simple de dimensi\'{o}n $4$ sobre
+un cuerpo $K$, o bien es isomorfa a $\MM_{2\times 2}(K)$, o bien es de
+divisi\'{o}n.
+
+Dado que todo $(\bb{C}^{\times})^{2}=\bb{C}^{\times}$, toda \'{a}lgebra de
+cuaterniones sobre $\bb{C}$ es isomorfa al \'{a}lgebra de matrices
+$\MM_{2\times 2}(\bb{C})$. Sobre $\bb{R}$ hay s\'{o}lo dos clases de
+isomorfismo de \'{a}lgebras de cuaterniones: $\bb{H}$ y
+$\MM_{2\times 2}(\bb{R})$. Notemos que $\bb{H}^{1}$, el subgrupo de unidades
+de norma reducida $1$ en $\bb{H}$, es compacto, mientras que
+el grupo correspondiente en matrices, $\SL_{2}(\bb{R})$, no lo es.
+
+Sobre los cuerpos locales $\bb{Q}_{p}$, como en el caso real, hay
+exactamente dos clases de isomorfismo de \'{a}lgebras de cuaterniones:
+una correspondiente a matrices y otra correspondiente a un \'{a}lgebra de
+divisi\'{o}n sobre $\bb{Q}_{p}$. Esto es cierto bien en general:
+un \emph{cuerpo local} es un cuerpo (conmutativo) localmente compacto
+(y no discreto), es decir, $\bb{R}$, $\bb{C}$ o una extensi\'{o}n
+finita de $\bb{Q}_{p}$ (si la caracter\'{\i}stica es $0$), o $\bb{F}_{q}[[T]]$,
+si la caracter\'{\i}stica es positiva.
+
+\begin{teoClassificationSurUnCorpsLocal}[Clasificaci\'{o}n local]
+ Sea $K$ un cuerpo local distinto de $\bb{C}$. Entonces existe una \'{u}nica
+ \'{a}lgebra de cuaterniones de divisi\'{o}n, salvo isomorfismo.
+\end{teoClassificationSurUnCorpsLocal}
+
+En adelante, consideraremos \'{a}lgebras de cuaterniones sobre un cuerpo
+global, m\'{a}s precisamente, sobre una extensi\'{o}n finita de $\bb{Q}$.
+Sea $K/\bb{Q}$ un cuerpo de n\'{u}meros, sea $v$ un lugar finito o infinito
+de $K$ y sea $K_{v}$ la completaci\'{o}n correspondiente.
+Decimos que un \'{a}lgebra de cuaterniones $B$ sobre $K$ \emph{ramifica}
+en $v$, si $B_{v}=B\otimes K_{v}$ es un \'{a}lgebra de divis\'{o}n.
+Sea $\mathrm{Ram}(B)$ el \emph{conjunto de ramificaci\'{o}n de $B$},
+conjunto de lugares de $K$ en donde $B$ ramifica.
+
+\begin{teoClassificationSurUnCorpsGlobal}[Clasificaci\'{o}n global]
+ El cardinal $\#\mathrm{Ram}(B)$ es par. Si $S$ es un subconjunto de lugares
+ de $K$ de cardinal par, existe una \'{u}nica \'{a}lgebra de cuaterniones
+ cuyo conjunto de ramificaci\'{o}n es $S$, salvo isomorfismo.
+\end{teoClassificationSurUnCorpsGlobal}
+
+En particular, el teorema de clasificaci\'{o}n nos dice que dos \'{a}lgebras
+de cuaterniones sobre un cuerpo de n\'{u}meros son isomorfas, si y s\'{o}lo
+si son isomorfas localmente.
+
+\subsection{\'{O}rdenes e ideales}
+Sean $R$ un anillo de Dedekind, $K$ su cuerpo de fracciones y $B$ un
+\'{a}lgebra de cuaterniones sobre $K$.
+
+Dado un espacio vectorial $V$ sobre $K$, un \emph{ret\'{\i}culo} en $V$
+un $R$-m\'{o}dulo $L\subset V$ finitamente generado. Si $L$ contiene una
+base de $V$, es decir, si $L\otimes_{R}K=V$, decimos que $L$ es un
+ret\'{\i}culo \emph{completo}. (Si es necesario enfatizar el rol del anillo
+$R$ diremos que $L$ es un $R$-lattice o un ret\'{\i}culo sobre $R$).
+
+Un elemento $b\in B$ es \emph{entero} (o \emph{entero sobre $R$}),
+si el $R$-subm\'{o}dulo $R[b]\subset B$ es un ret\'{\i}culo en $B$.
+Un elemento $b$ es entero, si y s\'{o}lo si su traza reducida y su norma
+reducida pertenecen a $R$. A diferencia de lo que ocurre en un cuerpo de
+n\'{u}meros, el conjunto de enteros de $B$ no constituye un anillo.
+
+Un \emph{ideal} ($R$-ideal) de $B$ es un ret\'{\i}culo (sobre $R$) completo
+en $B$. Un \emph{orden} ($R$-orden) de $B$ es un ideal que es un anillo
+(con unidad), o, equivalentemente, un anillo de enteros $\cal{O}\subset B$
+que contiene a $R$ y tal que $\cal{O}K=B$. Un \emph{orden maximal} es un
+orden que no est\'{a} contenido propiamente en otro orden. Un
+\emph{orden de Eichler} es una intersecci\'{o}n de dos \'{o}rdenes maximales.
+
+Dado $I$ un ideal de $B$, le asociamos los conjuntos
+\begin{align*}
+	\Oizq(I) \,=\, & \left\lbrace b\in B\,:\,bI\subset I\right\rbrace
+	\quad\text{y}\\
+	\Oder(I) \,=\, & \left\lbrace b\in B\,:\,Ib\subset I\right\rbrace
+\end{align*}
+%
+denominados, respectivamente, \emph{orden a izquierda} y \emph{orden a derecha}
+de $I$. Son \'{o}rdenes de $B$. Un ideal se dice \emph{\'{\i}ntegro}, si sus
+elementos son \'{\i}ntegros. Esta condici\'{o}n es equivalente a
+$I\subset\Oizq(I)$ (o, lo que es lo mismo, a $I\subset\Oder(I)$).
+La \emph{norma reducida de $I$}, denotada $\nrd(I)$ es el ideal fraccionario
+de $R$ generado por $\{\nrd(x)\,:\,x\in I\}$.
+
+Definimos el \emph{producto de dos ideales $I,J$} como el conjunto de
+sumas finitas de elementos de la forma $ab$, con $a\in I$ y $b\in J$. Es
+un ideal de $B$ y lo denotamos $IJ$. Pero, a diferencia de lo que ocurre en
+un cuerpo de n\'{u}meros, si multiplicamos dos ideales cuyo orden, digamos,
+a izquierda es $\cal{O}$, no es cierto que de esta manera se obtiene un
+ideal cuyo orden a izquierda es $\cal{O}$.
+
+Si $I$ es un ideal de $B$, definimos el \emph{inverso} de $I$ como
+\begin{align*}
+ I^{-1} \,=\, & \left\lbrace b\in B\,:\,
+	IbI\subset I\right\rbrace
+	\text{ .}
+\end{align*}
+%
+El inverso $I^{-1}$ es un ideal, pero no es cierto que $II^{-1}$ o que
+$I^{-1}I$ sean iguales a alguno de los \'{o}rdenes de $I$, como ocurre
+con los ideales fraccionarios del cuerpo $K$, por ejemplo. S\'{o}lo
+contamos con las inclusiones
+\begin{align*}
+ II^{-1}\,\subset\, & \Oizq(I)\,\subset\,\Oder(I^{-1})\text{ ,}\\
+ I^{-1}I\,\subset\, & \Oder(I)\,\subset\,\Oizq(I^{-1})\text{ .}
+\end{align*}
+%
+Decimos que \emph{$I$ es invertible}, si todas estas inclusiones son
+igualdades.
+
+Si $b\in B$ e $I\subset B$ es un ideal, $b\Oder(I)=\Oizq(I)b$. El ideal $I$
+se dice \emph{principal}, si es de la forma $\Oizq(I)b$ para alg\'{u}n
+elemento $b$. Si $I=\cal{O}b$ es un ideal principal, su orden a izquierda
+es $\cal{O}$ y su orden a derecha es el conjugado $b^{-1}\cal{O}b$. Notemos
+que $I=\cal{O}b\cal{O}'$. Vale tambi\'{e}n que $I^{-1}$ es un ideal principal
+($I^{-1}=b^{-1}\cal{O}$). En particular, todo ideal principal es invertible.
+Los ideales principales tambi\'{e}n satisfacen $\nrd(IJ)=\nrd(I)\nrd(J)$.
+
+Dado un ret\'{\i}culo $I\subset B$ (un $R$-subm\'{o}dulo finitamente
+generado), el \emph{dual} de $I$, definido como
+\begin{align*}
+	I^{*} \,:=\, & \left\lbrace b\in B\,:\,\trd(bI)\subset R\right\rbrace
+	\text{ ,}
+\end{align*}
+%
+es un ret\'{\i}culo tambi\'{e}n y vale que $(I^{*})^{*}=I$.
+Como la traza define una forma bilineal no degenerada, toda $R$-base de
+$I$ determina \'{u}nivocamente una \emph{base dual} para $I^{*}$. En
+particular, $I^{*}$ es un ideal, si $I$ lo es. Si $\cal{O}$ es un orden en
+$B$, definimos su \emph{diferente} como $(\cal{O}^{*})^{-1}$ y su
+\emph{discriminante reducido} como $\drd{\cal{O}}:=\nrd((\cal{O}^{*})^{-1})$.
+%Si $\cal{O}\subset\cal{O}'$ son \'{o}rdenes de $B$, los ideales diferentes
+%satifacen $\drd{\cal{O}}\mid\drd{\cal{O}'}$ y son iguales, si y s\'{o}lo si
+%los \'{o}rdenes son iguales.
+
+Dado un ret\'{\i}culo $I$, la presencia de la involuci\'{o}n
+$x\mapsto\conj{x}$ nos permite definir su \emph{conjugado} como
+$\conj{I}=\{\conj{x}\,:\,x\in I\}$. El conjugado de un ret\'{\i}culo es
+un ret\'{\i}culo y la aplicaci\'{o}n $I\mapsto\conj{I}$ satisface
+$\lconj{IJ}=\conj{J}\conj{I}$. Si $I$ es un ideal, $\conj{I}$ tambi\'{e}n
+lo es y vale que $\Oizq(\conj{I})=\Oder(I)$ y $\Oder(\conj{I})=\Oizq(I)$.
+Si $I$ es un ret\'{\i}culo con $1\in I$ y tal que $\trd(I)\subset R$, como
+$\conj{x}=\trd(x)-x$, se deduce que $\conj{I}=I$ y, en ese caso, los
+\'{o}rdenes a derecha y a izquierda son iguales.
+
+Decimos que \emph{$I$ es compatible con $J$}, o que el producto
+$IJ$ es \emph{compatible}, si $\Oder(I)=\Oizq(J)$. Si $IJ$ es un producto
+compatible, y, adem\'{a}s, $J$ es invertible, vale que
+\begin{align*}
+	\Oizq(IJ)\cdot IJ\,\subset\, & IJ\quad\text{y que} \\
+	\Oizq(IJ)\cdot IJJ^{-1} \,\subset\, & I\cdot\Oizq(J)
+	\,=\,I\cdot\Oder(I)\,=\,I
+	\text{ .}
+\end{align*}
+%
+Como siempre vale la inclusi\'{o}n $\Oizq(I)\subset\Oizq(IJ)$, tenemos que
+\begin{align*}
+	\Oizq(IJ) \,=\, & \Oizq(I)
+	\text{ .}
+\end{align*}
+%
+Si suponemos que $I$ tambi\'{e}n es invertible, podemos concluir que
+$\Oder(IJ)=\Oder(J)$, tambi\'{e}n. En definitiva, si $\cal{O}$ y $\cal{O}'$
+son dos \'{o}rdenes de $B$, si tomamos un producto compatible $IJ$
+con $I$ y $J$ invertibles, $\Oizq(I)=\cal{O}$ y $\Oder(J)=\cal{O}'$,
+entonces obtenemos un ideal cuyo orden a izquierda es $\cal{O}$ y
+cuyo orden a derecha es $\cal{O}'$. Si $\cal{O}=\cal{O}'$, entonces
+podemos definir un grupo, el \emph{grupo de $\cal{O}$-ideales bil\'{a}teros %
+e invertibles}. Denotamos este grupo por $\ideales{\cal{O}}$. Como
+ya mencionamos, los ideales principales son invertibles y el producto de
+dos ideales principales es principal, con lo que podemos definir el
+\emph{subgrupo de ideales principales} $\ppales{\cal{O}}\leq\ideales{\cal{O}}$.
+Estos son los ideales de la forma $\cal{O}b\cal{O}$.
+En general, si $\cal{O}\not =\cal{O}'$, no hay estructura de grupo
+y obtenemos un \emph{grupoide} considerando todos los conjuntos
+$\ideales{\cal{O},\cal{O}'}$ de ideales invertibles cuyo orden a izquierda
+es $\cal{O}$ y $\cal{O}'$ a derecha.
+
+\subsection{Clases}
+Dos ideales $I,J$ de $B$ se dicen \emph{equivalentes a izquierda}, si
+existe $b\in B^{\times}$ tal que $I=bJ$.
+Si $\cal{O}$ es un orden de $B$, esto determina una relaci\'{o}n de
+equivalencia en el conjunto de ideales cuyo orden \emph{a derecha} es
+$\cal{O}$ y dos $\cal{O}$-ideales a derecha son equivalentes a izquierda,
+si y s\'{o}lo si son isomorfos como $\cal{O}$-m\'{o}dulos a derecha.
+Notemos que si $I$ es un ideal invertible con $\Oder(I)=\cal{O}$, todo
+ideal $J=bI$ equivalente a izquierda cn $I$ es invertible, tambi\'{e}n.
+En tal caso, decimos que la \emph{clase} correspondiente a $I$ es
+\emph{invertible}. El \emph{conjunto de clases a izquierda} del orden
+$\cal{O}$, denotado $\lClass{\cal{O}}$, es el conjunto de ideales
+$I$ tales que $\Oder(I)=\cal{O}$, m\'{o}dulo la relaci\'{o}n
+$I\sim J\Leftrightarrow I=bJ$ para alg\'{u}n $b\in B^{\times}$, y cuya clase
+es invertible. An\'{a}logamente, podemos definir las clases a derecha de
+$\cal{O}$ (y denotamos el conjunto de dichas clases por $\rClass{\cal{O}}$).
+Notemos que $\rClass{\cal{O}}$ y $\lClass{\cal{O}}$ son \emph{a priori}
+s\'{o}lo \emph{conjuntos}.
+% El conjunto $\lClass{\cal{O}}$ tiene un elemento distinguido: la clase de
+% $\cal{O}$.
+Como un \'{a}lgebra de cuaterniones cuenta con una involuci\'{o}n
+$x\mapsto\conj{x}$, la aplicaci\'{o}n $I\mapsto\conj{I}$ da una biyecci\'{o}n
+entre las clases a izquierda y las clases a derecha de un orden $\cal{O}$.
+
+Decimos que dos \'{o}rdenes $\cal{O},\cal{O}'$ \emph{est\'{a}n conectados},
+si existe un ideal $I$ de $B$ cuyo orden a izquierda es $\cal{O}$ y cuyo
+orden a derecha es $\cal{O}'$ y se dicen \emph{del mismo tipo}, si son
+conjugados por un elemento de $B^{\times}$ (o, equivalentemente, si son
+isomorfos como $R$-\'{a}lgebras). Los \'{o}rdenes $\cal{O}$ y $\cal{O}'$ son
+del mismo tipo, si y s\'{o}lo si est\'{a}n conectados por un ideal principal.
+Un isomorfismo $\cal{O}\simeq\cal{O}'$ (dado por conjugaci\'{o}n) induce una
+biyecci\'{o}n $\lClass{\cal{O}}\rightarrow\lClass{\cal{O}'}$.
+La existencia de una involuci\'{o}n en $B$ nos permite concluir
+que ``estar conectados'' es una relaci\'{o}n de equivalencia entre los
+\'{o}rdenes de $B$. El \emph{g\'{e}nero} de $\cal{O}$ es el conjunto de
+\'{o}rdenes conectados con $\cal{O}$, es decir, su clase respecto de
+esta relaci\'{o}n, lo denotamos $\Genus{\cal{O}}$.
+Si $\cal{O}$ y $\cal{O}'$ son \'{o}rdenes conectados
+y $J$ es un ideal que los conecta, la aplicaci\'{o}n $I\mapsto IJ$ determina
+una biyecci\'{o}n $\lClass{\cal{O}}\rightarrow\lClass{\cal{O}'}$;
+su inversa est\'{a} dada por $I'\mapsto I'J^{-1}$.
+
+% Se puede ver que, sobre un cuerpo global, dos \'{o}rdenes est\'{a}n
+% conectados, si y s\'{o}lo si son isomorfos \emph{localmente} (pero
+% no necesariamente globalmente); dos \'{o}rdenes pueden pertenecer
+% al mismo g\'{e}nero pero no ser del mismo tipo.
+
+%%---
+
+\subsection{Grupoide de Brandt}
+Describimos la construcci\'{o}n an\'{a}loga al grupo de clases de ideales
+de un cuerpo de n\'{u}meros para un \'{a}lgebra de cuaterniones.
+
+Dados $\cal{O},\cal{O}'$ dos \'{o}rdenes de $B$, sea
+$\ideales{\cal{O},\cal{O}'}$ el conjunto de ideales invertibles cuyo
+orden a izquierda es $\cal{O}$ y cuyo orden a derecha es $\cal{O}'$.
+Este conjunto es no vac\'{\i}o precisamente cuando $\cal{O}$ y $\cal{O}'$
+pertenecen al mismo g\'{e}nero. El conjunto de ideales invertibles de $B$,
+con el producto dado por el producto compatible de ideales y las
+unidades los \'{o}rdenes de $B$, tiene estructura de grupoide.
+El producto $IJ$ est\'{a} definido \'{u}nicamente cuando el producto de
+ideales es compatible. \'{O}rdenes $\cal{O},\cal{O}',\cal{O}''$ pertenecen al
+mismo g\'{e}nero, si y s\'{o}lo si los conjuntos
+$\ideales{\cal{O},\cal{O}'}$ e $\ideales{\cal{O}',\cal{O}''}$ son no
+vac\'{\i}os, y, en tal caso, hay una aplicaci\'{o}n
+\begin{align*}
+	\ideales{\cal{O},\cal{O}'}\,\times\,\ideales{\cal{O}',\cal{O}''}
+	& \,\rightarrow\,\ideales{\cal{O},\cal{O}''} \\
+	(I,J) & \,\mapsto\,IJ
+	\text{ .}
+\end{align*}
+%
+Entonces, dado un g\'{e}nero $\cal{G}=\Genus{\cal{O}}$, definimos
+\begin{align*}
+	\Brandt{\cal{G}} \,:=\, & \left\lbrace
+	\text{Ideales invertibles } I\text{ de } B\text{ con }
+	\Oizq(I),\Oder(I)\in\cal{G}\right\rbrace
+	\text{ .}
+\end{align*}
+%
+Este conjunto tiene estructura de grupoide tambi\'{e}n y adem\'{a}s es conexo.
+
+Si $I,J\in\ideales{\cal{O},\cal{O}'}$, entonces $I$ y $J$ son isomorfos
+como $\cal{O},\cal{O}'$-bim\'{o}dulos, si y s\'{o}lo si existe
+$a\in K^{\times}$ tal que $J=aI$, es decir, son homot\'{e}ticos
+(extendiendo escalares %tensorizando con $K$
+se ve que todo isomorfismo de bim\'{o}dulos est\'{a} dado por multiplicar
+por un elemento de $B$. Necesariamente este elemento est\'{a}en el centro que
+es $K$). Esto determina una relaci\'{o}n de equivalencia y cada clase de
+homotecia tiene \'{o}rdenes a izquierda y a derecha bien definidos.
+De esta manera, las clases m\'{o}dulo homotecias de ideales invertibles de
+$B$ tambi\'{e}n constituyen un grupoide con el producto compatible de
+(clases de) ideales. Este grupoide admite un morfismo sobreyectivo del
+grupoide de los ideales invertibles de $B$, y una componente conexa
+$\Brandt{\cal{G}}$ determina un grupoide conexo asociado al g\'{e}nero
+$\cal{G}$ formado por las im\'{a}genes de los conjuntos
+$\ideales{\cal{O},\cal{O}'}$ con $\cal{O},\cal{O}'\in\cal{G}$.
+Definimos
+\begin{align*}
+ \Pic{\cal{O},\cal{O}'} \,:=\, & \ideales{\cal{O},\cal{O}'}/\sim \\
+	\,=\, &
+	\left\lbrace [I]\,:\,I\in\ideales{\cal{O},\cal{O}'}\right\rbrace
+	\text{ ,}
+\end{align*}
+%
+donde $[I]$ denota la clase de homotecia de $I$. En general, como
+$\ideales{\cal{O},\cal{O}'}$ no es un grupo, la suryecci\'{o}n
+$\ideales{\cal{O},\cal{O}'}\rightarrow\Pic{\cal{O},\cal{O}'}$ determina un
+morfismo
+\begin{align*}
+	\Brandt{\cal{G}}\,=\, & \bigcup_{\cal{O},\cal{O}'\in\cal{G}}\,
+	\ideales{\cal{O},\cal{O}'}
+	\,\rightarrow\,\bigcup_{\cal{O},\cal{O}'\in\cal{G}}\,
+	\Pic{\cal{O},\cal{O}'}
+	\text{ .}
+\end{align*}
+%
+Pero cuando $\cal{O}=\cal{O}'$, la relaci\'{o}n de homotecia est\'{a}
+dada por el subgrupo (normal) $\ppales{R}$ de ideales fraccionarios
+principales de $R$, que se identifica con los ideales principales de la
+forma $\cal{O}a\cal{O}\in\ideales{\cal{O}}$, $a\in K^{\times}$ v\'{\i}a
+$aR\mapsto\cal{O}a\cal{O}$. En este caso, tenemos un morfismo de grupos
+\begin{align*}
+ \ideales{\cal{O}} & \,\rightarrow\,\Pic{\cal{O}}\,:=\,
+	\ideales{\cal{O}}/\ppales{R}
+	\text{ .}
+\end{align*}
+%
+El grupo $\Pic{\cal{O}}$ es el \emph{grupo de Picard} del orden $\cal{O}$.
+Notemos que la inclusi\'{o}n $\ppales{R}\hookrightarrow\ideales{\cal{O}}$
+es la restricci\'{o}n de la inclusi\'{o}n de todos los ideales $\ideales{R}$,
+no s\'{o}lo los principales, por $\frak{a}\mapsto\cal{O}\frak{a}\cal{O}$.
+
+% Dentro del conjunto $\ideales{\cal{O},\cal{O}'}$ encontramos el subconjunto
+% $\ppales{\cal{O},\cal{O}'}=\{\cal{O}b\cal{O}'\,:\,b\in B^{\times}\}$ de
+% ideales principales. Si
+% \begin{align*}
+ % \normalizador{\cal{O},\cal{O}'}\,:=\, &
+	% \left\lbrace \alpha\in B^{\times}\,:\,
+	% \alpha^{-1}\cal{O}\alpha=\cal{O}'\right\rbrace
+	% \text{ ,}
+% \end{align*}
+% %
+% tenemos una suryecci\'{o}n
+% $\normalizador{\cal{O},\cal{O}'}\rightarrow\ppales{\cal{O},\cal{O}'}$
+% dada por $\alpha\mapsto\cal{O}\alpha\cal{O}'$. Si $\alpha,\alpha_{1}$
+% pertenecen a $\normalizador{\cal{O},\cal{O}'}$,
+% \begin{align*}
+	% \cal{O}\alpha\cal{O}'\,=\,\cal{O}\alpha_{1}\cal{O}'
+	% \,\Leftrightarrow\, & \cal{O}\alpha\,=\,\cal{O}\alpha_{1}
+	% \,\Leftrightarrow\,\alpha\cal{O}'\,=\,\alpha_{1}\cal{O}' \\
+	% \,\Leftrightarrow\, & \alpha_{1}^{-1}\alpha\in\cal{O}^{\times}
+	% \,\Leftrightarrow\, \alpha\alpha_{1}^{-1}\in\cal{O}'^{\times}
+	% \text{ .}
+% \end{align*}
+% %
+Volvamos al caso especial en que $\cal{O}'=\cal{O}$. Sea
+\begin{align*}
+ \cal{N}\,:=\,\normalizador[B^{\times}]{\cal{O}} \,=\, &
+	\left\lbrace b\in B^{\times}\,:\,b^{-1}\cal{O}b=\cal{O}
+	\right\rbrace
+\end{align*}
+%
+el normalizador de $\cal{O}$ en $B^{\times}$. %Tenemos una aplicaci\'{o}n
+%sobreyectiva $\normalizador[B^{\times}]{\cal{O}}\rightarrow\ppales{\cal{O}}$
+%dada por $b\mapsto\cal{O}b\cal{O}$, de la que se deduce que
+Existe una sucesi\'{o}n exacta corta de grupos
+\begin{center}
+\begin{tikzcd}
+	1\arrow{r} & \cal{O}^{\times}\arrow{r} &
+	% \normalizador[B^{\times}]{\cal{O}}\arrow{r} &
+	\cal{N}\arrow{r} &
+	\ppales{\cal{O}}\arrow{r} & 1
+\end{tikzcd}\quad\text{,}
+\end{center}
+%
+donde %$\normalizador[B^{\times}]{\cal{O}}=\normalizador{\cal{O},\cal{O}}$,
+la flecha de la izquierda es la inclusi\'{o}n y la de la derecha est\'{a}
+dada por $b\mapsto\cal{O}b\cal{O}$. Notemos que
+$K^{\times}\subset\cal{N}$. Para un elemento
+$a\in K^{\times}$, vale que $\cal{O}a\cal{O}=\cal{O}$, si y s\'{o}lo si
+$a$ es una unidad del orden $\cal{O}$ y esto equivale a que $a\in R^{\times}$.
+Es decir, la imagen de $K^{\times}$ por el morfismo de la derecha es igual
+a $\ppales{R}$. En particular, hay un isomorfismo
+\begin{align*}
+	K^{\times}\backslash \cal{N}/\cal{O}^{\times}
+	\,\simeq\, & \ppales{\cal{O}}/\ppales{R}
+	\text{ .}
+\end{align*}
+%
+
+\subsection{\'{O}rdenes e ideales sobre cuerpos locales no arquimedianos}
+Dado que estaremos interesados principalmente en \'{a}lgebras de cuaterniones
+sobre cuerpos de n\'{u}meros, ser\'{a} fundamental entender las \'{a}lgebras
+sobre cuerpos locales. Si $B/K$ es un \'{a}lgebra de cuaterniones
+sobre un cuerpo de n\'{u}meros $K$, entender los \'{o}rdenes y los ideales
+en las \'{a}lgebras $B_{v}=B\otimes_{K}K_{v}$ nos ayudar\'{a} a entender
+los \'{o}rdenes e ideales de $B$. Dividiremos la descripci\'{o}n en dos
+casos: $B$ es isomorfa a un \'{a}lgebra de matrices, o bien $B$ es de
+divisi\'{o}n. Pero antes hacemos una observaci\'{o}n v\'{a}lida en ambos.
+
+Sabemos que, si un ideal $I$ es principal, entonces es invertible.
+
+\begin{propoInvertibleImplicaPrincipal}
+	Sea $B$ un \'{a}lgebra de cuaterniones sobre una extensi\'{o}n finita
+	$K$ de $\bb{Q}_{p}$ con anillo de enteros $R$. Sea $I$ un ideal
+	invertible de $B$. Entonces $I$ es principal.
+\end{propoInvertibleImplicaPrincipal}
+
+% Dados dos ret\'{\i}culos completos $L,L'$ de $B=\MM_{2\times 2}(D)$,
+% $D$ una $K$-\'{a}lgebra de divisi\'{o}n, existe $h\in D^{\times}$ tal
+% que $hL'\subset L$ [Weil, p.30]. Si $B$ es de matrices, $D=K$ y
+% $h\in K^{\times}$; si es de divisi\'{o}n, $B=D$ y s\'{o}lo se tiene
+% $h\in B^{\times}$.
+
+\begin{proof}[Demostraci\'{o}n]
+	Sea $\cal{O}=\Oizq(I)$. Multiplicando a derecha por un elemento
+	$b\in I^{-1}\cap B^{\times}$, $I':=I\cdot b\subset\cal{O}$
+	y $\nrd(I')\subset R$.
+	% Si $B=\MM_{2\times 2}(K)$, se puede tomar $b\in K^{\times}$.
+	Si $1\not\in I'$,
+	elegimos $\alpha\in I'\cap B^{\times}$ tal que la
+	valuaci\'{o}n de $\nrd(\alpha)$ sea m\'{\i}nima y tomamos
+	$J:=I'\cdot\alpha^{-1}$. Como la norma de $\alpha$ era de
+	valuaci\'{o}n m\'{\i}nima, $\nrd(J)\subset R$ y $1\in J$.
+	La igualdad $\nrd(x+1)=\nrd(x)+\trd(x)+1$ implica que esto es
+	equivalente a que $1\in J$ y todo elemento de $J$ es \'{\i}ntegro.
+	% Adem\'{a}s, $\Oizq(J)=\cal{O}$.
+	% En particular,
+	% \begin{align*}
+		% J\,\subset\, & JJ^{-1}\,\subset\,\cal{O}\quad\text{y} \\
+		% \cal{O}\,\subset\, & J\text{ .}
+	% \end{align*}
+	% !`No! Esto no tiene por qu\'{e} ser as\'{\i}: $1\in J^{-1}$, sii
+	% $JJ\subset J$, sii $J\subset\Oizq(J)=\cal{O}$. !`Y esto \'{u}ltimo
+	% es justamente lo que queremos probar! No es cierto, a priori.
+	%
+	En particular, $\trd(J)\subset R$. Esto implica que $\conj{J}=J$,
+	pues $1\in J$ y $R\subset J$. Veamos que dos elementos de $J$
+	(anti) conmutan m\'{o}dulo $J$: en primer lugar, si $x,y\in B$
+	\begin{align*}
+		xy\,+\,yx \,=\, & \trd(y)x\,-\,\trd(x)\conj{y}\,+\,
+		\trd(yx)
+	\end{align*}
+	%
+	y, por otro lado, para $x,y\in J$ vale que $\nrd(x),\nrd(y)\in R$,
+	entonces
+	$\trd(yx)\in R$ si y s\'{o}lo si $\trd(yx)+\nrd(y)+\nrd(x)\in R$,
+	pero
+	\begin{align*}
+		\trd(yx)\,+\,\nrd(y)\,+\,\nrd(x)\,=\, & \nrd(x+\conj{y})
+	\end{align*}
+	y, como $\conj{J}=J$, $x+\conj{y}\in J$ y su norma es un entero.
+	% En definitiva, $J=\cal{O}$ e $I=\cal{O}\alpha b^{-1}$ es principal.
+	Ahora bien, como $1\in J$, tenemos inclusiones $J^{t}\subset J^{t+1}$
+	para todo $t\geq 0$. Como $J$ es finitamente generado en tanto
+	$R$-m\'{o}dulo, para $t$ suficientemente grande, el producto de
+	$t+1$ elementos en un conjunto de generadores contiene elementos
+	repetidos. Dado que $xy=-yx\,(\modulo J)$, si $x,y\in J$, podemos
+	suponer que, en el producto de $t+1$ generadores, un elemento
+	aparece repetido s\'{o}lo si alg\'{u}n par de elementos adyacentes
+	son iguales (m\'{o}dulo $J^{t}$). Entonces, como
+	$x^{2}=\trd(x)x-\nrd(x)$ para todo $x\in B$, deducimos que
+	$J^{t+1}=J^{t}$.
+
+	Finalmente, como $J$ es invertible, $J^{t+1}=J^{t}$ implica
+	$J=\Oizq(J)=\Oizq(I)=\cal{O}$, de lo que se deduce que
+	$I=\cal{O}\alpha b^{-1}$ es principal.
+\end{proof}
+
+Es decir, en las \'{a}lgebras de cuaterniones sobre un cuerpo local,
+$\ideales{\cal{O},\cal{O}'}=\ppales{\cal{O},\cal{O}'}$ para todo par
+de \'{o}rdenes. En particular, dos \'{o}rdenes est\'{a}n conectados,
+si y s\'{o}lo si est\'{a}n conectados por un ideal principal, si y
+s\'{o}lo si son conjugados.
+
+Podemos deducir las siguientes propiedades de los ideales invertibles%
+%de un \'{a}lgebra de cuaterniones sobre un cuerpo local%
+. En primer lugar, si $I,J$ son invertibles y el producto $IJ$ es compatible,
+entonces $\nrd(IJ)=\nrd(I)\nrd(J)$, pues $I$ y $J$ son principales.
+En segundo lugar, si $I=\cal{O}\alpha=\alpha\cal{O}'$,
+\begin{align*}
+	I\conj{I} \,=\, & \cal{O}\alpha\conj{\alpha}\cal{O}\,=\,
+	\nrd(\alpha)\cal{O}\,=\,\nrd(I)\cal{O}\quad\text{y} \\
+	\conj{I}I \,=\, & \nrd(I)\cal{O}'
+	\text{ .}
+\end{align*}
+%
+El inverso de $I$ est\'{a} dado por $I^{-1}=\nrd(I)^{-1}\conj{I}$, cuando
+$I$ es invertible (principal).
+
+\begin{obsConjugadosEInversos}
+Si $I$ es un ideal arbitrario de $B$, el ideal $\nrd(I)$ de $R$ es principal.
+Si $\alpha\in I$ es tal que $\nrd(\alpha)R=\nrd(I)$, tomamos $J=I\alpha^{-1}$.
+Entonces $1\in J$ y $\nrd(J)=R$. El argumento dado en la demostraci\'{o}n
+de la proposici\'{o}n ??? muestra que $J^{4}$ es un orden. Adem\'{a}s,
+$\conj{J}=J$ implica que $J$ los \'{o}rdenes a izquierda y a derecha de $J$
+coinciden y son iguales al orden $\Oizq(I)$. Por otro lado,
+\begin{align*}
+ (J^{2})^{2} \,=\, & J^{4}
+	\,=\,\Oizq(J)\,=\,\Oizq(J^{2}) \,=\, \Oder(J^{2})
+	\text{ .}
+\end{align*}
+%
+Entonces $J^{2}$ es invertible, $1\in J^{2}$ y $J^{2}\subset J^{4}$
+implica $\nrd(J^{2})\subset R$. De esto se deduce que $J^{2}$ es un orden
+que llamamos $\cal{O}_{i}$. Ese orden satisface
+\begin{align*}
+ \cal{O}_{i} \,=\, & I\conj{I}\nrd(\alpha)^{-1}
+	\,=\, I\conj{I}\nrd(I)^{-1}\quad\text{y} \\
+	\cal{O}_{i}\,\supset\, & \Oizq(I)
+	\text{ .}
+\end{align*}
+%
+De manera an\'{a}loga, hallamos un orden $\cal{O}_{d}$ que cumple
+\begin{align*}
+ \cal{O}_{d} \,=\, & \conj{I}I\nrd(I)^{-1}\quad\text{y} \\
+	\cal{O}_{d} \,\supset\, & \Oder(I)
+	\text{ .}
+\end{align*}
+%
+Si $\Oizq(I)=\cal{O}_{i}$, se deduce que $\conj{I}\nrd(I)^{-1}\subset I^{-1}$.
+Entonces deben ser iguales, pues la inclusi\'{o}n
+$I^{-1}\subset\conj{I}\nrd(I)^{-1}$ es cierta en general.
+% se deduce de $I^{-1}I\subset\Oder(I)=\Oizq(\conj{I})$.
+De esta igualdad, se deduce que
+% $\Oder(I)\supset I^{-1}I=\conj{I}I\nrd(I)=\cal{O}_{d}$ y que
+$\Oder(I)=\cal{O}_{d}$, tambi\'{e}n. En particular, $I$ es invertible
+si $\cal{O}_{i}$ es igual a su orden a izquierda. De la misma manera,
+si $\cal{O}_{d}$ es igual al orden a derecha, entonces el ideal es invertible.
+\end{obsConjugadosEInversos}
+
+\begin{propoMaxOrdInvertible}
+ Sea $I$ un ideal. Si alguno de $\Oizq(I)$ u $\Oder(I)$ es maximal,
+ entonces $I$ es invertible.
+\end{propoMaxOrdInvertible}
+
+Fijamos $K$ una extensi\'{o}n finita de $\bb{Q}_{p}$, $R$ su anillo de
+enteros, $\pi\in R$ un generador del ideal maximal $P=\pi R$ y $B$ un
+\'{a}lgebra de cuaterniones sobre $K$.
+
+\subsubsection{$B\simeq\MM_{2\times 2}(K)$}
+Sea $V/K$ un espacio vectorial de dimensi\'{o}n $2$. Eligiendo una base
+de $V$, $B$ se identifica con el \'{a}lgebra de endomorfismos de $V$,
+$\Endo(V)$.
+
+\begin{propoLatticesSplitAlg}
+ \textit{(i)} Los \'{o}rdenes maximales de $\Endo(V)$ son los anillos
+ $\Endo_{R}(L)$, donde $L\subset V$ es un ret\'{\i}culo completo
+ ($R$-subm\'{o}dulo finitamente generado que contiene una base de $V$
+ como $K$-e.v).
+ \textit{(ii)} Los ideales de $\Endo(V)$ cuyos \'{o}rdenes a izquierda y a
+ derecha son maximales son los ideales $\Endo_{R}(L,M)$, donde $L$ y $M$ son
+ ret\'{\i}culos completos de $V$.
+ \textit{(iii)} Sean $L,M$ ret\'{\i}culos completos de $V$. Existen elementos
+ $f_{1},f_{2}\in L$ tales que $\{f_{1},f_{2}\}$ es una $R$-base de $L$ y
+ $\{f_{1}\pi^{a_{1}},f_{2}\pi^{a_{2}}\}$ es una $R$-base de $M$ para
+ ciertos enteros $a_{1},a_{2}$ un\'{\i}vocamente determinados.
+\end{propoLatticesSplitAlg}
+
+Ver [Weil, Ch. \dots].
+
+\begin{propoLatticesSplitAlgCont}
+ Sean $L\subset M$ ret\'{\i}culos completos de $V$. Si $\{f_{1},f_{2}\}$ es
+ una base dada de $L$, existen enteros $n,m\in\bb{Z}$ y $r\in R$,
+ representante de las clases en $R/\pi^{m}R$ tales que
+ $\{f_{1}\pi^{n},r+f_{2}\pi^{m}\}$ es base de $M$.
+\end{propoLatticesSplitAlgCont}
+
+Ver [Vign\'{e}ras, Ch. II].
+
+\begin{teoMaxOrdsSplitAlg}
+ \textit{(i)} Todos los \'{o}rdenes maximales de $\MM_{2\times 2}(K)$ son
+ conjugados (en $\MM_{2\times 2}(K)$) a
+ $\begin{bmatrix} R & R \\ R & R \end{bmatrix}=\MM_{2\times 2}(R)$.
+ \textit{(ii)} Los ideales \'{\i}ntegros cuyo orden a izquierda es
+ $\MM_{2\times 2}(R)$ son todos de la forma
+ \begin{align*}
+	& \MM_{2\times 2}(R)
+	\begin{bmatrix} \pi^{n} & r \\ & \pi^{m} \end{bmatrix}
+ \end{align*}
+ %
+ con $n,m\geq 0$ y $r\in R$ representante de $R/\pi^{m}R$.
+\end{teoMaxOrdsSplitAlg}
+
+% \begin{paragraph}{El nivel de un orden de Eichler}
+\paragraph{El nivel de un orden de Eichler}
+Dos ret\'{\i}culos $L$ y $L'$ tienen igual anillo de endomorfismos, si
+y s\'{o}lo si son homot\'{e}ticos. Dados dos \'{o}rdenes $\cal{O},\cal{O}'$
+de $B=\Endo(V)$, $\cal{O}=\Endo(L)$ y $\cal{O}'=\Endo(M)$ para ciertos
+ret\'{\i}culos completos $L,M$. De los resultados citados, podemos deducir
+que existe una base $\{f_{1},f_{2}\}$ de $L$ y enteros $a_{1},a_{2}$ tales
+que $\{f_{1}\pi^{a_{1}},f_{2}^{a_{2}}\}$ es base de $M$. La \emph{distancia}
+entre los \'{o}rdenes $\cal{O}$ y $\cal{O}'$ es
+$\mathrm{dist}(\cal{O},\cal{O}'):=|a_{1}-a_{2}|\in\bb{Z}_{\geq 0}$.
+Este n\'{u}mero no depende de los ret\'{\i}culos elegidos para representar
+a $\cal{O}$ y a $\cal{O}'$. Un orden de Eichler es la intersecci\'{o}n
+de dos \'{o}rdenes maximales. Si $\cal{O},\cal{O}'$ son maximales,
+el \emph{nivel} del orden de Eichler $\cal{O}\cap\cal{O}'$ es la
+distancia $\mathrm{dist}(\cal{O},\cal{O}')$ entre los correspondientes
+\'{o}rdenes maximales.
+
+\begin{propoOrdEichlerSplitAlg}
+ Sea $\cal{O}$ un orden de $\MM_{2\times 2}(K)$. Las propiedades
+ siguientes son equivalentes:
+ \textit{(i)} existe un \'{u}nico par $\cal{O}_{1},\cal{O}_{2}$ de
+ \'{o}rdenes maximales tales que $\cal{O}=\cal{O}_{1}\cap\cal{O}_{2}$;
+ \textit{(ii)} $\cal{O}$ es un orden de Eichler;
+ \textit{(iii)} existe un \'{u}nico entero $e\geq 0$ tal que $\cal{O}$
+	es conjugado a $\begin{bmatrix} R & R \\ \pi^{e}R & R \end{bmatrix}$.
+\end{propoOrdEichlerSplitAlg}
+
+El entero $e$ en la proposici\'{o}n anterior es igual al nivel del orden
+de Eichler $\cal{O}$. Decimos tambi\'{e}n que el nivel de $\cal{O}$ es
+$\pi^{e}R$. Se verifica que el discriminante reducido del orden
+$\begin{bmatrix} R & R \\ \pi^{e}R & R \end{bmatrix}$ es $\pi^{e}R$.
+A este orden $\MM_{2\times 2}(K)$ lo llamamos
+\emph{orden de Eichler est\'{a}ndar de nivel $\pi^{e}R$} y lo denotamos
+$\cal{O}_{0}(\pi^{e}R)$. En general, el discriminante reducido de un orden
+de Eichler de nivel $\pi^{e}R$ en $B$ es $\pi^{e}R$.
+% \end{paragraph}
+
+Para resumir, si $B/K$ es un \'{a}lgebra de matrices, hay infinitos
+\'{o}rdenes maximales, pero son todos conjugados, y todo ideal para
+un orden maximal es principal. En otras palabras, hay un \'{u}nico tipo
+de orden maximal y el n\'{u}mero de clases (a izquierda o a derecha,
+en este caso no hay distinci\'{o}n) de ideales de un orden maximal es uno.
+La clase de conjugaci\'{o}n de un orden de Eichler --su tipo-- est\'{a}
+determinada por su nivel:
+\begin{align*}
+ \cal{O}\sim\begin{bmatrix} R & R \\ \pi^{e}R & R \end{bmatrix}
+	\,\Leftrightarrow\, &
+ \text{nivel}\,\cal{O}=\pi^{e}R\,\Leftrightarrow\,
+	\drd{\cal{O}}=\pi^{e}R
+	\text{ .}
+\end{align*}
+%
+
+\paragraph{Ideales de un orden de Eichler}
+Queremos ver c\'{o}mo son los ideales de un orden de Eichler. Sea
+$\cal{O}:=\cal{O}_{0}(\pi^{e}R)$ el orden de Eichler est\'{a}ndar de nivel
+$\pi^{e}R$.
+%, como ya mencionamos, el discriminante reducido de $\cal{O}$
+%es $\drd{\cal{O}}=\pi^{e}R$ igual al nivel.
+Recordando que estamos sobre un cuerpo local,
+$\ideales{\cal{O}}=\ppales{\cal{O}}$, con lo cual
+\begin{align*}
+ K^{\times}\backslash\normalizador[B^{\times}]{\cal{O}}/\cal{O}^{\times}
+	\,\simeq\, & \ppales{\cal{O}}/\ppales{R}
+	\,=\, \ideales{\cal{O}}/\ppales{R}
+	\text{ .}
+\end{align*}
+%
+Definimos un elemento $\varpi\in B$ por
+\begin{align*}
+	\varpi\,:=\, & \begin{bmatrix} & 1 \\ \pi^{e} & \end{bmatrix}
+		\text{ .}
+\end{align*}
+%
+El orden de Eichler es igual a la intersecci\'{o}n
+\begin{align*}
+ \cal{O} \,=\, & \MM_{2\times 2}(R)\,\cap\,
+	\varpi^{-1}\MM_{2\times 2}(R)\varpi
+	\text{ .}
+\end{align*}
+%
+Identificando $K$ con las matrices escalares, vemos que $\varpi^{2}=\pi^{e}$
+y que $\varpi$ pertenece a $\cal{N}:=\normalizador[B^{\times}]{\cal{O}}$.
+Sea $I:=\cal{O}\varpi$. Es decir, $\cal{O}\varpi=\varpi\cal{O}$ e $I$ es un
+ideal principal cuyos \'{o}rdenes a izquierda y a derecha coinciden y son
+iguales a $\cal{O}$. Si $e=0$, $I=\cal{O}$. Supongamos que $e\geq 1$.
+
+Sea $\alpha\in\cal{N}$. De acuerdo con la proposici\'{o}n
+???, los \'{o}rdenes $\MM_{2\times 2}(R)$ y su conjugado constituyen el
+\'{u}nico par de \'{o}rdenes maximales cuya intersecci\'{o}n es $\cal{O}$.
+Como conjugar por $\alpha$ estabiliza $\cal{O}$, los elementos del grupo
+$\cal{N}$ permutan los dos \'{o}rdenes y queda determinado un morfismo
+sobreyectivo $\cal{N}\rightarrow C_{2}$ en el grupo c\'{\i}clico de orden
+$2$. El n\'{u}cleo del morfismo est\'{a} incluido en el normalizador
+$\normalizador[B^{\times}]{\MM_{2\times 2}(R)}$, que es igual a
+$K^{\times}\GL_{2}(R)$. Entonces
+\begin{align*}
+ \ker(\cal{N}\rightarrow C_{2}) \,=\, &
+	\normalizador[B^{\times}]{\MM_{2\times 2}(R)}\,\cap\,
+	\varpi^{-1}\normalizador[B^{\times}]{\MM_{2\times 2}(R)}\varpi \\
+ \,=\, & K^{\times}
+	\left(\GL_{2}(R)\,\cap\,\varpi^{-1}\GL_{2}(R)\varpi\right) \\
+ \,=\, & K^{\times}\cal{O}^{\times}
+	\quad\text{y} \\
+	\ideales{\cal{O}}/\ppales{R}\,=\, & \langle\varpi\rangle\,\simeq\,
+	C_{2}
+	\text{ .}
+\end{align*}
+%
+Concluimos, as\'{\i}, que el grupo $\ideales{\cal{O}}$ es abeliano,
+generado por $I=\varpi\cal{O}$ y $P=\pi\cal{O}$ con la \'{u}nica relaci\'{o}n
+$I^{2}=\pi^{e}\cal{O}=P^{e}$. En particular, si $e=0$,
+$\cal{O}=\MM_{2\times 2}(R)$ es maximal y los ideales bil\'{a}teros
+forman un grupo libre generado por $P$.
+
+Esta descripci\'{o}n se simplifica cuando $B$ es de divisi\'{o}n.
+
+\subsubsection{$B\not\simeq\MM_{2\times 2}(K)$}
+La valuaci\'{o}n $v$ en $K$ se extiende a una valuaci\'{o}n en $B$
+componiendo con la norma reducida. Si $v:\,K^{\times}\rightarrow\bb{Z}$,
+definimos $w:\,B^{\times}\rightarrow\bb{Z}$ por
+\begin{align*}
+	w\,=\,v\circ\nrd
+\end{align*}
+%
+que es una valuaci\'{o}n discreta en $B$. Como
+$\nrd:\,B^{\times}\rightarrow K^{\times}$ es sobreyectiva (ver [Weil, Ch???]),
+existe $u\in B^{\times}$ cuya norma reducida es $\nrd(u)=\pi$ y
+$w(u)=1$. Entonces, si
+\begin{align*}
+	\cal{O}\,:=\, & \left\lbrace w\geq 0\right\rbrace\quad\text{y}\\
+	\cal{P}\,:=\, & \left\lbrace w>0 \right\rbrace\text{ ,}
+\end{align*}
+%
+el \'{u}nico orden maximal de $B$ es $\cal{O}$, cuyo \'{u}nico ideal
+maximal es $\cal{P}$, que es principal ($\cal{P}=\cal{O}u=u\cal{O}$).
+La norma reducida de $\cal{P}$ es $\nrd(\cal{P})=\pi R$ y los ideales
+de $\cal{O}$ son todos de la forma $\cal{P}^{i}$ con $i\in\bb{Z}$.
+Adem\'{a}s, $(\cal{O}^{*})^{-1}=\cal{P}$ y $\drd{\cal{O}}=\pi R$.
+En particular, en este caso tambi\'{e}n, el n\'{u}mero de clases de $\cal{O}$
+es uno (todos sus ideales a derecha y a izquierda son principales).
+Hay un \'{u}nico orden de Eichler y es igual a $\cal{O}$.
+
+Con esto terminamos la descripci\'{o}n de los \'{o}rdenes e ideales en
+un \'{a}lgebra sobre una extensi\'{o}n finita de $\bb{Q}_{p}$.

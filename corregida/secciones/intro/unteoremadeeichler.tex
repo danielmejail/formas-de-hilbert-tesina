@@ -1,0 +1,234 @@
+Al igual que al grupo ${\GL_{2}}_{/\bb{Q}}$, a un \'{a}lgebra de cuaterniones
+sobre un cuerpo de n\'{u}meros totalmente real se le puede asociar una
+noci\'{o}n de forma modular, denominada \emph{cuaterni\'{o}nica}. Su
+importancia viene, en parte, de que proporcionan una manera de calcular formas
+modulares cl\'{a}sicas, es decir, bases o conjuntos de generadores de estos
+espacios conformados por autoformas para la acci\'{o}n de los operadores de
+Hecke. Esta relaci\'{o}n est\'{a} dada por la correspondencia de Jacquet-%
+Langlands: a partir de una ``autoforma de Hecke cuaterni\'{o}nica'' $f_{B}$
+para un \'{a}lgebra de cuaterniones $B$ sobre un cuerpo de n\'{u}meros
+totalmente real $F/\bb{Q}$, es posible hallar una autoforma de Hecke
+$\theta_{f}$ para ${\GL_{2}}_{/F}$ con los mismos autovalores.
+\index{forma modular!cuaternionica@cuaterni\'{o}nica}
+
+Para ilustrar la idea, veamos un ejemplo sobre $\bb{Q}$ de c\'{o}mo obtener
+(parte de) el m\'{o}dulo de Hecke $\spitz{2}{\Gamma_{0}(N)}$ usando
+\'{a}lgebras de cuaterniones y formas asociadas. Lo que se encuentra a
+continuaci\'{o}n est\'{a} tomado de \cite{EichlerBasisProblem}; ver tambi\'{e}n
+\cite{PizerAlgo}.
+
+Sea $B$ un \'{a}lgebra de cuaterniones sobre $\bb{Q}$, definida, es decir,
+ramificada en $\infty$ y al menos en alg\'{u}n lugar finito, con generadores
+$i,j$ tales que
+\begin{align*}
+	i^{2}\,=\, a & \text{ ,} \quad j^{2}\,=\, b\quad\text{e}\quad
+		ij+ji\,=\,0
+	\text{ ,}
+\end{align*}
+%
+con $a,b<0$. Si definimos $k=ij$, entonces $\{1,i,j,k\}$ es una base de $B$
+sobre $\bb{Q}$ como espacio vectorial. Sea $K/\bb{Q}$ la extensi\'{o}n
+cuadr\'{a}tica (imaginaria) $\bb{Q}(i)=\bb{Q}(\sqrt{a})$. Los elementos de $B$
+se pueden expresar como matrices con coeficientes en el cuerpo $K$, v\'{\i}a
+las identificaciones
+\begin{align*}
+	1 \,=\, \begin{bmatrix} 1 & \\ & 1 \end{bmatrix}
+		& \text{ ,}\quad
+	i \,=\, \begin{bmatrix} \sqrt{a} & \\ & -\sqrt{a} \end{bmatrix}
+			\text{ ,}\quad
+	j \,=\, \begin{bmatrix} & 1 \\ b & \end{bmatrix} \text{ ,}\quad
+	k \,=\,	\begin{bmatrix} & \sqrt{a} \\ -b\,\sqrt{a} & \end{bmatrix}
+	\text{ .}
+\end{align*}
+%
+Si
+\begin{math}
+	x=x_{0}+x_{1}\,i+x_{2}\,j+x_{3}\,k\in B
+\end{math}~, entonces $x=z_1+z_2\,j$, con $z_{1}=x_{0}+x_{1}\,i$ y
+$z_{2}=x_{2}+x_{3}\,i$ elementos de $K$. Definimos
+\begin{align*}
+	\big[z\big] & \,=\, \begin{bmatrix} z_{1} & z_{2} \\
+				b\,\conj{z_{2}} & \conj{z_{1}} \end{bmatrix}
+				\,\in\,\MM_{2\times 2}(K)
+	\text{ ,}
+\end{align*}
+%
+donde $\conj{\cdot}$ denota el automorfismo no trivial de $K$ determinado por
+$\sqrt{a}\mapsto -\sqrt{a}$. Dadas dos indeterminadas
+$X,Y$, definimos una acci\'{o}n a derecha de $B^{\times}$ sobre el espacio
+vectorial de polinomios homog\'{e}neos en $X$ e $Y$ de grado $1$ por
+\begin{align*}
+	\begin{bmatrix} X \\ Y \end{bmatrix}\,\cdot\,z \,=\,
+		\begin{bmatrix} X\cdot z \\ Y\cdot z \end{bmatrix}
+		& \,:=\,\big[z\big]\,\begin{bmatrix} X \\ Y \end{bmatrix}
+			\,=\,\begin{bmatrix} z_{1}X+z_{2}Y \\
+				b\,\conj{z_{2}}X+\conj{z_{1}}Y \end{bmatrix}
+	\text{ ,}
+\end{align*}
+%
+para cada $z\in B^{\times}$. En general, sobre el espacio de polinomios
+homog\'{e}neos de grado $l$, se define
+\begin{align*}
+	\begin{bmatrix} X^{l} \\ X^{l-1}Y \\ \vdots \\ Y^{l} \end{bmatrix}
+		\,\cdot\,z & \,:=\,
+		\begin{bmatrix}
+			(X\cdot z)^{l} \\
+			(X\cdot z)^{l-1}(Y\cdot z) \\
+			\vdots \\ (Y\cdot z)^{l}
+		\end{bmatrix}
+	\text{ .}
+\end{align*}
+%
+Denotamos esta acci\'{o}n por $\phi_{l}(z)$. Definimos tambi\'{e}n
+$\phi_{0}(z)=1$ para todo $z\in B^{\times}$, la representaci\'{o}n trivial.
+
+Sea $D$ el \emph{discriminante} de $B$, el producto de los primos finitos en
+donde $B$ ramifica. Escribimos $N=DN'$. Sea $\cal{O}=\cal{O}_{1}$ un orden de
+Eichler de nivel $N'$ en $B$. Esto quiere decir que $\cal{O}$ es
+intersecci\'{o}n de dos \'{o}rdenes maximales de $B$ y que, para todo primo $p$
+que no divide a $D$, $\cal{O}_{p}:=\cal{O}\otimes\bb{Z}_{p}$ es conjugado al
+orden
+\begin{math}
+	\begin{bmatrix} \bb{Z}_{p} & \bb{Z}_{p} \\
+	N'\bb{Z}_{p} & \bb{Z}_{p} \end{bmatrix}
+\end{math}
+en $B_{p}=M_{2\times 2}(\bb{Q}_{p})$. Sea $\lClass{\cal{O}}$ el conjunto de
+clases de $\cal{O}$-ideales a derecha (invertibles).%
+\footnote{
+	Dos ideales $I,J$ pertenecen a la misma clase, si $I=bJ$ para cierto
+	$b\in B^{\times}$; en tal caso, escribimos $I\sim J$. Comparar con
+	\cite[\S~II.5]{EichlerBasisProblem}, en donde se consideran
+	ideales cuyo orden a \emph{izquierda} es $\cal{O}$.
+}
+El n\'{u}mero de clases $H:=\#\lClass{\cal{O}}$ es finito (ver el
+Teorema~\ref{thm:numerodeclasesfinito}). Sea $I_{1}=\cal{O}_{1}$ y sean
+$\lista[2]{I}{H}$ representantes de las otras clases de $\cal{O}$-ideales. Sean
+$\lista[2]{\cal{O}}{H}$ sus respectivos \'{o}rdenes a izquierda. Para cada
+$i,j\in[\![1,H]\!]$ y $n\geq 1$ se consideran los ideales \'{\i}ntegros $J_{i,j}$ en $B$ de norma $n$ y tales que existe $A_{i,j}\in B^{\times}$ con
+\begin{align*}
+	J_{i,j} & \,=\, A_{i,j}\,I_{j} I_{i}^{-1}
+	\text{ ,}
+\end{align*}
+%
+es decir, ideales con orden a derecha $\Oder(J_{i,j})=\cal{O}_{i}$,
+\'{\i}ntegros y equivalentes a izquierda a $I_{j}I_{i}^{-1}$.
+% Notemos que, en particular, el orden a izquierda de $J_{ij}$ es (est\'{a}
+% contenido en) $\cal{O}_{i}$.
+Para cada $i$, definimos $e_{i}:=|\cal{O}_{i}^{\times}|$ y, para cada $n\geq 1$
+y $l\geq 0$, una matriz $B_{l}(n)=B_{l}(n;D,N')$ como
+\begin{align*}
+	B_{l}(n) \,=\,\Big[ b_{l}(n)_{i,j}\Big]_{i,j\in[\![1,H]\!]}
+		& \quad\text{,}\qquad
+		b_{l}(n)_{i,j}\,=\,\sum_{A_{i,j}}\,\phi_{l}(A_{i,j})^{t}
+			\frac{1}{e_{i}}
+	\text{ .}
+\end{align*}
+%
+La coordenada $(i,j)$ de la matriz $B_{l}(n)$ es el endomorfismo
+$b_{l}(n)_{i,j}$ dado por la sumatoria $\sum\,\phi_{l}(A_{ij})^{t}(1/e_{i})$
+sobre todos los elementos del conjunto
+% $A_{ij}\in B^{\times}$ tales que $N_{ij}:=M_{i}^{-1}M_{j}A_{ij}\subset B$
+% sea un ideal \'{\i}ntegro de norma $n$. Equivalentemente, la suma se realiza
+% sobre el conjunto
+\begin{align*}
+	& \Big\{A_{i,j}\in I_{i}I_{j}^{-1}\,:\,
+		\nrd(A_{i,j}\,I_{j}I_{i}^{-1})=n\Big\}
+	\text{ .}
+\end{align*}
+%
+Estas definiciones se extienden al caso $n=0$ por $b_{l}(0)_{i,j}=0$, si
+$l\geq 1$, y $b_{0}(0)_{i,j}=1/e_{i}$.
+
+Las matrices $B_{0}(n)$ son de particular inter\'{e}s. Si $n\geq 1$, sus
+coordenadas $b_{0}(n)_{i,j}$ son n\'{u}meros enteros:
+\begin{align*}
+	b_{0}(n)_{i,j} & \,=\,\#
+		\bigg\{\begin{array}{c}
+				\text{ideales \'{\i}ntegros }J_{i,j}\,:\,
+					\Oder(J_{i,j})=\cal{O}_{i}, \\
+				J_{i,j}\sim I_{j}I_{i}^{-1},\,
+					\nrd(J_{i,j})=n
+		\end{array}\bigg\}
+\end{align*}
+%
+y, m\'{a}s aun, la sumatoria $b(n)=\sum_{i}\,b_{0}(n)_{i,j}$ es independiente
+de $j$.%
+\footnote{
+	\cite[Lemma~2.18]{PizerAlgo}.
+}
+Adem\'{a}s, es posible reducir simult\'{a}neamente en bloques, para $n\geq 0$:%
+\footnote{
+	\cite[Remark~2.20]{PizerAlgo}.
+}
+\begin{align*}
+	B_{0}(n) & \,=\,
+		\left[\begin{matrix} B_{0}(n)' & \\
+		& b(n) \end{matrix}\right]
+	\text{ .}
+\end{align*}
+%
+
+Sea $\underline{\theta}_{l}(z;D,N')$ la serie
+\begin{align*}
+	\underline{\theta}_{l}(z;D,N') & \,=\,
+		\sum_{n=0}^{\infty}\,B_{l}(n;D,N')\,q^{n}
+\end{align*}
+%
+($q=e^{2\pi iz}$).
+% En t\'{e}rminos de la base $\{X^{k}Y^{l-k}\}_{k}$ de
+% polinomios homog\'{e}neos, cada endomorfismo $b_{l}(n)_{i,j}$ est\'{a}
+% representado por una matriz de tama\~{n}o $(l+1)\times (l+1)$, con lo que la
+% serie $\underline{\theta}_{l}$.
+En \cite{EichlerBasisProblem}, Eichler demuestra que los coeficientes de estas
+matrices son las series de formas modulares para $\Gamma_{0}(DN')$ de peso
+$l+2$. Si $l>0$, dichas formas son cuspidales. Para obtener formas cuspidales
+de peso $2$ (cuando $l=0$), se considera la serie definida de manera
+an\'{a}loga, con $B_{0}(n)'$ en lugar de $B_{l}(n)$. Al igual que los
+operadores de Hecke, las matrices $B_{l}(n)$ ($(n,DN')=1$) generan un anillo
+conmutativo y semisimple, y verifican las mismas identidades que dichos
+operadores.
+
+Una consecuencia de esto es que es posible diagonalizar simult\'{a}neamente las
+matrices $B_{l}(n)$ ($l$ fijo). Para $l=0$, podemos diagonalizar la parte
+cuspidal $B_{0}(n)'$, de manera an\'{a}loga. Para cada $l\geq 0$, las series de
+matrices que se obtienen a partir de dichas matrices diagonalizadas se
+corresponden con formas cuspidales que son autoformas para todos los operadores
+de Hecke $T_{n}$ ($(n,DN')=1$). Sea $\Theta_{l}(D,N')$ el m\'{o}dulo generado
+por las formas que se obtienen diagonalizando $B_{l}(n)$ y $\Theta_{0}(D,N')'$
+el m\'{o}dulo que se obtiene de manera an\'{a}loga a partir de las $B_{0}(n)'$.
+El resultado prncipal de Eichler es el siguiente (en un caso particular):
+
+\begin{teoEichlerIntro}[Eichler]
+	Sea $N'\in\bb{Z}$ libre de cuadrados y $p$ un primo coprimo con $N'$.
+	El m\'{o}dulo de Hecke $\spitz{2}{\Gamma_{0}(pN')}$, de formas
+	cuspidales de peso $2$ para $\Gamma_{0}(pN')$, se descompone de la
+	siguiente manera.
+	\begin{align*}
+		\spitz{2}{\Gamma_{0}(pN')} & \,=\,\Theta_{0}(p,N')'\,\oplus\,
+			\iota_{1}(\spitz{2}{\Gamma_{0}(N')})\,\oplus\,
+			\iota_{p}(\spitz{2}{\Gamma_{0}(N')})
+		\text{ .}
+	\end{align*}
+	%
+\end{teoEichlerIntro}
+
+Es decir, usando el \'{a}lgebra definida que ramifica en un \'{u}nico primo
+finito $p$, es posible aislar la parte de $\spitz{2}{\Gamma_{0}(pN')}$
+conformada por las formas nuevas en $p$. Para hallar esta descomposici\'{o}n,
+lo que se hace es encontrar objetos an\'{a}logos a los operadores de Hecke
+--estas matrices $B_{l}(n)$, llamadas \emph{matrices de Brandt}--
+\index{matrices de Brandt}
+y hallar una relaci\'{o}n entre los anillos que generan;
+concretamente, las matrices de Brandt, como los operadores de Hecke,
+generan anillos conmutativos semisimples y las trazas de sus elementos son
+iguales. Puesto que los coeficientes de las series $\underline{\theta}_{l}$
+son series \emph{theta} \index{series \emph{theta}}
+asociadas a la forma norma de los ideales del \'{a}lgebra, se logra dar un
+conjunto de generadores del espacio de formas cuspidales ``aritm\'{e}ticamente
+distinguido''. Dadas autoformas de Hecke para el \'{a}lgebra de cuaterniones
+de discriminante $D$, se obtiene un conjunto de formas modulares
+el\'{\i}pticas cuspidales, tambi\'{e}n autoformas de Hecke, y con los
+mismos autovalores, entre las cuales se puede hallar un subconjunto
+linealmente independiente generando la parte correspondiente a las formas
+nuevas en $D$.
+

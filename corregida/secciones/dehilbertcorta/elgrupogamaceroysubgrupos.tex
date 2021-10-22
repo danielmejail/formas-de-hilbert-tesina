@@ -1,0 +1,299 @@
+Usando las $n$ inmersiones de $F$ en $\bb{R}$, queda determinada una
+inclusi\'{o}n de $\GLtp_{2}(F)$ en el producto $\GL_{2}(\bb{R})^{n}$ y, de esta
+manera, una acci\'{o}n de $\GLtp_{2}(F)$ en $\hP^{n}$ dada por:
+\begin{equation}
+	\label{eq:accionenelsemiplanodehilbert}
+	\begin{bmatrix} a & b \\ c & d \end{bmatrix}\,z
+		\,=\, \left(
+		\frac{a_{1}z_{1}+b_{1}}{c_{1}z_{1}+d_{1}},\,\dots,\,
+		\frac{a_{n}z_{n}+b_{n}}{c_{n}z_{n}+d_{n}}
+		\right)
+	\text{ .}
+\end{equation}
+%
+El espacio $\hP^{n}$ posee una medida invariante por la acci\'{o}n de
+$\GLtp_{2}(\bb{R})^{n}$:
+\begin{equation}
+	\label{eq:medidaenelsemiplanodehilbert}
+	d\mu \,=\, \prod_{i=1}^{n}\,y_{i}^{-2}dx_{i}dy_{i}
+	\text{ .}
+\end{equation}
+%
+En particular, por \eqref{eq:accionenelsemiplanodehilbert} esta medida es
+invariante por $\GLtp_{2}(F)$.
+
+Sea $\cal{O}_{0}(1)$ el orden maximal
+\begin{equation}
+	\label{eq:ordenmaximalmatrices}
+	\cal{O}_{0}(1) \,:=\, \MM_{2\times 2}(\oka{F}) \,=\,
+	\begin{bmatrix} \oka{F} & \oka{F} \\ \oka{F} & \oka{F} \end{bmatrix}
+\end{equation}
+%
+contenido en $B=\MM_{2\times 2}(F)$. Manteniendo este orden fijo,
+consideramos los \'{o}rdenes de la forma
+\begin{equation}
+	\label{eq:ordendeeichlermatrices}
+	\cal{O}_{0}(\frak{N}) \,:=\,
+	\begin{bmatrix} \oka{F} & \oka{F} \\ \frak{N} & \oka{F} \end{bmatrix}
+		\,\subset\,\cal{O}_{0}(1)
+		\text{ ,}
+\end{equation}
+%
+que resultan ser \'{o}rdenes de Eichler para los distintos ideales
+\'{\i}ntegros $\frak{N}\subset\oka{F}$. Si no hay ambig\"{u}edad, escribiremos
+$\cal{O}$ en lugar de $\cal{O}_{0}(\frak{N})$. Dado un ideal fraccionario
+$\frak{a}$ de $F$, fijamos un id\`{e}le finito $\hhat{a}\in\Idfin{F}$ que
+cumpla
+\begin{equation}
+	\label{eq:ideleasociadomatrices}
+	\frak{a} \,=\,\hhat{a}\Adfin{\oka{F}}\,\cap\,F
+\end{equation}
+%
+y $\hhat{\alpha}\in\GL_{2}(\Adfin{F})$ dado por
+\begin{equation}
+	\label{eq:matrizasociadaaidelematrices}
+	\hhat{\alpha} \,=\,\begin{bmatrix} \hhat{a} & \\ & 1 \end{bmatrix}
+	\text{ .}
+\end{equation}
+%
+En particular, $\nrd(\hhat{\alpha})=\hhat{a}$. De esta manera, a cada ideal
+$\frak{a}$, se le asocian el orden de Eichler
+\begin{equation}
+	\label{eq:ordenasociadomatrices}
+	\cal{O}_{\frak{a}} \,:=\,\big(\hhat{\alpha}\Adfin{\cal{O}}
+			\hhat{\alpha}^{-1}\big)\,\cap\,\MM_{2\times 2}(F)
+		\,=\,\begin{bmatrix} \oka{F} & \frak{a} \\
+			\frak{N}\frak{a}^{-1} & \oka{F}\end{bmatrix}
+\end{equation}
+%
+y el grupo de unidades totalmente positivas
+\begin{equation}
+	\label{eq:unidadestotalmentepositivasasociadasmatrices}
+	\Gamma_{0}(\frak{N},\frak{a}) \,:=\,
+		\cal{O}_{\frak{a}}^{\times}\,\cap\,\GLtp_{2}(F)
+	\text{ .}
+\end{equation}
+%
+Escribiremos ocasionalmente, $\Gamma_{\frak{a}}$ o
+$\cal{O}_{\frak{a},+}^{\times}$ para denotar este mismo grupo.
+
+% \begin{obsDefinicionOrdenAsociadoMatrices}%
+	% \label{obs:definicionordenasociadomatrices}
+	% Como el id\`{e}le $\hhat{a}$ en \eqref{eq:ideleintegroasociadomatrices}
+	% est\'{a} determinado salvo una unidad en $\Idfin{\oka{F}}$, el orden
+	% $\cal{O}_{\frak{a}}$ y el grupo de unidades $\Gamma_{\frak{a}}$, no
+	% dependen de la elecci\'{o}n de $\hhat{a}$, pero s\'{\i} dependen de la
+	% elecci\'{o}n del elemento $\hhat{\alpha}\in\GL_{2}(\Adfin{F})$ tal que
+	% $\nrd(\hhat{\alpha})=\hhat{a}$. Si
+	% $\hhat{\alpha}'\in\GL_{2}(\Adfin{F})$ es tal que el ideal determinado
+	% por $\nrd(\hhat{\alpha}')$ pertenece a la clase reducida de $\frak{a}$,
+	% entonces, por el Corolario~\ref{thm:normaclasesestrictas}, existen
+	% $\gamma\in\GLtp_{2}(F)$ y $\hhat{\beta}\in\Idfin{\cal{O}}$ tales que
+	% $\hhat{\alpha}'=\gamma\hhat{\alpha}\hhat{\beta}$ y los \'{o}rdenes
+	% asociados por \eqref{eq:ordenasociadomatrices} son conjugados por un
+	% elemento de $\GLtp_{2}(F)$.
+% \end{obsDefinicionOrdenAsociadoMatrices}
+% 
+Al \'{a}lgebra $\MM_{2\times 2}(F)$ y al orden $\cal{O}$ se les asocia la
+variedad
+\begin{align*}
+	Y_{0}(\frak{N}) & \,=\,
+		\bigsqcup_{\frak{a}}\,Y_{0}(\frak{N},\frak{a})
+	\text{ ,}
+\end{align*}
+%
+donde $\frak{a}$ recorre un sistema de representantes del grupo de clases
+estrictas $\pClass{F}$ e $Y_{0}(\frak{N},\frak{a})$ se define como el cociente
+$\Gamma_{0}(\frak{N},\frak{a})\backslash\hP^{n}$ (comparar con
+\S~\ref{sec:cuaternionicasvariedadesdeshimura}). Esta variedad no es
+compacta pero, v\'{\i}a la determinaci\'{o}n de un dominio fundamental para
+cada componente $Y_{0}(\frak{N},\frak{a})$, se demuestra que es de volumen
+finito.%
+\footnote{\cite[Ch.~IV,\S~1]{vanDerGeerSurfaces}}
+% Por ejemplo, con respecto a la medida \eqref{eq:medidaenelsemiplanodehilbert},
+% la variedad $Y_{0}(1,1)$ correspondiente al grupo $\Gamma_{0}(1,1)$ (matrices
+% con coeficientes enteros y determinante una unidad totalmente positiva), tiene
+% volumen
+% \begin{align*}
+	% \mu\big(Y_{0}(1,1)\big) & \,=\,2\zeta_{F}(-1)
+	% \text{ ,}
+% \end{align*}
+% %
+% donde
+% \begin{math}
+	% \zeta_{F}(s)=\sum_{\frak{b}\subset\oka{F}}\,\norma(\frak{b})^{-s}
+% \end{math}
+% es la funci\'{o}n zeta de Dedekind del cuerpo $F$
+% \cite[Ch.~IV,\S~1]{vanDerGeerSurfaces}.
+%
+% En general, los grupos $\Gamma_{0}(\frak{N},\frak{a})$ son conmensurables (?)
+% con $\Gamma_{0}(1,1)$ y el volumen de la variedad asociada est\'{a} dado por
+% \begin{align*}
+	% \mu\big(Y_{0}(\frak{N},\frak{a})\big) & \,=\,
+		% \frac{\big|\Gamma_{0}(1,1):\Gamma_{0}(1,1)\cap%
+			% \Gamma_{0}(\frak{N},\frak{a})\big|}{%
+		% \big|\Gamma_{0}(\frak{N},\frak{a}):
+			% \Gamma_{0}(1,1)\cap\Gamma_{0}(\frak{N},\frak{a})\big|}
+		% \,\mu\big(Y_{0}(1,1)\big)
+	% \text{ .}
+% \end{align*}
+% %
+Para obtener una variedad compacta, se considera el grupo $\GLtp_{2}(F)$
+actuando en $\bb{P}^{1}(F)$ por:
+\begin{equation}
+	\label{eq:accionenlascuspides}
+	\begin{bmatrix} a & b \\ c & d \end{bmatrix}\,[\alpha:\beta]
+		\,=\,[a\alpha+b\beta:c\alpha+d\beta]
+\end{equation}
+%
+Como tambi\'{e}n $\bb{P}^{1}(F)\hookrightarrow\bb{P}(\bb{R})^{n}$ v\'{\i}a las
+inmersiones de $F$ en $\bb{R}$, podemos obtener una compactificaci\'{o}n de
+$Y_{0}(\frak{N},\frak{a})$ agregando las c\'{u}spides de
+$\Gamma_{0}(\frak{N},\frak{a})$, las \'{o}rbitas de
+$\Gamma_{0}(\frak{N},\frak{a})$ actuando en $\bb{P}^{1}(F)$ --esta
+compactificaci\'{o}n se conoce como \emph{compactificaci\'{o}n de %
+Baily-Borel}%
+\footnote{\cite[Ch.~II, \S~7]{vanDerGeerSurfaces}}
+-- que denotamos
+\index{compactificacion de Baily Borel@compactificaci\'{o}n de Baily-Borel}
+\begin{align*}
+	\shimura{\frak{N},\frak{a}} & \,:=\,
+		\Gamma_{0}(\frak{N},\frak{a})\backslash
+		\left(\hP^{n}\cup\bb{P}^{1}(F)\right)
+	\text{ .}
+\end{align*}
+%
+A diferencia de las \emph{curvas} modulares, estas variedades tienen
+puntos singulares: los puntos el\'{\i}pticos y las (finitas) c\'{u}spides
+que agregamos. Cuando $F=\bb{Q}$, para cada nivel $N>1$ hay una \'{u}nica
+curva $X_{0}(N)$. En general, a cada ideal \'{\i}ntegro $\frak{N}$, le
+asociamos en principio una variedad $\shimura{\frak{N},\frak{a}}$ por cada
+$\frak{a}$ en un sistema de representantes de las clases en $\pClass{F}$.
+
+Adem\'{a}s de los grupos $\Gamma_{0}(\frak{N},\frak{a})$, aparecer\'{a}n
+naturalmente otros, por ejemplo, de la forma
+\begin{math}
+	\Gamma_{0}(\frak{N},\frak{a})\cap
+		\big(\gamma\Gamma_{0}(\frak{N},\frak{b})\gamma^{-1}\big)
+\end{math}~.
+Las propiedades fundamentales de las formas de Hilbert: existencia
+de expansi\'{o}n de Fourier y principio de Koecher, dependen de la existencia
+de suficientes ``traslaciones'' y de suficientes ``homotecias''
+(respectivamente). Estas transformaciones surgen de considerar el estabilizador
+de la c\'{u}spide $\infty$ en $\Gamma_{0}(\frak{N},\frak{a})$. Por otra
+parte, para poder relacionar el producto interno de Petersson con los
+operadores de Hecke en los espacios de formas cuspidales, necesitaremos
+garantizar que estas transformaciones est\'{e}n presentes, tambi\'{e}n, en
+otros grupos. Con este fin, introducimos los subgrupos de congruencia y la
+relaci\'{o}n de conmensurabilidad.
+
+Dados $\frak{N}$ y $\frak{a}$, respectivamente un ideal \'{\i}ntegro y un
+ideal fraccionario en $F$, definimos un grupo $\Gamma_{0}(\frak{N},\frak{a})$
+por la expresi\'{o}n \eqref{eq:unidadestotalmentepositivasasociadasmatrices}
+(la diferencia est\'{a} en que $\frak{a}$ es, en principio, arbitrario).
+Fijado $\frak{a}$, los grupos $\Gamma_{0}(\frak{N},\frak{a})$ constituyen
+una familia ordenada por
+\begin{math}
+	\frak{M}\mid\frak{N}\Rightarrow\Gamma_{0}(\frak{M},\frak{a})
+		\supset\Gamma_{0}(\frak{N},\frak{a})
+\end{math}~,
+con $\Gamma_{0}(1,\frak{a})$ conteniendo a todos. El anillo
+$\cal{O}_{0}(1)_{\frak{a}}$ (\eqref{eq:ordenasociadomatrices} con $\frak{N}=1$)
+act\'{u}a por endomorfismos en el $\oka{F}$-m\'{o}dulo
+$\frak{a}\oplus\oka{F}$:
+\begin{align*}
+	\begin{bmatrix} a & b \\ c & d \end{bmatrix}(x,y) & \,=\,
+			(ax+by,cx+dy)
+	\text{ .}
+\end{align*}
+%
+Evaluando en un punto $(x,0)$ y en un punto $(0,y)$ ($x,y\not=0$), se ve que
+el \'{u}nico elemento que act\'{u}a trivialmente es la matriz identidad
+$I\in\cal{O}_{0}(1)_{\frak{a}}$. En particular, el grupo
+$\Gamma_{0}(1,\frak{a})$ se realiza como un subgrupo de automorfismos de
+este $\oka{F}$-m\'{o}dulo. Para cada ideal \'{\i}ntegro
+$\frak{N}\subset\oka{F}$, el subm\'{o}dulo $\frak{N}\frak{a}\oplus\frak{N}$ es
+$\cal{O}_{0}(1)_{\frak{a}}$-invariante:
+\begin{align*}
+	\begin{bmatrix} \oka{F} & \frak{a} \\
+		\frak{a}^{-1} & \oka{F} \end{bmatrix}
+			(\frak{N}\frak{a}\oplus\frak{N}) & \,\subset\,
+		\frak{N}\frak{a}\oplus\frak{N}
+	\text{ .}
+\end{align*}
+%
+En particular, $\Gamma_{0}(1,\frak{a})$ preserva este subm\'{o}dulo y la
+acci\'{o}n del grupo desciende a una acci\'{o}n en el cociente
+\begin{math}
+	\big(\frak{a}\oplus\oka{F}\big)/
+		\big(\frak{N}\frak{a}\oplus\frak{N}\big)\simeq
+		\frak{a}/\frak{N}\frak{a}\,\oplus\,\oka{F}/\frak{N}
+\end{math}~.
+La imagen del correspondiente morfismo
+\begin{math}
+	\Gamma_{0}(1,\frak{a})\rightarrow
+		\Auto(\frak{a}/\frak{N}\frak{a}\,\oplus\,\oka{F}/\frak{N})
+\end{math}
+es finita y su n\'{u}cleo est\'{a} dado por
+\begin{align*}
+	\Gamma(\frak{N},\frak{a}) & \,:=\,
+		\bigg\{\begin{bmatrix} a & b \\ c & d \end{bmatrix}\in
+			\Gamma_{0}(1,\frak{a})\,:\,
+		\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+			\equiv
+			\begin{bmatrix} 1 & \\ & 1 \end{bmatrix}\,
+				\bigg(\frak{N}\cdot
+				\begin{bmatrix} \oka{F} & \frak{a} \\
+				\frak{a}^{-1} & \oka{F} \end{bmatrix}
+				\bigg)
+			\bigg\}% \\
+	%& \,=\,\bigg\{\begin{bmatrix} a & b \\ c & d \end{bmatrix}\in
+			%\begin{bmatrix} \oka{F} & \frak{a} \\
+			%\frak{a}^{-1} & \oka{F} \end{bmatrix}\,:\,
+			%ad-bc\in\oka{F,+}^{\times},\,a\equiv d\equiv 1
+				%(\frak{N}),\,
+				%c\in\frak{N}\frak{a}^{-1},\,
+				%b\in\frak{N}\frak{a}
+			%\bigg\}
+	\text{ .}
+\end{align*}
+%
+El grupo $\Gamma(\frak{N},\frak{a})$ es, pues, normal en
+$\Gamma_{0}(1,\frak{a})$ y de \'{\i}ndice finito. Adem\'{a}s, la
+condici\'{o}n $c\in\frak{N}\frak{a}^{-1}$ implica que
+$\Gamma(\frak{N},\frak{a})\subset\Gamma_{0}(\frak{N},\frak{a})$. Un subgrupo
+$\Gamma\subset\GLtp_{2}(F)$ se dice \emph{de congruencia}, si
+\index{subgrupo de congruencia}
+existen ideales $\frak{a},\frak{a}'$ y $\frak{N},\frak{N}'\subset\oka{F}$ y
+$A\in\GLtp_{2}(F)$ tales que
+\begin{align*}
+	A^{-1}\,\Gamma_{0}(\frak{N},\frak{a})\,A & \,\supset\,
+		\Gamma \,\supset\,
+		\Gamma(\frak{N}',\frak{a}')
+	\text{ .}
+\end{align*}
+%
+Los grupos $\Gamma_{0}(\frak{N},\frak{a})$ son subgrupos de congruencia. Se
+puede demostrar que la clase de subgrupos de congruencia es cerrada por
+conjugaci\'{o}n en $\GLtp_{2}(F)$ y que todos los subgrupos de congruencia son
+conmensurables entre s\'{\i}.%
+\footnote{
+	Ver \cite[Ch.~I, \S~3]{FreitagForms} para una idea de la
+	demostraci\'{o}n.
+}
+
+En general, si $\Gamma\subset\GLtp_{2}(F)$ es conmensurable con
+$\Gamma_{0}(1,1)$ (y, por lo tanto, con todo subgrupo de congruencia), entonces
+el cociente $\Gamma\backslash\hP^{n}$ es una variedad no compacta y de volumen
+finito. Si $\Gamma'\subset\Gamma$ es un subgrupo de \'{\i}ndice finito,
+entonces%
+\footnote{
+	\cite[Ch.~IV,\S~1]{vanDerGeerSurfaces}
+}
+\begin{align*}
+	\mu\big(\Gamma'\backslash\hP^{n}\big) & \,=\,
+		\big|\Gamma:\Gamma'\big|\cdot
+			\mu\big(\Gamma\backslash\hP^{n}\big)
+	\text{ .}
+\end{align*}
+%

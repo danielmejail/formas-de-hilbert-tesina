@@ -1,0 +1,146 @@
+Las siguientes observaciones son v\'{a}lidas tanto en el caso en que $B$ es un
+\'{a}lgebra de matrices, como en el caso en que $B$ es de divisi\'{o}n. Sea
+entonces $F$ un cuerpo de n\'{u}meros, sea $B$ un \'{a}lgebra de cuaterniones
+sobre $F$, de matrices o de divisi\'{o}n, y sea $\cal{O}\subset B$ un orden
+arbitrario. Dado un conjunto (medible) $U$ (en alg\'{u}n espacio medible),
+su funci\'{o}n caracter\'{\i}stica ser\'{a} denotada por $[U]$ y, si no hay
+riesgo de confusi\'{o}n, su medida ser\'{a} denotada por $|U|$.
+
+Dado un lugar no arquimediano $v\in\lugares[f]{F}$ y dado $\xi\in F_{v}$, sea
+$|\xi|_{v}$ el m\'{o}dulo de $\xi$. Es decir, si $\xi\not =0$,
+$|\xi|_{v}\in\bb{R}_{>0}$ es el \'{u}nico n\'{u}mero real positivo tal que,
+cualquiera sea la medida de Haar en $F_{v}$ y cualquiera sea el conjunto
+medible $U\subset F_{v}$, se cumple $a_{v}(U\cdot \xi)=|\xi|_{v}a_{v}(U)$;
+si $\xi=0$, entonces $|\xi|_{v}=0$. Dado $x\in B_{v}$, sea
+$\norma[B_{v}/F_{v}](x)$ su norma, es decir, el determinante del endomorfismo
+$\rho(x):\,b\mapsto b\cdot x$ de $B_{v}$ en tanto espacio vectorial sobre
+$F_{v}$, y sea $\nrd(x)$ su norma reducida. La relaci\'{o}n entre ambas es
+$\norma[B_{v}/F_{v}](x)=\nrd(x)^{2}$. Adem\'{a}s, el m\'{o}dulo del
+endomorfismo $\rho(x)$ es igual a
+\begin{equation}
+	\label{eq:modulodeunelementodelalgebra}
+	%\label{eq:moduloesigualamodulodelanormadeterminante}
+	\frac{\alpha_{v}(U\cdot x)}{\alpha_{v}(U)} \,=\,
+		|\norma[B_{v}/F_{v}](x)|_{v}\,=\,|\nrd(x)|_{v}^{2}
+	\text{ ,}
+\end{equation}
+%
+cualquiera sea la medida de Haar $\alpha_{v}$ en $B_{v}$ y cualquiera sea el
+conjunto medible de medida finita y positiva $U\subset B_{v}$ (si $x$ no es
+invertible, entonces ambos lados de la igualdad son nulos). El orden
+$\cal{O}_{v}$ satisface $\nrd(\cal{O}_{v})\subset\oka{F,v}$ y su grupo de
+unidades $\nrd(\cal{O}_{v}^{\times})\subset\oka{F,v}^{\times}$. Si
+$x\in\cal{O}_{v}^{\times}$ es una unidad, entonces $|\nrd(x)|_{v}=1$.
+En particular,
+\begin{align*}
+	\alpha_{v}(U\cdot x) & \,=\, \alpha_{v}(U)
+\end{align*}
+%
+para todo conjunto medible $U\subset B_{v}$, toda unidad
+$x\in\cal{O}_{v}^{\times}$ y toda medida de Haar $\alpha_{v}$ en $B_{v}$.
+Esto se puede deducir, por ejemplo, tomando $U=\cal{O}_{v}$: en ese caso,
+$\cal{O}_{v}$ es un entorno compacto del elemento neutro,
+$\cal{O}_{v}\cdot x=\cal{O}_{v}$ y
+\begin{math}
+	\alpha_{v}(\cal{O}_{v}\cdot x)=\alpha_{v}(\cal{O}_{v})
+\end{math}~.
+En cuanto al grupo de unidades $B_{v}^{\times}$ del \'{a}lgebra, si
+$\alpha_{v}$ es alguna medida de aditiva en $B_{v}$, entonces la medida
+$\mu_{v}$ en $B_{v}^{\times}$ que verifica
+\begin{equation}
+	\label{eq:medidamultiplicativainducida}
+	d\mu_{v} \,=\, \frac{d\alpha_{v}}{|\nrd(x)|_{v}^{2}}
+\end{equation}
+%
+es invariante tanto a izquierda, como a derecha (\cite[Ch.~X \S~1]{WeilBasic}).
+Cualquier otra medida multiplicativa es un m\'{u}ltiplo constante de $\mu_{v}$.
+Esta medida tambi\'{e}n est\'{a} caracterizada por:
+\begin{align*}
+	\mu_{v}(\cal{O}_{v}^{\times}) & \,=\,\int_{B_{v}}\,
+		[\cal{O}_{v}^{\times}]\,\frac{d\alpha_{v}}{|\nrd(x)|_{v}^{2}}
+		\,=\,\alpha_{v}(\cal{O}_{v}^{\times})
+	\text{ .}
+\end{align*}
+%
+De manera an\'{a}loga al caso aditivo, $\cal{O}_{v}^{\times}$ es un entorno
+compacto del elemento neutro y, si $\mu_{v}$ es una medida de Haar en
+$B_{v}^{\times}$, entonces, para toda unidad $x\in\cal{O}_{v}^{\times}$, se
+verifica $x\cal{O}_{v}^{\times}x^{-1}=\cal{O}_{v}^{\times}$ y
+\begin{math}
+	\mu_{v}(x\cal{O}_{v}^{\times}x^{-1}) =\mu_{v}(\cal{O}_{v}^{\times})
+\end{math}~.
+En consecuencia, el m\'{o}dulo de $b\mapsto xbx^{-1}$ es $1$, si
+$x\in\cal{O}_{v}^{\times}$.
+
+El siguiente objetivo es definir una medida en $\Idfin{B}$.
+% Sea, entonces, $\cal{O}'\subset B$ un orden \emph{maximal}.
+El anillo de ad\`{e}les finitos $\Adfin{B}$ es el producto restringido de la
+familia $\{B_{v}\}_{v}$ con respecto a los subespacios abiertos y
+compactos $\cal{O}_{v}$. Para cada lugar finito $v\in\lugares[f]{F}$,
+elegimos la medida de aditiva $\alpha_{v}$ en $B_{v}$ tal que
+$\alpha_{v}(\cal{O}_{v})=1$. El papel de $\cal{O}$ en la definici\'{o}n de
+$\Adfin{B}$ es an\'{a}logo al que $\cal{O}^{\times}$ juega en la
+definici\'{o}n de $\Idfin{B}$. Sea $\mu_{v}$ la medida en $B_{v}^{\times}$
+dada por \eqref{eq:medidamultiplicativainducida}. Entonces, para el grupo de
+unidades $\cal{O}_{v}^{\times}$, vale que
+\begin{math}
+	\mu_{v}(\cal{O}_{v}^{\times})=\alpha_{v}(\cal{O}_{v}^{\times})
+\end{math}~.
+En el grupo de unidades $B_{v}^{\times}$ elegimos la medida multiplicativa
+$\alpha_{v}^{\times}$ tal que $\alpha_{v}^{\times}(\cal{O}_{v}^{\times})=1$,
+es decir,
+\begin{equation}
+	\label{eq:medidamultiplicativainducidacorrectamente}
+	d\alpha_{v}^{\times} \,=\,
+		\frac{d\mu_{v}}{\alpha_{v}(\cal{O}_{v}^{\times})}
+		\,=\,\frac{1}{\alpha_{v}(\cal{O}_{v}^{\times})}\,
+			\frac{d\alpha_{v}}{|\nrd(x)|_{v}^{2}}
+	\text{ .}
+\end{equation}
+%
+% Por la proposici\'{o}n \ref{thm:localgloballattices},
+% $\cal{O}_{v}=\cal{O}'_{v}$ para casi todo $v\in\lugares[f]{F}$. Entonces
+Las medidas $\{\alpha_{v}\}_{v}$ determinan una medida de Haar
+$\alpha=\prod_{v}\,\alpha_{v}$ en $\Adfin{B}$
+(\cite[Ch.~XV]{CasselsFrohlichANT}), que, entre otras propiedades, satisface:
+\begin{propoMedidaEnAdelesFinitos}\label{thm:medidaenadelesfinitos}
+	Sea $\{f_{v}\}_{v}$ una familia que verifica $f_{v}=1$ en
+	$\cal{O}_{v}$ para casi todo $v\in\lugares[f]{F}$ y alguna de las dos
+	condiciones siguientes:
+	\begin{itemize}
+		\item[(j)] para todo $v$, la funci\'{o}n $f_{v}$ es medible y
+			no negativa;
+		\item[(jj)] para todo $v$, la funci\'{o}n $f_{v}$ es integrable
+			y, adem\'{a}s,
+			\begin{align*}
+				\prod_{v}\,\Big(\int_{B_{v}}\,
+					|f_{v}|\,d\alpha_{v}\Big) & \,<\,\infty
+				\text{ .}
+			\end{align*}
+			%
+	\end{itemize}
+	%
+	Entonces la funci\'{o}n $f=\prod_{v}\,f_{v}$ es medible y, en el caso
+	(jj), $f$ es integrable en $\Adfin{B}$. En cualquiera de los dos casos,
+	\begin{align*}
+		\int_{\Adfin{B}}\,f\,d\alpha & \,=\,
+			\prod_{v}\,\Big(\int_{B_{v}}\,f_{v}\,d\alpha_{v}\Big)
+		\text{ .}
+	\end{align*}
+	%
+\end{propoMedidaEnAdelesFinitos}
+
+% De manera an\'{a}loga, como $\cal{O}_{v}^{\times}={\cal{O}'}_{v}^{\times}$
+% para casi todo $v\in\lugares[f]{F}$,
+Las medidas $\{\alpha_{v}^{\times}\}_{v}$
+inducen una medida $\alpha^{\times}=\prod_{v}\,\alpha_{v}^{\times}$ en
+$\Idfin{B}$. La medida de Haar $\alpha^{\times}$ posee propiedades similares
+a las enunciadas en \ref{thm:medidaenadelesfinitos} para $\alpha$.
+Los elementos de $\Idfin{B}$ son de la forma $\hhat{u}=(u_{v})_{v}$, con
+$u_{v}\in B_{v}$ para todo $v$ y $u_{v}\in\cal{O}_{v}^{\times}$ para casi todo
+$v$. Los elementos $u_{v}\in B_{v}$ se identifican con su imagen v\'{\i}a el
+morfismo que a $u_{v}$ le asigna el id\`{e}le dado por $(\hhat{u})_{v}=u_{v}$
+y $(\hhat{u})_{w}=1$, si $w\not= v$. Un subconjunto $U\subset B_{v}$ se
+identifica con su imagen v\'{\i}a este mismo morfismo.
+
+

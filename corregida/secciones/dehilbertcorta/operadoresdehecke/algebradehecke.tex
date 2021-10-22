@@ -1,0 +1,193 @@
+Sean $\frak{p}\subset\oka{F}$ un ideal primo, $p\in\oka{F,\frak{p}}$ un
+generador del ideal maximal y sea
+\begin{math}
+	\pi=\begin{bmatrix} p & \\ & 1 \end{bmatrix}
+\end{math}~.
+Sea $\hhat{p}\in\Idfin{F}$ el id\`{e}le (\'{\i}ntegro) dado por
+$\hhat{p}_{v}=1$, si $v\not=\frak{p}$, e igual a $p$ en $\frak{p}$;
+% En particular, $\hhat{p}\Adfin{\oka{F}}\cap F=\frak{p}$.
+identificamos $\hhat{p}$ con el correspondiente elemento del centro de
+$\Idfin{B}$. Sea $\hhat{\pi}\in\Idfin{B}$ el id\`{e}le dado por
+$\hhat{\pi}_{v}=1$, si $v\not=\frak{p}$, e igual a $\pi$ en $\frak{p}$.
+
+\begin{defOperadoresDeHeckeMatrices}\label{def:operadoresdeheckematrices}
+	Llamaremos \emph{operadores de Hecke (en \frak{p})} a los operadores
+	\begin{align*}
+		T_{\frak{p}}\,=\,T_{\hhat{\pi}} & \quad\text{y}\quad
+			S_{\frak{p}}\,=\,T_{\hhat{p}}
+		\qquad\qquad (\,(\frak{p},\frak{N})=1\,)
+	\end{align*}
+	%
+	en $\modularH{k}{\frak{N}}$.\index{operador de Hecke}
+	El \emph{\'{a}lgebra de Hecke} de $\modularH{k}{\frak{N}}$ es el
+	\'{a}lgebra sobre $\bb{C}$ generada por el conjunto
+	\begin{math}
+		\big\{T_{\frak{p}},\,S_{\frak{p}}
+			\,:\,\frak{p}\nmid\frak{N}\big\}
+	\end{math}
+	en $\Endo[\bb{C}](\modularH{k}{\frak{N}})$.%
+	\footnote{
+		La definici\'{o}n de operadores de Hecke se extiende a los
+		primos divisores del nivel con algunas modificaciones (ver
+		\cite{ShemanskeWalling}, \cite{MiyakeOnAutomorphicFormsOnGL}).
+	}
+	Los operadores de Hecke preservan los espacios de formas cuspidales
+	$\spitzH{k}{\frak{N}}$ y $\spitzH{k}{\frak{N},\omega}$ para cada
+	cuasicar\'{a}cter $\omega$.
+\end{defOperadoresDeHeckeMatrices}
+
+Si $\frak{p}$ y $\frak{q}$ son dos primos distintos, dado que act\'{u}an
+en coordenadas distintas, los operadores $T_{\frak{p}}$ y $T_{\frak{q}}$
+conmutan. Los operadores $S_{\frak{p}}$ conmutan con $T_{\frak{q}}$,
+$S_{\frak{q}}$ y tambi\'{e}n con $T_{\frak{p}}$, porque $\hhat{p}$ es central.
+
+Para poder expresar el operador de Hecke $T_{\frak{p}}$ como un operador de
+coclase doble, es necesario hallar un conjunto de representantes de las clases
+\begin{math}
+	\Idfin{\cal{O}}\backslash\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}
+\end{math}~,
+con $\hhat{\pi}$ como en la Definici\'{o}n \ref{def:operadoresdeheckematrices}.
+Como el \'{u}nico lugar en donde $\hhat{\pi}$ no es trivial es el lugar
+correspodiente al ideal primo $\frak{p}$, ser\'{a} suficiente hallar una
+descomposici\'{o}n de
+\begin{math}
+	\cal{O}_{\frak{p}}^{\times}\pi\cal{O}_{\frak{p}}^{\times}
+\end{math}
+como uni\'{o}n disjunta de conjuntos de la forma
+$\cal{O}_{\frak{p}}^{\times}\beta$. Si $\frak{p}\nmid\frak{N}$, entonces
+$\cal{O}_{\frak{p}}^{\times}=\GL(\oka{F,\frak{p}})$ y, tomando un sistema de
+representantes $\{b_{i}\}_{i}$ de las clases $i\in\oka{F,\frak{p}}/(p)$, se
+verifica
+\begin{align*}
+	\cal{O}_{\frak{p}}^{\times}
+		\begin{bmatrix} p & \\ & 1 \end{bmatrix}
+			\cal{O}_{\frak{p}}^{\times} & \,=\,
+		\bigsqcup_{i\in\oka{F,\frak{p}}/(p)}\,
+			\cal{O}_{\frak{p}}^{\times}
+		\begin{bmatrix} 1 & b_{i} \\ & p \end{bmatrix}\,\sqcup\,
+			\cal{O}_{\frak{p}}^{\times}
+		\begin{bmatrix} p & \\ & 1\end{bmatrix}
+	\text{ .}
+\end{align*}
+%
+En cuanto a $S_{\frak{p}}$, notamos simplemente que
+\begin{align*}
+	\cal{O}_{\frak{p}}^{\times}
+		\begin{bmatrix} p & \\ & p \end{bmatrix}
+			\cal{O}_{\frak{p}}^{\times} & \,=\,
+		\cal{O}_{\frak{p}}^{\times}
+			\begin{bmatrix} p & \\ & p \end{bmatrix}
+	\text{ .}
+\end{align*}
+%
+As\'{\i}, si $f\in\modularH{k}{\frak{N}}$, entonces
+\begin{math}
+	\big(S_{\frak{p}}f\big)(z,\hhat{\alpha}\Idfin{\cal{O}})=
+		f(z,\hhat{\alpha}\hhat{p}^{-1}\Idfin{\cal{O}})
+\end{math}~.
+En particular, si $f\in\spitzH{k}{\frak{N},\omega}$, entonces
+$S_{\frak{p}}f=\omega(\frak{p})^{-1}\cdot f$.%
+\footnote{\label{obs:shimuradiferenciaenelautovalor}
+	En \cite{ShimuraSpecialValuesOfZeta},
+	Proposici\'{o}n~2.1, se afirma algo en apariencia distinto: el
+	autovalor de $S_{\frak{p}}$ en una $f$ perteneciente a uno de los
+	espacios an\'{a}logos a los que aqu\'{\i} denotamos
+	$\spitzH{k}{\frak{N},\omega}$ es $\omega(\frak{p})$ en lugar de
+	$\omega(\frak{p})^{-1}$. Esta discrepancia se debe a que nosotros hemos
+	definido la acci\'{o}n de $\GL_{2}(\Adfin{F})$ a derecha en funciones
+	por
+	\begin{math}
+		\phi\operadormatrices{\peso{k}}{(1,\hhat{\pi})}
+			(g,\hhat{\alpha})=\phi(g,\hhat{\alpha}\hhat{\pi}^{-1})
+	\end{math}~,
+	mientras que Shimura define la acci\'{o}n con el conjugado
+	$\hhat{\pi}^\iota$ en lugar del inverso. Esta diferencia tambi\'{e}n
+	aparecer\'{a} m\'{a}s adelante cuando describamos el efecto de los
+	operadores $T_{\frak{p}}$ en los coeficientes de Fourier
+	(\S~\ref{subsec:relacionconfourier}).
+}
+
+\begin{obsIdelesDeNormaP}\label{obs:idelesdenormap}
+	Dado $\hhat{p}\in\Adfin{\oka{F}}$, el id\`{e}le $\hhat{\pi}$ pertenece
+	al anillo $\Adfin{\cal{O}}$. En particular, los elementos de la coclase
+	doble $\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}$ pertenecen a
+	$\Adfin{\cal{O}}$ y sus normas reducidas pertenecen a
+	$\hhat{p}\,\Idfin{\oka{F}}$.
+	% (Localmente,
+	% \begin{math}
+		% \big(\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}\big)_{\frak{q}}
+	% \end{math}
+	% es igual a $\cal{O}_{\frak{q}}^{\times}$, si $\frak{q}\not= \frak{p}$,
+	% y a
+	% \begin{math}
+		% \GL_{2}(\oka{F,\frak{p}})
+			% \begin{bmatrix} p & \\ & 1 \end{bmatrix}
+			% \GL_{2}(\oka{F,\frak{p}})
+	% \end{math}~,
+	% si $\frak{q}=\frak{p}$, pues $\frak{p}$ es coprimo con el nivel del
+	% orden $\cal{O}$).
+	Rec\'{\i}procamente, si $\hhat{x}\in\Adfin{\cal{O}}$
+	y $\nrd(\hhat{x})\in\hhat{p}\,\Idfin{\oka{F}}$, entonces
+	$x_{\frak{q}}\in\cal{O}_{\frak{q}}^{\times}$, si
+	$\frak{q}\not=\frak{p}$, y, por eliminaci\'{o}n, existen
+	$v_{\frak{p}},w_{\frak{p}}\in\GL_{2}(\oka{F,\frak{p}})$ tales que
+	\begin{math}
+		v_{\frak{p}}x_{\frak{p}}w_{\frak{p}}=\pi
+	\end{math}~.
+	En definitiva,
+	\begin{align*}
+		\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}} & \,=\,
+			\Big\{\hhat{x}\in\Adfin{\cal{O}}\,:\,
+				\nrd(\hhat{x})\in\hhat{p}\,\Idfin{\oka{F}}
+			\Big\}
+		\text{ .}
+	\end{align*}
+	%
+	Escribimos $\frak{I}(\frak{p})$ para referirnos a este
+	conjunto y notamos que
+	\begin{math}
+		\frak{I}(\frak{p})=\Idfin{\cal{O}}\hhat{x}\Idfin{\cal{O}}
+	\end{math}
+	para cualquier elemento $\hhat{x}\in\frak{I}(\frak{p})$. Definimos,
+	tambi\'{e}n,
+	\begin{align*}
+		\Theta(\frak{p}) & \,=\,
+			\Idfin{\cal{O}}\backslash\frak{I}(\frak{p})
+		\text{ .}
+	\end{align*}
+	%
+\end{obsIdelesDeNormaP}
+
+\begin{propoOperadoresDeHeckeSonNormales}%
+	\label{propo:operadoresdeheckesonnormales}
+	Los operadores de Hecke $T_{\frak{p}}$ y $S_{\frak{p}}$ son normales,
+	si $\frak{p}\nmid\frak{N}$.
+\end{propoOperadoresDeHeckeSonNormales}
+
+\begin{proof}
+	Notamos que, con $\hhat{\pi}$ y $\hhat{p}$ como en la Definici\'{o}n
+	\ref{def:operadoresdeheckematrices}, $\hhat{p}^\iota=\hhat{p}$ y, por
+	la Observaci\'{o}n~\ref{obs:idelesdenormap},
+	\begin{math}
+		\Idfin{\cal{O}}\hhat{\pi}^\iota\Idfin{\cal{O}}=
+			\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}
+	\end{math}~, lo que implica que $T_{\hhat{p}^\iota}=T_{\hhat{p}}$ y que
+	$T_{\hhat{\pi}^\iota}=T_{\hhat{\pi}}$. De la expresi\'{o}n
+	\eqref{eq:operadorcoclaseformasadjunto}, se deduce que
+	\begin{align*}
+		S_{\frak{p}}^{*} \,=\,\chi(\frak{p})^{2}\,S_{\frak{p}}
+			&\quad\text{y}\quad
+		T_{\frak{p}}^{*} \,=\,\chi(\frak{p})\,T_{\frak{p}}
+		\text{ ,}
+	\end{align*}
+	%
+	en cada componente $\spitzH{k}{\frak{N},\omega}$
+	($\chi=|\omega|^{-1}\,\omega$).
+\end{proof}
+
+Cada espacio $\spitzH{k}{\frak{N},\omega}$ es de dimensi\'{o}n finita y la
+familia de operadores $\big\{T_{\frak{p}}\,:\,\frak{p}\nmid\frak{N}\big\}$ es
+una familia de operadores normales que conmutan entre s\'{\i}. Concluimos,
+entonces, que existen bases ortogonales para los espacios de formas cuspidales
+conformadas por autofunciones para todos los operadores $T_{\frak{p}}$ con
+$\frak{p}$ que no divide al nivel.

@@ -1,0 +1,344 @@
+Definimos, ahora, una aplicaci\'{o}n
+\begin{math}
+	\frak{v}:\,\spitzH[B]{k}{\frak{N},\frak{a}}\rightarrow
+		\Omega^{1}(\hP,L_{\peso{k}}(\bb{C}))
+\end{math}~,
+que, a una forma cuspidal $f$ le asigna una $1$-forma (holomorfa) en $\hP$ a
+valores en el espacio vectorial complejo $L_{\peso{k}}(\bb{C})$. Dado un punto
+$z\in\hP$, sea $v(z)\in\wpoli{1}(\bb{C})$ el polinomio
+\begin{align*}
+	\mathrm{v}(z) & \,=\, zX\,+\,Y \,=\,
+		\begin{bmatrix} z & 1 \end{bmatrix}\,
+		\begin{bmatrix} X \\ Y \end{bmatrix}
+	\text{ .}
+\end{align*}
+%
+Si $\gamma\in\GL_{2}(\bb{R})$, se cumple
+\begin{align*}
+	\mathrm{v}(\gamma z) & \,=\,
+		\begin{bmatrix} \frac{az+b}{cz+d} & 1 \end{bmatrix}\,
+		\begin{bmatrix} X \\ Y \end{bmatrix}
+	\,=\, j(\gamma,z)^{-1} \begin{bmatrix} z & 1 \end{bmatrix}
+		\begin{bmatrix} a & c \\ b & d \end{bmatrix}
+		\begin{bmatrix} X \\ Y \end{bmatrix}
+\end{align*}
+%
+Dados $w\geq 0$ y $m\in\bb{Z}$, miramos a $\mathrm{v}(z)^{w}$ como elemento de
+$\wmpoli{w}{m}(\bb{C})$ y, recordando que
+$\gamma^\iota=\det(\gamma)\gamma^{-1}$, deducimos que
+\begin{align*}
+	\mathrm{v}(z)^{w}\cdot\gamma^{-1} & \,=\,\det(\gamma)^{-m}\,
+		\big(\mathrm{v}(z)^{w}\big) \Big(
+		\begin{bmatrix} X & Y \end{bmatrix}\,
+			(\det(\gamma)^{-1}\,\gamma^\iota)^\iota\Big) \\
+	& \,=\,\det(\gamma)^{-m}\,\Big(
+		\begin{bmatrix} z & 1 \end{bmatrix}\,\det(\gamma)^{-1}\,
+			\gamma^t
+		\begin{bmatrix} X \\ Y \end{bmatrix}\Big)^{w}
+	\text{ .}
+\end{align*}
+%
+Es decir,
+\begin{align*}
+	\mathrm{v}(\gamma z)^{w} & \,=\,j(\gamma,z)^{-w}\,\det(\gamma)^{w+m}\,
+		\big(\mathrm{v}(z)^{w}\cdot\gamma^{-1}\big)
+\end{align*}
+%
+Si $f\in\spitzH[B]{k}{\frak{N},\frak{a}}$ es una forma cuspidal, definimos
+\begin{align*}
+	\frak{v}(f) & \,=\, \mathrm{v}(z)^{w_{1}}\otimes f(z)\,dz
+	\text{ ,}
+\end{align*}
+%
+con $\mathrm{v}(z)^{w_{1}}\in\wmpoli{w_{1}}{m_{1}}(\bb{C})$.
+
+\begin{obsPullbackDeUnoForma}\label{obs:pullbackdeunoforma}
+	Calculamos el pullback de $\frak{v}(f)$ por una transformaci\'{o}n
+	$\gamma$. De la expresi\'{o}n
+	\eqref{eq:indefinidaoperadordepesokmetodos} y recordando que
+	$w_{1}=k_{1}-2$, se deduce que
+	\begin{align*}
+		\gamma^{*}\frak{v}(f) & \,=\, \mathrm{v}(\gamma z)^{w_{1}}
+			\otimes	f(\gamma z)\,d(\gamma z) \\
+		& \,=\, \frac{\det(\gamma_{1})^{w_{1}+m_{1}}}{%
+				j(\gamma_{1},z)^{w_{1}}}
+			\,\big(\mathrm{v}(z)^{w_{1}}\cdot\gamma^{-1}\big)
+				\otimes f(\gamma z)\,
+			\frac{\det(\gamma_{1})}{j(\gamma_{1},z)^{2}}\,dz \\
+		& \,=\,\big(\mathrm{v}(z)^{w_{1}}\cdot\gamma^{-1}\big)
+			\otimes\bigg(
+			\frac{\det(\gamma_{1})^{k_{1}+m_{1}-1}}{%
+				j(\gamma_{1},z)^{k_{1}}}f(\gamma z)\bigg)\,dz
+		\text{ .}
+	\end{align*}
+	%
+	Es decir, en general,
+	\begin{equation}
+		\label{eq:pullbackdeunoforma}
+		\gamma^{*}\frak{v}(f) \,=\,\big(
+			\mathrm{v}(z)^{w_{1}}\otimes
+				f\operadormatrices{\peso{k}}{%
+				\gamma}(z)\big)\cdot\gamma^{-1}\,dz \,=\,
+			\frak{v}\big(f\operadormatrices{\peso{k}}{\gamma}\big)
+				\cdot\gamma^{-1}
+		\text{ .}
+	\end{equation}
+	%
+	Si $\gamma\in\Gamma_{\frak{a}}$, entonces
+	\begin{math}
+		\gamma^{*}\frak{v}(f) =\frak{v}(f)\cdot\gamma^{-1}
+	\end{math}~.
+\end{obsPullbackDeUnoForma}
+
+Sea $\tau_{0}\in\hP$ y sea $p_{0}\in L_{\peso{k}}(\bb{C})$. Dada una forma
+cuspidal $f$, la expresi\'{o}n
+\begin{align*}
+	\varphi(\tau) & \,=\,\int_{\tau_{0}}^{\tau}\,\frak{v}(f)\,+\,p_{0}
+\end{align*}
+%
+define una funci\'{o}n $\hP\rightarrow L_{\peso{k}}(\bb{C})$. Por la
+Observaci\'{o}n~\ref{obs:pullbackdeunoforma}, dada
+$\gamma\in\Gamma_{\frak{a}}$,
+\begin{align*}
+	\varphi(\gamma\tau) & \,=\,\int_{\gamma\tau_{0}}^{\gamma\tau}\,
+		\frak{v}(f)\,+\,\int_{\tau_{0}}^{\gamma\tau_{0}}\,\frak{v}(f)
+		\,+\,p_{0} \,=\,
+		\bigg(\int_{\tau_{0}}^{\tau}\,\frak{v}(f)\bigg)\cdot\gamma^{-1}
+		\,+\,\int_{\tau_{0}}^{\gamma\tau_{0}}\,\frak{v}(f)\,+\,p_{0} \\
+	& \,=\,	\varphi(\tau)\cdot\gamma^{-1}\,+\,\tilde{t}(\gamma)
+	\text{ ,}
+\end{align*}
+%
+donde
+\begin{align*}
+	\tilde{t}(\gamma) & \,:=\,\int_{\tau_{0}}^{\gamma\tau_{0}}\,
+		\frak{v}(f)\,+\,p_{0}\cdot(1-\gamma^{-1})
+	\text{ .}
+\end{align*}
+%
+La funci\'{o}n
+\begin{math}
+	t:\,\Gamma_{\frak{a}}\rightarrow L_{\peso{k}}(\bb{C})
+\end{math}
+dada por $t(\gamma)=\tilde{t}(\gamma^{-1})$ verifica
+\begin{align*}
+	t(\gamma\delta) & \,=\,t(\gamma)\cdot\delta\,+\,t(\delta)
+	\text{ .}
+\end{align*}
+%
+Es decir, $t\in\cociclos[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}$. Cambiando
+$p_{0}$ por alg\'{u}n otro elemento del m\'{o}dulo $L_{\peso{k}}(\bb{C})$, la
+funci\'{o}n que se obtiene en lugar de $t$ difiere de \'{e}sta en un coborde.
+Definimos, dada una forma cuspidal $f$, una funci\'{o}n
+$t_{f}:\,\Gamma_{\frak{a}}\rightarrow L_{\peso{k}}(\bb{C})$ por
+\begin{align*}
+	t_{f}(\gamma) & \,=\,\int_{\tau_{0}}^{\gamma^{-1}\tau_{0}}\,\frak{v}(f)
+\end{align*}
+%
+y, al igual que $t$, la funci\'{o}n $t_{f}$ est\'{a} definida, m\'{o}dulo
+$\cobordes[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}$,
+independientemente de $\tau_{0}$ y satisface
+\begin{math}
+	t_{f}(\gamma\delta)=t_{f}(\gamma)\cdot\delta+t_{f}(\delta)
+\end{math}~.
+La aplicaci\'{o}n $f\mapsto [t_{f}]$ determina una transformaci\'{o}n
+$\bb{C}$-lineal
+\begin{align*}
+	& \ES_{\frak{a}} \,:\,\spitzH[B]{k}{\frak{N},\frak{a}} \,\rightarrow\,
+		\cohomolo[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+\end{align*}
+%
+Como, los operadores de Hecke act\'{u}an en los espacios
+$\spitzH[B]{k}{\frak{N},\frak{a}}$ de manera conjunta, consideramos
+\begin{align*}
+	& \ES \,:\,\spitzH[B]{k}{\frak{N}}\,\rightarrow\, H\,=\,
+		\bigoplus_{\frak{a}}\,
+			\cohomolo[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+\end{align*}
+%
+dada por
+\begin{math}
+	\ES =\bigoplus_{\frak{a}}\,\ES_{\frak{a}}
+\end{math}~.
+
+\begin{obsCohomologiaReal}\label{obs:cohomologiareal}
+	Repitiendo el razonamiento anterior con la parte real
+	$\Re(\frak{v}(f))$ en lugar de $\frak{v}(f)$ y $\bb{R}$ en lugar de
+	$\bb{C}$, se deduce que la aplicaci\'{o}n
+	\begin{math}
+		f\mapsto\text{clase}\Big[\gamma\mapsto
+			\int_{\tau_{0}}^{\gamma^{-1}\tau_{0}}\,
+			\Re(\frak{v}(f))\Big]
+	\end{math}~determina una transformaci\'{o}n lineal \emph{real}
+	\begin{math}
+		\spitzH[B]{k}{\frak{N},\frak{a}}\rightarrow
+			\cohomolo[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{R})}
+	\end{math}~.
+	Esta transformaci\'{o}n es un isomorfismo de $\bb{R}$-espacios
+	vectoriales (ver \cite[Thm.~8.4]{ShimuraIntroduction}).
+	%
+	% Si repetimos el razonamiento anterior con $\Re(\frak{v}(f))$ en lugar
+	% de $\frak{v}(f)$, definiendo una funci\'{o}n
+	% $\tau\mapsto\int_{\tau_{0}}^{\tau}\,\Re(\frak{v}(f))+r$, con
+	% $r\in L_{\peso{k}}(\bb{R})$, obtenemos una funci\'{o}n
+	% $u_{f}:\,\Gamma_{\frak{a}}\rightarrow L_{\peso{k}}(\bb{R})$
+	% perteneciente a $Z^{1}(\Gamma_{\frak{a}},L_{\peso{k}}(\bb{R}))$. Y,
+	% como antes, si cambiamos $r$ por alg\'{u}n otro polinomio $r'$,
+	% obtenemos un cociclo $u'$ que cumple que $u_{f}-u'$ pertenece a
+	% $B^{1}(\Gamma_{\frak{a}},L_{\peso{k}}(\bb{R}))$. Finalmente, definimos
+	% \begin{align*}
+		% & \varphi \,:\, \spitzH[B]{k}{\frak{N},\frak{a}}\,\rightarrow\,
+			% H^{1}(\Gamma_{\frak{a}},L_{\peso{k}}(\bb{R})) \\
+		% & \qquad\qquad f \,\mapsto\, [u_{f}]
+		% \text{ .}
+	% \end{align*}
+	%
+	Se puede obtener un isomorfismo de $\bb{C}$-espacios, por medio de una
+	involuci\'{o}n en $H$. La definici\'{o}n que proporcionamos de dicha
+	involuci\'{o}n est\'{a} adaptada de
+	\cite[\S~2.4]{VoightComputingOverArbitrary}.
+\end{obsCohomologiaReal}
+
+Recordemos de \S~\ref{sec:clasesdeideales} el grupo de clases
+\begin{math}
+	\Class[(+)]{F}=
+		F_{(+)}^{\times}\backslash\Idfin{F}/\Idfin{\oka{F}}
+\end{math}~, donde $F_{(+)}^{\times}=\nrd(B^{\times})$ es la imagen de la norma
+reducida en $F^{\times}$. El n\'{u}cleo del epimorfismo can\'{o}nico
+\begin{math}
+	\pClass{F}=
+		F_{+}^{\times}\backslash\Idfin{F}/\Idfin{\oka{F}}
+			\rightarrow\Class[(+)]{F}
+\end{math}~est\'{a} dado por
+\begin{math}
+	F_{(+)}^{\times}/F_{+}^{\times}=\big(\bb{Z}/2\bb{Z}\big)^{r}
+\end{math}~, donde $r$ es la cantidad de lugares arquimedianos no ramificados
+de $B$.%
+\footnote{
+	ver la Observaci\'{o}n~\ref{obs:eichlernorma}.
+}
+Puesto que la cantidad de lugares arquimedianos en donde el \'{a}lgebra
+$B/F$ no ramifica es $r=1$, el n\'{u}cleo es trivial --este es el caso, si y
+s\'{o}lo si existe una unidad $u\in\oka{F}^{\times}$ que cumple $v_{i}(u)>0$
+para $i\geq 2$ y $v_{1}(u)<0$-- o bien es c\'{\i}clico de orden $2$. En todo
+caso, podemos elegir un ideal $\frak{m}$ de $F$ cuya clase estricta genere el
+n\'{u}cleo del morfismo can\'{o}nico $\pClass{F}\rightarrow\Class[(+)]{F}$.
+Dado un representante $\frak{a}$ del grupo de clases estrictas, existe un
+\'{u}nico representante $\frak{a}'$ tal que $[\frak{a}\frak{m}]=[\frak{a}']$.
+% Observaci\'{o}n tonta, $a=a'$, si y s\'{o}lo si $[m]=1$ (es decir, el
+%R n\'{u}cleo es trivial). En ese caso, la involuci\'{o}n preservar\'{a} las
+% componentes; en otro caso, las permutar\'{a} de manera no trivial (con
+% orden $2$). En todo caso, la $\mu_{a,a'}$ se deber\'{\i}a poder hallar.
+En particular, las clases de $\frak{a}$ y de $\frak{a}'$ son iguales en
+$\Class[(+)]{F}$. Ahora, como $B/F$ es indefinida, seg\'{u}n el Teorema~%
+\ref{thm:eichlernorma}, la norma reducida induce un isomorfismo entre este
+grupo de clases y el cociente
+\begin{math}
+	B^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}
+\end{math}~. Deducimos que existe $\mu_{\frak{a},\frak{a}'}\in B^{\times}$ tal
+que $\det((\mu_{\frak{a},\frak{a}'})_{1})<0$ y
+\begin{math}
+	\hhat{\alpha}\Idfin{\cal{O}}=\mu_{\frak{a},\frak{a}'}^{-1}
+		\hhat{\alpha}'\Idfin{\cal{O}}
+\end{math}~,
+o, lo que es lo mismo,
+\begin{align*}
+	\mu_{\frak{a},\frak{a}'}\,\Gamma_{\frak{a}}\,
+		\mu_{\frak{a},\frak{a}'}^{-1} & \,=\,\Gamma_{\frak{a}'}
+	\text{ .}
+\end{align*}
+%
+Dado $f\in\cociclos[1]{\Gamma_{\frak{a}'},L_{\peso{k}}(\bb{C})}$, sea
+\begin{math}
+	f\big\vert W_{\infty,\frak{a},\frak{a}'}\in
+		\cociclos[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+\end{math}
+el cociclo definido por
+\begin{equation}
+	\label{eq:involucionencomponentesmetodos}
+	f\big\vert W_{\infty,\frak{a},\frak{a}'}(\gamma) \,=\,
+		f(\mu_{\frak{a},\frak{a}'}\gamma\mu_{\frak{a},\frak{a}'}^{-1}
+			)\cdot\mu_{\frak{a},\frak{a}'}
+	\text{ .}
+\end{equation}
+%
+Si $f\in\cobordes[1]{\Gamma_{\frak{a}'},L_{\peso{k}}(\bb{C})}$, entonces la
+igualdad $(1-\mu\gamma\mu^{-1})\mu=\mu(1-\gamma)$ implica que
+$f\big\vert W_{\infty,\frak{a},\frak{a}'}$ es un coborde. Queda determinada una
+transformaci\'{o}n lineal
+\begin{align*}
+	& W_{\infty,\frak{a},\frak{a}'} \,:\,
+		\cohomolo[1]{\Gamma_{\frak{a}'},L_{\peso{k}}(\bb{C})}
+			\,\rightarrow\,
+		\cohomolo[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+	\text{ ,}
+\end{align*}
+%
+para cada par de representantes $\frak{a}$ y $\frak{a}'$ tales que
+$[\frak{a}\frak{m}]=[\frak{a}']$. Denotamos por $W_{\infty}$ el endomorfismo
+inducido en $H$:
+\begin{align*}
+	(f_{\frak{a}'})_{\frak{a}'}\big\vert W_{\infty} & \,=\,
+		(f_{\frak{a}'}\big\vert W_{\infty,\frak{a},\frak{a}'}
+			)_{\frak{a}}
+	\text{ .}
+\end{align*}
+%
+
+\begin{obsInvolucionNoDependeDeMuCohomologia}%
+	\label{obs:involucionnodependedemucohomologia}
+	La definici\'{o}n de $W_{\infty,\frak{a},\frak{a}'}$ no depende de la
+	elecci\'{o}n de $\mu_{\frak{a},\frak{a}'}$. Sea
+	$\nu=\nu_{\frak{a},\frak{a}'}\in B^{\times}$ tal que $\det(\nu_{1})<0$
+	y
+	\begin{math}
+		\hhat{\alpha}\Idfin{\cal{O}}=
+			\nu^{-1}\hhat{\alpha}'\Idfin{\cal{O}}
+	\end{math}
+	y sea $\mu=\mu_{\frak{a},\frak{a}'}$. Sea
+	$f\in\cociclos[1]{\Gamma_{\frak{a}'},L_{\peso{k}}(\bb{C})}$ y sea
+	$g$ el cociclo en $\Gamma_{\frak{a}}$ dado por
+	$g(\gamma)=f(\mu\gamma\mu^{-1})\cdot\mu$. La igualdad
+	$\nu\hhat{\alpha}\Idfin{\cal{O}}=\mu\hhat{\alpha}\Idfin{\cal{O}}$
+	implica que $\mu^{-1}\nu\in\Gamma_{\frak{a}}$, con lo cual, por
+	la expresi\'{o}n \eqref{eq:propiedadesdeloscociclos},
+	\begin{align*}
+		f(\nu\gamma\nu^{-1})\cdot\nu & \,=\,
+			g\big((\mu^{-1}\nu)\,\gamma\,(\mu^{-1}\nu)^{-1}\big)
+				\cdot (\mu^{-1}\nu) \\
+		& \,=\,g(\gamma)\,-\,g(\mu^{-1}\nu)\cdot(1-\gamma)\,\in\,
+			f(\mu\gamma\mu^{-1})\cdot\mu\,+\,
+			\cobordes[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+		\text{ .}
+	\end{align*}
+	%
+\end{obsInvolucionNoDependeDeMuCohomologia}
+
+Por la Observaci\'{o}n~\ref{obs:involucionnodependedemucohomologia}, la
+igualdad $[\frak{m}]^{2}=[1]$ en $\pClass{F}$ implica que $W_{\infty}$ es una
+involuci\'{o}n en $H$. Si $[\frak{a}\frak{m}]=[\frak{a}']$ entonces
+$[\frak{a}'\frak{m}]=[\frak{a}]$. En particular, $W_{\infty}^{2}$ es
+diagonal y es igual a
+\begin{math}
+	W_{\infty,\frak{a}',\frak{a}}\circ W_{\infty,\frak{a},\frak{a}'}
+\end{math}
+en la componente correspondiente a $\frak{a}$. Tomando
+$\mu_{\frak{a}',\frak{a}}=\mu_{\frak{a},\frak{a}'}^{-1}$ en la definici\'{o}n
+de $W_{\infty,\frak{a}',\frak{a}}$, se deduce que $W_{\infty}^{2}$ es la
+identidad en cada componente.
+
+Por medio de $W_{\infty}$, podemos descomponer el espacio $H$ como suma directa
+de autoespacios para la involuci\'{o}n: $H=H^{+}\oplus H^{-}$, donde
+\begin{align*}
+	H^{\pm} & \,=\,\Big\{f\in H\,:\,f\big\vert W_{\infty}=\pm f\Big\}
+	\text{ .}
+\end{align*}
+%
+
+\begin{teoEichlerShimura}[{\cite[Propo.~4.4]{MatsushimaShimura}}]%
+	\label{thm:eichlershimura}
+	Si $\ES^{+}:\,\spitzH[B]{k}{\frak{N}}\rightarrow H^{+}$ denota la
+	composici\'{o}n de $\ES$ con la proyecci\'{o}n en el autoespacio
+	$H^{+}$, entonces $\ES$ es un isomorfismo de $\bb{C}$-espacios
+	vectoriales.
+\end{teoEichlerShimura}

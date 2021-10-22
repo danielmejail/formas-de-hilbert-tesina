@@ -1,0 +1,161 @@
+% Afirmamos que $\ES(f)\in H^{+}$ para toda $f\in\spitzH[B]{k}{\frak{N}}$.
+% !`No! Es como afirmar que la inmersi\'{o}n diagonal $x\mapsto (x,x)$ tiene
+% imagen en el eje $\{y=0\}$ porque ``es obvio que'' son isomorfos --notar que
+% el eje es el autoespacio positivo para la conjugaci\'{o}n, como $H^{+}$ en
+% la analog\'{\i}a !`Pero la proyecci\'{o}n los hace isomorfos!
+
+Sea $f=(f_{\frak{a}})_{\frak{a}}\in\spitzH[B]{k}{\frak{N}}$, sean
+$\frak{a},\frak{a}'$ tales que $[\frak{a}\frak{m}]=[\frak{a}']$ y sea
+$\mu=\mu_{\frak{a},\frak{a}'}$ como en la definici\'{o}n de
+$W=W_{\infty,\frak{a},\frak{a}'}$. Entonces
+\begin{math}
+	\ES_{\frak{a}}(f_{\frak{a}})=[t_{f_{\frak{a}}}]\in
+		\cohomolo[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+\end{math}~.
+Si $\gamma\in\Gamma_{\frak{a}}$,
+\begin{align*}
+	\big(\ES_{\frak{a}'}(f_{\frak{a}'})\big\vert W\big)(\gamma) & \,=\,
+		\bigg(\int_{\tau_{0}}^{(\mu\gamma\mu^{-1})^{-1}\tau_{0}}\,
+			\frak{v}(f_{\frak{a}'})\bigg)\cdot\mu
+	\,=\,\bigg(\int_{\mu^{-1}\tau_{0}}^{\gamma^{-1}\mu^{-1}\tau_{0}}\,
+			\mu^{*}\frak{v}(f_{\frak{a}'})\bigg)\cdot\mu \\
+	& \,=\,\int_{\mu^{-1}\tau_{0}}^{\gamma^{-1}\mu^{-1}\tau_{0}}\,
+		\frak{v}\big(f_{\frak{a}'}\operadormatrices{\peso{k}}{\mu}\big)
+	\,=\,\int_{\mu^{-1}\tau_{0}}^{\gamma^{-1}\mu^{-1}\tau_{0}}\,
+		\frak{v}(f_{\frak{a}})
+	\text{ .}
+\end{align*}
+%
+La ante\'{u}ltima igualdad se deduce de la observaci\'{o}n
+\ref{obs:pullbackdeunoforma}, mientras que la \'{u}ltima es simplemente la
+definici\'{o}n de $f$ a partir de sus componentes $f_{\frak{a}}$ (ver la
+observaci\'{o}n \ref{obs:}).
+
+En general, una forma cuspidal $f$ est\'{a} determinada por sus componentes
+$f_{\frak{a}}$, funciones definidas en el semiplano superior. Pero,
+equivalentemente, $f$ est\'{a} determinada por las funciones
+$f(\tilde{z},\hhat{\alpha}\Idfin{\cal{O}})$, definidas para
+$\tilde{z}\in\hP^{-}$:
+\begin{center}
+	\begin{tikzcd}
+		\bigoplus_{\frak{a}}\,\widetilde{%
+			\spitzH[B]{k}{\frak{N},\frak{a}}} &
+		\spitzH[B]{k}{\frak{N}} \arrow[r,"\sim"]\arrow[l,"\sim"'] &
+		\bigoplus_{\frak{a}}\,\spitzH[B]{k}{\frak{N},\frak{a}}
+	\end{tikzcd}
+\end{center}
+El pasaje de un lado al otro --como si fuese un cambio de cartas-- est\'{a}
+dado por $(f_{\frak{a}})_{\frak{a}}\mapsto (\tilde{f}_{\frak{a}})_{\frak{a}}$,
+donde
+\begin{align*}
+	\tilde{f}_{\frak{a}}(\tilde{z}) & \,=\,\big(f_{\frak{a}'}
+		\operadormatrices{\peso{k}}{\mu_{\frak{a},\frak{a}'}}\big)
+			(\tilde{z})\,=\,J_{1}(\mu_{1},\tilde{z})^{-1}\,
+		f_{\frak{a}'}(\mu_{1}\tilde{z})^{\mu}
+	\text{ .}
+\end{align*}
+%
+Las funciones $\tilde{f}_{\frak{a}}$ est\'{a}n definidas en el semiplano
+complejo inferior. Tomando la estructura holomorfa \emph{opuesta} (?) en
+$\hP^{-}$, cada $\tilde{f}_{\frak{a}}$ se identifica con una funci\'{o}n
+antiholomorfa en $\hP=\hP^{+}$. Es decir, el isomorfismo anterior, se puede
+ver --en cierto sentido\dots-- como
+\begin{math}
+	\tilde{f}_{\frak{a}}(z)=f_{\frak{a}'}(-\conj{z})
+\end{math}~.
+Tanto las formas holomorfas $\spitzH[B]{k}{\frak{N},\frak{a}}$ como las
+antiholomorfas admiten un morfismo en cohomolog\'{\i}a, el mismo espacio de
+cohomolog\'{\i}a. Ya hemos definido el morfismo
+\begin{math}
+	\ES_{\frak{a}}:\,\spitzH[B]{k}{\frak{N},\frak{a}}\rightarrow
+		\cohomolo[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+\end{math}
+por medio de la forma diferencial holomorfa $\frak{v}(f)$. Para las
+antiholomorfas, definimos
+\begin{math}
+	\widetilde{\ES}_{\frak{a}}:\,\widetilde{%
+		\spitzH[B]{k}{\frak{N},\frak{a}}}\rightarrow
+		\cohomolo[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+\end{math}
+como
+\begin{align*}
+	\widetilde{\ES}_{\frak{a}}(\tilde{f})(\gamma) & \,=\,
+		\int_{\tilde{\tau}_{0}}^{\gamma^{-1}\tilde{\tau}_{0}}\,
+		\tilde{\frak{v}}(\tilde{f})
+	\text{ ,}
+\end{align*}
+%
+donde $\tilde{\tau}_{0}\in\hP^{-}$ y
+\begin{math}
+	\tilde{\frak{v}}(\tilde{f})=\mathrm{v}(\tilde{z})^{w_{1}}\otimes
+		\tilde{f}(\tilde{z})\,d\tilde{z}
+\end{math}~,
+o, en t\'{e}rminos de la estructura compleja,
+$\mathrm{v}(\conj{z})^{w_{1}}\otimes\tilde{f}(z)\,d\conj{z}$, para cada
+$z\in\hP$. Como antes, $\widetilde{\ES}_{\frak{a}}$ est\'{a} bien definido y
+determina una transformaci\'{o}n $\widetilde{\ES}$ en la suma directa de los
+espacios de formas cuspidales antiholomorfas. La cuenta hecha con el operador
+$W=W_{\infty,\frak{a},\frak{a}'}$ m\'{a}s arriba muestra, m\'{a}s generalmente,
+que el siguiente diagrama conmuta
+\begin{center}
+	\begin{tikzcd}
+		\bigoplus_{\frak{a}}\,\spitzH[B]{k}{\frak{N},\frak{a}}
+			\arrow[r,"\sim"] \arrow[d,"\ES"'] &
+		\bigoplus_{\frak{a}}\,\widetilde{%
+			\spitzH[B]{k}{\frak{N},\frak{a}}}
+			\arrow[d,"\widetilde{\ES}"] \\
+		\bigoplus_{\frak{a}}\,\cohomolo[1]{%
+			\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+			\arrow[r,"W_{\infty}"] &
+		\bigoplus_{\frak{a}}\,\cohomolo[1]{%
+			\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+	\end{tikzcd}
+\end{center}
+donde la flecha horizontal superior est\'{a} dada por
+\begin{math}
+	(f_{\frak{a}})_{\frak{a}}\mapsto (f\operadormatrices{\peso{k}}{%
+		\mu_{\frak{a},\frak{a}'}})_{\frak{a}'}
+\end{math}~.
+Esto era de esperar, porque ambas flechas fueron definidas usando las mismas
+matrices.
+
+Por otra parte, podemos considerar la siguiente sucesi\'{o}n
+\begin{center}
+	\begin{tikzcd}
+		\spitzH[B]{k}{\frak{N}} \arrow[r] &
+		\bigoplus_{\frak{a}}\,\spitzH[B]{k}{\frak{N},\frak{a}}
+			\,\oplus\,\bigoplus_{\frak{a}}\,\widetilde{%
+			\spitzH[B]{k}{\frak{N},\frak{a}}}
+		\arrow[r,"\ES+\widetilde{\ES}"] &
+		\bigoplus_{\frak{a}}\,\cohomolo[1]{%
+			\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+	\end{tikzcd}
+\end{center}
+La primera flecha es la inmersi\'{o}n diagonal
+\begin{align*}
+	& f\,\mapsto\,\big((f_{\frak{a}})_{\frak{a}},
+		(\tilde{f}_{\frak{a}})_{\frak{a}}\big) \text{ , donde} \\
+	f_{\frak{a}}(z) & \,=\, f(z,\hhat{\alpha}\Idfin{\cal{O}})
+		\quad\text{y} \\
+	\tilde{f}_{\frak{a}}(\tilde{z}) & \,=\,
+		f(\tilde{z},\hhat{\alpha}\Idfin{\cal{O}})
+		\,=\,\big(f_{\frak{a}'}\operadormatrices{\peso{k}}{%
+			\mu_{\frak{a},\frak{a}'}}\big)(\tilde{z})
+	\text{ .}
+\end{align*}
+%
+La componente $\frak{a}$ de la imagen por la segunda, es
+\begin{align*}
+	\ES(f_{\frak{a}})+\widetilde{\ES}(\tilde{f}_{\frak{a}}) & \,=\,
+		\int_{\tau_{0}}^{\gamma^{-1}\tau_{0}}\,\frak{v}(f_{\frak{a}})
+		\,+\,\int_{\mu^{-1}\tau_{0}}^{\gamma^{-1}\mu^{-1}\tau_{0}}\,
+			\tilde{\frak{v}}\big(f_{\frak{a}'}\operadormatrices{%
+				\peso{k}}{\mu}\big)
+	\text{ ,}
+\end{align*}
+%
+que resulta ser invariante por $W_{\infty}$. Esto deber\'{\i}a proporcionar un
+isomorfismo $\spitzH[B]{k}{\frak{N}}\simeq H^{+}$. De todos modos, no es en
+este sentido que suele decir que dichos espacios son isomorfos.
+
+

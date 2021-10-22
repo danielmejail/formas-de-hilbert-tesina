@@ -1,0 +1,104 @@
+Sea $I$ un ideal invertible a derecha con inverso (a derecha) $J$. Por
+definici\'{o}n del pseudo inverso, como $IJI=\Oizq(I)\,I=I$, vale que
+$J\subset I^{-1}$. Pero tambi\'{e}n, como $\Oder(I)=\Oizq(J)$,
+\begin{align*}
+	I^{-1} & \,=\,I^{-1}\,(IJ) \,=\,(I^{-1}I)\,J\,\subset\,J
+	\text{ .}
+\end{align*}
+%
+Entonces debe ser $J=I^{-1}$. En particular, $I$ es invertible a derecha, si y
+s\'{o}lo si $I\cdot I^{-1}$ es un producto coherente y vale
+$I\cdot I^{-1}=\Oizq(I)$. En tal caso, $I^{-1}$ es su \'{u}nico inverso a
+derecha. La afirmaci\'{o}n an\'{a}loga acerca de la invertibilidad a izquierda
+tambi\'{e}n es cierta. En particular, $I$ es invertible, si y s\'{o}lo si las
+inclusiones en \eqref{eq:idealpseudoinverso} son \emph{todas} igualdades.
+
+Sean $\cal{O}$ y $\cal{O}'$ dos \'{o}rdenes en $B$ y sean $I$ y $J$ dos ideales
+de $B$ tales que $\Oizq(I)=\cal{O}$, $\Oder(J)=\cal{O}'$ y que $IJ$ sea
+coherente. En general, $\cal{O}\subset\Oizq(IJ)$. Si asumimos que $J$ es
+invertible a derecha, entonces
+\begin{align*}
+	x\,I & \,=\,x\,I\,(JJ^{-1})\,\subset\,IJJ^{-1}\,=\,I
+	\text{ ,}
+\end{align*}
+%
+para todo $x\in\Oizq(IJ)$. Se deduce que $\Oizq(IJ)=\cal{O}$. Un argumento
+an\'{a}logo muestra que, si $I$ es invertible a izquierda, entonces
+$\Oder(IJ)=\cal{O}'$.
+
+Si $\cal{O}=\cal{O}'$, entonces podemos definir un grupo, el \emph{grupo de %
+$\cal{O}$-ideales bil\'{a}teros e invertibles}.
+\index{grupo de $\cal{O}$-ideales}
+Denotamos este grupo por $\ideales{\cal{O}}$. Como ya hemos mencionado, los
+ideales principales son invertibles y sus inversos son principales y el
+producto de dos ideales principales es principal, con lo que podemos definir el
+\emph{subgrupo de ideales principales},\index{subgrupo de ideales principales}
+$\ppales{\cal{O}}\leq\ideales{\cal{O}}$.
+% Estos son los ideales de la forma $\cal{O}b\cal{O}$.
+En general, si $\cal{O}\not =\cal{O}'$, no hay estructura de grupo
+y obtenemos un \emph{grupoide}\index{grupoide}
+considerando todos los conjuntos $\ideales{\cal{O},\cal{O}'}$ de ideales
+invertibles cuyo orden a izquierda es $\cal{O}$ y $\cal{O}'$ a derecha.
+
+\begin{obsDiferenteInvertible}\label{obs:diferenteinvertible}
+	Sea $\cal{O}$ un orden y sea $I$ un ideal a izquierda de $\cal{O}$.
+	El producto $I\cdot \dual{I}$ es coherente y se cumple, por la
+	Observaci\'{o}n \ref{obs:dualdeunproducto}, que
+	\begin{math}
+		\dual{(I\cdot\dual{I})} =\cal{O}
+	\end{math}~.
+	Dualizando, $I\cdot\dual{I}=\dual{\cal{O}}$. Si, ahora,
+	$\dual{\cal{O}}$ es invertible a derecha, entonces vale que
+	\begin{align*}
+		I\cdot\big(\dual{I}\,(\dual{\cal{O}})^{-1}\big) & \,=\,\cal{O}
+		\text{ ,}
+	\end{align*}
+	%
+	con todos los productos coherentes. Es decir, todos los ideales $I$
+	tales que $\Oizq(I)=\cal{O}$ son invertibles a derecha y sus inversos
+	est\'{a}n dados por $I^{-1}=\dual{I}\,(\dual{\cal{O}})^{-1}$.
+\end{obsDiferenteInvertible}
+
+Cuando el orden es maximal todos los ideales resultan ser invertibles.
+
+\begin{propoOrdenMaximalIdealInvertible}%
+	\label{propo:ordenmaximalidealinvertible}
+	Sea $\cal{O}$ un orden maximal. Si $I$ es un ideal a izquierda de
+	$\cal{O}$, entonces $I$ es invertible a derecha. Es decir, el producto
+	$I\cdot I^{-1}=\cal{O}$ es coherente.
+\end{propoOrdenMaximalIdealInvertible}
+
+\begin{proof}
+	El producto $I\cdot I^{-1}$ es compatible, por maximalidad de $\cal{O}$
+	y \ref{eq:idealpseudoinverso}. Si denotamos por $A$ este ideal,
+	entonces $A$ es un $\cal{O}$-ideal bil\'{a}tero, normal e \'{\i}ntegro.
+	Por definici\'{o}n, $AA^{-1}\subset\cal{O}$ y, por lo tanto,
+	$(AA^{-1})\,I=I$. Esto quiere decir que $I^{-1}A^{-1}\subset I^{-1}$ y,
+	entonces, $A^{-1}\subset\Oder(I^{-1})=\cal{O}$, por maximalidad. Pero
+	$A,A^{-1}\subset\cal{O}$ s\'{o}lo puede suceder si $A=\cal{O}$.%
+	\footnote{
+		\cite[Satz~6, \S~2]{Deuring}
+	}
+\end{proof}
+
+% De la proposici\'{o}n anterior y de la Observaci\'{o}n
+% \ref{obs:normalintegroprincipal}, se deduce el siguiente corolario.
+% 
+\begin{coroOrdenMaximalIdealInvertible}\label{coro:ordenmaximalidealinvertible}
+	Si $I$ es un ideal normal, entonces $I$ es invertible.
+\end{coroOrdenMaximalIdealInvertible}
+% 
+% De la Observaci\'{o}n \ref{obs:normalintegroprincipal}, se deduce que basta
+% con verificar que alguno de los dos \'{o}rdenes de $I$ sea maximal.
+%
+% Dado un ret\'{\i}culo $I$, la presencia de la involuci\'{o}n
+% $x\mapsto\conj{x}$ nos permite definir su \emph{conjugado}
+% \index{reticulo@ret\'{\i}culo!conjugado}
+% como $\conj{I}=\{\conj{x}\,:\,x\in I\}$. El conjugado de un ret\'{\i}culo
+% es un ret\'{\i}culo y la aplicaci\'{o}n $I\mapsto\conj{I}$ satisface
+% $\lconj{IJ}=\conj{J}\conj{I}$. Si $I$ es un ideal, $\conj{I}$ tambi\'{e}n
+% lo es y vale que $\Oizq(\conj{I})=\Oder(I)$ y $\Oder(\conj{I})=\Oizq(I)$.
+% Si $I$ es un ret\'{\i}culo con $1\in I$ y tal que $\trd(I)\subset R$, como
+% $\conj{x}=\trd(x)-x$, se deduce que $\conj{I}=I$ y, en ese caso, los
+% \'{o}rdenes a derecha y a izquierda son iguales.
+% 

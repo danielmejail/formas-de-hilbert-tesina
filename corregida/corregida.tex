@@ -1,0 +1,41 @@
+
+%%%% PROCESAR con PdfLaTeX !!!!!
+
+
+\documentclass[12pt]{book}
+\usepackage{geometry}\geometry{top=5cm,bottom=2cm,left=3cm,right=3cm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+%\usepackage{txfonts}
+\usepackage[spanish]{babel}
+
+\usepackage[
+	backend=biber,
+	style=numeric,
+	citestyle=numeric,
+	sorting=nyt,
+	isbn=false,
+	doi=false,
+	related=false,
+	giveninits=true
+	%idemtracker=context
+	%opcittracker=true
+]{biblatex}
+\renewbibmacro{in:}{%
+	\ifentrytype{article}{}{\printtext{\bibstring{in}\intitlepunct}}}
+\AtEveryBibitem{\clearlist{language}}
+\addbibresource{./biblio.bib}
+\nocite{*}
+
+\input{./headers/formato.tex}
+
+
+\begin{document}
+\pagenumbering{roman}
+\input{./headers/caratula.tex}
+\clearpage
+\pagenumbering{arabic}
+\input{./headers/cuerpo.tex}
+
+\end{document}

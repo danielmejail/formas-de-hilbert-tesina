@@ -1,0 +1,168 @@
+La interpretaci\'{o}n automorfa de las formas modulares cuaterni\'{o}nicas
+permite definir de manera uniforme los operadores de Hecke para un \'{a}lgebra
+definida o indefinida, tal como se hace para el \'{a}lgebra de matrices. Dados,
+pues, un \'{a}lgebra de cuaterniones $B/F$, un orden de Eichler $\cal{O}$ en
+$B$ y un id\`{e}le $\hhat{\pi}\in\Idfin{B}$, el subgrupo abierto
+$\Idfin{\cal{O}}$ act\'{u}a a izquierda sobre el compacto
+$\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}\subset\Idfin{B}$, de lo que se deduce
+que existe una descomposici\'{o}n
+\begin{equation}
+	\label{eq:cuaternionesdescomposiciondecoclasedobleideles}
+	\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}} \,=\,
+		\bigsqcup_{i}\,\Idfin{\cal{O}}\hhat{\pi}_{i}
+\end{equation}
+%
+y el sistema de representantes $\{\hhat{\pi}_{i}\}_{i}$ es un conjunto finito.
+Sea $\frak{N}$ el nivel del orden $\cal{O}$. Si $B$ es un \'{a}lgebra
+indefinida y $f\in\modularH[B]{k}{\frak{N}}$, la expresi\'{o}n
+\begin{equation}
+	\label{eq:cuaternionicasoperadorcoclase}
+	\big(T_{\hhat{\pi}}f\big)(z,\hhat{\alpha}\Idfin{\cal{O}}) \,=\,
+		\sum_{i}\,f(z,\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}})
+\end{equation}
+%
+define un nuevo elemento de $\modularH[B]{k}{\frak{N}}$; si $B$ es un
+\'{a}lgebra definida, la expresi\'{o}n an\'{a}loga, sin el argumento
+arquimediano `$z$', tambi\'{e}n define una forma modular del mismo peso y del
+mismo nivel que $f$. En todo caso, queda determinado, de esta manera, un
+operador
+\begin{math}
+	T_{\hhat{\pi}}:\,\modularH[B]{k}{\frak{N}}\rightarrow
+		\modularH[B]{k}{\frak{N}}
+\end{math}
+asociado al id\`{e}le $\hhat{\pi}$.
+
+Sea $\frak{D}$ el discriminante de $B$ y sea $\frak{p}$ un ideal primo tal que
+$\frak{p}\nmid\frak{D}\frak{N}$. Sea $p$ un uniformizador de
+$\oka{F,\frak{p}}$, un generador de su ideal maximal, y sea
+$\pi\in\cal{O}_{\frak{p}}$ el elemento dado por la matriz
+\begin{align*}
+	\pi & \,=\,\begin{bmatrix} p & \\ & 1 \end{bmatrix}
+	\text{ .}
+\end{align*}
+%
+Sea $\hhat{\pi}\in\Idfin{B}$ el id\`{e}le dado por $\hhat{\pi}_{v}=1$, si
+$v\not=\frak{p}$ y tal que $\hhat{\pi}_{\frak{p}}=\pi$. Llamamos
+\emph{operador de Hecke en $\frak{p}$} al operador
+$T_{\frak{p}}:=T_{\hhat{\pi}}$, determinado por una descomposici\'{o}n de
+$\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}$. Definimos, tambi\'{e}n,
+\begin{align*}
+	\frak{I}(\frak{p}) \,=\,\Big\{\hhat{x}\in\Adfin{\cal{O}}\,:\,
+		\nrd(\hhat{x})\in\hhat{p}\Idfin{\oka{F}}\Big\}
+		& \quad\text{y} \quad
+	\Theta(\frak{p})\,=\,\Idfin{\cal{O}}\backslash\frak{I}(\frak{p})
+	\text{ .}
+\end{align*}
+%
+Entonces $\frak{I}(\frak{p})=\Idfin{\cal{O}}\hhat{x}\Idfin{\cal{O}}$ para todo
+$\hhat{x}$ perteneciente a este conjunto, pues $(\frak{p},\frak{D}\frak{N})=1$,
+y, en particular,
+$\frak{I}(\frak{p})=\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}$. Adem\'{a}s, la
+sumatoria en la definici\'{o}n de $T_{\frak{p}}$ se realiza sobre un sistema de
+representantes de $\Theta(\frak{p})$, tanto en el caso indefinido, como en el
+definido. Dado que para ideales primos distintos $\frak{p},\frak{q}$ los
+operadores correspondientes $T_{\frak{p}}$ y $T_{\frak{q}}$ act\'{u}an en
+distintas coordenadas, se deduce que conmutan. El \emph{\'{a}lgebra de Hecke}
+actuando en $\modularH[B]{k}{\frak{N}}$ es el \'{a}lgebra de endomorfismos
+generada por el conjunto
+\begin{math}
+	\big\{T_{\frak{p}}\,:\,\frak{p}\nmid\frak{D}\frak{N}\big\}
+\end{math}~.
+Denotamos por $\spitzH[B]{k}{\frak{N}}$ el espacio de formas cuaterni\'{o}nicas
+\emph{cuspidales} de peso $\peso{k}$ y nivel $\frak{N}$ para $B$. En la
+siguiente secci\'{o}n se explicar\'{a} lo que se quiere decir por ``cuspidal'';
+a los fines de enunciar el siguiente teorema, es suficiente saber que
+$\spitzH[B]{k}{\frak{N}}$ es un subespacio de $\modularH[B]{k}{\frak{N}}$, con
+la estructura de m\'{o}dulo de Hecke dada por restringir los operadores
+$T_{\frak{p}}$.
+
+Sea $\frak{N}\subset\oka{F}$ un ideal \'{\i}ntegro y supongamos que
+$\frak{N}=\frak{D}\frak{N}'$ con $\frak{D}$ y $\frak{N}'$ \'{\i}ntegros y
+$\frak{D}$ libre de cuadrados. Por el Teorema de clasificaci\'{o}n
+\ref{thm:clasificacionglobal}, existe al menos un \'{a}lgebra de cuaterniones
+$B/F$ de discriminante $\frak{D}$. Supongamos, adem\'{a}s, que
+$(\frak{D},\frak{N}')=1$.
+
+\begin{teoJacquetLanglands}[Jacquet-Langlands]\label{thm:correspondenciajl}
+	Existe un morfismo inyectivo
+	\begin{math}
+		\spitzH[B]{k}{\frak{N}'}
+			\hookrightarrow\spitzH{k}{\frak{D}\frak{N}'}
+	\end{math}
+	que preserva la acci\'{o}n de Hecke y cuya imagen es el subespacio
+	$\spitzH{k}{\frak{D}\frak{N}'}^{\frak{D}-\neue}$ de formas
+	nuevas en todo ideal primo divisor de $\frak{D}$.
+\end{teoJacquetLanglands}
+
+El Teorema \ref{thm:correspondenciajl} nos da un procedimiento para recuperar
+$\spitzH{k}{\frak{N}}$ a trav\'{e}s de formas modulares cuaterni\'{o}nicas.
+Supongamos que $\frak{l}$ es un ideal primo que divide a $\frak{N}$ pero que al
+cuadrado no lo divide. Por el Teorema de clasificaci\'{o}n global para
+\'{a}lgebras de cuaterniones \ref{thm:clasificacionglobal}, sabemos que existe
+un \'{a}lgebra de cuaterniones $B/F$ tal que
+$\Ram(B)\cap\lugares[f]{F}=\{\frak{l}\}$, es decir, $\frak{l}$ es el \'{u}nico
+lugar finito de $F$ en donde $B$ ramifica. Si elegimos $B$ de esta manera,
+\begin{align*}
+	\spitzH{k}{\frak{N}} & \,=\, \spitzH{k}{\frak{N}}^{\frak{l}-\neue}
+		\,\oplus\,\spitzH{k}{\frak{N}}^{\frak{l}-\oude} \\
+	& \,=\, \spitzH[B]{k}{\frak{N}'}\,\oplus\,
+		\iota_{1}\left(\spitzH{k}{\frak{N}'}\right)\,\oplus\,
+		\iota_{\frak{l}}\left(\spitzH{k}{\frak{N}'}\right)
+	\text{ .}
+\end{align*}
+%
+El problema de la descripci\'{o}n de $\spitzH{k}{\frak{N}}$ se reduce
+entonces a poder determinar un subespacio en correspondencia con un espacio
+de formas cuaterni\'{o}nicas y un subespacio de formas de Hilbert de nivel
+``m\'{a}s bajo''.
+
+Aun asumiendo que podemos \emph{calcular} sin problemas los espacios de formas
+cuspidales cuaterni\'{o}nicas $\spitzH[B]{k}{\frak{N}'}$ para un nivel
+arbitrario $\frak{N}'$, este procedimiento presenta un inconveniente.
+Supongamos primero, para simplificar, que $\frak{N}=\frak{p}\frak{q}$, con
+$\frak{p}$ y $\frak{q}$ ideales primos distintos. Entonces la
+descomposici\'{o}n de $\spitzH{k}{\frak{p}\frak{q}}$ se puede hacer, en
+principio, de varias maneras. Podemos elegir un \'{a}lgebra $B$ con
+$\Ram(B)\cap\lugares[f]{F}=\{\frak{p}\}$ para obtener
+\begin{align*}
+	\spitzH{k}{\frak{p}\frak{q}} & \,=\, \spitzH[B]{k}{\frak{q}}\,\oplus\,
+		\spitzH{k}{\frak{p}\frak{q}}^{\frak{p}-\oude}
+	\text{ ;}
+\end{align*}
+%
+si $n=[F:\bb{Q}]=1\text{ o }2$, hay una \'{u}nica \'{a}lgebra de tales
+caracter\'{\i}sticas, pero si $n>2$ hay m\'{a}s de una elecci\'{o}n posible.
+Podemos, tambi\'{e}n, intercambiar los roles de $\frak{p}$ y de $\frak{q}$.
+O bien podemos elegir $B$ de manera que
+$\Ram(B)\cap\lugares[f]{F}=\{\frak{p},\frak{q}\}$ --de nuevo, hay m\'{a}s
+de una manera de hacer esta elecci\'{o}n, si $n\geq 2$-- y obtener as\'{\i}
+\begin{align*}
+	\spitzH{k}{\frak{p}\frak{q}} & \,=\, \spitzH[B]{k}{1}\,\oplus\,
+		\spitzH{k}{\frak{p}\frak{q}}^{\frak{p}\frak{q}-\oude} \\
+	& \,=\,\spitzH[B]{k}{1}\,\oplus\, \spitzH{k}{\frak{p}\frak{q}}^{\oude}
+	\text{ .}
+\end{align*}
+%
+
+Pero, si el nivel $\frak{N}$ no es libre de cuadrados, no tenemos tantas
+elecciones. Por ejemplo, si $\frak{N}=\frak{p}^{2}$, el discriminante de $B$
+debe ser $\frak{D}=1$, es decir, s\'{o}lo podemos permitir ramificaci\'{o}n en
+infinito. Si $n=1$ esto es imposible y si $n=2$ hay una \'{u}nica elecci\'{o}n
+posible. En general, los m\'{e}todos que describiremos en el
+Cap\'{\i}tulo~\ref{cap:metodos} se basan en poder elegir $B$ de manera que $r$,
+la cantidad de lugares arquimedianos en donde $B$ no ramifica, sea, o bien $0$,
+o bien $1$. En ese caso, si $\frak{N}=\frak{p}^{2}$, hay una \'{u}nica forma de
+realizar esa elecci\'{o}n.
+
+En el cap\'{\i}tulo siguiente, describimos en detalle los m\'{o}dulos de Hecke
+$\spitzH[B]{k}{\frak{N}}$, manteniendo, como hasta ahora, la distinci\'{o}n
+entre las \'{a}lgebras definidas e indefinidas. La descripci\'{o}n en el caso
+indefinido es muy similar a la del m\'{o}dulo de formas de Hilbert cuspidales.
+V\'{\i}a los isomorfismos de Eichler-Shimura, los espacios de formas
+cuatern\'{o}nicas para un \'{a}lgebra indefinida $B$ se realizan en la
+cohomolog\'{\i}a de la variedad de Shimura $\shimura[B]{\frak{N}}$. Esta
+reinterpretaci\'{o}n da lugar, en el caso particular en que $B$ ramifica en
+todos excepto un \'{u}nico lugar arquimediano, a un m\'{e}todo para calcular
+formas de Hilbert cuspidales. Por otra parte, la descripci\'{o}n cuando $B$ es
+totalmente definida es lo suficientemente expl\'{\i}cita como para ser
+implementada y obtener, as\'{\i}, un segundo m\'{e}todo.

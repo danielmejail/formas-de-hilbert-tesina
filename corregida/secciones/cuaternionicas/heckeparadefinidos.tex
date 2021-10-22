@@ -1,0 +1,579 @@
+Supongamos ahora que $B/F$ es un \'{a}lgebra totalmente definida y sea
+$\cal{O}\subset B$ un orden de Eichler. La definici\'{o}n de los operadores de
+Hecke es an\'{a}loga a la definici\'{o}n para \'{a}lgebras indefinidas en
+t\'{e}rminos de operadores de colcases dobles. Dado $\hhat{\pi}\in\Idfin{B}$,
+vale que
+\begin{math}
+	\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}=\bigsqcup_{i}\,
+		\Idfin{\cal{O}}\hhat{\pi}_{i}
+\end{math}~,
+donde $\hhat{\pi}_{i}$ recorre un conjunto finito. Dada
+$f\in\modularH[B]{k}{\frak{N}}$, la expresi\'{o}n
+\begin{equation}
+	\label{eq:heckeparadefinidos}
+	\big(T_{\hhat{\pi}}f\big)(\hhat{\alpha}\Idfin{\cal{O}}) \,=\,
+		\sum_{i}\,f(\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}})
+\end{equation}
+%
+determina un nuevo elemento de $\modularH[B]{k}{\frak{N}}$.
+
+\begin{defHeckeParaDefinidos}\label{def:heckeparadefinidos}
+	Sea $\frak{p}\subset\oka{F}$ un ideal primo que no divide a
+	$\frak{D}\frak{N}$. Si $\hhat{\pi}\in\Idfin{B}$ es el id\`{e}le dado
+	por
+	\begin{math}
+		\begin{bmatrix} p & \\ & 1 \end{bmatrix}
+	\end{math}
+	en el lugar $\frak{p}$ y $1$ en $v\not =\frak{p}$. El
+	\emph{operador de Hecke} en $\frak{p}$ es el operador
+	$T_{\frak{p}}:=T_{\hhat{\pi}}$ asociado a la coclase doble
+	$\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}$.
+\end{defHeckeParaDefinidos}
+
+Como en la secci\'{o}n \S~\ref{subsec:dehilbertoperadoresdehecke}, sea
+$\frak{I}(\frak{p})=\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}=\{\}$.
+
+Sea $H=\#\lClass{\cal{O}}$ y fijemos un sistema de representantes
+$\{I_{t}\}_{t}$ de las clases a izquierda en $\lClass{\cal{O}}$ y elementos
+$\hhat{\alpha}_{t}\in\Idfin{B}$ tales que
+$I_{t}=\hhat{\alpha}_{t}\Adfin{\cal{O}}\cap B$. Dado
+$\hhat{\alpha}\Idfin{\cal{O}}$, para cada $\hhat{\pi}_{i}$ existe un \'{u}nico
+$t\in [\![1,H]\!]$ y un elemento $\rho_{i}\in B^{\times}$ que verifica
+\begin{equation}
+	\label{eq:cuaternionicadefinidaidealesequivalentes}
+	\rho_{i}\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}} \,=\,
+		\hhat{\alpha}_{t}\Idfin{\cal{O}}
+	\text{ .}
+\end{equation}
+%
+Dos elementos $\rho_{i},\rho_{i}'$ que cumplen con
+\eqref{eq:cuaternionicadefinidaidealesequivalentes} difieren en una
+unidad del orden $\cal{O}_{t}=\Oizq(I_{t})$.
+Entonces podemos reescribir $T_{\hhat{\pi}}f$ de la siguiente manera:
+\begin{align*}
+	\big(T_{\hhat{\pi}}f\big)
+	(\hhat{\alpha}\Idfin{\cal{O}}) & \,=\,\sum_{i}\,\sum_{t=1}^{H}\,
+		f(\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}})\,
+		[\hhat{\alpha}_{t}\Idfin{\cal{O}}]
+			(\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}}) \\
+	& \,=\, \sum_{t=1}^{H}\,\sum_{i}\,
+		f(\hhat{\alpha}_{t}\Idfin{\cal{O}})^{\rho_{i}}\,
+		[\hhat{\alpha}_{t}\Idfin{\cal{O}}]
+			(\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}})
+	\text{ ,}
+\end{align*}
+%
+identificando un ret\'{\i}culo $\hhat{\alpha}\Adfin{\cal{O}}\cap B$ con la
+coclase $\hhat{\alpha}\Idfin{\cal{O}}$ en los id\`{e}les finitos de $B$.
+El t\'{e}rmino
+\begin{math}
+	[\hhat{\alpha}_{t}\Idfin{\cal{O}}]
+			(\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}})
+\end{math}
+es igual a $1$ o a $0$, si las clases
+\begin{math}
+	[\hhat{\alpha}_{t}\Idfin{\cal{O}}]
+\end{math}
+y
+\begin{math}
+	[\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}}]
+\end{math}
+son iguales o no.
+
+Ahora bien, la igualdad de las clases
+\begin{math}
+	[\hhat{\alpha}_{t}\Idfin{\cal{O}}]=
+		[\hhat{\alpha}\hhat{\pi}^{-1}\Idfin{\cal{O}}]
+\end{math}~,
+con $\hhat{\pi}\in\Adfin{\cal{O}}$ de norma reducida igual a un id\`{e}le
+correspondiente a $\frak{p}$, equivale a la existencia de una unidad
+$\rho\in B^{\times}$ tal que
+\begin{math}
+	\rho\in\hhat{\alpha}_{t}\Idfin{\cal{O}}\hhat{\pi}\hhat{\alpha}^{-1}
+\end{math}~;
+esto es, a su vez, equivalente, en t\'{e}rminos de ideales de $B$, a que exista
+$\rho\in B^{\times}$ tal que $J=II_{t}^{-1}\cal{O}_{t}\rho$ define un ideal con
+orden a izquierda $\Oizq(I)=\hhat{\alpha}\Adfin{\cal{O}}\hhat{\alpha}\cap B$,
+\'{\i}ntegro y de norma reducida $\frak{p}$. Rec\'{\i}procamente, dado un ideal
+(invertible) $J$ de $B$ que cumple $\Oizq(J)=\Oizq(I)$, $J\sim II_{t}^{-1}$ y
+$\nrd(J)=\frak{p}$, existe un id\`{e}le $\hhat{\pi}\in\Adfin{\cal{O}}$ tal que
+\begin{align*}
+	J & \,=\,\hhat{\alpha}\Adfin{\cal{O}}\hhat{\alpha}^{-1}
+		(\hhat{\alpha}\hhat{\pi}\hhat{\alpha}^{-1})\,\cap\,B
+	\text{ .}
+\end{align*}
+%
+Pero, entonces, existe $\rho\in B^{\times}$ tal que
+\begin{math}
+	\hhat{\alpha}\hhat{\pi}^{-1}\Idfin{\cal{O}}=
+		\rho^{-1}\hhat{\alpha}_{t}\Idfin{\cal{O}}
+\end{math}~.
+En definitiva,
+\begin{equation}
+	\label{eq:heckeparadefinidosconideales}
+	\big(T_{\hhat{\pi}}f\big)(I) \,=\,\sum_{t=1}^{H}\,\sum_{\rho}\,
+		\frac{1}{w_{t}}\,f(I_{t})^{\rho}
+	\text{ ,}
+\end{equation}
+%
+donde $w_{t}=\big|\cal{O}_{t}^{\times}/\oka{F}^{\times}\big|$ y $\rho$
+recorre un sistema de representantes de
+\begin{align*}
+	& \Big\{ \rho\in I_{t}I^{-1}\,:\,\nrd(II_{t}^{-1}\,\rho)=\frak{p}\Big\}
+		/\oka{F}^{\times}
+	\text{ .}
+\end{align*}
+%
+
+\subsubsection*{Peso paralelo $\peso{k}=(\lista[\null]{2}{\null})$}
+Cuando $\peso{k}=(2,\,\dots,\,2)$, los elementos $\rho_{i}$ act\'{u}an de
+manera trivial y queda:
+\begin{align*}
+	\big(T_{\hhat{\pi}}f\big)
+	% f\barra{(2,\,\dots,\,2)}{[\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}]}
+	(\hhat{\alpha}\Idfin{\cal{O}}) & \,=\, \sum_{t}\,
+		f(\hhat{\alpha}_{t}\Idfin{\cal{O}})\cdot
+		\#\big\{\hhat{\pi}_{i}\,:\,
+			[\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}}]=
+			[\hhat{\alpha}_{t}\Idfin{\cal{O}}]
+		\big\}
+	\text{ .}
+\end{align*}
+%
+Si $f=[I_{s}]$, con $I_{s}=\hhat{\alpha}_{s}\Adfin{\cal{O}}\cap B$ uno de los
+representantes de las clases de ideales,
+\begin{align*}
+	% [I_{s}]\barra{(2,\,\dots,\,2)}%
+	% {[\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}]}
+	% (\hhat{\alpha}\Idfin{\cal{O}}) \,=\, &
+	% \sum_{t}\,[\hhat{\alpha}_{s}\Idfin{\cal{O}}]
+	% (\hhat{\alpha}_{t}\Idfin{\cal{O}})\cdot
+	% \#\left\lbrace\hhat{\pi}_{i}\,:\,[\hhat{\alpha}\hhat{\pi}_{i}^{-1}
+	% \Idfin{\cal{O}}]=[\hhat{\alpha}_{t}\Idfin{\cal{O}}]\right\rbrace \\
+	% \,=\, & \#\left\lbrace\hhat{\pi}_{i}\,:\,
+	% [\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}}]=
+	% [\hhat{\alpha}_{s}\Idfin{\cal{O}}]\right\rbrace
+	% \quad\text{e} \\
+	T_{\hhat{\pi}}[I_{s}]
+	% [I_{s}]
+	% \barra{(2,\,\dots,\,2)}{[\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}]}
+	& \,=\,\sum_{t}\,\#\big\{\hhat{\pi}_{i}\,:\,
+		[\hhat{\alpha}_{t}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}}]=
+		[\hhat{\alpha}_{s}\Idfin{\cal{O}}]\big\} [I_{t}]
+	\text{ .}
+\end{align*}
+%
+
+Intentaremos hallar una expresi\'{o}n global para $T_{\frak{p}}$, es decir, en
+t\'{e}rminos de ideales del \'{a}lgebra y que no dependa de tener que elegir
+representantes $\{\hhat{\pi}_{i}\}_{i}$ de las coclases de $\Idfin{\cal{O}}$.
+En primer lugar, podemos suponer que los representantes $\hhat{\pi}_{i}$
+cumplen
+\begin{align*}
+	\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}} & \,=\,
+		\bigsqcup_{i}\,\Idfin{\cal{O}}\hhat{\varpi}_{i}
+		\,=\,\bigsqcup_{i}\,\hhat{\varpi}_{i}\Idfin{\cal{O}}
+	\text{ .}
+\end{align*}
+%
+
+Sean $s,t\in[\![1,h]\!]$. La igualdad entre las clases
+\begin{math}
+	[\hhat{\alpha}_{t}\hhat{\varpi}_{i}^{-1}\Idfin{\cal{O}}]=
+		[\hhat{\alpha}_{s}\Idfin{\cal{O}}]
+\end{math}
+equivale a la existencia de elementos $b\in B^{\times}$ y
+$\hhat{u}\in\Idfin{\cal{O}}$ tales que
+$b\hhat{\alpha}_{t}\hhat{\varpi}_{i}^{-1}=\hhat{\alpha}\hhat{u}$.
+A su vez, usando que $\{\hhat{\varpi}_{i}\}_{i}$ es un conjunto de
+representantes de las coclases tanto a izquierda como a derecha en
+$\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}$, esto equivale a
+$b\hhat{\alpha}_{t}=\hhat{\alpha}_{s}\hhat{\varpi}_{j}^{-1}\hhat{v}$ para un
+\'{u}nico $j$ (posiblemente distinto de $i$) y alg\'{u}n
+$\hhat{v}\in\Idfin{\cal{O}}$. En particular,
+\begin{math}
+	[\hhat{\alpha}_{t}\Idfin{\cal{O}}]=
+		[\hhat{\alpha}_{s}\hhat{\varpi}_{j}\Idfin{\cal{O}}]
+\end{math}
+y
+\begin{align*}
+	% T_{\frak{p}}([\hhat{\alpha}_{s}\Idfin{\cal{O}}]) \,=\, &
+	T_{\frak{p}}([I_{s}]) & \,=\,
+		\sum_{j}\,[\hhat{\alpha}_{s}\hhat{\varpi}_{j}\Idfin{\cal{O}}]
+	\text{ .}
+\end{align*}
+%
+
+Notemos que $\hhat{\pi}$ es un elemento del orden $\Adfin{\cal{O}}$ en los
+ad\`{e}les finitos de $B$ y, por lo tanto,
+$\hhat{\varpi}_{j}\in\Adfin{\cal{O}}$ tambi\'{e}n. Ahora bien, la coclase
+$\hhat{\alpha}_{s}\hhat{\varpi}_{j}\Idfin{\cal{O}}$ se corresponde con un ideal
+$I$ de $B$ tal que:
+\begin{align*}
+	\Oder(I)\,=\,\cal{O}\text{ ,} & \quad
+		I\,\subset\, I_{s} \quad\text{y}\quad
+		\nrd(I)\,=\,\frak{p}\cdot\nrd(I_{s})
+	\text{ .}
+\end{align*}
+%
+Rec\'{\i}procamente, se verifica localmente que, si $I\subset I_{s}$, entonces
+la coclase correspondiente en $\Idfin{B}/\Idfin{\cal{O}}$ es de la forma
+$\hhat{\alpha}\Idfin{\cal{O}}$ con
+$\hhat{\alpha}\Adfin{\cal{O}}\subset\hhat{\alpha}_{s}\Adfin{\cal{O}}$ y que, si
+$\nrd(I)=\frak{p}\cdot\nrd(I_{s})$, entonces
+$\hhat{\alpha}\Adfin{\cal{O}}=\hhat{\varpi}\hhat{\alpha}_{s}\Adfin{\cal{O}}$
+con $\hhat{\varpi}\in\hhat{\alpha}_{s}\Adfin{\cal{O}}\hhat{\alpha}_{s}^{-1}$
+y $\nrd(\hhat{\varpi})=\hhat{p}$. En particular,
+$\hhat{\alpha}\Adfin{\cal{O}}=\hhat{\alpha}_{s}\hhat{\varpi}'\Adfin{\cal{O}}$
+para cierto $\hhat{\varpi}'\in\Adfin{\cal{O}}$ tal que
+$\nrd(\hhat{\varpi}')=\hhat{p}$. En definitiva, deducimos que
+\begin{align*}
+	T_{\frak{p}}([I]) & \,=\,
+	% \sum_{t}\,\#\left\lbrace I'\in\mathscr{T}_{\frak{p}}(I)\,:\,
+	% [I']=[I_{t}]\right\rbrace [I_{t}] \\
+	% \,=\, &
+	\sum_{I'\in\mathscr{T}_{\frak{p}}(I)}\,[I']\text{ , donde} \\
+	\mathscr{T}_{\frak{p}}(I) & \,=\,
+		\Big\{ I'\in\ideales{\cal{O}}\,:\,
+			I'\subset I,\,\nrd(I')=\frak{p}\cdot\nrd(I)\Big\}
+	\text{ .}
+\end{align*}
+%
+
+Si $\frak{p},\frak{q}$ son ideales primos distintos en $\oka{F}$,
+$T_{\frak{p}}T_{\frak{q}}=T_{\frak{q}}T_{\frak{p}}$. Pero, en general, no son
+autoadjuntos respecto del producto interno definido en
+$\modular[B]{(2,\,\dots,\,2)}{\frak{N}}$.
+\begin{align*}
+	\langle T_{\frak{p}}([I]),[J]\rangle & \,=\,
+		\#\Big\{ I'\in\mathscr{T}_{\frak{p}}(I)\,:\,
+			[I']=[J]\Big\}\cdot w_{J} \\
+	& \,=\,\left|\Big\{ b\in B^{\times}\,:\,
+		bJ\in\mathscr{T}_{\frak{p}}(I)\Big\}/\Gamma_{J}\right|\cdot
+		\left|\Gamma_{J}/\oka{F}^{\times}\right| \\
+	& \,=\, \left|\Big\{ b\in B^{\times}\,:\,bJ\in
+		\mathscr{T}_{\frak{p}}(I)\Big\}/\oka{F}^{\times}\right|
+	\text{ .}
+\end{align*}
+%
+Dado que la norma reducida satisface $\nrd(I_{v})=\nrd(I)_{v}$ para todo ideal
+$I$ y todo lugar $v$, los conjuntos $\mathscr{T}_{\frak{p}}(I)$ quedan
+determinados localmente. De esto se deduce que, dados dos ideales
+$I,I'\subset B$, $I'\in\mathscr{T}_{\frak{p}}(I)$ si y s\'{o}lo si
+$\frak{p}I\in\mathscr{T}_{\frak{p}}(I')$. En nuestro caso, si
+$b\in B^{\times}$, $bJ\in\mathscr{T}_{\frak{p}}(I)$ si y s\'{o}lo si
+$\frak{p}b^{-1}I\in\mathscr{T}_{\frak{p}}(J)$. As\'{\i},
+\begin{align*}
+	\langle T_{\frak{p}}([I]),[J]\rangle & \,=\,
+		\left|\Big\{ b\in B^{\times}\,:\,
+			\frak{p}b^{-1}I\in\mathscr{T}_{\frak{p}}(J)\Big\}/
+			\oka{F}^{\times}\right|
+\end{align*}
+%
+Si el n\'{u}mero de clases de $F$ fuese uno, entonces podr\'{\i}amos reemplazar
+el ideal $\frak{p}$ por un elemento global $p\in\oka{F}$ y
+\begin{align*}
+	\langle T_{\frak{p}}([I]),[J]\rangle & \,=\,
+	\left|\Big\{ b'\in B^{\times}\,:\,b'I\in
+		\mathscr{T}_{\frak{p}}(J)\Big\}/\oka{F}^{\times}\right| \\
+	& \,=\, \langle [I],T_{\frak{p}}([J])\rangle
+	\text{ .}
+\end{align*}
+%
+Pero esto no es posible en general. Entonces, lo que se deduce es:
+\begin{align*}
+	\langle T_{\frak{p}}([I]),[J]\rangle & \,=\,
+		\langle [\frak{p}I],T_{\frak{p}}([J])\rangle
+	\text{ .}
+\end{align*}
+%
+
+Dado un ideal primo $\frak{p}\subset\oka{F}$ tal que
+$(\frak{p},\frak{D}\frak{N})=1$, podemos asociarle otro operador: si ahora
+$\hhat{\pi}$ es el id\`{e}le dado por
+\begin{math}
+	\begin{bmatrix} p & \\ & p \end{bmatrix}
+\end{math}
+en el lugar $\frak{p}$ y $1$ en $v\not =\frak{p}$, donde, como antes,
+$p\in\oka{F,\frak{p}}$ es un uniformizador, definimos el \emph{operador %
+diamante}\index{operador diamante}
+como el operador de coclase doble asociado a $\hhat{\pi}$ y lo denotamos
+$\diamante{\frak{p}}$. Como $\hhat{\pi}\in\Adfin{\oka{F}}$, pertenece al centro
+de $\Idfin{B}$ y, en un elemento de la base, est\'{a} dado por
+\begin{align*}
+	\diamante{\frak{p}} [I] (\hhat{\alpha}\Idfin{\cal{O}}) & \,=\,
+		T_{\hhat{\pi}}[I]
+	% [I]
+	% \barra{(2,\,\dots,\,2)}{[\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}]}
+			(\hhat{\alpha}\Idfin{\cal{O}})
+		\,=\,[I](\hhat{\alpha}\hhat{\pi}^{-1}\Idfin{\cal{O}})
+	\text{ .}
+\end{align*}
+%
+Pero el ideal correspondiente a $\hhat{\alpha}\hhat{\pi}^{-1}\Idfin{\cal{O}}$
+pertenece a la clase de $I$, si y s\'{o}lo si el correspondiente a
+$\hhat{\alpha}\Idfin{\cal{O}}$ pertenece a $\frak{p}I$.
+% Esto se debe a la forma particular que tiene $\hhat{\pi}$: es,
+% esencialmente, el id\`{e}le en $\Idfin{B}$ correspondiente a $\frak{p}$.
+Es decir,
+\begin{align*}
+	\diamante{\frak{p}} [I] & \,=\, [\frak{p}I]
+	\text{ .}
+\end{align*}
+%
+
+\begin{obsDiamanteParaDefinidos}\label{obs:diamanteparadefinidos}
+	Recordemos que los operadores diamante act\'{u}an trivialmente en
+	formas modulares el\'{\i}pticas para los grupos de congruencia
+	$\Gamma_{0}(N)$ y notemos que esto no sigue siendo cierto en la
+	situaci\'{o}n an\'{a}loga cuando el n\'{u}mero de clases del cuerpo es
+	$\#\Class{F}>1$.
+\end{obsDiamanteParaDefinidos}
+
+Se puede hacer lo mismo con cada ideal fraccionario $\frak{d}$ de $F$ coprimo
+con $\frak{D}\frak{N}$ eligiendo $\hhat{\pi}$ de manera apropiada y se ve que
+\begin{align*}
+	\diamante{\frak{d}} \diamante{\frak{e}} & \,=\,
+		\diamante{\frak{d}\frak{e}}
+		\,=\,\diamante{\frak{e}}\diamante{\frak{d}}
+	\text{ .}
+\end{align*}
+%
+Podemos deducir varias cosas: los operadores diamante son multiplicativos y, no
+s\'{o}lo conmutan entre s\'{\i}, sino tambi\'{e}n conmutan con los operadores
+$T_{\frak{p}}$. Adem\'{a}s, si $T^{*}$ denota el adjunto de un operador $T$
+respecto del producto interno de Petersson, entonces
+\begin{align*}
+	\langle\frak{p}\rangle^{*} & \,=\,
+		\diamante{\frak{p}^{-1}} \,=\,\diamante{\frak{p}}^{-1}
+			\quad\text{y} \\
+	T_{\frak{p}}^{*} & \,=\, \diamante{\frak{p}}^{-1}T_{\frak{p}}
+	\text{ .}
+\end{align*}
+%
+Queremos extender la definici\'{o}n de $T_{\frak{p}}$ a ideales
+\emph{\'{\i}ntegros} de $F$, de manera que sean multiplicativos.
+% (por lo menos entre operadores asociados a ideales coprimos).
+%
+% Podemos definir inductivamente $T_{\frak{p}^{k}}$ copiando la relaci\'{o}n
+% que cumplen los operadores de Hecke en los espacios de formas modulares
+% el\'{\i}pticas, o bien podemos extender la expresi\'{o}n para
+% $T_{\frak{p}}$ en t\'{e}rminos de ideales del \'{a}lgebra:
+
+Sea $I\subset B$ un ideal con $\Oder(I)=\cal{O}$ y sea $\frak{m}\subset\oka{F}$
+un ideal \'{\i}ntegro de $F$ coprimo con $\frak{D}\frak{N}$.
+% (en realidad, cuando definimos $T_{\frak{p}}$ no hac\'{\i}a falta
+% asumir que $\frak{p}$ fuese coprimo con $\frak{N}$ (si con $\frak{D}$,
+% though), entonces podemos no asumir que $\frak{m}$ es coprimo con
+% $\frak{N}$).
+Sea $\mathscr{T}_{\frak{m}}(I)$ el conjunto de ideales
+\begin{align*}
+	\mathscr{T}_{\frak{m}}(I) & \,=\,
+		\Big\{ I'\in\ideales{\cal{O}}\,:\,
+			I'\subset I,\,\nrd(I')=\frak{m}\cdot\nrd(I)\Big\}
+	\text{ ,}
+\end{align*}
+%
+y definimos el operador $T_{\frak{m}}$ usando la expresi\'{o}n global para los
+operadores de Hecke en los elementos de la base:
+\begin{align*}
+	T_{\frak{m}}([I]) & \,=\,
+		\sum_{I'\in\mathscr{T}_{\frak{m}}(I)}\,[I']
+	\text{ .}
+\end{align*}
+%
+Se verifica que $T_{\frak{m}}T_{\frak{m}'}=T_{\frak{m}\frak{m}'}$ para ideales
+$\frak{m}$ y $\frak{m}'$ coprimos y que, por lo tanto, conmutan.
+% Cuando $\frak{m}=\frak{p}$ un ideal primo, la equivalencia entre esta
+% expresi\'{o}n para $T_{\frak{p}}$ y la expresi\'{o}n como operador
+% de coclase doble depend\'{\i}a de que el id\`{e}le $\hhat{\pi}$ y su
+% conjugado $\lconj{\hhat{\pi}}$ verificaran
+% $\hhat{u}\lconj{\hhat{\pi}}\hhat{u}^{-1}=\hhat{\pi}$ para alguna
+% unidad $\hhat{u}\in\Idfin{\cal{O}}$. Esto sigue siendo cierto para
+% $\frak{m}$, si se elige un id\`{e}le adecuado $\hhat{\mu}$.
+
+\begin{propoHeckeParaDefinidosRecursiva}\label{thm:heckeparadefinidosrecursiva}
+	El operador $T_{1}$ act\'{u}a como la identidad de
+	$\spitz[B]{(2,\,\dots,\,2)}{\frak{N}}$. Sea $\frak{p}\subset\oka{F}$ un
+	ideal primo y sea $k\geq 1$. Entonces
+	\begin{equation}
+		\label{eq:heckeparadefinidosrecursiva}
+		T_{\frak{p}^{k+2}} \,=\,
+			T_{\frak{p}^{k+1}}T_{\frak{p}} \,-\,\norma(\frak{p})
+			\diamante{\frak{p}} T_{\frak{p}^{k}}
+		\text{ .}
+	\end{equation}
+	%
+\end{propoHeckeParaDefinidosRecursiva}
+
+\begin{proof}[Demostraci\'{o}n]
+	Demostraremos \eqref{eq:heckeparadefinidosrecursiva} localmente. Es
+	decir, sea $F$ un cuerpo local, sea $\frak{o}$ su anillo de enteros,
+	sea $p\in\frak{o}$ un generador del ideal maximal, sea $B/F$ el
+	\'{a}lgebra de matrices $\MM_{2\times 2}(F)$ y sea $\cal{O}$ el orden
+	maximal
+	\begin{math}
+		\begin{bmatrix} \frak{o} & \frak{o} \\
+		\frak{o} & \frak{o} \end{bmatrix}
+	\end{math}
+	de $B$. Entonces afirmamos que
+	\begin{math}
+		T_{p^{k+2}}=T_{p^{k+1}}T_{p}-\norma(p\frak{o})
+			\diamante{p} T_{p^{k}}
+	\end{math}~.
+
+	Por un lado,
+	\begin{align*}
+		T_{p^{k+2}}([I]) & \,=\,
+			\sum_{I'\in\mathscr{T}_{p^{k+2}}(I)}\,[I']
+						\quad\text{y} \\
+		T_{p^{k+1}}\circ T_{p}([I]) & \,=\,
+			\sum_{I'\in\mathscr{T}_{p^{k+1}}(I)}\,
+			\sum_{J\in\mathscr{T}_{p}(I')}\,[J]
+		\text{ .}
+	\end{align*}
+	%
+	Recordemos que, sobre un cuerpo local, los ideales $I\subset B$ con
+	$\Oder(I)=\cal{O}$ son todos principales. Si fijamos un ideal $I$ y
+	llamamos $\cal{O}'=\Oizq(I)$ a su orden a izquierda,
+	\begin{align*}
+		T_{p^{k+2}}([I]) & \,=\,\sum_{
+			\begin{smallmatrix}
+				\omega\in\cal{O}'/\cal{O}'^{\times} \\
+				\nrd(\omega)=p^{k+2}
+			\end{smallmatrix}
+			}\,[\omega I] \\
+		T_{p^{k+1}}\circ T_{p}([I]) & \,=\,\sum_{
+			\begin{smallmatrix}
+				\omega_{0}\in\cal{O}'/\cal{O}'^{\times} \\
+				\nrd(\omega_{0})=p
+			\end{smallmatrix}
+			}\,\sum_{
+			\begin{smallmatrix}
+				\omega_{1}\in\omega_{0}\cal{O}'
+				\omega_{0}^{-1}/\omega_{0}
+				\cal{O}'^{\times}\omega_{0}^{-1} \\
+				\nrd(\omega_{1})=p^{k+1}
+			\end{smallmatrix}
+			}\,[\omega_{1}\omega_{0}I]
+		\text{ .}
+	\end{align*}
+	%
+	Cada ideal $J=\omega I$ que aparece en la sumatoria de $T_{p^{k+2}}$
+	aparece en la sumatoria de $T_{p^{k+1}}T_{p}$ y, como
+	$\nrd(\omega_{1}\omega_{0})=\nrd(\omega_{1})\nrd(\omega_{0})$,
+	todos los ideales $\omega_{1}\omega_{0}I$ que aparecen en la sumatoria
+	de $T_{p^{k+1}}T_{p}$ aparecen en la sumatoria de $T_{p^{k+2}}$. Pero
+	cada $J=\omega I$ con $\nrd(\omega)=p^{k+2}$ es igual a
+	$(\omega\omega_{0}^{-1})\omega_{0} I$ para cada $\omega_{0}\in\cal{O}'$
+	con $\nrd(\omega_{0})=p$. Entonces cada $J$ que aparece en
+	$T_{p^{k+2}}$ aparece $\norma(p\frak{o})+1$ veces en
+	$T_{p^{k+1}}T_{p}$, pues un sistema de representantes de los elementos
+	en $\cal{O}'$ de norma reducida $p$ m\'{o}dulo unidades en $\cal{O}'$
+	est\'{a} en biyecci\'{o}n con un sistema de representantes
+	$\{\pi_{i}\}_{i}\subset\cal{O}$ tal que
+	\begin{math}
+		\cal{O}^{\times}\begin{bmatrix} p & \\ & 1 \end{bmatrix}
+			\cal{O}^{\times}=
+			\bigsqcup_{i}\,\cal{O}^{\times}\pi_{i}
+	\end{math}~,
+	y \'{e}stos son precisamente $\norma(p\frak{o})+1$: est\'{a}n dados,
+	por ejemplo, por
+	\begin{align*}
+		\begin{bmatrix} 1 & j \\ & p \end{bmatrix}
+			% \quad\text{con } j\in\frak{o}/p\frak{o}\text{ y} \\
+			& \quad\text{y}\quad
+		\begin{bmatrix} p & \\ & 1 \end{bmatrix}
+			\text{ ,}
+	\end{align*}
+	%
+	donde $j$ recorre un sistema de representantes de $\frak{o}/p\frak{o}$.
+\end{proof}
+
+% Evaluando la expresi\'{o}n anterior en un elemento $f=[I]$
+% %=[\hhat{\alpha}_{t_{0}}\Idfin{\cal{O}}]$
+% de la base de $\modular[B]{(2,\,\dots,\,2)}{\frak{N}}$, resulta
+% \begin{align*}
+	% % [\hhat{\alpha}_{t_{0}}\Idfin{\cal{O}}]
+	% T_{\frak{p}}([I])
+	% % \barra{(2,\,\dots,\,2)}{[\Idfin{\cal{O}}\hhat{\pi}\Idfin{\cal{O}}]}
+	% \,=\, & \sum_{t}\,\#\left\lbrace I'\in\ideales{\cal{O}}\,:\,
+	% I'\subset I,\nrd(I')=\frak{p}\cdot\nrd(I),\,
+	% [I']=[I_{t}]
+	% \right\rbrace [I_{t}]
+	% \text{ ,}
+% \end{align*}
+% %
+% %
+% La cuenta: sea $\gamma\in B^{\times}$ tal que
+% $\gamma (\hhat{\alpha}_{t}\hhat{\pi}_{i}^{-1}\Adfin{\cal{O}}\cap B)=%
+% \hhat{\alpha}_{t_{0}}\Adfin{\cal{O}}\cap B$. Existe
+% $\hhat{u}\in\Idfin{\cal{O}}$ tal que
+% $\gamma\hhat{\alpha}_{t}\hhat{\pi}_{i}^{-1}=\hhat{\alpha}_{t_{0}}\hhat{u}$.
+% Entonces
+% \begin{align*}
+	% (\hhat{\alpha}_{t}\hhat{\pi}_{i}^{-1}\Adfin{\cal{O}}
+	% \hhat{\alpha}_{t_{0}})\,\cap\, B \,=\, &
+	% \gamma^{-1}\cal{O}_{\hhat{\alpha}_{t_{0}}}\quad\text{y} \\
+	% \cal{O}_{\hhat{\alpha}_{t_{0}}}\gamma \,=\, &
+	% (\hhat{\alpha}_{t_{0}}\Adfin{\cal{O}}
+	% \hhat{\pi}_{i}\hhat{\alpha}_{t}^{-1}) \,\cap\, B \\
+	% \,=\, & (\hhat{\alpha}_{t_{0}}\Adfin{\cal{O}}\cap B)
+	% (\hhat{\alpha}_{t}\Adfin{\cal{O}}\cap B)^{-1}
+	% \cal{O}_{\hhat{\alpha}_{t}}
+	% (\hhat{\alpha}_{t}\hhat{\pi}_{i}\hhat{\alpha}_{t}^{-1}) \\
+	% \,=\, & I_{t_{0}}I_{t}^{-1}J\,\subset\,I_{t_{0}}I_{t}^{-1}
+	% \text{ ,}
+% \end{align*}
+% %
+% donde $J:=\cal{O}_{\hhat{\alpha}_{t}}%
+% (\hhat{\alpha}_{t}\hhat{\pi}_{i}\hhat{\alpha}_{t}^{-1})$. Finalmente,
+% \begin{align*}
+	% \gamma J\gamma^{-1}I_{t_{0}} \,=\, & \gamma I_{t}
+	% \qquad\text{(todos los ideales de la clase $[I_{t}]$ %
+	% de norma $\frak{p}\cdot\nrd(I_{t_{0}})$).} \\
+	% \hhat{\pi}_{i}\hhat{\alpha}_{t}^{-1}\gamma^{-1}\hhat{\alpha}_{t_{0}}
+	% \,\in\, & \Idfin{\cal{O}}\text{ ,} \\
+	% \Oder(\gamma J\gamma^{-1}) \,=\, &
+	% (\hhat{\alpha}_{t}\hhat{\pi}_{i}%
+	% \hhat{\alpha}_{t}^{-1}\gamma^{-1})^{-1}
+	% \cal{O}_{\hhat{\alpha}_{t}}
+	% (\hhat{\alpha}_{t}\hhat{\pi}_{i}\hhat{\alpha}_{t}^{-1}\gamma^{-1}) \\
+	% \,=\, & \cal{O}_{\hhat{\alpha}_{t_{0}}}\quad\text{y} \\
+	% \gamma J\gamma^{-1}I_{t_{0}} \,=\, &
+	% \gamma\cal{O}_{\hhat{\alpha}_{t}}\hhat{\alpha}_{t}
+	% \hhat{\pi}_{i}\hhat{\alpha}_{t}^{-1}\gamma^{-1}
+	% \qquad\text{(y contenidos en $I_{t_{0}}$).}
+% \end{align*}
+% %
+% o, equivalentemente,
+% \begin{align*}
+	% T_{\frak{p}}([I]) \,=\, &
+	% \sum_{I'\in\mathscr{T}_{\frak{p}}(I)}\,[I']\quad\text{, donde} \\
+	% \mathscr{T}_{\frak{p}}(I) \,=\, &
+	% \left\lbrace I'\in\ideales{\cal{O}}\,:\,
+	% I'\subset I,\,\nrd(I')\,\frak{p}\cdot\nrd(I)
+	% \right\rbrace
+	% \text{ .}
+% \end{align*}
+% %
+% Dado que la norma reducida satisface $\nrd(I_{v})=\nrd(I)_{v}$ para
+% todo ideal $I$ y todo lugar finito $v$, los conjuntos
+% $\mathscr{T}_{\frak{p}}(I)$ quedan determinados localmente.
+% % En un \'{a}lgebra de cuaterniones sobre un cuerpo local, todo ideal de un
+% % orden de Eichler del \'{a}lgebra es principal.
+% De esto se deduce que, dados dos ideales $I',I\subset B$,
+% $I'\in\mathscr{T}_{\frak{p}}(I)$ si y s\'{o}lo si
+% $\frak{p}I\in\mathscr{T}_{\frak{p}}(I')$. Esto tiene como consecuencia
+% que los operadores de Hecke $T_{\frak{p}}$ son autoadjuntos respecto del
+% producto interno de Petersson:
+% \begin{align*}
+	% \langle T_{\frak{p}}([I]),[J]\rangle \,=\, &
+	% \#\left\lbrace I'\in\mathscr{T}_{\frak{p}}(I)\,:\,
+	% [I']=[J]\right\rbrace
+	% \cdot w_{J} \\
+	% \,=\, &	\#\left(\left\lbrace b\in B^{\times}\,:\,
+	% bJ\in\mathscr{T}_{\frak{p}}(I)\right\rbrace/\oka{F}^{\times}\right)
+	% \text{ .}
+% \end{align*}
+% %

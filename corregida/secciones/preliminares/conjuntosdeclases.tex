@@ -1,0 +1,159 @@
+Sean $I,J$ dos ideales de $B$. Decimos que $I$ y $J$ son \emph{equivalentes a %
+izquierda}, si existe $b\in B^{\times}$ tal que $I=bJ$. Dado un orden $\cal{O}$
+en $B$, el \emph{conjunto de clases a izquierda de $\cal{O}$}, denotado
+$\lClass{\cal{O}}$, es el conjunto de clases de ideales invertibles $I$ de $B$
+tales que $\Oder(I)=\cal{O}$ m\'{o}dulo la relaci\'{o}n de equivalencia a
+izquierda. A diferencia de lo que ocurre en el caso de un cuerpo de
+n\'{u}meros, este conjunto es, simplemente, un conjunto.
+
+Sea $\hhat{g}=(g_{v})_{v}\in\Idfin{B}$. La familia de ret\'{\i}culos
+$\{g_{v}\cal{O}_{v}\}_{v}$ determina un ideal de $B$ cuyo orden a derecha es
+$\cal{O}$. Dicho ideal es, por definici\'{o}n, localmente principal y, por lo
+tanto, invertible. Rec\'{\i}procamente, como todo ideal invertible es
+localmente principal, la aplicaci\'{o}n $(g_{v})_{v}\mapsto I$ as\'{\i}
+definida es sobreyectiva. Si $(g_{v})_{v},(g'_{v})_{v}\in\Idfin{B}$, vale
+$g_{v}\cal{O}_{v}=g'_{v}\cal{O}_{v}$ para todo $v$, si y s\'{o}lo si
+$g'_{v}\in g_{v}\cal{O}_{v}^{\times}$ para todo $v$. Hay una biyecci\'{o}n
+\begin{align*}
+	\Idfin{B}/\Idfin{\cal{O}} & \,\xrightarrow{\sim}\,
+		\bigg\{\begin{array}{c}
+			\text{Ideales invertibles }I\subset B\text{ con} \\
+			\Oder(I)=\cal{O}
+		\end{array}\bigg\} \,=\,
+			\bigcup_{\cal{O}'\subset B}\,\ideales{\cal{O}',\cal{O}}
+	\text{ ,}
+\end{align*}
+%
+que determina una correspondencia entre
+$B^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}$ y $\lClass{\cal{O}}$.
+%
+% La estructura de $\ideles{B}$ en tanto producto restringido depende,
+% \textit{a priori}, de elegir un orden previamente en $B$ y de un conjunto
+% finito $S$ de lugares. Pero como $S$ es finito y todos los \'{o}rdenes
+% $\cal{O},\cal{O}'$ (ret\'{\i}culos completos) de $B$ satisfacen
+% $\cal{O}_{v}=\cal{O}'_{v}$ para casi todo $v$, no hay diferencia.
+
+\begin{teoFinClassNum}\label{thm:numerodeclasesfinito}
+	Si $B/K$ es un \'{a}lgebra de cuaterniones sobre un cuerpo de
+	n\'{u}meros y $\cal{O}\subset B$ es un orden de Eichler, el cardinal
+	del conjunto $\lClass{\cal{O}}$, el \emph{n\'{u}mero de clases} de
+	$\cal{O}$, es finito.\index{numero de clases@n\'{u}mero de clases}
+\end{teoFinClassNum}
+
+\begin{teoEichlerNormaClases}[Eichler]\label{thm:eichlernormaclases}
+	% Si $B/K$ es un \'{a}lgebra de cuaterniones sobre un cuerpo de
+	% n\'{u}meros y $\cal{O}\subset B$ es un orden de Eichler,
+	La norma reducida induce una suryecci\'{o}n
+	\begin{align*}
+		n & \,:\, B^{\times}\backslash \Idfin{B}/\Idfin{\cal{O}}
+			\,\twoheadrightarrow\,
+			K_{(+)}^{\times}\backslash\Idfin{K}/\Idfin{\oka{K}}
+	\end{align*}
+	%
+	del conjunto de clases $\lClass{\cal{O}}$, en un grupo de clases
+	asociado al cuerpo $K$ y al \'{a}lgebra $B$. Si, adem\'{a}s, $B/K$ es
+	indefinida, esta aplicaci\'{o}n es biyectiva.
+\end{teoEichlerNormaClases}
+%
+% \begin{proof}
+	% La norma reducida $B^{\times}\rightarrow K^{\times}$ induce morfismos
+	% en las completaciones $B_{v}^{\times}\rightarrow K_{v}^{\times}$ y
+	% una aplicaci\'{o}n $\ideles{B}\rightarrow\ideles{K}$ evaluando en
+	% los puntos ad\'{e}licos. Por el Teorema \ref{thm:eichlernorma},
+	% $\nrd(B^{\times})=K_{(+)}^{\times}$ y para $v\in\lugares[f]{K}$
+	% finito $\nrd(\cal{O}_{v}^{\times})=\oka{K,v}^{\times}$. Con lo
+	% cual se obtiene una aplicaci\'{o}n bien definida y sobreyectiva
+	% \begin{align*}
+		% n\,:\, & B^{\times}\backslash
+		% \Idinf{B}\times\Idfin{B}/\Idinf{B}\Idfin{\cal{O}}
+		% \,\twoheadrightarrow\,
+		% K_{(+)}^{\times}\backslash
+		% \Idinf{K}\times\Idfin{K}/\Idinf{K}\Idfin{\oka{K}}
+		% \text{ ,}\quad\text{o bien} \\
+		% n\,:\, & B^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}
+		% \,\twoheadrightarrow\,
+		% K_{(+)}^{\times}\backslash\Idfin{K}/\Idfin{\oka{K}}
+		% \text{ .}
+	% \end{align*}
+	% %
+	% El cociente de la izquierda est\'{a} en correspondencia con el
+	% conjunto $\lClass{\cal{O}}$ y el de la derecha con el grupo de
+	% clases $\cal{I}/\cal{P}_{B}$, donde $\cal{I}$
+	% es el grupo de ideales fraccionarios de $K$ y $\cal{P}_{B}$ es el
+	% subgrupo de ideales principales con generadores en
+	% $K_{(+)}^{\times}=\nrd(B^{\times})$.
+	% Si $B/K$ es indefinida, el grupo $B_{S}^{1}$ contiene a
+	% $\SL_{2}(\bb{R})$ como alguno de sus factores y, por lo tanto,
+	% no es compacto. Por el Teorema \ref{thm:aproxfuerte},
+	% $B^{1}B_{S}^{1}$ es denso en $\adeles{B}^{1}$. Como
+	% $\Idfin{\cal{O}}$ es abierto, el producto $\Idfin{\cal{O}}\Idinf{B}$
+	% es abierto y contiene a $B_{S}^{1}$. Entonces
+	% \begin{math}
+		% \adeles{B}^{1}\subset
+			% B^{\times}\cdot\Idfin{\cal{O}}\Idinf{B}
+	% \end{math}
+	% y $n$ resulta ser inyectiva.
+% \end{proof}
+%
+% Expresado de otra manera, el n\'{u}cleo del morfismo (!`No es morfismo!)
+% suryectivo $n$ es, en general,
+% \begin{align*}
+	% & B^{\times}\backslash
+	% \adeles{B}^{1}/(\Idinf{B}\Idfin{\cal{O}}\cap\adeles{B}^{1})
+	% \text{ .}
+% \end{align*}
+% %
+% Si $B\not\simeq\MM_{2\times 2}(K)$, es decir, si $B$ es de divisi\'{o}n,
+% este cociente es finito: en primer lugar, al ser
+% $\Idinf{B}\Idfin{\cal{O}}\cap\adeles{B}^{1}$ abierto en $\adeles{B}^{1}$,
+% el cociente del segundo por el primero es discreto, y, en segundo lugar,
+% como sucede con un cuerpo de n\'{u}meros, $B^{\times}$ es discreto en
+% $\adeles{B}^{1}$ y el cociente $B^{\times}\backslash\adeles{B}^{1}$ es
+% compacto. El n\'{u}cleo de $n$ es compacto y discreto y, por lo tanto,
+% finito. cuando $B/K$ es indefinida,
+% $\adeles{B}^{1}\subset B^{\times}\cdot\Idinf{B}\Idfin{\cal{O}}$, con lo
+% cual el n\'{u}cleo es trivial. Por otro lado, la imagen de $n$ es
+% $K_{(+)}^{\times}\backslash\Idfin{K}/\Idfin{\oka{K}}$, un grupo de clases
+% de $K$ y, en consecuencia, finito.
+%
+% Las inclusiones $B_{+}^{\times}\subset B^{\times}$ y
+% $K_{+}^{\times}\subset K_{(+)}^{\times}$ determinan un diagrama conmutativo:
+% \begin{center}
+	% \begin{tikzcd}
+		% B_{+}^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}
+			% \arrow[d] \arrow[r,two heads,"\widetilde{n}"] &
+		% K_{+}^{\times}\backslash\Idfin{K}/\Idfin{\oka{K}}
+			% \simeq\pClass{K}
+			% \arrow[d] \\
+		% B^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}
+			% \arrow[r,two heads,"n"] &
+		% K_{(+)}^{\times}\backslash\Idfin{K}/\Idfin{\oka{K}}
+			% \simeq\Class[(+)]{K}
+	% \end{tikzcd}
+% \end{center}
+% cuyas flechas representan funciones entre conjuntos, salvo la de la derecha,
+% que representa el morfismo de grupos de clases.
+% % En general, todas ellas son suryecciones.
+
+Cuando $B$ es totalmente definida, $K_{(+)}^{\times}=K_{+}^{\times}$ y la
+aplicaci\'{o}n $n$ del Teorema \ref{thm:eichlernormaclases} es una
+suryecci\'{o}n en el grupo de clases estrictas $\pClass{K}$. Si $B$ es
+indefinida, se obtiene una biyecci\'{o}n con un cociente de este grupo,
+denotado $\Class[(+)]{K}$. De todas maneras, $\pClass{K}$ aparece, si
+modificamos el grupo actuando a izquierda.
+
+\begin{coroNormaReducidaClasesEstrictas}\label{coro:normaclasesestrictas}
+	La norma reducida induce una aplicaci\'{o}n sobreyectiva
+	\begin{align*}
+		\widetilde{n} & \,:\,
+			B_{+}^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}
+			\,\twoheadrightarrow\,
+			K_{+}^{\times}\backslash\Idfin{K}/\Idfin{\oka{K}}
+		\text{ .}
+	\end{align*}
+	%
+	Si $B$ es indefinida, $\widetilde{n}$ es una biyecci\'{o}n.
+\end{coroNormaReducidaClasesEstrictas}
+%
+% Las demostraciones de estos resultados se pueden encontrar en [Weil],
+% [Hida], [Vign\'{e}ras], \dots

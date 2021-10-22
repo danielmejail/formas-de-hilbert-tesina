@@ -1,0 +1,394 @@
+% \theoremstyle{plain}
+% \newtheorem*{propoLocalGlobalLattices}{Proposici\'{o}n}
+% \newtheorem*{teoEichlerNorma}{Teorema}
+% \newtheorem*{teoAproxFuerte}{Teorema}
+% \newtheorem*{teoEichlerNormaClases}{Teorema}
+% \newtheorem*{coroFinClassNum}{Corolario}
+% 
+% \theoremstyle{remark}
+
+\subsection{Grupos en los ad\`{e}les}
+En esta secci\'{o}n repasamos definiciones y algunos resultados sobre el
+anillo de ad\`{e}les de un cuerpo de n\'{u}meros y algunas construcciones
+relacionadas.
+
+Empezamos recordando la definici\'{o}n de \emph{producto restringido}.
+\index{producto restringido}
+Sea $I$ un conjunto de \'{\i}ndices y supongamos que, para cada $v\in I$,
+tenemos un grupo $G_{v}$. Si adem\'{a}s tenemos, para casi todo $v$
+(es decir, todos salvo finitos) un subgrupo $C_{v}$ de $G_{v}$, podemos
+definir el producto restringido de los $G_{v}$ respecto de los $C_{v}$:
+\begin{align*}
+ G \,=\, & \left\lbrace (x_{v})_{v\in I}\,\in\,\prod_{v\in I}\,G_{v}\,:\,
+	x_{v}\in C_{v}\text{ para casi todo }v\in I\right\rbrace
+	\text{ .}
+\end{align*}
+%
+En el caso que nos interesa, los grupos $G_{v}$ son grupos topol\'{o}gicos
+localmente compactos y, cuando est\'{a}n dados, los subgrupos $C_{v}$ son
+compactos. En este caso, el producto restringido $G$ tiene estructura de
+grupo topol\'{o}gico localmente compacto. Una base de entornos del elemento
+neutro est\'{a} dada por los subconjuntos $\prod_{v\in I}\,U_{v}$, donde
+cada $U_{v}$ es un abierto con clausura compacta en $G_{v}$ y, para casi todo
+$v$, $U_{v}=C_{v}$. Se demuestra que este grupo topol\'{o}gico no depende
+de la elecci\'{o}n de conjunto finito $S$.
+
+Fijemos un cuerpo de n\'{u}meros $K$ y sea $\oka{K}$ el anillo de enteros.
+El conunto de lugares de $K$ lo denotamos $\lugares{K}$ y tenemos
+$\lugares{K}=\lugares[\infty]{K}\cup\lugares[f]{K}$, donde $\lugares[f]{K}$
+es el conjunto de lugares finitos o no arquimedianos correspondientes a los
+primos de $\oka{K}$ y $\lugares[\infty]{K}$ es el conjunto de lugares
+infinitos o arquimedianos (escribimos tambi\'{e}n $v\in\lugares[\infty]{K}$
+en lugar de $v\mid\infty$,
+%y $v<\infty$ en lugar de $v\in\lugares[f]{K}$,
+ocasionalmente).
+Para cada $v$, $K_{v}$ denota la completaci\'{o}n
+de $K$ en el lugar $v$. Si $v$ es un lugar finito, $\oka{K,v}$ denota el
+anillo de enteros, el orden maximal, de $K_{v}$.
+En general, si $S$ es un conjunto de lugares
+de $K$ que contiene a $\lugares[\infty]{K}$, definimos $\oka{K}(S)$
+como el anillo de $S$-enteros:
+\begin{align*}
+ \oka{K}(S) \,=\, & \bigcap_{v\not\in S}\,(\oka{K,v}\cap K)
+\end{align*}
+%
+
+El \emph{anillo de ad\`{e}les de $K$}
+\index{anillo de adeles@anillo de ad\`{e}les}
+es el anillo topol\'{o}gico que se
+obtiene tomando el producto restringido de las completaciones $K_{v}$
+respecto de $\oka{K,v}$ ($v\in\lugares[f]{K}$) y el
+\emph{grupo de id\`{e}les de $K$}
+\index{grupo de ideles@grupo de id\`{e}les}
+es el producto restringido de
+$K_{v}^{\times}$ respecto de $\oka{K,v}^{\times}$ ($v\in\lugares[f]{K}$).
+Los denotamos, respecivamente, $\adeles{K}$ y $\ideles{K}$.
+
+% El anillo de matrices $\MM_{n\times n}(\adeles{K})$ y el grupo de matrices
+% invertibles $\GL_{n}(\adeles{K})$ se obtienen como productos restringidos
+% de los respectivos grupos asociados a las completaciones de $K$.
+%
+Supongamos que $K$ es un cuerpo de n\'{u}meros totalmente real y sea $B$
+un \'{a}lgebra de cuaterniones definida sobre $K$. Sea
+$S\supset\lugares[\infty]{K}$ un conjunto finito de lugares y sea
+$\cal{O}\subset B$ un $\oka{K}(S)$-orden fijo
+(no necesariamente un orden maximal).
+%Definiciones en Vign\'{e}ras
+Para cada lugar $v$, tomamos $G_{v}$ el \'{a}lgebra de cuaterniones
+$B_{v}=B\otimes_{K}K_{v}$ sobre el cuerpo local $K_{v}$ y, para cada lugar
+finito $v\in\lugares[f]{K}\setmin S$, definimos el orden
+$\cal{O}_{v}=\cal{O}\otimes_{\oka{K}(S)}\oka{K,v}$ y tomamos
+$C_{v}=\cal{O}_{v}$. El producto restringido se denomina anillo de ad\`{e}les
+de $B$ y es igual a tomar el producto tensorial sobre $K$ de $B$ con
+$\adeles{K}$. Podemos descomponer este anillo de la siguiente manera:
+\begin{align*}
+ \adeles{B} \,:=\,B\,\otimes_{K}\,\adeles{K}\,=\, &
+	\Adinf{B}\,\times\,\hhat{B}
+	\text{ ,}
+\end{align*}
+%
+donde $\Adinf{B}$ es el producto $\prod_{v\in\lugares[\infty]{K}}\,B_{v}$ con
+$v\in\lugares[\infty]{K}$ y $\hhat{B}$ es el anillo de ad\`{e}les finitos:
+con la notaci\'{o}n anterior, el producto restringido de $G_{v}$ respecto
+de $C_{v}$, pero donde $v$ recorre los lugares finitos \'{u}nicamente.
+Si $\Adfin{K}$ es el anillo de ad\`{e}les finitos de $K$ y
+$\Adinf{K}=\prod_{v\in\lugares[\infty]{K}}\,K_{v}$, tenemos que
+$\adeles{K}=\Adinf{K}\times\Adfin{K}$ y, en general, si
+$G$ es un grupo algebraico af\'{\i}n definido sobre $K$,
+\begin{align*}
+	G(\adeles{K}) \,=\, & G(\Adinf{K})\,\times\,G(\Adfin{K})
+	\text{ ,}
+\end{align*}
+%
+identificando $\Adinf{K}$ con los ad\`{e}les $(x_{v})_{v\in\lugares{K}}$
+tales que $x_{v}=1$, si $v\nmid\infty$ e identificando
+$\Adfin{K}$ con aquellos tales que $x_{v}=1$ para $v\in\lugares[\infty]{K}$.
+Como hicimos con los id\`{e}les, definimos el grupo de unidades de
+$\adeles{B}$ como el producto restringido de $B_{v}^{\times}$
+($v\in\lugares{K}$) respecto de $\cal{O}_{v}^{\times}$ ($v\not\in S$).
+Lo denotamos $\ideles{B}$.
+Por \'{u}ltimo, asociado al \'{a}lgebra $B$, introducimos el grupo
+ad\'{e}lico $\adeles{B}^{1}$ dado por el producto restringido de
+$G_{v}=B_{v}^{1}$, el n\'{u}cleo de la norma reducida, respecto de
+$C_{v}=\cal{O}_{v,1}$, los enteros de norma reducida uno.
+
+\subsection{\'{A}lgebras de cuaterniones sobre un cuerpo de n\'{u}meros}
+Pasamos ahora a describir algunos aspectos de los \'{o}rdenes y de los
+ideales de un \'{a}lgebra de cuaterniones sobre un cuerpo global, teniendo
+en cuenta lo que sucede en el caso local. Sea $K/\bb{Q}$ una extensi\'{o}n
+finita, $\oka{K}\subset K$ su anillo de enteros y $B/K$ un \'{a}lgebra de
+cuaterniones. Dado un ret\'{\i}culo $L\subset B$, llamamos
+$L_{v}=L\otimes_{\oka{K}}\oka{K,v}$ a su clausura en $B_{v}$.
+
+\begin{propoLocalGlobalLattices}
+ Sean $L_{0},L\subset B$ ret\'{\i}culos completos.
+	\begin{itemize}
+		\item[i] $L=\bigcap_{v\in\lugares[f]{K}}\,B\cap L_{v}$,
+		\item[ii] $L_{v}=L_{0,v}$ para casi todo $v\in\lugares[f]{K}$ y
+		\item[iii] Si $\{L'_{v}\}_{v\in\lugares[f]{K}}$ es una familia
+			de ret\'{\i}culos locales completos en $B_{v}$,
+			existe un (\'{u}nico) ret\'{\i}culo global completo
+			$M\subset B$ tal que $L'_{v}=M_{v}$ para todo
+			$v\in\lugares[f]{K}$.
+	\end{itemize}
+\end{propoLocalGlobalLattices}
+
+El \'{a}lgebra $B/K$ se dice \emph{indefinida},
+\index{algebra indefinida@\'{a}lgebra indefinida}
+si $B$ es no ramificada
+\index{algebra ramificada@\'{a}lgebra ramificada}
+en alg\'{u}n lugar arquimediano, es decir, si existe $v\in\lugares[\infty]{K}$
+tal que $B_{v}\simeq\MM_{2\times 2}(K_{v})$. Si $B_{v}$ es de divisi\'{o}n
+para todo lugar infinito $v$, decimos que $B$ es \emph{(totalmente) definida}.
+\index{algebra definida@\'{a}lgebra (totalmente) definida}
+Esto \'{u}ltimo solamente es posible cuando $K/\bb{Q}$ es totalmente real.
+
+Sea $K_{(+)}^{\times}\subset K^{\times}$ el subconjunto de
+elementos cuya imagen en $K_{v}$ es positiva para todo lugar real $v$
+en donde $B$ ramifica.
+
+\begin{teoEichlerNorma}[de la imagen de la norma]
+	La imagen del morfismo $\nrd:\,B^{\times}\rightarrow K^{\times}$ es
+	\begin{align*}
+		\nrd(B^{\times}) \,=\, & K_{(+)}^{\times}
+		\text{ .}
+	\end{align*}
+	%
+\end{teoEichlerNorma}
+
+% \begin{proof}[Demostraci\'{o}n]
+%  Ver [Weil, XI \S 3]
+% \end{proof}
+
+En particular, si $K/\bb{Q}$ es una extensi\'{o}n totalmente real de
+grado $n$ y $B$ es un \'{a}lgebra que ramifica en $n-r$ lugares arquimedianos,
+es decir,
+\begin{align*}
+ B_{\infty} \,\simeq\, & \MM_{2\times 2}(\bb{R})^{r} \,\times\,
+	\bb{H}^{n-r}
+	\text{ ,}
+\end{align*}
+%
+y si
+$B_{+}^{\times}=\{\gamma\in B^{\times}\,:\,\nrd(\gamma)\in K_{+}^{\times}\}$
+denota el subgrupo de $B^{\times}$ de elementos cuya norma reducida es
+totalmente positiva, entonces
+\begin{align*}
+	B^{\times}/B_{+}^{\times} \,\simeq\, & (\bb{Z}/2\bb{Z})^{r}
+	\text{ .}
+\end{align*}
+%
+
+Sea $S\subset\lugares{K}$ un subconjunto finito. Sea $B^{1}$
+el subgrupo de $B^{\times}$ de elementos de norma reducida uno, sea
+$B_{v}^{1}$ el subgrupo correspondiente en $B_{v}^{\times}$ y sea
+$B_{S}^{1}:=\prod_{v\in S}\,B_{v}^{1}$. Cada $B_{v}^{1}$ es compacto, si
+y s\'{o}lo si $B$ ramifica en $v$ y $B_{S}^{1}$ es compacto, si y s\'{o}lo
+si $S\subset\Ram(B)$.
+
+\begin{teoAproxFuerte}[de aproximaci\'{o}n fuerte]
+	Sea $S\subset\lugares{K}$ un subconjunto finito que contiene al menos
+	un lugar arquimediano. Entonces, si $B_{S}^{1}$ no es compacto,
+	$B^{1}\cdot B_{S}^{1}$ es denso en $\adeles{B}^{1}$.
+\end{teoAproxFuerte}
+
+De ahora en adelante, tomamos $S=\lugares[\infty]{K}$. Entonces
+\begin{align*}
+	B_{S}^{1}\text{ es compacto}\,\Leftrightarrow\, &
+	B\text{ es totalmente definida.}
+\end{align*}
+%
+
+\subsection{Propiedades locales}
+Un ret\'{\i}culo $L\subset B$ es un orden o un ideal, si y s\'{o}lo si
+$L_{v}$ es un orden o un ideal, respectivamente, para todo lugar
+finito $v$. Dado $X\subset B$, decimos que $X$ satisface una propiedad
+\emph{localmente},
+\index{propiedad local}
+si todas las clausuras $X_{v}$, $v\in\lugares[f]{K}$
+tienen la propiedad correspondiente. Un orden de $B$ es maximal, si y
+s\'{o}lo si es localmente maximal y es de Eichler, si y s\'{o}lo si
+lo es localmente. Si $v\in\lugares[f]{K}$ es un lugar finito e $I\subset B$
+es un ideal,
+\begin{align*}
+	\Oizq(I_{v}) \,=\, & \Oizq(I)_{v}\text{ ,} \\
+	\Oder(I_{v}) \,=\, & \Oder(I)_{v}\text{ ,} \\
+	(I_{v})^{*} \,=\, & (I^{*})_{v}\text{ y} \\
+	\nrd(I_{v}) \,=\, & \nrd(I)_{v}\text{ .}
+\end{align*}
+%
+El ideal $I$ es invertible, si y s\'{o}lo si es localmente invertible, si
+y s\'{o}lo si es localmente principal. En particular, todos los ideales
+de un orden de Eichler de $B$ son localmente principales y, por lo tanto,
+invertibles. Si $\cal{O}$ es un orden de $B$,
+\begin{align*}
+	\drd{\cal{O}_{v}} \,=\, & (\drd{\cal{O}})_{v}\text{ .}
+\end{align*}
+%
+El orden $\cal{O}$ es maximal, si y s\'{o}lo si
+$\drd{\cal{O}}=\prod_{\frak{p}\in\Ram(B)\setmin S}\,\frak{p}$,
+el producto de los primos (finitos)
+%fuera de $S$
+en donde $B$ ramifica. A este producto lo llamamos el
+\emph{discriminante de $B$}
+\index{discriminante}
+y lo denotaremos $\frak{D}$.
+Si $\cal{O}$ es de Eichler, su \emph{nivel}
+\index{nivel de un orden de Eichler}
+es el ideal $\frak{N}\subset\oka{K}$ tal que para cada $v\in\lugares[f]{K}$
+$\frak{N}_{v}\subset\oka{K,v}$ es el nivel del orden $\cal{O}_{v}$
+($v$ debe ser no ramificado). El ideal $\frak{N}$ es tal que
+\begin{align*}
+	\cal{O}_{v}\,\sim\, & \begin{bmatrix} \oka{K,v} & \oka{K,v} \\
+				\frak{N}\oka{K,v} & \oka{K,v}
+				\end{bmatrix}
+\end{align*}
+%
+en $B_{v}=\MM_{2\times 2}(K_{v})$ para
+$v\in\lugares[f]{K}\setmin\Ram(B)$. El discriminante reducido de
+un orden de Eichler $\cal{O}$ de nivel $\frak{N}$ es igual a
+$\drd{\cal{O}}=\frak{D}\cdot\frak{N}$. Notemos que $(\frak{N},\frak{D})=1$.
+
+Sea $\cal{O}$ un orden de Eichler de nivel $\frak{N}$ y sea
+\begin{align*}
+	\Idfin{\cal{O}}\,:=\, &
+	(\cal{O}\otimes_{\bb{Z}}\Adfin{\bb{Z}})^{\times}
+	\,=\, \prod_{v\in\lugares[f]{K}}\,\cal{O}_{v}^{\times}
+	\text{ .}
+\end{align*}
+%
+Sea $(g_{v})_{v}\in\Idfin{B}$, los id\`{e}les finitos en
+$\ideles{B}=\Idinf{B}\times\Idfin{B}$. La familia de ret\'{\i}culos
+$\{g_{v}\cal{O}_{v}\}_{v}$ determina un ideal de $B$
+cuyo orden a derecha es $\cal{O}$.
+% La estructura de $B$ en tanto producto restringido depende,
+% \textit{a priori}, de elegir un orden previamente en $B$ y de un conjunto
+% finito $S$ de lugares. Pero como $S$ es finito y todos los \'{o}rdenes
+% $\cal{O},\cal{O}'$ (ret\'{\i}culos completos) de $B$ satisfacen
+% $\cal{O}_{v}=\cal{O}'_{v}$ para casi todo $v$, no hay diferencia.
+Como todo ideal $I$ de $\cal{O}$ es localmente principal, la aplicaci\'{o}n
+$(g_{v})_{v}\mapsto I$ as\'{\i} definida es sobreyectiva. Si
+$(g_{v})_{v},(g'_{v})_{v}\in\Idfin{B}$, vale
+$g_{v}\cal{O}_{v}=g'_{v}\cal{O}_{v}$ para todo $v$, si y s\'{o}lo si
+$g'_{v}\in g_{v}\cal{O}_{v}^{\times}$ para todo $v$. Hay una biyecci\'{o}n
+\begin{align*}
+	\Idfin{B}/\Idfin{\cal{O}}\,\xrightarrow{\sim}\, &
+	\left\lbrace
+	\begin{array}{c}
+		\text{Ideales }I\subset B\text{ con} \\
+		\Oder(I)=\cal{O}
+	\end{array}
+	\right\rbrace
+	\text{ ,}
+\end{align*}
+%
+que determina una correspondencia entre
+$B^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}$ y $\lClass{\cal{O}}$.
+
+\begin{teoEichlerNormaClases}[Eichler]
+	Si $B/K$ es un \'{a}lgebra de cuaterniones sobre un cuerpo de
+	n\'{u}meros y $\cal{O}\subset B$ es un orden de Eichler, la
+	norma reducida induce una suryecci\'{o}n del conjunto de clases
+	$\lClass{\cal{O}}$ de ideales cuyo orden a derecha es $\cal{O}$
+	m\'{o}dulo la relaci\'{o}n: $I\sim J$ si existe $b\in B^{\times}$
+	con $J=bI$, en un grupo de clases asociado al cuerpo $K$ y al
+	\'{a}lgebra $B$:
+	\begin{align*}
+		n\,:\, & B^{\times}\backslash \Idfin{B}/\Idfin{\cal{O}}
+		\,\twoheadrightarrow\,
+		K_{(+)}^{\times}\backslash\Idfin{K}/\Idfin{\oka{K}}
+		\text{ .}
+	\end{align*}
+	%
+	Si, adem\'{a}s, $B/K$ es indefinida, esta aplicaci\'{o}n es biyectiva.
+\end{teoEichlerNormaClases}
+
+\begin{proof}[Demostraci\'{o}n]
+	La norma reducida $B^{\times}\rightarrow K^{\times}$ induce morfismos
+	en las completaciones $B_{v}^{\times}\rightarrow K_{v}^{\times}$ y
+	una aplicaci\'{o}n $\ideles{B}\rightarrow\ideles{K}$ evaluando en
+	los puntos ad\'{e}licos. Por el teorema ???,
+	$\nrd(B^{\times})=K_{(+)}^{\times}$ y para $v\in\lugares[f]{K}$
+	finito $\nrd(\cal{O}_{v}^{\times})=\oka{K,v}^{\times}$. Con lo
+	cual se obtiene una aplicaci\'{o}n bien definida y sobreyectiva
+	\begin{align*}
+		n\,:\, & B^{\times}\backslash
+		\Idinf{B}\times\Idfin{B}/\Idinf{B}\Idfin{\cal{O}}
+		\,\twoheadrightarrow\,
+		K_{(+)}^{\times}\backslash
+		\Idinf{K}\times\Idfin{K}/\Idinf{K}\Idfin{\oka{K}}
+		\text{ ,}\quad\text{o bien} \\
+		n\,:\, & B^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}
+		\,\twoheadrightarrow\,
+		K_{(+)}^{\times}\backslash\Idfin{K}/\Idfin{\oka{K}}
+		\text{ .}
+	\end{align*}
+	%
+	El cociente de la izquierda est\'{a} en correspondencia con el
+	conjunto $\lClass{\cal{O}}$ y el de la derecha con el grupo de
+	clases $\cal{I}/\cal{P}_{B}$, donde $\cal{I}$
+	es el grupo de ideales fraccionarios de $K$ y $\cal{P}_{B}$ es el
+	subgrupo de ideales principales con generadores en
+	$K_{(+)}^{\times}=\nrd(B^{\times})$.
+	Si $B/K$ es indefinida, el grupo $B_{S}^{1}$ contiene a
+	$\SL_{2}(\bb{R})$ como alguno de sus factores y, por lo tanto,
+	no es compacto. Por el teorema ??? $B^{1}B_{S}^{1}$ es denso
+	en $\adeles{B}^{1}$. Como $\Idfin{\cal{O}}$ es abierto, el producto
+	$\Idfin{\cal{O}}\Idinf{B}$ es abierto y contiene a $B_{S}^{1}$.
+	Entonces
+	$\adeles{B}^{1}\subset B^{\times}\cdot\Idfin{\cal{O}}\Idinf{B}$
+	y $n$ resulta ser inyectiva.
+\end{proof}
+
+Expresado de otra manera, el n\'{u}cleo del morfismo suryectivo $n$ es,
+en general,
+\begin{align*}
+	& B^{\times}\backslash
+	\adeles{B}^{1}/(\Idinf{B}\Idfin{\cal{O}}\cap\adeles{B}^{1})
+	\text{ .}
+\end{align*}
+%
+Si $B\not\simeq\MM_{2\times 2}(K)$, es decir, si $B$ es de divisi\'{o}n,
+este cociente es finito: en primer lugar, al ser
+$\Idinf{B}\Idfin{\cal{O}}\cap\adeles{B}^{1}$ abierto en $\adeles{B}^{1}$,
+el cociente del segundo por el primero es discreto, y, en segundo lugar,
+como sucede con un cuerpo de n\'{u}meros, $B^{\times}$ es discreto en
+$\adeles{B}^{1}$ y el cociente $B^{\times}\backslash\adeles{B}^{1}$ es
+compacto. El n\'{u}cleo de $n$ es compacto y discreto y, por lo tanto,
+finito. cuando $B/K$ es indefinida,
+$\adeles{B}^{1}\subset B^{\times}\cdot\Idinf{B}\Idfin{\cal{O}}$, con lo
+cual el n\'{u}cleo es trivial. Por otro lado, la imagen de $n$ es
+$K_{(+)}^{\times}\backslash\Idfin{K}/\Idfin{\oka{K}}$, un grupo de clases
+de $K$ y, en consecuencia, finito.
+
+\begin{coroFinClassNum}
+	Si $B/K$ es un \'{a}lgebra de cuaterniones sobre un cuerpo de
+	n\'{u}meros (definida o indefinida, de matrices o de divisi\'{o}n)
+	y $\cal{O}\subset B$ es un orden de Eichler, el cardinal del conjunto
+	de clases $\lClass{\cal{O}}$, el \emph{n\'{u}mero de clases}
+	\index{numero de clases@n\'{u}mero de clases}
+	de $\cal{O}$, es finito.
+\end{coroFinClassNum}
+
+Otra consecuencia del teorema es que, cuando $B$ es totalmente definida,
+$K_{(+)}^{\times}=K_{+}^{\times}$, el conjunto de elementos totalmente
+positivos y obtenemos una suryecci\'{o}n del cociente
+$B^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}$ en $\pClass{K}$,
+el grupo de clases estrictas de $K$. Si $B$ es indefinida se obtiene
+una biyecci\'{o}n con un cociente de este grupo. Pero, de la demostraci\'{o}n
+del teorema, se puede ver que $\pClass{K}$ aparece si modificamos el grupo
+actuando a izquierda: si
+$B_{+}^{\times}=\{\gamma\in B^{\times}:\nrd(\gamma)\gg 0\}$,
+se obtiene una
+\begin{align*}
+	\widetilde{n}\,:\, &
+	B_{+}^{\times}\backslash\Idfin{B}/\Idfin{\cal{O}}
+	\,\twoheadrightarrow\,
+	K_{+}^{\times}\backslash\Idfin{K}/\Idfin{\oka{K}}
+\end{align*}
+%
+suryectiva, independientemente de $B$, que, si $B$ es indefinida, resutla
+una biyecci\'{o}n.
+
+% Las demostraciones de estos resultados se pueden encontrar en [Weil],
+% [Hida], [Vign\'{e}ras], \dots

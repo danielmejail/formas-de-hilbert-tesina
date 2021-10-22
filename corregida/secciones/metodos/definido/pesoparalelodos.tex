@@ -1,0 +1,206 @@
+Si $\peso{k}=\peso 2=(\lista[\null]{2}{\null})$, el $\GL_{2}(\bb{C})^{n}$-%
+m\'{o}dulo $W_{\peso{k}}(\bb{C})$ es, entonces, trivial y una forma modular
+$f\in\modularH[B]{2}{\frak{N}}$ es, simplemente, una funci\'{o}n
+$f:\,\ideales{\cal{O}}\rightarrow\bb{C}$ constante en clases de isomorfismo, es
+decir, $f(bI)=f(I)$ para todo $b\in B^{\times}$.
+% (dos ideales de $B$ son isomorfos, si uno es un m\'{u}ltiplo del otro por un
+% elemento de $B^{\times}$), es decir, $f(bI)=f(I)$ para todo $b\in B^{\times}$.
+Un ejemplo sencillo de forma modular de nivel $\cal{O}$ y peso $\peso 2$
+est\'{a} dado por la funci\'{o}n caracter\'{\i}stica de un ideal, $[I]$. De
+hecho, si $\{\lista{I}{H}\}$ es un sistema de representantes de las clases a
+izquierda, el conjunto $\{[I_{1}],\,\dots,\,[I_{H}]\}$ constituye una base de
+$\modularH[B]{2}{\frak{N}}$.
+
+Pasamos ahora a los operadores de Hecke. Tomando $f=[I]$ en
+\eqref{eq:heckeparadefinidosconideales}, obtenemos
+\begin{equation}
+	\label{eq:heckeparadefinidosconidealespesoparalelo}
+	\big(T_{\frak p}[I]\big)(I') \,=\,
+		% \sum_{t=1}^{H}\,\sum_{J\in\mathscr T_{\frak p}(I')_t}\,
+			% [I](J) \,=\,
+		% \sum_{t=1}^{H}\,\sum_{J\in\mathscr T_{\frak p}(I')_t}\,
+			% [I](J) \,=\,
+		\sum_{J\in\mathscr T_{\frak p}(I')}\,[I](J)
+	\text{ .}
+\end{equation}
+%
+
+\begin{lemaHeckeParaDefinidaNoEsAutoadjunto}
+	\label{lema:heckeparadefinidanoesautoadjunto}
+	Dados ideales $J,J'\in\ideales{\cal O}$,
+	\begin{align*}
+		J'\in\mathscr T_{\frak p}(J) & \,\Leftrightarrow\,
+			\frak p^{-1}J\in\mathscr T_{\frak p}(J')
+		\text{ .}
+	\end{align*}
+	%
+\end{lemaHeckeParaDefinidaNoEsAutoadjunto}
+
+\begin{proof}
+	Si $J'\in\mathscr T_{\frak p}(J)$, entonces $J'\supset J$ y, en
+	particular, $J{J'}^{-1}\subset\Oizq(J')$. De esto se deduce que
+	\begin{math}
+		J'J^{-1}=(J{J'}^{-1})^{-1}=
+			\nrd(J{J'}^{-1})^{-1}\,\lconj{J{J'}^{-1}}\subset
+			\frak p^{-1}\,\Oizq(J')
+	\end{math}. Esto quiere decir que
+	$(\frak p^{-1}J)^{-1}\subset {J'}^{-1}$ y que
+	$J'\subset\frak p^{-1}J$.
+	Rec\'{\i}procamente, si $\frak p^{-1}J\in\mathscr T_{\frak p}(J')$,
+	entonces $J'\subset\frak p^{-1}J$ y, en particular,
+	$J'(\frak p^{-1}J)^{-1}\subset\Oizq(J)$. De esto, se deduce que
+	\begin{math}
+		J{J'}^{-1}\subset (J'J^{-1})^{-1}=
+			\nrd(J'J^{-1})^{-1}\,\lconj{J'J^{-1}}=
+			\frak p\,\lconj{J'J^{-1}}
+	\end{math}. Pero esto es igual a $\lconj{J'(\frak p^{-1}J)^{-1}}$ que
+	est\'{a} contenido en $\Oizq(J)$. As\'{\i}, ${J'}^{-1}\subset J^{-1}$ y
+	$J\subset J'$.
+\end{proof}
+
+\begin{obsHeckeParaDefinidaNoEsAutoadjunto}
+	\label{obs:heckeparadefinidanoesautoadjunto}
+	Como consecuencia del Lema~\ref{lema:heckeparadefinidanoesautoadjunto},
+	dados $I,I'\in\ideales{\cal O}$,
+	\begin{align*}
+		\Big\{b\in B^\times \,:\,
+			b\,\frak p^{-1}I\in\mathscr T_{\frak p}(I')\Big\}
+			& \,=\,
+		\Big\{b\in B^\times \,:\,b^{-1}I'\in\mathscr T_{\frak p}(I)
+			\Big\}
+		\text{ .}
+	\end{align*}
+	%
+	En particular,
+	\begin{align*}
+		& \Big\vert\Big\{
+			J\in\mathscr T_{\frak p}(I')\,:\,J\sim \frak p^{-1}I
+				\Big\}\Big\vert\cdot w_{\frak p^{-1}I} \,=\,
+		\Big\vert\Big\{b\in B^\times\,:\,
+			b\,\frak p^{-1}I\in\mathscr T_{\frak p}(I')\Big\}/
+			\Gamma_{\frak p^{-1}I}\Big\vert\cdot w_{\frak p^{-1}I}
+				\\
+		& \qquad \,=\,
+		\Big\vert\Big\{b\in B^\times\,:\,
+			b\,\frak p^{-1}I\in\mathscr T_{\frak p}(I')\Big\}/
+			\oka F^\times\Big\vert \,=\,
+		\Big\vert\oka F^\times\backslash\Big\{b\in B^\times\,:\,
+			b^{-1}I'\in\mathscr T_{\frak p}(I)
+				\Big\}\Big\vert \\
+		& \qquad \,=\,
+		\Big\vert\Gamma_{I'}\backslash\Big\{b\in B^\times\,:\,
+			b^{-1}I'\in\mathscr T_{\frak p}(I)
+				\Big\}\Big\vert\cdot w_{I'} \,=\,
+		\Big\vert\Big\{J\in\mathscr T_{\frak p}(I)\,:\, J\sim I'
+			\Big\}\Big\vert\cdot w_{I'}
+		\text{ .}
+	\end{align*}
+	%
+\end{obsHeckeParaDefinidaNoEsAutoadjunto}
+
+% El espacio de formas modulares de peso paralelo $2$ admite un producto
+% interno (\emph{producto interno de Petersson}) dado por
+En $\modularH[B]{2}{\frak N}$ definimos el producto interno
+\index{producto interno de Petersson}
+\begin{equation}
+	\label{eq:peterssonpesoparalelodosdefinida}
+	\langle [I],[J]\rangle \,:=\,
+	\begin{cases}
+		\frac{1}{w_{I}} & \quad\text{si } [I] = [J]\text{ ,} \\
+		0 & \quad\text{si } [I]\not = [J]\text{ .}
+	\end{cases}
+\end{equation}
+%
+Con esta definici\'{o}n, la base $\{[I_{1}],\,\dots,\,[I_{H}]\}$ es una base
+ortogonal.
+% PERO $\|e_0\|not\eq H$ CON LA DEFINICI\'{O}N A CONTINUACI\'{O}N. \'{E}STA ES
+% LA DEFINICI\'{O}N NECESARIA PARA QUE LOS OPERADORES DE HECKE SEAN NORMALES
+% En general, si $\#\pClass{F}>1$, $T_{\frak p}$ no es autoadjunto.
+
+\begin{propoHeckeParaDefinidaNoEsAutoadjunto}
+	\label{propo:heckeparadefinidanoesautoadjunto}
+	% Sea $\frak p\subset\oka F$ un ideal primo tal que
+	% $(\frak p,\frak D\frak N)=1$.
+	Dados ideales $I,I'\in\ideales{\cal O}$,
+	\begin{align*}
+		\langle T_{\frak p}[\frak p^{-1}I],[I']\rangle & \,=\,
+			\langle [I],T_{\frak p}[I']\rangle
+		\text{ .}
+	\end{align*}
+	%
+\end{propoHeckeParaDefinidaNoEsAutoadjunto}
+
+\begin{proof}
+	De \eqref{eq:heckeparadefinidosconidealespesoparalelo}, deducimos que
+	\begin{align*}
+		\langle T_{\frak p}[\frak p^{-1}I],[I']\rangle \,=\,\Big(
+			\sum_{J\in\mathscr T_{\frak p}(I')}\,[\frak p^{-1}I](J)
+				\Big)\,\frac{1}{w_{I'}} & \quad\text{y}\quad
+		\langle [I],T_{\frak p}[I']\rangle \,=\,
+			\Big(\sum_{J'\in\mathscr T_{\frak p}(I)}\,
+				[I'](J')\Big)\,\frac{1}{w_{I}}
+		\text{ .}
+	\end{align*}
+	%
+	Estas dos expresiones son iguales por la Observaci\'{o}n~%
+	\ref{obs:heckeparadefinidanoesautoadjunto} y porque
+	$w_I=w_{\frak p^{-1}I}$.
+\end{proof}
+
+Dado un ideal primo $\frak{p}\subset\oka{F}$ tal que
+$(\frak{p},\frak{D}\frak{N})=1$, podemos definir el \emph{operador diamante},
+$\diamante{\frak p}$, como el operador asociado a $\hhat{p}$ por
+\eqref{eq:cuaternionicasoperadorcoclase}, donde $\hhat{p}\in\Idfin{F}$ es el
+id\`{e}le dado por un uniformizador $p\in\oka{F,\frak{p}}$ en el lugar
+$\frak{p}$ y por $1$ en $v\not=\frak{p}$. En un elemento de la base, est\'{a}
+dado por
+\index{operador diamante}
+\begin{align*}
+	\diamante{\frak{p}} [I] & \,=\, [\frak{p}I]
+	\text{ .}
+\end{align*}
+%
+Estos operadores son centrales. Adem\'{a}s,
+\begin{align*}
+	T_{\frak{p}}^{*} & \,=\, \diamante{\frak{p}}^{-1}T_{\frak{p}}
+	\text{ .}
+\end{align*}
+%
+Lo que muestra que los operadores de Hecke constituyen una familia de
+operadores normales que conmutan entre s\'{\i} y, por lo tanto, se diagonalizan
+simult\'{a}neamente.
+
+\begin{obsDiamanteParaDefinidos}\label{obs:diamanteparadefinidos}
+	Recordemos que los operadores diamante act\'{u}an trivialmente en
+	formas modulares el\'{\i}pticas para los grupos de congruencia
+	$\Gamma_{0}(N)$ y notemos que esto no sigue siendo cierto en la
+	situaci\'{o}n an\'{a}loga cuando $\#\Class{F}>1$.
+\end{obsDiamanteParaDefinidos}
+
+La funci\'{o}n constante $e_0=\sum_{[I]}\,[I]\equiv 1$ es una autofuci\'{o}n
+para $T_{\frak p}$:
+\begin{align*}
+	T_{\frak p}e_0 & \,=\,\sum_{[I]}\,\sum_{[I']}\,\Big(
+		\sum_{J\in\mathscr T_{\frak p}(I')}\,[I](J)\Big)\,[I'] \,=\,
+		\big(\idnorm\frak p+1\big)\,\sum_{[I']}\,[I']
+	\text{ .}
+\end{align*}
+%
+Tambi\'{e}n es una autofunci\'{o}n para $T_{\frak p}^*$, pues
+$\diamante{\frak p}e_0=\sum_{[I]}\,[\frak pI]$, pero $I\mapsto\frak pI$ es una
+permutaci\'{o}n de las clases en $\lClass{\cal O}$.
+
+\begin{defFormaCuspidalDefinida}\label{def:formacuspidaldefinida}
+	Una forma modular cuaterni\'{o}nica
+	$f\in\modularH[B]{2}{\frak{N}}$ se dice \emph{cuspidal},
+	\index{forma modular!cuaternionica@cuaterni\'{o}nica!cuspidal} si $f$
+	es ortogonal al subespacio generado por la forma $e_0$.
+	\begin{align*}
+		\spitzH[B]{2}{\frak{N}} & \,=\,
+			\Big\{ f\in\modularH[B]{2}{\frak{N}}\,:\,
+					\langle f,e_0\rangle =0\Big\}
+		\text{ .}
+	\end{align*}
+	%
+\end{defFormaCuspidalDefinida}
+

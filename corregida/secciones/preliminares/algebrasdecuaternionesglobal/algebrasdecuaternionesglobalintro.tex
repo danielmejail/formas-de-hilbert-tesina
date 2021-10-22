@@ -1,0 +1,46 @@
+% Pasamos ahora a describir algunos aspectos de los \'{o}rdenes y de los ideales
+% de un \'{a}lgebra de cuaterniones sobre un cuerpo global, teniendo en cuenta lo
+% que sucede en el caso local.
+% 
+Sean $K/\bb{Q}$ un cuerpo de n\'{u}meros, $S\subset\lugares{K}$ un subconjunto
+finito de lugares que contiene $\lugares[\infty]{K}$, $E/K$ un $K$-espacio
+vectorial de dimensi\'{o}n finita y $L\subset E$ un $\oka{K}(S)$-ret\'{\i}culo.
+Para cada lugar $v\in\lugares{K}$, sean
+\begin{align*}
+	E_{v}\,=\,E\tensor[K]{K_{v}} & \qquad\text{y}\qquad
+		L_{v}\,=\,L\otimes_{\oka{K}(S)}\oka{K,v}
+\end{align*}
+%
+el espacio vectorial sobre la completaci\'{o}n $K_{v}$ determinado por
+extensi\'{o}n de escalares y, respectivamente, el $\oka{K,v}$-ret\'{\i}culo en
+$E_{v}$ generado por $L$, su clausura ($L_{v}$ s\'{o}lo est\'{a} definido para
+$v\in\lugares[f]{K}\setmin S$). Si $M_{v}$ es un ret\'{\i}culo en $E_{v}$,
+decimos que $M_{v}$ es un \emph{ret\'{\i}culo local}. Para enfatizar que $L$ es
+un ret\'{\i}culo en el espacio sobre $K$, decimos que $L$ es un
+\emph{ret\'{\i}culo global}. Si $x\in E$, denotamos por $x_{v}$ su imagen en
+$E_{v}$, es decir, $x_{v}=x\otimes 1$.
+
+\begin{propoLocalGlobalLattices}\label{propo:localgloballattices}
+	Sea $E/K$ un espacio vectorial sobre $K$ y sean $L_{0}$ y $L$
+	ret\'{\i}culos en $E$. Entonces
+	\begin{itemize}
+		\item[(i)]
+			\begin{math}
+				L=\bigcap_{v\in\lugares[f]{K}\setmin S}\,
+					E\cap L_{v}
+			\end{math}
+			y
+		\item[(ii)] $L_{v}=L_{0,v}$ para casi todo
+			$v\in\lugares[f]{K}\setmin S$.
+	\end{itemize}
+	%
+	Adem\'{a}s, (iii) si $\{M_{v}\}_{v\in\lugares[f]{K}\setmin S}$ es una
+	familia de ret\'{\i}culos locales tales que $M_{v}=L_{0,v}$ para casi
+	todo $v$, existe un (\'{u}nico) ret\'{\i}culo global $L'\subset E$ tal
+	que $L_{v}'=M_{v}$ para todo $v\in\lugares[f]{K}\setmin S$.
+\end{propoLocalGlobalLattices}
+% 
+% \begin{proof}
+	% Ver \cite[Ch.~V, \S~2, Thm.~2]{WeilBasic}.
+% \end{proof}
+

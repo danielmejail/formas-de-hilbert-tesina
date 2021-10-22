@@ -1,0 +1,308 @@
+A continuaci\'{o}n mostramos que las formas modulares cuaterni\'{o}nicas, como
+las formas modulares de Hilbert, tienen una contraparte ad\'{e}lica. El rol que
+ocupaba el grupo ${\GL_{2}}_{/F}$ es en este caso ocupado por el grupo de
+unidades de un \'{a}lgebra de cuaterniones de divisi\'{o}n.
+
+\subsection{Caso indefinido}
+Supongamos que $B$ es un \'{a}lgebra indefinida y sea
+\begin{math}
+	f :\,(\hP^{\pm})^{r}\times(\Idfin{B}/\Idfin{\cal{O}})\rightarrow
+		W_{\peso{k}}
+\end{math} tal que $f\operadormatrices{\peso{k}}{\gamma}=f$ para toda
+$\gamma\in B^{\times}$. Definimos una funci\'{o}n
+\begin{math}
+	\phi_{f} :\,\Idinf{B}\times\Idfin{B}\rightarrow W_{\peso{k}}
+\end{math}
+por
+\begin{equation}
+	\label{eq:funcionadelicacorrespondienteindefinida}
+	\phi_{f}(g,\hhat{\alpha}) \,=\,
+		\bigg(\prod_{i=1}^{r}\,J_{i}(g_{i},\sqrt{-1})^{-1}\bigg)\,
+		f(g\cdot\mathbf{i},\hhat{\alpha}\Idfin{\cal{O}})^{g}
+	\text{ .}
+\end{equation}
+%
+
+Dada $\phi:\,\Idinf{B}\times\Idfin{B}\rightarrow W_{\peso{k}}$ y un elemento
+$(h,\hhat{\beta})\in\Idinf{B}\times\Idfin{B}$, definimos
+\begin{equation}
+	\label{eq:adelicaindefinidaoperadordepesok}
+	\big(\phi\operadormatrices{\peso{k}}{(h,\hhat{\beta})}\big)
+		(g,\hhat{\alpha}) \,=\,
+		\bigg(\prod_{i=1}^{r}\,J_{i}(h_{i},\sqrt{-1})^{-1}\bigg)\,
+		\phi(gh^{-1},\hhat{\alpha}\hhat{\beta}^{-1})^{h}
+	\text{ .}
+\end{equation}
+%
+Entonces, la funci\'{o}n $\phi_{f}$ satisface
+\begin{itemize}
+	\item[I]
+		\begin{math}
+			\phi_{f}\operadormatrices{\peso{k}}{(h,\hhat{\beta})}=
+				\phi_{f}
+		\end{math}
+		para toda $h\in  C^{B}_{\mathbf{i}}$ y
+		$\hhat{\beta}\in\Idfin{\cal{O}}$ y
+	\item[II]
+		\begin{math}
+			\phi_{f}(\gamma g,\gamma\hhat{\alpha})=
+				\phi_{f}(g,\hhat{\alpha})
+		\end{math}
+		para toda $\gamma\in B^{\times}$.
+\end{itemize}
+%
+En cuanto a I, por \eqref{eq:funcionadelicacorrespondienteindefinida} y
+\eqref{eq:adelicaindefinidaoperadordepesok},
+\begin{align*}
+	& \big(\phi_{f}\operadormatrices{\peso{k}}{(h,\hhat{\beta})}\big)
+		(g,\hhat{\alpha}) \,=\,
+		\bigg(\prod_{i=1}^{r}\,J_{i}(h_{i},\sqrt{-1})^{-1}\bigg)\,
+			\phi_{f}(gh^{-1},\hhat{\alpha}\hhat{\beta}^{-1})^{h} \\
+	& \qquad\qquad\,=\,
+		\bigg(\prod_{i=1}^{r}\,J_{i}(h_{i},\sqrt{-1})^{-1}
+		J_{i}(g_{i}h_{i}^{-1},\sqrt{-1})^{-1}\bigg)\,
+		f(gh^{-1}\cdot\mathbf{i},
+		\hhat{\alpha}\hhat{\beta}^{-1}\Idfin{\cal{O}})^{(gh^{-1})\,h}
+	\text{ .}
+\end{align*}
+%
+Si $h\in C^{B}_{\mathbf{i}}$ y $\hhat{\beta}\in\Idfin{\cal{O}}$, esto es
+igual a $\phi_{f}(g,\hhat{\alpha})$ de lo que se deduce I. En cuanto a II,
+\begin{align*}
+	\phi_{f}(\gamma g,\gamma\hhat{\alpha})
+	% & \,=\,\bigg(\prod_{i=1}^{r}\,
+		% J_{i}(\gamma_{i}g_{i},\sqrt{-1})^{-1}\bigg)\,
+		% f(\gamma g\cdot\mathbf{i},
+			% \gamma\hhat{\alpha}\Idfin{\cal{O}})^{\gamma g} \\
+	& \,=\,\bigg(\prod_{i=1}^{r}\,J_{i}(g_{i},\sqrt{-1})^{-1}\bigg)\,
+		\bigg\{\bigg(\prod_{i=1}^{r}\,J_{i}(\gamma_{i},z_{i})^{-1}
+			\bigg)\,f(\gamma z,\gamma\hhat{\alpha}\Idfin{\cal{O}}
+				)^{\gamma}\bigg\}^{g}
+	\text{ ,}
+\end{align*}
+%
+donde $z=g\cdot\mathbf{i}$. Si $\gamma\in B^{\times}$, por
+\eqref{eq:indefinidaoperadordepesok} y
+$f\operadormatrices{\peso{k}}{\gamma}=f$, esta expresi\'{o}n es igual a
+$\phi_{f}(g,\hhat{\alpha})$.
+
+Rec\'{\i}procamente, si
+\begin{math}
+	\phi:\,\Idinf{B}\times\Idfin{B}\rightarrow W_{\peso{k}}
+\end{math}
+es una funci\'{o}n que cumple con I y II, entonces la expresi\'{o}n
+\begin{align*}
+	f_{\phi}(z,\hhat{\alpha}\Idfin{\cal{O}}) & \,=\,
+		\bigg(\prod_{i=1}^{r}\,J_{i}(g_{i},\sqrt{-1})\bigg)\,
+			\phi(g,\hhat{\alpha})^{g^{-1}}
+\end{align*}
+%
+define una funci\'{o}n
+\begin{math}
+	f_{\phi}:\,(\hP^{\pm})^{r}\times(\Idfin{B}/\Idfin{\cal{O}})
+		\rightarrow W_{\peso{k}}
+\end{math}
+(por I, $f_{\phi}$ est\'{a} bien definida) que verifica
+$f_{\phi}\operadormatrices{\peso{k}}{\gamma}=f_{\phi}$ para
+$\gamma\in B^{\times}$ (por II).
+
+\subsection{Caso definido}
+Si $B$ es un \'{a}lgebra definida, al no haber acci\'{o}n en el semiplano, la
+construcci\'{o}n anterior se simplifica. Sea
+ $f:\,\Idfin{B}/\Idfin{\cal{O}}\rightarrow W_{\peso{k}}$ una funci\'{o}n tal
+que $f\operadormatrices{\peso{k}}{\gamma}=f$ para $\gamma\in B^{\times}$ (la
+acci\'{o}n est\'{a} dada por la expresi\'{o}n
+\eqref{eq:definidaoperadordepesok}) y sea
+$\phi_{f}:\,\Idinf{B}\times\Idfin{B}\rightarrow W_{\peso{k}}$ la funci\'{o}n
+dada por
+\begin{equation}
+	\label{eq:funcionadelicacorrespondientedefinida}
+	\phi_{f}(g,\hhat{\alpha}) \,=\,f(\hhat{\alpha}\Idfin{\cal{O}})^{g}
+	\text{ .}
+\end{equation}
+%
+Como en el caso indefinido introducimos un operador de peso $\peso{k}$. Dada
+una funci\'{o}n $\phi:\,\Idinf{B}\times\Idfin{B}\rightarrow W_{\peso{k}}$ y
+$(h,\hhat{\beta})\in\Idinf{B}\times\Idfin{B}$, sea
+$\phi\operadormatrices{\peso{k}}{(h,\hhat{\beta})}$ la funci\'{o}n dada por
+\begin{equation}
+	\label{eq:adelicadefinidaoperadordepesok}
+	\big(\phi\operadormatrices{\peso{k}}{(h,\hhat{\beta})}\big)
+		(g,\hhat{\alpha}) \,=\,
+		\phi(gh^{-1},\hhat{\alpha}\hhat{\beta}^{-1})^{h}
+	\text{ .}
+\end{equation}
+%
+Con estas definiciones, si $f\operadormatrices{\peso{k}}{\gamma}=f$ para
+$\gamma\in B^{\times}$, vale tambi\'{e}n que
+\begin{itemize}
+	\item[I]
+		\begin{math}
+			\phi_{f}\operadormatrices{\peso{k}}{(h,\hhat{\beta})}=
+				\phi_{f}
+		\end{math}
+		para toda $h\in\Idinf{B}$ y $\hhat{\beta}\in\Idfin{\cal{O}}$ y
+	\item[II]
+		\begin{math}
+			\phi_{f}(\gamma g,\gamma\hhat{\alpha})=
+				\phi_{f}(g,\hhat{\alpha})
+		\end{math}
+		para toda $\gamma\in B^{\times}$.
+\end{itemize}
+%
+Equivalentemente, $\phi_{f}$ satisface
+\begin{align*}
+	\phi_{f}(gh,\hhat{\alpha}) \,=\, \phi_{f}(g,\hhat{\alpha})^{h}
+		& \quad\text{,}\quad
+	\phi_{f}(g,\hhat{\alpha}\hhat{\beta})\,=\,\phi_{f}(g,\hhat{\alpha})
+		\quad\text{y} \quad
+	\phi_{f}(\gamma g,\gamma\hhat{\alpha}) \,=\,\phi_{f}(g,\hhat{\alpha})
+\end{align*}
+%
+para $h\in\Idinf{B}$, $\hhat{\beta}\in\Idfin{\cal{O}}$ y
+$\gamma\in B^{\times}$. Rec\'{\i}procamente, si
+$\phi:\,\Idinf{B}\times\Idfin{B}\rightarrow W_{\peso{k}}$ satisface estas
+condiciones, entonces la expresi\'{o}n
+\begin{align*}
+	f_{\phi}(\hhat{\alpha}\Idfin{\cal{O}}) & \,=\,
+		\phi(g,\hhat{\alpha})^{g^{-1}}
+\end{align*}
+%
+define una funci\'{o}n
+\begin{math}
+	f_{\phi}:\,\Idfin{B}/\Idfin{\cal{O}}\rightarrow W_{\peso{k}}
+\end{math}~que cumple que
+\begin{math}
+	f_{\phi}\operadormatrices{\peso{k}}{\gamma}=f_{\phi}
+\end{math}~para $\gamma\in B^{\times}$. En particular, para cada
+$\hhat{\alpha}\in\Idfin{B}$ y cada
+\begin{math}
+	\gamma\in\Gamma_{\hhat{\alpha}}=
+		(\hhat{\alpha}\Idfin{\cal{O}}\hhat{\alpha}^{-1})\cap B^{\times}
+\end{math}~,
+\begin{align*}
+	\phi(1,\hhat{\alpha})^{\gamma} & \,=\,
+		\phi(\gamma,\gamma\hhat{\alpha}) \,=\,\phi(1,\hhat{\alpha})
+	\text{ .}
+\end{align*}
+%
+
+\subsection{Formas automorfas}%\label{subsec:formasautomorfascuaternionicas}
+Sea, ahora, $B/F$ un \'{a}lgebra de cuaterniones de divisi\'{o}n, definida o
+indefinida. Sea $\cal{O}\subset B$ un orden de Eichler. A cada lugar
+arquimediano $v\in\lugares[\infty]{F}$ le asociamos un grupo compacto $K_{v}$
+de la siguiente manera:
+\begin{align*}
+	K_{v} & \,=\,
+		\begin{cases}
+			\SO{2} & \quad\text{si }v
+				\text{ es no ramificado} \\
+			\bb{H}^{1} & \quad\text{si }v
+				\text{ es ramificado}
+		\end{cases}
+	\text{ .}
+\end{align*}
+%
+Sea $K_{\infty}=\prod_{v\in\lugares[\infty]{F}}\,K_{v}$ el producto de estos
+grupos. Entonces $K_{\infty}$ es un subgrupo compacto y conexo de la parte
+arquimediana $\Idinf{B}$ de $\ideles{B}$ (si $B$ es indefinida, es el subgrupo
+compacto conexo maximal del estabilizador
+$C^{B}_{\mathbf{i}}=\centre(\bb{R})\cdot K_{\infty}$).
+
+\begin{defFormaAutomorfa}[\cite{HarrisAGrA}]\label{def:formaautomorfa}
+	Una funci\'{o}n
+	\begin{math}
+		\phi:\,\ideles{B}=\Idinf{B}\times\Idfin{B}\rightarrow\bb{C}
+	\end{math} es una \emph{forma automorfa de nivel $\Idfin{\cal{O}}$}, si
+	es $C^{\infty}$ en la primera variable y localmente constante en la
+	segunda y:\index{forma automorfa}
+	\begin{itemize}
+		\item[(i)] $\phi(\gamma g)=\phi(g)$ para todo
+			$\gamma\in B^{\times}$,
+		\item[(ii)] $\phi(g\hhat{\beta})=\phi(g)$ si
+			$\hhat{\beta}\in\Idfin{\cal{O}}$,
+		\item[(iii)] $\phi$ es $K_{\infty}$-finita y
+			$\centre$-finita, es decir, el espacio generado por
+			las funciones $g\mapsto\phi(\eta gh)$
+			con $h\in K_{\infty}$ y $\eta\in\centre(\adeles{F})$,
+			es de dimensi\'{o}n finita,
+			% \item[iv)] $\phi$ es soluci\'{o}n de las ecuaciones
+			% diferenciales
+			% \begin{align*}
+				% \Delta_{i}\phi=-\frac{k_{i}}{2}
+				% \left(\frac{k_{i}}{2}-1\right)\phi
+				% \text{ ,}
+			% \end{align*}
+			% %
+			% donde $\Delta_{i}$ es el elemento de Casimir en
+			% $U(\mathit{Lie}(B_{v_{i}}^{\times}))$, (la
+			% complexificaci\'{o}n de) el \'{a}lgebra envolvente
+			% del \'{a}lgebra de Lie de
+			% $B_{v_{i}}^{\times}\simeq\GL_{2}(\bb{R})$ para
+			% cada lugar $v_{i}$ que no ramifica
+			% ($i=1,\,\dots,\,r$).
+		\item[(iv)] si
+			\begin{math}
+				\Delta_{i}\in U(\mathit{Lie}(
+					B_{v_{i}}^{\times}))
+			\end{math}
+			es el elemento de Casimir en (la complexificaci\'{o}n
+			de) el \'{a}lgebra envolvente del \'{a}lgebra de Lie de
+			$B_{v_{i}}^{\times}\simeq\GL_{2}(\bb{R})$ para cada
+			lugar $v_{i}$ que no ramifica ($i=1,\,\dots,\,r$),
+			entonces la \'{o}rbita de $\phi$ por la acci\'{o}n de
+			estos operadores est\'{a} contenida en un subespacio de
+			dimensi\'{o}n finita de $C(\ideles{B})$.
+			% el espacio generado por las funciones que se obtienen
+			% aplicando los operadores $\Delta_{i}$ a $\phi$ es
+			% de dimensi\'{o}n finita.
+	\end{itemize}
+	M\'{a}s generalmente, dado un espacio vectorial complejo $W$,
+	una funci\'{o}n $\phi:\,\ideles{B}\rightarrow W$ se dice
+	forma automorfa de nivel $\Idfin{\cal{O}}$, si para toda funcional
+	lineal $\lambda:\,W\rightarrow\bb{C}$, $\lambda\circ\phi$ es una
+	forma de ese tipo.
+\end{defFormaAutomorfa}
+
+% La condi\'{o}n \textit{(iv)} se puede expresar en t\'{e}rminos un poco
+% m\'{a}s generales diciendo que la \'{o}rbita de $\phi$ por la acci\'{o}n
+% del centro del \'{a}lgebra envolvente genera un espacio de dimensi\'{o}n
+% finita.
+%
+% Si $B\simeq\MM_{2\times 2}(F)$ hay que agregar una condici\'{o}n de
+% crecimiento moderado.
+% Cuando $B\not\simeq\MM_{2\times 2}(F)$, es decir, cuando $B$ es de divisi\'{o}n
+% (indefinida o no), la condici\'{o}n de crecimiento moderado es redundante
+% pues la variedad de Shimura asociada es compacta.
+
+\begin{propoFormasModularesComoFormasAutomorfas}[\cite{HarrisAGrA}]%
+	\label{thm:formasmodularescomoformasautomorfas}
+	La aplicaci\'{o}n $f\mapsto\phi_{f}$ determina una correspondencia
+	entre formas modulares de peso $\peso{k}$ y nivel $\Idfin{\cal{O}}$
+	y formas automorfas
+	\begin{math}
+		\phi:\,\ideles{B}\rightarrow W_{\peso{k}}(\bb{C})
+	\end{math}
+	que satisfacen \textrm{I} y \textrm{II} y, para cada lugar arquimediano
+	no ramificado $v_{i}$,
+	\begin{align*}
+		d\rho X^{-}_{i}\phi & \,=\, 0
+		\text{ ,}
+	\end{align*}
+	%
+	donde
+	\begin{math}
+		\rho:\,\Idinf{B}\rightarrow\mathrm{Aut}(C^{\infty}(\Idinf{B}))
+	\end{math}
+	es la representaci\'{o}n regular a derecha y $X^{-}_{i}$ es el
+	elemento de
+	\begin{math}
+		\frak{gl}(2,\bb{C})\simeq
+			\mathit{Lie}(B_{v_{i}}^{\times})\otimes_{\bb{R}}\bb{C}
+	\end{math}
+	dado por la matriz
+	\begin{math}
+		\begin{bmatrix} 1 & -i \\ -i & -1 \end{bmatrix}
+	\end{math}~.
+\end{propoFormasModularesComoFormasAutomorfas}
+

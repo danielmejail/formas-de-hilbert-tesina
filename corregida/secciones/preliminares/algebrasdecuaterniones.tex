@@ -1,0 +1,234 @@
+Sea $K$ un cuerpo. Un \emph{\'{a}lgebra de cuaterniones sobre $K$}
+\index{algebra de cuaterniones@\'{a}lgebra de cuaterniones}
+es un \'{a}lgebra central de dimensi\'{o}n cuatro sobre $K$ con la siguiente
+propiedad:
+\begin{quote}
+	existen $L\subset B$ un $K$-\'{a}lgebra separable de dimensi\'{o}n dos
+	sobre $K$, $\theta\in K^{\times}$ y $u\in B$ de manera que
+	$B=L\oplus uL$, $u^{2}=\theta$ y $mu=u\conj{m}$, para todo $m\in L$,
+\end{quote}
+donde $\iota:\,m\mapsto \conj{m}$ es el $K$-automorfismo no trivial de $L/K$.
+Escribimos $B=\quatalg{L,\theta}$ para indicar que $B$ se obtiene a partir de
+$L$ y de $\theta$ de esta manera. Toda \'{a}lgebra de cuaterniones sobre un
+cuerpo $K$ es un \'{a}lgebra central simple (sobre $K$); rec\'{\i}procamente,
+toda \'{a}lgebra central simple de dimensi\'{o}n cuatro sobre $K$ es un
+\'{a}lgebra de cuaterniones.
+
+Sea $B=\quatalg{L,\theta}$ un \'{a}lgebra de cuaterniones sobre el cuerpo $K$.
+La \emph{conjugaci\'{o}n} en $B$\index{conjugacion@conjugaci\'{o}n}
+es la transformaci\'{o}n $K$-lineal $\iota$ de $B$ determinada por
+\begin{equation}
+	\label{eq:conjugacioncuaterniones}
+	\iota(\iota(b))\,=\,b \quad\text{,}\quad
+	\iota(bb_{1}) \,=\,\iota(b_{1})\iota(b) \quad\text{y}\quad
+	\iota(u)\,=\,-u
+	\text{ .}
+\end{equation}
+%
+Denotamos el \emph{conjugado}\index{conjugado}
+$\iota(b)$ de $b$ en $B$ por $\conj{b}$ y se verifica que
+$\conj{b}=\conj{m}-un$, si $b=m+un$ con $m,n\in L$.
+
+El producto de dos elementos $b=m+un$, $b_{1}=m_{1}+un_{1}$ est\'{a} dado por
+\begin{equation}
+	\label{eq:productocuaterniones}
+	bb_{1} \,=\,(m+un)\cdot (m_{1}+un_{1}) \,=\,
+		(\theta\conj{n}n_{1}+mm_{1})\,+\,u\,(\conj{m}n_{1}+nm_{1})
+	\text{ .}
+\end{equation}
+%
+La \emph{norma reducida} de un elemento $b\in B$ se define como
+$\nrd(b)=b\conj{b}$ y su \emph{traza reducida} es $\trd(b)=b+\conj{b}$.
+\index{norma reducida}\index{traza reducida}
+Si $b=m+un$, entonces
+\begin{equation}
+	\label{eq:normaytrazacuaterniones}
+	\nrd(b) \,=\,-\theta\conj{n}n+m\conj{m}	\quad\text{y}\quad
+		\trd(b) \,=\,m+\conj{m}
+	\text{ .}
+\end{equation}
+%
+En particular, $\nrd(b)$ y $\trd(b)$ son elementos del cuerpo $K$. Todo
+elemento $b\in B$ es soluci\'{o}n de un polinomio cuadr\'{a}tico con
+coeficientes en $K$:
+\begin{align*}
+	\mathsf{m}_{b} & \,=\,X^{2}-\trd(b)\,X+\nrd(b) \,=\,(X-b)\,(X-\conj{b})
+	\text{ ,}
+\end{align*}
+%
+su \emph{polinomio minimal}.\index{polinomio minimal}
+
+\begin{lemaNormaYTrazaCuaterniones}\label{lema:normaytrazacuaterniones}
+	Las unidades del \'{a}lgebra $B$ son, exactamente, los elementos de
+	norma reducida no nula:
+	\begin{align*}
+		B^{\times} & \,=\,\big\{\nrd\not=0\big\}
+		\text{ .}
+	\end{align*}
+	%
+	Adem\'{a}s, la restricci\'{o}n a $B^{\times}$ determina un morfismo de
+	grupos $\nrd :\,B^{\times}\rightarrow K^{\times}$, al que tambi\'{e}n
+	se denomina \emph{norma reducida}. Por otra parte, la traza reducida es
+	una transformaci\'{o}n $K$-lineal $\trd:\,B\rightarrow K$ y la
+	aplicaci\'{o}n
+	\begin{align*}
+		\phi(b,b_{1}) & \,=\,\trd(bb_{1})
+	\end{align*}
+	%
+	es una forma $K$-bilineal no degenerada.
+\end{lemaNormaYTrazaCuaterniones}
+
+Sea $H/K$ un espacio vectorial de dimensi\'{o}n cuatro con base
+$\{1,i,j,k\}$ y sean $a,b\in K\setmin \{0\}$. Bajo las relaciones
+$ji=k$, $1\cdot h=h$ para todo $h\in H$,
+\begin{align*}
+	i^2 \,=\,1\cdot a & \quad\text{,}\quad
+		j^2 \,=\,1\cdot b\quad\text{y}\quad
+		ij \,=\,-ji
+	\text{ ,}
+\end{align*}
+%
+el espacio $H$ se vuelve una $K$-\'{a}lgebra. Si la caracter\'{\i}stica de $K$
+es distinta de $2$, $H$ tiene estructura de \'{a}lgebra de cuaterniones sobre
+$K$: si $L=K(i)$, $\theta=b$ y $u=j$, entonces $H=\quatalg{L,\theta}$.
+% Si la caracter\'{\i}stica de $K$ es $2$, $H$ es conmutativa (en particular,
+% todo ideal es bil\'{a}tero y el centro contiene propiamente a $K$
+Si $h=x_{1}+ix_{2}+jx_{3}+kx_{4}\in H$, entonces $h=m+un$, con
+$m=x_{1}+ix_{2}$ y $n=x_{3}+ix_{4}$ en $L$. El conjugado, la norma reducida y
+la traza reducida de $h$ est\'{a}n dados por
+\begin{align*}
+	\conj{h} & \,=\,\conj{m}-un\,=\,
+		% (x_{1}-ix_{2})\,-\,j\,(x_{3}+ix_{4})\,=\,
+		x_{1}-ix_{2}-jx_{3}-kx_{4} \text{ ,} \\
+	\nrd(h) & \,=\,-\theta\conj{n}n+m\conj{m} \,=\,
+		% -b(x_{3}^{2}-ax_{4})\,+\,(x_{1}^{2}-ax_{2}^{2}) \,=\,
+		x_{1}^{2}-ax_{2}^{2}-bx_{3}^{2}+abx_{4}^{2} \quad\text{y} \\
+	\trd(h) & \,=\, m+\conj{m} \,=\,
+		% (x_{1}+ix_{2})\,+\,(x_{1}-ix_{2}) \,=\,
+		2x_{1}
+	\text{ .}
+\end{align*}
+%
+La aplicaci\'{o}n forma bilineal $\phi(h,h_{1})=\trd(hh_{1})$ restringida a $L$
+es no degenerada. Si $m=x+iy,m_{1}=x_{1}+iy_{1}\in L$, entonces
+$\trd(mm_{1})=mm_{1}+\lconj{mm_{1}}=2(xx_{1}+ayy_{1})$. Eligiendo $m=x_{1}$,
+si $x_{1}\not =0$, o bien $m=iy_{1}$, si $x_{1}=0$, se comprueba que
+$\trd(mm_{1})$ es no nula.
+%
+Si la caracter\'{\i}stica de $K$ es $2$, se obtiene un \'{a}lgebra de
+cuaterniones imponiendo las relaciones
+\begin{align*}
+	i^2 + i\,=\, 1\cdot a & \quad\text{,}\quad
+	j^2\,=\,1\cdot b \quad\text{y}\quad
+	ij\,=\,j\,(i+1)
+	\text{ .}
+\end{align*}
+%
+Si un \'{a}lgebra de cuaterniones $H/K$ est\'{a} dada de esta manera,
+escribimos $H=\varquatalg[K]{a,b}$.
+
+%\paragraph{Ejemplo}
+\begin{ejemploMatrices}\label{ejemplo:matrices}
+	El \'{a}lgebra de matrices $B=\MM_{2\times 2}(K)$ con coeficientes en
+	un cuerpo $K$ es un \'{a}lgebra de cuaterniones sobre $K$. El cuerpo
+	$K$ se identifica con las matrices escalares $I\cdot a$. Dada un matriz
+	\begin{math}
+		\gamma=\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+	\end{math}~,
+	la adjunta de $\gamma$ es la matriz
+	\begin{align*}
+		\gamma^\iota & \,=\,
+			\begin{bmatrix} d & -b \\
+			-c & a \end{bmatrix}
+		\text{ .}
+	\end{align*}
+	%
+	Vales que $\gamma\gamma^\iota=\det(\gamma)$ y que
+	$\gamma+\gamma^\iota=\traza(\gamma)$. El polinomio caracter\'{\i}stico
+	de $\gamma$ est\'{a} dado por
+	\begin{math}
+		(X-\gamma)\,(X-\gamma^\iota)=
+			X^{2}-\traza(\gamma)\,X+\det(\gamma)
+	\end{math}~.
+	En particular, $\gamma$ y $\gamma^\iota$ poseen los mismos autovalores
+	y son similares.
+	Si la caracter\'{\i}stica de $K$ es distinta de $2$, tomamos
+	\begin{align*}
+		i\,=\,\begin{bmatrix} -1 & \\ & 1 \end{bmatrix} &
+			\quad\text{y}\quad
+		j \,=\,\begin{bmatrix} & 1 \\ 1 & \end{bmatrix}
+		\text{ .}
+	\end{align*}
+	%
+	Si la caracter\'{\i}stica de $K$ es $2$, tomamos
+	\begin{align*}
+		i\,=\,\begin{bmatrix} 1 & 1 \\ 1 & \end{bmatrix}
+			& \quad\text{y}\quad
+		j\,=\,\begin{bmatrix} & 1 \\ 1 & \end{bmatrix}
+		\text{ .}
+	\end{align*}
+	%
+	En ambos casos, se obtiene un \'{a}lgebra de cuaterniones. Notamos que
+	el conjugado, la norma reducida y la traza reducida se realizan,
+	respectivamente, como la matriz adjunta, el determinante y la traza
+	usuales. El $K$-automorfismo no trivial de $L=K(i)$ est\'{a} dado por
+	el automorfismo interior $x\mapsto jxj^{-1}$.
+
+	Si la caracter\'{\i}stica es distinta de $2$, tambi\'{e}n podemos
+	elegir una matriz $m$ de autovalores distintos (no nulos) y
+	$u\in\GL_{2}(K)$ tal que $um^\iota u^{-1}=m$. En particular, si
+	definimos $L:=K(m)$, vale $nu=un^\iota$ para toda $n\in L$. La igualdad
+	$\traza(un)=un+n^\iota u^\iota=n^\iota\traza(u)$, v\'{a}lida para
+	$n\in L$, implica $\traza(u)=0$ y $u^\iota =-u$. Como
+	$uu^\iota=\det(u)\in K^{\times}$, se deduce que
+	$\theta=u^2\in K^{\times}$.
+\end{ejemploMatrices}
+
+Sea $F/K$ una extensi\'{o}n finita de cuerpos y sea $B=\quatalg{L,\theta}$ un
+\'{a}legbra de cuaterniones sobre $K$. Tomando producto tensorial sobre $K$, se
+obtiene un \'{a}lgebra de cuaterniones sobre $F$:
+$B\tensor[K]F=\quatalg{L,\theta}\otimes_{K}F$. Denotamos este \'{a}lgebra por
+$B_{F}$. Se cumple que
+\begin{align*}
+	B_{F} & \,=\,\quatalg{L\tensor[K] F,\theta}
+	\text{ .}
+\end{align*}
+%
+% Se dice que $F$ es un cuerpo de descomposici\'{o}n para $B$, si
+% $B_{F}\simeq\MM_{2\times 2}(F)$; los posibles isomorfismos se denominan
+% $F$-representaciones de $B$
+
+% Sea $B=\varquatalg[K]{a,b}$ un \'{a}lgebra de cuaterniones sobre $K$. Si $a$
+% es un cuadrado en $K^{\times}$, queda $B\simeq\MM_{2\times 2}(K)$. Si no,
+% tomamos $L=K(i)$ con $i^{2}=a$ (si $\mathrm{char}(K)\not=2$).
+% y $(a,b)_{K}$ es una sub\'{a}lgebra de $(a,b)_{L}=(a,b)_{K}\otimes L$.
+% Entonces podemos describir a $(a,b)_{K}$ de la siguiente manera:
+% \begin{align*}
+	% (a,b)_{K} & \,\simeq\, \left\lbrace \begin{bmatrix} u & v \\
+			% b\conj{v} & \conj{u} \end{bmatrix}
+		% \,:\, u,v\in L\right\rbrace
+% \end{align*}
+% %
+% en tanto $K$-\'{a}lgebras. Entonces $B=L\oplus jL$. Como en el Ejemplo
+% \ref{ejemplo:matrices}, $K$ se identifica con las matrices escalares
+% $I\cdot x_{0}$, $x_{0}\in K$, la extensi\'{o}n $L/K$ es una $K$-\'{a}lgebra de
+% divisi\'{o}n conmutativa maximal contenida en $B$ y se identifica con las
+% matrices de la forma
+% \begin{math}
+	% \begin{bmatrix} u & \\ & \conj{u}\end{bmatrix}
+% \end{math}
+% con $u\in L$ y
+% \begin{math}
+	% j=\begin{bmatrix} & 1 \\ b & \end{bmatrix}
+% \end{math}~.
+% Si $x=x_{0}+x_{1}i+x_{2}j+x_{3}k=u+j\conj{v}\in B$, entonces
+% \begin{align*}
+	% \conj{x} & \,=\, x_{0} - x_{1} i - x_{2} j - x_{3} k
+		% \,=\, \conj{u} - j\conj{v}\text{ ,} \\
+	% \trd(x) & \,=\, 2x_{0}
+		% \,=\, u + \conj{u} \quad\text{y} \\
+	% \nrd(x) & \,=\, x_{0}^{2} - a x_{1}^{2} - b x_{2}^{2} + ab x_{3}^{2}
+		% \,=\,u\conj u - b v\conj v
+	% \text{ .}
+% \end{align*}
+% %

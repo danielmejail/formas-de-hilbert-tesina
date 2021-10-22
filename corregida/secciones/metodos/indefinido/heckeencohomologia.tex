@@ -1,0 +1,279 @@
+Sea $\frak{p}$ un ideal primo de $\oka{F}$ que no divide a $\frak{D}\frak{N}$ y
+sean $\frak{a}$ y $\frak{b}$ representantes que cumplen con
+$[\frak{b}]=[\frak{a}\frak{p}^{-1}]$. Si
+$f\in\spitzH[B]{k}{\frak{N},\frak{b}}$, el operador de Hecke en $f$,
+\begin{align*}
+	T_{\frak{p}}f & \,=\,\sum_{\varpi}\,
+		f\operadormatrices{\peso{k}}{\varpi}
+	\text{ ,}
+\end{align*}
+%
+define una forma en $\spitzH[B]{k}{\frak{N},\frak{a}}$, donde la suma se
+realiza sobre representantes de $\Theta(\frak{p})_{\frak{a},\frak{b}}$. El
+grupo $\Gamma_{\frak{a}}$ act\'{u}a \emph{derecha} sobre este conjunto. Si
+$\varpi\in\Theta(\frak{p})_{\frak{a},\frak{b}}$ y $\gamma\in\Gamma_{\frak{a}}$,
+existen $\varpi_{\gamma}\in\Theta(\frak{p})_{\frak{a},\frak{b}}$ y
+$\delta_{\varpi}\in\Gamma_{\frak{b}}$ tales que
+\begin{equation}
+	\label{eq:permutacionnormapmetodos}
+	\varpi\gamma \,=\, \delta_{\varpi}\varpi_{\gamma}
+	\text{ .}
+\end{equation}
+%
+As\'{\i}, en analog\'{\i}a con la definici\'{o}n de $T_{\frak{p}}$,
+se define, dada $f\in H^{1}(\Gamma_{\frak{b}},L_{\peso{k}}(\bb{C}))$,
+un elemento $T(\frak{p})f$ del grupo
+$H^{1}(\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C}))$ como la clase del cociclo
+\begin{equation}
+	\label{eq:heckeencohomologia}
+	T(\frak{p})f \,:\, \gamma\,\mapsto\,
+		\sum_{\varpi}\,f(\delta_{\varpi})^{\varpi_{\gamma}}
+	\text{ .}
+\end{equation}
+%
+
+\begin{obsHeckeEnCohomologia}\label{obs:heckeencohomologia}
+	La expresi\'{o}n \eqref{eq:heckeencohomologia} define un cociclo en
+	$\cociclos[1]{\Gamma_{a},L_{\peso{k}}(\bb{C})}$. Dadas
+	$\gamma,\gamma'\in\Gamma_{\frak{a}}$,
+	\begin{align*}
+		\varpi\,(\gamma\gamma') & \,=\,
+			(\delta_{\varpi}\varpi_{\gamma})\,\gamma' \,=\,
+			(\delta_{\varpi}\delta_{\varpi_{\gamma}}')\,
+				(\varpi_{\gamma})_{\gamma'}
+		\text{ ,}
+	\end{align*}
+	%
+	para ciertas
+	\begin{math}
+		\delta_{\varpi},\delta_{\varpi_{\gamma}}'\in\Gamma_{\frak{b}}
+	\end{math}~.
+	En particular, la permutaci\'{o}n
+	\begin{math}
+		\varpi\mapsto \varpi_{\gamma\gamma'}
+	\end{math}
+	es la composici\'{o}n de las permutaciones determinadas por $\gamma$ y
+	por $\gamma'$ y, adem\'{a}s, si denotamos $\delta_{\varpi}''$ al
+	elemento que verifica
+	\begin{math}
+		\varpi\,(\gamma\gamma')=\delta_{\varpi}''\varpi_{\gamma\gamma'}
+	\end{math}~,
+	vale que $\delta_{\varpi}''=\delta_{\varpi}\delta_{\varpi_{\gamma}}'$.
+	Entonces
+	\begin{align*}
+		\big(T(\frak{p})f\big)(\gamma\gamma') & \,=\,\sum_{\varpi}\,
+			f(\delta_{\varpi}\delta_{\varpi_{\gamma}}'
+				)\cdot(\varpi_{\gamma})_{\gamma'} \,=\,
+			\sum_{\varpi}\,f(\delta_{\varpi})\cdot
+				\delta_{\varpi_{\gamma}}'
+				(\varpi_{\gamma})_{\gamma'} \,+\,
+				f(\delta_{\varpi_{\gamma}}')\cdot
+				(\varpi_{\gamma})_{\gamma'} \\
+		& \,=\,\Big(\sum_{\varpi}\,f(\delta_{\varpi})\cdot
+			\varpi_{\gamma}\Big)\cdot\gamma' \,+\,
+			\sum_{\varpi}\,f(\delta_{\varpi_{\gamma}}')\cdot
+				(\varpi_{\gamma})_{\gamma'} \\
+		& \,=\,\big(T(\frak{p})f\big)(\gamma)\cdot\gamma' \,+\,
+			\big(T(\frak{p})f\big)(\gamma')
+		\text{ .}
+	\end{align*}
+	%
+	Si
+	\begin{math}
+		f =\partial x\in
+			\cobordes[1]{\Gamma_{\frak{b}},L_{\peso{k}}(\bb{C})}
+	\end{math}~,
+	\begin{align*}
+		\big(T(\frak{p})f\big)(\gamma) & \,=\,\sum_{\varpi}\,
+			x\cdot (1-\delta_{\varpi})\,\varpi_{\gamma} \,=\,
+			\Big(\sum_{\varpi}\,x\cdot\varpi_{\gamma}\Big)\,-\,
+			\sum_{\varpi}\,x\cdot\varpi\gamma \\
+		& \,=\,\Big(\sum_{\varpi}\,x\cdot\varpi\Big)\cdot(1-\gamma)
+		\text{ .}
+	\end{align*}
+	%
+\end{obsHeckeEnCohomologia}
+
+Las transformaciones
+\begin{math}
+	T(\frak{p}):\,\cohomolo[1]{\Gamma_{\frak{b}},L_{\peso{k}}(\bb{C})}
+		\rightarrow
+		\cohomolo[1]{\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+\end{math}
+inducen un endomorfismo $T(\frak{p})$ en la suma directa $H$, que, como los
+operadores $T_{\frak{p}}$ en formas cuspidales, permuta las componentes.
+
+\begin{propoEichlerShimuraHeckeEquivariante}%
+	\label{propo:eichlershimuraheckeequivariante}
+	Con estas definiciones,
+	\begin{align*}
+		T(\frak{p})\big(\ES(f)\big) & \,=\,\ES\big(T_{\frak{p}}f\big)
+		\text{ ,}
+	\end{align*}
+	%
+	para toda $f\in\spitzH[B]{k}{\frak{N}}$.
+\end{propoEichlerShimuraHeckeEquivariante}
+
+\begin{proof}
+	Sean $\frak{a},\frak{b}$ tales que $[\frak{a}]=[\frak{b}\frak{p}]$.
+	\begin{align*}
+		& \ES_{\frak{a}}\big(T_{\frak{p}}f_{\frak{b}}\big)(\gamma)
+			\,=\,
+			\int_{\tau_{0}}^{\gamma^{-1}\tau_{0}}\,\sum_{\varpi}\,
+			\frak{v}\big(f_{\frak{b}}\operadormatrices{\peso{k}}{%
+				\varpi_{\gamma}}\big) \,=\,
+			\int_{\tau_{0}}^{\gamma^{-1}\tau_{0}}\,\sum_{\varpi}\,
+			\varpi_{\gamma}^{*}\frak{v}(f_{\frak{b}})\cdot
+				\varpi_{\gamma} \\
+		& \qquad\,=\,
+			\sum_{\varpi}\,\int_{\varpi_{\gamma}\tau_{0}}^{%
+			\varpi_{\gamma}\gamma^{-1}\tau_{0}}\,
+			\frak{v}(f_{\frak{b}})\cdot\varpi_{\gamma} \,=\,
+			\sum_{\varpi}\,\Big(
+			\int_{\tau_{0}}^{\delta_{\varpi}^{-1}\varpi\tau_{0}}\,
+				\frak{v}(f_{\frak{b}})\,-\,
+			\int_{\tau_{0}}^{\varpi_{\gamma}\tau_{0}}\,
+				\frak{v}(f_{\frak{b}})\Big)\cdot\varpi_{\gamma}
+				\\
+		& \qquad\,=\,
+			\sum_{\varpi}\,\Big(
+			\int_{\tau_{1}}^{\delta_{\varpi}^{-1}\tau_{1}}\,
+				\frak{v}(f_{\frak{b}})\,+\,
+				p_{\varpi}\cdot\delta_{\varpi}\Big)\cdot
+					\varpi_{\gamma}\,-\,
+			\sum_{\varpi}\,p_{\varpi_{\gamma}}\cdot\varpi_{\gamma}
+		\text{ .}
+	\end{align*}
+	%
+	La \'{u}ltima igualdad es cierta m\'{o}dulo cobordes, donde
+	$\tau_{1}=\varpi\tau_{0}$ y
+	\begin{math}
+		p_{\varpi}=\int_{\tau_{0}}^{\varpi\tau_{0}}\,
+			\frak{v}(f_{\frak{b}})
+	\end{math}~.
+	Pero, entonces, dado que $\delta_{\varpi}\varpi_{\gamma}=\varpi\gamma$,
+	\begin{align*}
+		\ES_{\frak{a}}\big(T_{\frak{p}}f_{\frak{b}}\big)(\gamma)
+			& \,=\,
+		\sum_{\varpi}\,\int_{\tau_{1}}^{\delta_{\varpi}^{-1}\tau_{1}}\,
+			\frak{v}(f_{\frak{b}})\cdot\varpi_{\gamma}\,-\,
+			x\cdot(1-\gamma) \,=\,
+			T(\frak{p})\big(\ES_{\frak{b}}(f_{\frak{b}})\big)
+				(\gamma)
+		\text{ ,}
+	\end{align*}
+	%
+	con
+	\begin{math}
+		x=\sum_{\varpi}\,\int_{\tau_{0}}^{\varpi\tau_{0}}\,
+			\frak{v}(f_{\frak{b}})\cdot\varpi
+	\end{math}~.
+\end{proof}
+
+\begin{propoInvolucionConmutaConHecke}\label{propo:involucionconmutaconhecke}
+	Los operadores de Hecke $T(\frak{p})$ conmutan con la involuci\'{o}n
+	$W_{\infty}$. Es decir,
+	\begin{align*}
+		T(\frak{p})\big(f\big\vert W_{\infty}\big) & \,=\,
+			\big(T(\frak{p})f\big)\big\vert W_{\infty}
+		\text{ ,}
+	\end{align*}
+	%
+	para toda $f\in H$.
+\end{propoInvolucionConmutaConHecke}
+
+\begin{proof}
+	Supongamos que $[\frak{a}]=[\frak{b}\frak{p}]$,
+	$[\frak{a}\frak{m}]=[\frak{a}']$ y que
+	$[\frak{b}\frak{m}]=[\frak{b}']$. Entonces
+	$[\frak{a}']=[\frak{b}'\frak{p}]$. Sea
+	\begin{math}
+		f\in\cohomolo[1]{\Gamma_{\frak{b}'},L_{\peso{k}}(\bb{C})}
+	\end{math}~.
+	Por un lado,
+	\begin{align*}
+		T(\frak{p})\big(f\big\vert W_{\infty,\frak{b},\frak{b}'}\big)
+			(\gamma) & \,=\,\sum_{\varpi}\,\big(
+			f\big\vert W_{\infty,\frak{b},\frak{b}'}\big)
+				(\delta_{\varpi})\cdot\varpi_{\gamma} \,=\,
+			\sum_{\varpi}\,f(\mu_{\frak{b},\frak{b}'}
+			\delta_{\varpi}\mu_{\frak{b},\frak{b}'}^{-1})\cdot
+				\mu_{\frak{b},\frak{b}'}\varpi_{\gamma}
+		\text{ .}
+	\end{align*}
+	%
+	Evaluando en el orden inverso,
+	\begin{align*}
+		\big(T(\frak{p})f\big)\big\vert W_{\infty,\frak{a},\frak{a}'}
+			(\gamma) & \,=\,\big(T(\frak{p})f\big)
+				(\mu_{\frak{a},\frak{a}'}\gamma
+					\mu_{\frak{a},\frak{a}'}^{-1})\cdot
+					\mu_{\frak{a},\frak{a}'} \,=\,
+			\sum_{\varpi'}\,f(\delta_{\varpi'}')\cdot
+				\varpi_{\gamma'}'\mu_{\frak{a},\frak{a}'}
+		\text{ ,}
+	\end{align*}
+	%
+	donde $\varpi'$ recorre un sistema de representantes de
+	$\Theta(\frak{p})_{\frak{a}',\frak{b}'}$, $\gamma'$ denota el conjugado
+	\begin{math}
+		\gamma'=\mu_{\frak{a},\frak{a}'}\gamma
+			\mu_{\frak{a},\frak{a}'}^{-1}\in\Gamma_{\frak{a}'}
+	\end{math}
+	y los elementos $\delta_{\varpi'}'\in\Gamma_{\frak{b}'}$ son tales que
+	\begin{math}
+		\varpi'\gamma'=\delta_{\varpi'}'\varpi_{\gamma'}'
+	\end{math}~.
+	Pero
+	\begin{align*}
+		\varpi'\gamma'\,=\,\delta_{\varpi'}'\varpi_{\gamma'}' &
+			\quad\Leftrightarrow\quad
+		(\mu_{\frak{b},\frak{b}'}^{-1}\varpi'\mu_{\frak{a},\frak{a}'})
+			\,\gamma\,=\,
+		\mu_{\frak{b},\frak{b}'}^{-1}\delta_{\varpi'}'
+			\mu_{\frak{b},\frak{b}'}\,
+			(\mu_{\frak{b},\frak{b}'}^{-1}\varpi_{\gamma'}'
+				\mu_{\frak{a},\frak{a}'})
+		\text{ ,}
+	\end{align*}
+	%
+	con
+	\begin{math}
+		\mu_{\frak{b},\frak{b}'}^{-1}\delta_{\varpi'}'
+			\mu_{\frak{b},\frak{b}'}\in\Gamma_{\frak{b}}
+	\end{math}
+	y la aplicaci\'{o}n
+	\begin{math}
+		\varpi\mapsto\mu_{\frak{b},\frak{b}'}\varpi
+			\mu_{\frak{a},\frak{a}'}^{-1}
+	\end{math}
+	es una correspondencia
+	\begin{math}
+		\Theta(\frak{p})_{\frak{a},\frak{b}}\xrightarrow{\sim}
+			\Theta(\frak{p})_{\frak{a}',\frak{b}'}
+	\end{math}~.
+	En definitiva,
+	\begin{align*}
+		\sum_{\varpi'}\,f(\delta_{\varpi'}')\cdot\varpi_{\gamma'}'
+			\mu_{\frak{a},\frak{a}'} & \,=\,
+			\sum_{\varpi}\,
+				f(\mu_{\frak{b},\frak{b}'}\delta_{\varpi}
+			\mu_{\frak{b},\frak{b}'}^{-1})\cdot
+			\mu_{\frak{b},\frak{b}'}\varpi_{\gamma}
+		\text{ ,}
+	\end{align*}
+	%
+	lo que concluye la demostraci\'{o}n.
+\end{proof}
+
+\begin{coroEichlerShimura}\label{coro:eichlershimura}
+	El isomorfismo
+	\begin{math}
+		\ES^{+} :\,\spitzH[B]{k}{\frak{N}}\,\xrightarrow{\sim}\,
+		\bigoplus_{\frak{a}}\,\cohomolo[1]{%
+			\Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}^{+}
+	\end{math}
+	es equivariante respecto de la acci\'{o}n de Hecke.
+\end{coroEichlerShimura}
+%
+

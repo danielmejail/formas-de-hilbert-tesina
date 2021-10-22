@@ -1,0 +1,96 @@
+
+Las formas modulares cuaterni\'{o}nicas que vamos a definir est\'{a}n
+dadas como funciones en $\ideles{B}$. Para poder tratarlas de manera
+homog\'{e}nea, lo primero ser\'{a} definir el espacio de llegada de dichas
+funciones.
+
+Dado un entero $w\in\bb{Z}$, consideramos el $\bb{C}$-espacio vectorial de
+polinomios homog\'{e}neos de grado $w$ en variables $X,Y$, con una acci\'{o}n a
+derecha de $\GL_{2}(\bb{C})$ dada por
+% a izquierda en los argumentos, a derecha en las funciones
+\begin{equation}
+	\label{eq:accionenpolinomioshomogeneos}
+\begin{aligned}
+	\begin{bmatrix} X \\ Y \end{bmatrix}\,\cdot\,\gamma \,:=\, &
+		(\gamma^{\iota})^{t}\begin{bmatrix} X \\ Y \end{bmatrix}
+		\,=\, \begin{bmatrix} d & -c \\ -b & a \end{bmatrix}
+			\begin{bmatrix} X \\ Y \end{bmatrix} \\
+	\,=\, & \begin{bmatrix} d X - c Y \\ -b X + a Y \end{bmatrix}
+	\text{ .}
+\end{aligned}
+\end{equation}
+%
+En la expresi\'{o}n anterior, $\gamma$ es la matriz
+\begin{math}
+	\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+\end{math}
+con coeficientes complejos, $\null^{t}$ denota transposici\'{o}n e
+$\null^{\iota}$ denota la adjunta.
+% en este caso, para no confundir el conjugado de un elemento del \'{a}lgebra de
+% matrices (ejemplo \ref{ejemplo:matrices}) con conjugaci\'{o}n compleja.
+Fijando un segundo entero $m\in\bb{Z}$, consideramos una acci\'{o}n modificada
+a partir de la anterior: si $p$ es un polinomio homog\'{e}neo de grado $w$ y
+$\gamma\in\GL_{2}(\bb{C})$, definimos
+\begin{equation}
+	\label{eq:accionenpolinomioscontwist}
+	p(X,Y)\,\cdot\,\gamma \,=\,\det(\gamma)^{m}\,p(dX-cY,-bX+aY)
+	\text{ .}
+\end{equation}
+%
+Denotaremos el espacio de polinomios homog\'{e}neos de grado $w$ con esta
+acci\'{o}n de $\GL_{2}(\bb{C})$ por $\wmpoli{w}{m}(\bb{C})$.
+% Vale la pena notar que este mismo m\'{o}dulo (pero con una acci\'{o}n
+% \emph{a izquierda}) es el descripto en \cite{EichlerBasisProblem}.
+
+Sea $\peso{k}=(\lista{k}{n})$ un peso (ver
+\S~\ref{sec:dehilbertformasparacongruencia}) y sean
+\begin{align*}
+	k_{0} \,=\,\mathrm{max}_{i}\,k_{i} & \text{ ,}\quad
+		m_{i} \,=\,\frac{k_{0} - k_{i}}{2}\quad\text{y}\quad
+		w_{i} \,=\,k_{i}-2
+	\text{ .}
+\end{align*}
+%
+Si
+\begin{math}
+	B\otimes_{\bb{Q}}\bb{R}=\MM_{2\times 2}(\bb{R})^{r}\times\bb{H}^{n-r}
+\end{math}~,
+se considera el $\GL_{2}(\bb{C})^{n-r}$-m\'{o}dulo
+\begin{equation}
+	\label{eq:unbxmodulo}
+	W_{\peso{k}}(\bb{C}) \,:=\,
+		\wmpoli{w_{r+1}}{m_{r+1}}(\bb{C})\,\otimes\,\cdots\,\otimes\,
+		\wmpoli{w_{n}}{m_{n}}(\bb{C})
+	\text{ .}
+\end{equation}
+%
+Si $r=n$, se define $W_{\peso{k}}(\bb{C}):=\bb{C}$. Tambi\'{e}n se cumple
+$W_{\peso{k}}(\bb{C})\simeq\bb{C}$, si $\peso{k}=(2,\,\dots,\,2)$.
+
+Sean $\lista{v}{n}$ los lugares arquimedianos de $F$. Para cada $v_{j}$ podemos
+escoger una inclusi\'{o}n
+\begin{math}
+	B_{v_{j}}\hookrightarrow\MM_{2\times 2}(\bb{C})
+\end{math}
+de manera que la imagen de un elemento
+\begin{math}
+	t\in\centre(B_{v_{j}}^{\times})=\bb{R}^{\times}
+\end{math}
+sea la matriz escalar
+\begin{math}
+	\begin{bmatrix} t & \\ & t \end{bmatrix}
+\end{math}
+y la denotamos $\gamma\mapsto\gamma_{j}$. El morfismo
+\begin{math}
+	B^{\times}\hookrightarrow\GL_{2}(\bb{C})^{n-r}
+\end{math}
+dado por
+\begin{align*}
+	\gamma\,\mapsto\, & (\gamma_{r+1},\,\dots,\,\gamma_{n})
+\end{align*}
+%
+determina una estructura de $B^{\times}$-m\'{o}dulo en $W_{\peso{k}}(\bb{C})$.
+Si $r=n$, por ejemplo si $B\simeq\MM_{2\times 2}(F)$,
+$W_{\peso{k}}(\bb{C})=\bb{C}$ con la acci\'{o}n trivial de $B^{\times}$.
+% Vale la pena observar que este m\'{o}dulo involucra
+% \'{u}nicamente los lugares arquimedianos ramificados del \'{a}lgebra.

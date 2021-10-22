@@ -1,0 +1,140 @@
+Describimos la construcci\'{o}n an\'{a}loga al grupo de clases de ideales
+de un cuerpo de n\'{u}meros para un \'{a}lgebra de cuaterniones.
+
+Dados $\cal{O},\cal{O}'$ dos \'{o}rdenes de $B$, sea
+$\ideales{\cal{O},\cal{O}'}$ el conjunto de ideales invertibles cuyo
+orden a izquierda es $\cal{O}$ y cuyo orden a derecha es $\cal{O}'$.
+Este conjunto es no vac\'{\i}o precisamente cuando $\cal{O}$ y $\cal{O}'$
+pertenecen al mismo g\'{e}nero. El conjunto de ideales invertibles de $B$,
+con el producto dado por el producto compatible de ideales y las
+unidades los \'{o}rdenes de $B$, tiene estructura de grupoide.
+El producto $IJ$ est\'{a} definido \'{u}nicamente cuando el producto de
+ideales es compatible. \'{O}rdenes $\cal{O},\cal{O}',\cal{O}''$ pertenecen al
+mismo g\'{e}nero, si y s\'{o}lo si los conjuntos
+$\ideales{\cal{O},\cal{O}'}$ e $\ideales{\cal{O}',\cal{O}''}$ son no
+vac\'{\i}os, y, en tal caso, hay una aplicaci\'{o}n
+\begin{align*}
+	\ideales{\cal{O},\cal{O}'}\,\times\,\ideales{\cal{O}',\cal{O}''}
+	& \,\rightarrow\,\ideales{\cal{O},\cal{O}''} \\
+	(I,J) & \,\mapsto\,IJ
+	\text{ .}
+\end{align*}
+%
+Entonces, dado un g\'{e}nero $\cal{G}=\Genus{\cal{O}}$, definimos
+\begin{align*}
+	\Brandt{\cal{G}} \,:=\, & \left\lbrace
+	\text{Ideales invertibles } I\text{ de } B\text{ con }
+	\Oizq(I),\Oder(I)\in\cal{G}\right\rbrace
+	\text{ .}
+\end{align*}
+%
+Este conjunto tiene estructura de grupoide tambi\'{e}n y adem\'{a}s es conexo.
+
+Si $I,J\in\ideales{\cal{O},\cal{O}'}$, entonces $I$ y $J$ son isomorfos
+como $\cal{O},\cal{O}'$-bim\'{o}dulos, si y s\'{o}lo si existe
+$a\in K^{\times}$ tal que $J=aI$, es decir, son homot\'{e}ticos
+(extendiendo escalares %tensorizando con $K$
+se ve que todo isomorfismo de bim\'{o}dulos est\'{a} dado por multiplicar
+por un elemento de $B$. Necesariamente este elemento est\'{a}en el centro que
+es $K$). Esto determina una relaci\'{o}n de equivalencia y cada clase de
+homotecia tiene \'{o}rdenes a izquierda y a derecha bien definidos.
+De esta manera, las clases m\'{o}dulo homotecias de ideales invertibles de
+$B$ tambi\'{e}n constituyen un grupoide con el producto compatible de
+(clases de) ideales. Este grupoide admite un morfismo sobreyectivo del
+grupoide de los ideales invertibles de $B$, y una componente conexa
+$\Brandt{\cal{G}}$ determina un grupoide conexo asociado al g\'{e}nero
+$\cal{G}$ formado por las im\'{a}genes de los conjuntos
+$\ideales{\cal{O},\cal{O}'}$ con $\cal{O},\cal{O}'\in\cal{G}$.
+Definimos
+\begin{align*}
+ \Pic{\cal{O},\cal{O}'} \,:=\, & \ideales{\cal{O},\cal{O}'}/\sim \\
+	\,=\, &
+	\left\lbrace [I]\,:\,I\in\ideales{\cal{O},\cal{O}'}\right\rbrace
+	\text{ ,}
+\end{align*}
+%
+donde $[I]$ denota la clase de homotecia de $I$. En general, como
+$\ideales{\cal{O},\cal{O}'}$ no es un grupo, la suryecci\'{o}n
+$\ideales{\cal{O},\cal{O}'}\rightarrow\Pic{\cal{O},\cal{O}'}$ determina un
+morfismo
+\begin{align*}
+	\Brandt{\cal{G}}\,=\, & \bigcup_{\cal{O},\cal{O}'\in\cal{G}}\,
+	\ideales{\cal{O},\cal{O}'}
+	\,\rightarrow\,\bigcup_{\cal{O},\cal{O}'\in\cal{G}}\,
+	\Pic{\cal{O},\cal{O}'}
+	\text{ .}
+\end{align*}
+%
+Pero cuando $\cal{O}=\cal{O}'$, la relaci\'{o}n de homotecia est\'{a}
+dada por el subgrupo (normal) $\ppales{R}$ de ideales fraccionarios
+principales de $R$, que se identifica con los ideales principales de la
+forma $\cal{O}a\cal{O}\in\ideales{\cal{O}}$, $a\in K^{\times}$ v\'{\i}a
+$aR\mapsto\cal{O}a\cal{O}$. En este caso, tenemos un morfismo de grupos
+\begin{align*}
+ \ideales{\cal{O}} & \,\rightarrow\,\Pic{\cal{O}}\,:=\,
+	\ideales{\cal{O}}/\ppales{R}
+	\text{ .}
+\end{align*}
+%
+El grupo $\Pic{\cal{O}}$ es el \emph{grupo de Picard} del orden $\cal{O}$.
+Notemos que la inclusi\'{o}n $\ppales{R}\hookrightarrow\ideales{\cal{O}}$
+es la restricci\'{o}n de la inclusi\'{o}n de todos los ideales $\ideales{R}$,
+no s\'{o}lo los principales, por $\frak{a}\mapsto\cal{O}\frak{a}\cal{O}$.
+
+% Dentro del conjunto $\ideales{\cal{O},\cal{O}'}$ encontramos el subconjunto
+% $\ppales{\cal{O},\cal{O}'}=\{\cal{O}b\cal{O}'\,:\,b\in B^{\times}\}$ de
+% ideales principales. Si
+% \begin{align*}
+ % \normalizador{\cal{O},\cal{O}'}\,:=\, &
+	% \left\lbrace \alpha\in B^{\times}\,:\,
+	% \alpha^{-1}\cal{O}\alpha=\cal{O}'\right\rbrace
+	% \text{ ,}
+% \end{align*}
+% %
+% tenemos una suryecci\'{o}n
+% $\normalizador{\cal{O},\cal{O}'}\rightarrow\ppales{\cal{O},\cal{O}'}$
+% dada por $\alpha\mapsto\cal{O}\alpha\cal{O}'$. Si $\alpha,\alpha_{1}$
+% pertenecen a $\normalizador{\cal{O},\cal{O}'}$,
+% \begin{align*}
+	% \cal{O}\alpha\cal{O}'\,=\,\cal{O}\alpha_{1}\cal{O}'
+	% \,\Leftrightarrow\, & \cal{O}\alpha\,=\,\cal{O}\alpha_{1}
+	% \,\Leftrightarrow\,\alpha\cal{O}'\,=\,\alpha_{1}\cal{O}' \\
+	% \,\Leftrightarrow\, & \alpha_{1}^{-1}\alpha\in\cal{O}^{\times}
+	% \,\Leftrightarrow\, \alpha\alpha_{1}^{-1}\in\cal{O}'^{\times}
+	% \text{ .}
+% \end{align*}
+% %
+Volvamos al caso especial en que $\cal{O}'=\cal{O}$. Sea
+\begin{align*}
+ \cal{N}\,:=\,\normalizador[B^{\times}]{\cal{O}} \,=\, &
+	\left\lbrace b\in B^{\times}\,:\,b^{-1}\cal{O}b=\cal{O}
+	\right\rbrace
+\end{align*}
+%
+el normalizador de $\cal{O}$ en $B^{\times}$. %Tenemos una aplicaci\'{o}n
+%sobreyectiva $\normalizador[B^{\times}]{\cal{O}}\rightarrow\ppales{\cal{O}}$
+%dada por $b\mapsto\cal{O}b\cal{O}$, de la que se deduce que
+Existe una sucesi\'{o}n exacta corta de grupos
+\begin{center}
+\begin{tikzcd}
+	1\arrow{r} & \cal{O}^{\times}\arrow{r} &
+	% \normalizador[B^{\times}]{\cal{O}}\arrow{r} &
+	\cal{N}\arrow{r} &
+	\ppales{\cal{O}}\arrow{r} & 1
+\end{tikzcd}\quad\text{,}
+\end{center}
+%
+donde %$\normalizador[B^{\times}]{\cal{O}}=\normalizador{\cal{O},\cal{O}}$,
+la flecha de la izquierda es la inclusi\'{o}n y la de la derecha est\'{a}
+dada por $b\mapsto\cal{O}b\cal{O}$. Notemos que
+$K^{\times}\subset\cal{N}$. Para un elemento
+$a\in K^{\times}$, vale que $\cal{O}a\cal{O}=\cal{O}$, si y s\'{o}lo si
+$a$ es una unidad del orden $\cal{O}$ y esto equivale a que $a\in R^{\times}$.
+Es decir, la imagen de $K^{\times}$ por el morfismo de la derecha es igual
+a $\ppales{R}$. En particular, hay un isomorfismo
+\begin{align*}
+	K^{\times}\backslash \cal{N}/\cal{O}^{\times}
+	\,\simeq\, & \ppales{\cal{O}}/\ppales{R}
+	\text{ .}
+\end{align*}
+%

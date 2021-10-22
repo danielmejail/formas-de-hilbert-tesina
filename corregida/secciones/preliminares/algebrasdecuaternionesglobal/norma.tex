@@ -1,0 +1,62 @@
+Se dice que $B$ es \emph{indefinida}, si $B$ ramifica en alg\'{u}n lugar
+% si NO ramifica en alg\'{u}n lugar arquimediano
+arquimediano. Si $B_{v}$ es de divisi\'{o}n para todo
+$v\in\lugares[\infty]{K}$, se dice que $B$ es \emph{(totalmente) definida}
+(esto \'{u}ltimo solamente es posible cuando $K/\bb{Q}$ es totalmente real).
+\index{algebra definida@\'{a}lgebra (totalmente) definida}
+\index{algebra indefinida@\'{a}lgebra indefinida}\index{totalmente real}
+% % Sea $v\in\lugares[\infty]{K}$ un lugar arquimediano de $K$. Decimos que $v$
+% % es real, si $K_{v}\simeq\bb{R}$.
+% Sea $K_{(+)}^{\times}\subset K^{\times}$ el subconjunto de elementos cuya
+% imagen en $K_{v}$ es positiva para todo lugar arquimediano $v$ en donde $B$
+% ramifica (necesariamente $K_{v}\simeq\bb{R}$).
+%
+\begin{teoEichlerNorma}%[de la imagen de la norma]%
+	\label{thm:eichlernorma}
+	La imagen del morfismo $\nrd:\,B^{\times}\rightarrow K^{\times}$ es
+	\begin{align*}
+		\nrd(B^{\times}) & \,=\, K_{(+)}^{\times}\,=\,
+			\Big\{x\in K\,:\,x_{v}>0\text{ , si }
+				v\in\lugares[\infty]{K}\cap\Ram(B)\Big\}
+		\text{ .}
+	\end{align*}
+	%
+\end{teoEichlerNorma}
+
+% \begin{proof}[Demostraci\'{o}n]
+%  Ver [Weil, XI \S 3]
+% \end{proof}
+
+Si $K/\bb{Q}$ es una extensi\'{o}n totalmente real, un elemento $x\in K$ es
+\emph{totalmente positivo}, si $x_{v}>0$ para todo lugar arquimediano
+$v\in\lugares[\infty]{K}$. Escribimos $x\gg 0$ para indicar que $x$ es
+totalmente positivo y denotamos por
+\begin{math}
+	K_{+}^{\times}=\{x\in K^{\times}\,:\, x \gg 0\}
+\end{math}
+el subgrupo de elementos totalmente positivos de $K$. Dada un \'{a}lgebra de
+cuaterniones $B/K$, los elementos cuya norma reducida es totalmente positiva
+conforman un subgrupo que denotamos por
+\begin{math}
+	B_{+}^{\times}=\{\gamma\in B^{\times}\,:\,
+		\nrd(\gamma)\gg 0\}
+\end{math}~.
+
+\begin{obsEichlerNorma}\label{obs:eichlernorma}
+	Si el grado de la extensi\'{o}n $K/\bb{Q}$ es igual a $n=[K:\bb{Q}]$ y
+	$B/K$ ramifica en $n-r$ lugares arquimedianos, entonces
+	\begin{math}
+		B_{\infty}\simeq
+			\MM_{2\times 2}(\bb{R})^{r}\times\bb{H}^{n-r}
+	\end{math}
+	y
+	\begin{align*}
+		B^{\times}/B_{+}^{\times} & \,\simeq\,
+			K_{(+)}^{\times}/K_{+}^{\times} \,\simeq\,
+			(\bb{Z}/2\bb{Z})^{r}
+		\text{ ,}
+	\end{align*}
+	%
+	v\'{\i}a la norma reducida.
+\end{obsEichlerNorma}
+

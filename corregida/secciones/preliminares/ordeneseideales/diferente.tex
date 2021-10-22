@@ -1,0 +1,114 @@
+La \emph{norma reducida} de un ideal $I\subset B$\index{ideal!norma reducida}
+es el ideal de $K$ generado por las normas reducidas de los elementos de $I$:
+\begin{align*}
+	\nrd(I) & \,=\,\generado[R]{\nrd(x)\,:\,x\in I}\,\subset\,K
+	\text{ .}
+\end{align*}
+%
+Esto define un ideal fraccionario de $K$: si $\{\alpha_{k}\}_{k}$ es una
+$R$-base de $I$ y $x=\sum_{k}\,a_{k}\alpha_{k}\in I$,
+\begin{align*}
+	\nrd(x) %& \,=\,\lconj{\Big(\sum_{k}\,a^{k}\alpha_{k}\Big)}\,
+		%\Big(\sum_{k}\,a^{k}\alpha_{k}\Big) \\
+	& \,=\,\sum_{i<j}\,a_{i}a_{j}\,\big(\nrd(\alpha_{i}+\alpha_{j})-
+			\nrd(\alpha_{i})-\nrd(\alpha_{j})\big) \,+\,
+			\sum_{k}\,(a_{k})^{2}\,\nrd(\alpha_{k})
+\end{align*}
+%
+y, entonces, $\nrd(x)$ es una combinaci\'{o}n $R$-lineal de las finitas normas
+reducidas $\nrd(\alpha_{k})$ y $\nrd(\alpha_{i}+\alpha_{j})$. La traza
+reducida, por otra parte, permite definir el \emph{dual} de un ideal. Como
+hemos mencionado (Lema \ref{lema:normaytrazacuaterniones}), la aplicaci\'{o}n
+$\phi:\,B\times B\rightarrow K$ dada por $\phi(h,h_{1})=\trd(hh_{1})$ es una
+forma bilineal no degenerada. El dual de un ideal $I$ es el conjunto
+\index{ideal!dual}
+\begin{align*}
+	\dual{I} & \,=\,\big\{x\in B\,:\,\trd(x\cdot I)\subset R\big\}
+	\text{ .}
+\end{align*}
+%
+Este conjunto es un ideal.
+% Es un $R$-m\'{o}dulo y, si $\{\beta_{k}\}_{k}\subset I$ es una $K$-base,
+% contiene a la base dual respecto de $\phi$. Si $y\in \dual{I}$ e
+% $y=\sum_{k}\,y_{k}\beta_{k}$, vale que
+% $y_{k}=\sum_{l}\,(T^{-1})_{k,l}\,\gamma_{l}$, con $\gamma_{l}\in R$ y
+% $T$ la matriz de trazas. Si $D\in R$ es tal que $D\cdot T^{-1}$ tiene
+% coeficientes enteros, $D\cdot y=\sum_{k}\,(D\cdot y_{k})\,\beta_{k}\in I$ y
+% $D\cdot \dual{I}\subset I$. En particular, $\dual{I}$ es f.g. y, por lo tanto,
+% un ideal.
+Por la ciclicidad de la traza, $I\subset \dual{(\dual{I})}$ y, dado que
+$\dual{I}$ contiene a la base dual respecto de $\phi$ de una base en $I$, vale
+que $\dual{(\dual{I})}\subset I$. Es decir,
+\begin{math}
+	\dual{(\dual{I})}=I
+\end{math}~.
+En particular,
+\begin{equation}
+	\label{eq:ordendelidealdual}
+	\Oizq(\dual{I}) \,=\,\Oder(I)
+	\text{ .}
+\end{equation}
+%
+
+\begin{obsDualDeUnProducto}\label{obs:dualdeunproducto}
+	Para todo par de ideales $I,J$ de $B$, vale que
+	\begin{align*}
+		\dual{(I\cdot J)} & \,=\,
+			\big\{x\in B\,:\,xI\subset\dual{J}\big\}\,=\,
+			\big\{x\in B\,:\,Jx\subset\dual{I}\big\}
+		\text{ .}
+	\end{align*}
+	%
+\end{obsDualDeUnProducto}
+
+Si $\cal{O}\subset B$ es un orden, su \emph{diferente} es el ideal
+$(\dual{\cal{O}})^{-1}$ de $B$. De la igualdad \eqref{eq:ordendelidealdual} y
+de la expresi\'{o}n \eqref{eq:idealpseudoinverso}, con $\dual{\cal{O}}$ en
+lugar de $I$, se deduce que
+\begin{align*}
+	\cal{O} & \,\subset\,\Oizq\big((\dual{\cal{O}})^{-1}\big)\,\cap\,
+		\Oder\big((\dual{\cal{O}})^{-1}\big)
+	\text{ .}
+\end{align*}
+%
+Esto quiere decir que el diferente es estable por multiplicaci\'{o}n por
+elementos del mismo orden a ambos lados. Dado que $1\in\dual{\cal{O}}$, se
+verifica tambi\'{e}n que $(\dual{\cal{O}})^{-1}\subset\cal{O}$ y, en
+particular, el diferente de un orden es un ideal \'{\i}ntegro.
+
+La definici\'{o}n del ideal diferente es v\'{a}lida para cualquier ideal. Dado
+un ideal $I$ de $B$, $\drd{I}$ denota el ideal en el cuerpo $K$ definido como
+la norma reducida del ideal $(\dual{I})^{-1}$:
+\begin{align*}
+	\drd{I} & \,=\,\nrd\big((\dual{I})^{-1}\big)
+	\text{ .}
+\end{align*}
+%
+Si $I=\cal{O}$ es un orden, lo llamamos \emph{discriminante (reducido) de %
+$\cal{O}$}. El discriminante proporciona una manera de determinar si un orden
+es maximal.\index{discriminante reducido}
+
+\begin{propoDiscriminante}\label{propo:discriminante}
+	Sean $\cal{O},\cal{O}'\subset B$ dos \'{o}rdenes. Entonces
+	$\cal{O}\subset\cal{O}'$ implica $\drd{\cal{O}}\subset\drd{\cal{O}'}$.
+	Si, \emph{adem\'{a}s}, $\drd{\cal{O}}=\drd{\cal{O}'}$, entonces
+	$\cal{O}=\cal{O}'$.
+\end{propoDiscriminante}
+
+% La involuci\'{o}n del \'{a}lgebra de cuaterniones $B$ simplifica en cierta
+% medida la descripci\'{o}n de sus ideales.
+% Sea $I$ un ideal de $B$ y sea $\lconj{I}$ el ideal
+% \begin{align*}
+	% \lconj{I} & \,=\,\big\{\conj{x}\,:\,x\in I\big\}
+	% \text{ .}
+% \end{align*}
+% %
+% Los \'{o}rdenes son invariantes por esta operaci\'{o}n, es decir, si $\cal{O}$
+% es un orden de $B$, entonces $\lconj{\cal{O}}=\cal{O}$. En general, se cumple
+% que
+% \begin{align*}
+	% \Oizq(\lconj{I}) & \,=\,\Oder(I)
+	% \text{ .}
+% \end{align*}
+% %
+

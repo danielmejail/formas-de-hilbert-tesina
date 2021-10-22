@@ -1,0 +1,146 @@
+En esta secci\'{o}n repasamos las definiciones del anillo de ad\`{e}les y del
+grupo de id\`{e}les de un cuerpo de n\'{u}meros y algunas construcciones
+relacionadas. Aprovechamos tambi\'{e}n para indicar la notaci\'{o}n que se
+utilizar\'{a} en el resto del trabajo.
+
+Sea $V$ un conjunto de \'{\i}ndices y, para cada $v\in V$, sea $G_{v}$ un
+grupo. Si adem\'{a}s contamos con un subconjunto finito $S\subset V$ y, para
+cada $v\not\in S$, con un subgrupo $C_{v}\leq G_{v}$, podemos definir el
+\emph{producto restringido} de los $G_{v}$ respecto de los $C_{v}$:
+\index{producto restringido}
+\begin{align*}
+	G & \,=\, \Big\{ (x_{v})_{v\in V}\,\in\,\prod_{v\in V}\,G_{v}\,:\,
+		x_{v}\in C_{v}\text{ para casi todo }v\in V\setmin S\Big\}
+	\text{ .}
+\end{align*}
+%
+Denotaremos este grupo por $\prod_{v}'\,G_{v}$, cuando no sea necesario
+mencionar expl\'{\i}citamente el conjunto de lugares $S$ y la familia de
+subgrupos $C_v$.
+Decimos que una propiedad se cumple para casi todo elemento de un conjunto, si
+se cumple para todos los elementos salvo posiblemente finitos de ellos. En los
+casos que nos interesan, los grupos $G_{v}$ son grupos topol\'{o}gicos
+localmente compactos y, cuando est\'{a}n dados, los subgrupos $C_{v}$ son
+abiertos y compactos. En este caso, el producto restringido $G$ tiene
+estructura de grupo topol\'{o}gico localmente compacto. Una base de entornos
+del elemento neutro est\'{a} dada por los subconjuntos de la forma
+$\prod_{v\in V}\,U_{v}$, donde cada $U_{v}$ es abierto con clausura compacta y
+$U_{v}=C_{v}$, para casi todo $v$. Los conjuntos de \'{\i}ndices $V$ y $S$ son,
+m\'{a}s aun, $V=\lugares{K}$, el conjunto de lugares de un cuerpo de
+n\'{u}meros $K/\bb{Q}$, y $S\subset\lugares{K}$ un subconjunto finito de
+lugares que contiene los lugares arquimedianos.
+
+Fijemos $K/\bb{Q}$ un cuerpo de n\'{u}meros. Denotamos por $\oka{K}$ su anillo
+de enteros y por $\lugares{K}$ el conjunto de lugares de $K$. Escribimos
+$\lugares[f]{K}$ y $\lugares[\infty]{K}$ para referirnos, respectivamente, al
+subconjunto de lugares finitos, o no arquimedianos, correspondientes a los
+primos de $\oka{K}$, y al subconjunto de lugares infinitos, o arquimedianos. Si
+$v\in\lugares{K}$, denotamos la completaci\'{o}n de $K$ en $v$ por $K_{v}$. Si
+$v\in\lugares[f]{K}$, denotamos el orden maximal en $K_{v}$ por $\oka{K,v}$,
+compuesto por los elementos de m\'{o}dulo menor o igual a $1$. Si $S$ es un
+subconjunto finito de lugares de $K$ que contiene a $\lugares[\infty]{K}$, el
+\emph{anillo de $S$-enteros} est\'{a} definido por
+\index{Senteros@$S$-enteros}
+\begin{align*}
+	\oka{K}(S) & \,=\, \bigcap_{v\not\in S}\,\big(K\cap\oka{K,v}\big)
+	\text{ .}
+\end{align*}
+%
+Este conjunto es un subanillo de $K$ y un dominio de Dedekind. Si
+$S=\lugares[\infty]{K}$, entonces $\oka{K}(S)=\oka{K}$.
+
+\begin{defAdelesIdelesNumeros}\label{def:adelesidelesnumeros}
+	El \emph{anillo de ad\`{e}les de $K$}, denotado $\adeles{K}$, es el
+	producto restringido determinado por $S=\lugares[\infty]{K}$,
+	$G_{v}=K_{v}$ y $C_{v}=\oka{K,v}$. Es un anillo topol\'{o}gico.
+	El \emph{grupo de id\`{e}les de $K$}, denotado $\ideles{K}$, es el
+	grupo topol\'{o}gico que se obtiene tomando $S=\lugares[\infty]{K}$,
+	$G_{v}=K_{v}^{\times}$ y $C_{v}=\oka{K,v}^{\times}$. Es igual al grupo
+	de unidades de $\adeles{K}$ (como conjunto).
+	\index{anillo de adeles@anillo de ad\`{e}les}\index{adeles@ad\`{e}les}
+	\index{grupo de ideles@grupo de id\`{e}les}\index{ideles@id\`{e}les}
+\end{defAdelesIdelesNumeros}
+
+Sea $B/K$ un \'{a}lgebra de cuaterniones sobre $K$. Dado $v\in\lugares{K}$, se
+obtiene un \'{a}lgebra de cuaterniones sobre la completaci\'{o}n $K_{v}$
+extendiendo escalares:
+\begin{align*}
+	B_{v} & \,=\,B\tensor[K]K_{v}
+	\text{ .}
+\end{align*}
+%
+Sea $S\subset\lugares{K}$ un subconjunto finito de lugares de $K$ que contiene
+$\lugares[\infty]{K}$ y sea $\cal{O}\subset B$ un $\oka{K}(S)$-orden del
+\'{a}lgebra. Si $v\in\lugares[f]{K}\setmin S$, entonces
+\begin{align*}
+	\cal{O}_{v} & \,=\,\cal{O}\tensor[\oka{K}(S)]\oka{K,v}
+\end{align*}
+%
+define un ($\oka{K,v}$-)orden en $B_{v}$.
+
+\begin{defAdelesIdelesCuaterniones}\label{def:adelesidelescuaterniones}
+	El \emph{anillo de ad\`{e}les de $B$}, denotado $\adeles{B}$, es el
+	producto restringido de $G_{v}=B_{v}$ respecto de $C_{v}=\cal{O}_{v}$
+	(definidos para $v\not\in S$). Esta definici\'{o}n no depende del
+	conjunto finito $S$ (siempre que contenga $\lugares[\infty]{K}$), ni
+	del orden $\cal{O}$ elegidos; se verifica que
+	\begin{align*}
+		\adeles{B} & \,=\, B\tensor[K]\adeles{K}
+		\text{ .}
+	\end{align*}
+	%
+	El \emph{grupo de id\`{e}les de $B$}, denotado $\ideles{B}$, es el
+	producto restringido que se obtiene eligiendo $G_{v}=B_{v}^{\times}$ y
+	$C_{v}=\cal{O}_{v}^{\times}$. Es un grupo topol\'{o}gico y el grupo de
+	unidades de $\adeles{B}$.
+\end{defAdelesIdelesCuaterniones}
+
+En general, si $V=\lugares{K}$, $S\supset\lugares[\infty]{K}$ es un subconjunto
+finito, $\{G_{v}\,:\,v\in\lugares{K}\}$ es una familia de grupos indexada
+por los lugares de $K$ y $\{C_{v}\,:\,v\not\in S\}$ es una familia de
+subgrupos, entonces el producto restringido se descompone como producto de una
+parte arquimediana y una parte no arquimediana:
+\begin{align*}
+	G & \,=\,\Adinf{G}\times \Adfin{G}
+	\text{ ,}
+\end{align*}
+%
+donde $\Adinf{G}=\prod_{v\in\lugares[\infty]{K}}\,G_{v}$ y
+$\Adfin{G}=\prod_{v\in\lugares[f]{F}}'\,G_{v}$ es el producto restringido de
+$\{G_{v}\,:\,v\in\lugares[f]{K}\}$ respecto de
+$\{C_{v}\,:\,v\in\lugares[f]{K}\setmin S\}$. Con respecto a los ejemplos
+anteriores, usaremos la siguiente notaci\'{o}n:
+\begin{align*}
+	\adeles{X}\,=\,\Adinf{X}\times\Adfin{X} & \qquad\text{y}\qquad
+		\ideles{X}\,=\,\Idinf{X}\times\Idfin{X}
+	\text{ ,}
+\end{align*}
+%
+donde $X=K\text{ o }B$. Si $S\subset\lugares{K}$ es un subconjunto finito que
+contiene los lugares arquimedianos, entonces
+\begin{align*}
+	\Adfin{\oka{K}(S)}\,=\,\prod_{v\in\lugares[f]{K}\setmin S}\,
+		\oka{K,v} & \qquad\text{y}\qquad
+	\Idfin{\oka{K}(S)}\,=\,\prod_{v\in\lugares[f]{K}\setmin S}\,
+		\oka{K,v}^{\times}
+\end{align*}
+%
+definen, respectivamente, un subanillo compacto de $\Adfin{K}$ y su grupo
+de unidades, tambi\'{e}n un subgrupo compacto de $\Idfin{K}$ con la
+topolog\'{\i}a heredada de los id\`{e}les. An\'{a}logamente,
+\begin{align*}
+	\Adfin{\cal{O}} \,=\,\prod_{v\in\lugares[f]{K}\setmin S}\,
+		\cal{O}_{v} \,=\,\cal{O}\tensor[\oka{K}(S)]\Adfin{\oka{K}(S)}
+		& \qquad\text{y}\qquad
+	\Idfin{\cal{O}} \,=\,\prod_{v\in\lugares[f]{K}\setmin S}\,
+		\cal{O}_{v}^{\times}
+\end{align*}
+%
+definen un subanillo compacto de $\Adfin{B}$ y su grupo de unidades, que es un
+subgrupo compacto en $\Idfin{B}$.
+%
+% Por \'{u}ltimo, asociado al \'{a}lgebra $B$, introducimos el grupo ad\'{e}lico
+% $\adeles{B}^{1}$ dado por el producto restringido de $G_{v}=B_{v}^{1}$, el
+% n\'{u}cleo de la norma reducida, respecto de $C_{v}=\cal{O}_{v,1}$, los
+% elementos del orden $\cal{O}_{v}$ de norma reducida $1$.
+%% ?`y el n\'{u}cleo del m\'{o}dulo c\'{o}mo se denota?

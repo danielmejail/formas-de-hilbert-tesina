@@ -1,0 +1,386 @@
+En esta secci\'{o}n volvemos nuevamente a un \'{a}lgebra de matrices
+$B=\MM_{2\times 2}(K)$ sobre un cuerpo local $K$ no arquimediano (m\'{a}s
+precisamente una extensi\'{o}n finita de $\bb{Q}_{p}$). Sea $R\subset K$ su
+anillo de enteros y sea $\pi\in R$ un elemento primo, un generador del
+\'{u}nico ideal maximal $P=\pi R$. Si $x\in K$, sea $\theta(x)\in\bb{Z}$ tal
+que existe $u\in R^{\times}$ con $x=u\pi^{\theta(x)}$. Denotamos por $\varpi$
+la matriz
+\begin{math}
+	\begin{bmatrix} \pi & \\ & 1 \end{bmatrix}
+\end{math}~.
+Dado $e\geq 0$ un entero no negativo, $\cal{O}_{0}(\pi^{e}R)$ denota el orden
+de Eichler est\'{a}ndar de nivel $\pi^{e}R$, es decir,
+\begin{math}
+	\cal{O}_{0}(\pi^{e}R)=
+		\begin{bmatrix} R & R \\ \pi^{e}R & R \end{bmatrix}
+\end{math}~.
+Si $e=0$, entonces
+\begin{align*}
+	\cal{O}_{0}(R)^{\times} & \,=\,\GL_{2}(R) \,=\,
+		\MM_{2\times 2}(R)\cap\big\{\det\in R^{\times}\big\}
+	\text{ .}
+\end{align*}
+%
+En general, si $e\geq 1$,
+\begin{align*}
+	\cal{O}_{0}(\pi^{e}R)^{\times} & \,=\,\cal{O}_{0}(\pi^{e}R)\cap
+		\big\{\det\in R^{\times}\big\}
+	\text{ .}
+\end{align*}
+%
+
+\begin{propoDescomposicionEnCoclasesADerecha}
+	\label{thm:descomposicionencoclasesaderecha}
+	Sea $e\geq 0$ y sean $\Gamma=\cal{O}_{0}(\pi^{e}R)^{\times}$ y
+	$\Gamma'=(\varpi^{-1}\Gamma\varpi)\cap\Gamma$. Entonces, si $e=0$,
+	existe un sistema de representantes $c_{i}\in R$ las clases $i$ en el
+	cuerpo residual $R/(\pi)$ tal que
+	\begin{align*}
+		\Gamma & \,=\, \bigsqcup_{i\in R/(\pi)}\,
+			\Gamma'\begin{bmatrix} 1 & \\ c_{i} & 1 \end{bmatrix}
+			\,\sqcup\,
+			\Gamma'\begin{bmatrix} & 1 \\ 1 & \end{bmatrix}
+		\text{ .}
+	\end{align*}
+	%
+	Si $e\geq 1$, entonces
+	\begin{align*}
+		\Gamma & \,=\, \bigsqcup_{i\in R/(\pi)}\,
+			\Gamma'\begin{bmatrix} 1 & \\
+				c_{i}\pi^{e} & 1 \end{bmatrix}
+		\text{ ,}
+	\end{align*}
+	%
+	con el mismo sistema de representantes $\{c_{i}\}_{i\in R/(\pi)}$.
+\end{propoDescomposicionEnCoclasesADerecha}
+
+\begin{proof}
+	En primer lugar,
+	\begin{math}
+		\Gamma'=\big\{\gamma\in\Gamma\,:\,
+			\varpi\gamma\varpi^{-1}\in\Gamma\big\}
+	\end{math}~.
+	Pero
+	\begin{align*}
+		\begin{bmatrix} \pi & \\ & 1 \end{bmatrix}
+			\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+			\begin{bmatrix} \pi & \\ & 1 \end{bmatrix}^{-1}
+		& \,=\,\begin{bmatrix} a & \pi b \\ \pi^{-1}c & d \end{bmatrix}
+		\text{ .}
+	\end{align*}
+	%
+	Entonces
+	\begin{align*}
+		\Gamma' & \,=\,\bigg\{
+			\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+			\in\cal{O}_{0}(\pi^{e}R)\,:\,
+			ad-bc\in R^{\times},\,c\in (\pi^{e+1})\bigg\}
+		\text{ .}
+	\end{align*}
+	%
+	Sea
+	\begin{math}
+		\begin{bmatrix} a & b \\ c & d \end{bmatrix}\in\Gamma
+	\end{math}
+	y sea $u=ad-bc\in R^{\times}$ su determinante. Supongamos primero que
+	$e=0$. Entonces podemos distinguir dos casos: $\theta(d)=0$ y $d$ es
+	invertible en $R$, o $\theta(d)>0$. En el primer caso,
+	\begin{align*}
+		\begin{bmatrix} u^{-1}d & -u^{-1}b \\ & d^{-1} \end{bmatrix}
+			\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+		& \,=\, \begin{bmatrix} 1 & \\ d^{-1}c & 1 \end{bmatrix}
+		\text{ ,}
+	\end{align*}
+	%
+	donde $c\in R$ es, en principio, un entero arbitrario. Dos matrices
+	de este tipo pertenecen a la misma coclase a derecha de $\Gamma$ con
+	respecto a $\Gamma'$, si y s\'{o}lo si
+	\begin{align*}
+		\begin{bmatrix} 1 & \\ c' & 1 \end{bmatrix}
+			\begin{bmatrix} 1 & \\ c & 1 \end{bmatrix}^{-1}
+		& \,=\,\begin{bmatrix} 1 & \\ c'-c & 1 \end{bmatrix}
+			\,\in\,\Gamma'
+		\text{ ,}
+	\end{align*}
+	%
+	o, lo que es lo mismo, $c'-c\in (\pi)$. En el segundo caso,
+	\begin{align*}
+		\begin{bmatrix} -u^{-1}c & u^{-1}a \\ & c^{-1} \end{bmatrix}
+			\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+		& \,=\, \begin{bmatrix} & 1 \\ 1 & c^{-1}d \end{bmatrix}
+		\text{ .}
+	\end{align*}
+	%
+	Como antes, si $d$ fuese un entero arbitrario, dos matrices de este
+	tipo ser\'{\i}an $\Gamma'$-equivalentes, si y s\'{o}lo si
+	$d'-d\in (\pi)$. Pero, asumiendo $\theta(d)>0$, el coeficiente
+	$d$ de cualquiera de estas matrices pertenece al ideal maximal y, en
+	consecuencia, se obtienen matrices pertenencientes a la misma coclase.
+	En definitiva, fijando un sistema de representantes
+	$\{c_{i}\in R\}_{i\in R/(\pi)}$ de las clases en el cuerpo residual,
+	se deduce la primera de las igualdades en el enunciado. Si asumimos
+	que $e\geq 1$, entonces el argumento dado en el primero de los dos
+	casos anteriores sigue siendo v\'{a}lido, reemplazando la condici\'{o}n
+	$c'-c\in (\pi)$ por $c'-c\in (\pi^{e})$. Por otro lado,
+	$\theta(c)\geq e\geq 1$ implica $\theta(d)$, con lo que se deduce que
+	el segundo caso es trivial. En definitiva, las coclases a derecha
+	de $\Gamma$ con respecto a $\Gamma'$ est\'{a}n indexadas por
+	representantes del cociente $(\pi^{e})/(\pi^{e+1})$, que,
+	v\'{\i}a $c\mapsto c\pi^{e}$, est\'{a}n en correspondencia con el
+	sistema $\{c_{i}\}_{i\in R/(\pi)}$.
+\end{proof}
+
+En el caso $e=0$, el mismo sistema de representantes de las coclases a derecha
+con respecto a $\Gamma'$ determina un sistema de representantes de las coclases
+a derecha con respecto al subgrupo conjugado $\varpi\Gamma'\varpi^{-1}$.
+
+\begin{propoDescomposicionEnCoclasesADerechaSubgrupoConjugado}
+	\label{thm:descomposicionencoclasesaderechasubgrupoconjugado}
+	Sea
+	\begin{math}
+		\Gamma''=\varpi\Gamma'\varpi^{-1}=
+			(\varpi\Gamma\varpi^{-1})\cap\Gamma
+	\end{math}~.
+	Si $e=0$, entonces
+	\begin{align*}
+		\Gamma & \,=\,\bigsqcup_{i\in R/(\pi)}\,
+			\Gamma'\begin{bmatrix} & 1 \\ 1 & d_{i} \end{bmatrix}
+				\,\sqcup\,
+			\Gamma'\begin{bmatrix} 1 & \\ & 1 \end{bmatrix}
+			\,=\,\bigsqcup_{i\in R/(\pi)}\,
+			\Gamma''\begin{bmatrix} a_{i} & 1 \\ 1 & \end{bmatrix}
+				\,\sqcup\,
+			\Gamma''\begin{bmatrix} 1 & \\ & 1 \end{bmatrix}
+		\text{ ,}
+	\end{align*}
+	%
+	donde los coeficientes $a_{i}$ y los coeficientes $d_{i}$ forman
+	sistemas de representantes de las clases en $R/(\pi)$.
+\end{propoDescomposicionEnCoclasesADerechaSubgrupoConjugado}
+
+\begin{proof}
+	Una matriz $\gamma$ pertenece al subgrupo $\Gamma''$, si y s\'{o}lo si
+	$\gamma\in\Gamma$ y $\varpi^{-1}\gamma\varpi\in\Gamma$, tambi\'{e}n.
+	Entonces $\Gamma''$ es igual a
+	\begin{align*}
+		\Gamma'' & \,=\,\bigg\{
+			\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+			\in\cal{O}_{0}(\pi^{e}R)\,:\,ad-bc\in R^{\times},\,
+				b\in (\pi)\bigg\}
+		\text{ .}
+	\end{align*}
+	%
+	Supongamos que $e=0$ y sea
+	\begin{math}
+		\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+			\in\Gamma
+	\end{math}~.
+	Este elemento pertenece a $\Gamma''$, si y s\'{o}lo si $\theta(b)>0$.
+	En otro caso, $b\in R^{\times}$ y
+	\begin{align*}
+		\begin{bmatrix} b^{-1} & \\ u^{-1}d & -u^{-1}b \end{bmatrix}
+			\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+		& \,=\, \begin{bmatrix} b^{-1}a & 1 \\ 1 & \end{bmatrix}
+		\text{ .}
+	\end{align*}
+	%
+	% La matriz multiplicando a izquierda, pertenece a $\Gamma''$, porque
+	% $e=0$; si, en cambio, $e\geq 1$, esta matriz no pertenece a
+	% $\Gamma''$, porque el coeficiente $d$ est\'{a} forzado a ser una
+	% unidad.
+	Dos matrices de este tipo pertenecen a la misma coclase a derecha con
+	respecto a $\Gamma''$, si y s\'{o}lo si
+	\begin{align*}
+		\begin{bmatrix} a' & 1 \\ 1 & \end{bmatrix}
+			\begin{bmatrix} a & 1 \\ 1 & \end{bmatrix}^{-1}
+		& \,=\,\begin{bmatrix} 1 & a'-a \\ & 1 \end{bmatrix}
+	\end{align*}
+	%
+	pertenece a $\Gamma''$, es decir, si y s\'{o}lo si $a'-a\in (\pi)$.
+	La descomposici\'{o}n con respecto al subgrupo $\Gamma'$ es v\'{a}lida,
+	pues, para $c\in R^{\times}$,
+	\begin{align*}
+		\begin{bmatrix} -c & 1 \\ & c^{-1} \end{bmatrix}
+			\begin{bmatrix} 1 & \\ c & 1 \end{bmatrix}
+		& \,=\, \begin{bmatrix} & 1 \\ 1 & c^{-1} \end{bmatrix}
+	\end{align*}
+	%
+	y dos matrices de este tipo pertenecen a la misma coclase con respecto
+	a $\Gamma'$, si y s\'{o}lo si los coeficientes de la esquina inferior
+	derecha son congruentes m\'{o}dulo $(\pi)$.
+\end{proof}
+
+\begin{coroDescomposicionEnCoclasesADerechaSubgrupoConjugado}%
+	\label{coro:descomposicionencoclasesaderechasubgrupoconjugado}
+	Sea $\{d_{i}\}_{i\in R/(\pi)}$ un sistema de representantes de las
+	clases en $R/(\pi)$ y, para cada clase $i$, sea
+	\begin{math}
+		\gamma_{i}=\begin{bmatrix} & 1 \\ 1 & d_{i} \end{bmatrix}
+	\end{math}~.
+	Sea $I$ la matriz identidad. Entonces el conjunto
+	$\{\gamma_{i}\}\cup\{I\}$ constituye un sistema de representantes de
+	las coclases a derecha con respecto a $\Gamma'$ en $\Gamma$ y el
+	conjunto $\{\gamma_{i}^{-1}\}\cup\{I\}$ constituye un sistema de
+	representantes con respecto a $\Gamma''$.
+\end{coroDescomposicionEnCoclasesADerechaSubgrupoConjugado}
+
+\begin{proof}
+	La primera afirmaci\'{o}n es parte del enunciado de la proposici\'{o}n
+	\ref{thm:descomposicionencoclasesaderechasubgrupoconjugado}. La
+	segunda afirmaci\'{o}n se deduce de que $-I\in\Gamma$.
+	% y de que $-I$ es central.
+\end{proof}
+
+Pasamos, ahora, a la descomposici\'{o}n de coclases dobles.
+
+\begin{propoDescomposicionDeLaCoclaseDobleMatrices}%
+	\label{thm:descomposiciondelacoclasedoblematrices}
+	Las descomposiciones de $\Gamma$ en coclases a derecha con respecto a
+	$\Gamma'$ mencionadas en las propocisiones
+	\ref{thm:descomposicionencoclasesaderecha} y
+	\ref{thm:descomposicionencoclasesaderechasubgrupoconjugado} inducen,
+	por multiplicaci\'{o}n a izquierda por $\varpi$, descomposiciones
+	\begin{equation}
+		\label{eq:descomposiciondelacoclasedoblematrices}
+		\begin{aligned}
+			& \GL_{2}(R)\begin{bmatrix} \pi & \\
+				& 1 \end{bmatrix}\GL_{2}(R)
+			\,=\,\bigsqcup_{i\in R/(\pi)}\,\GL_{2}(R)
+				\begin{bmatrix} \pi & \\c_{i} & 1\end{bmatrix}
+				\,\sqcup\,\GL_{2}(R)
+				\begin{bmatrix} 1 & \\ & \pi \end{bmatrix} \\
+			& \qquad\qquad\,=\,
+			\bigsqcup_{i\in R/(\pi)}\,\GL_{2}(R)
+				\begin{bmatrix} 1 & b_{i} \\ & \pi\end{bmatrix}
+				\,\sqcup\,\GL_{2}(R)
+				\begin{bmatrix} \pi & \\ & 1 \end{bmatrix} 
+		\text{ ,}
+		\end{aligned}
+	\end{equation}
+	%
+	donde los coeficientes $c_{i}$ y los coeficientes $b_{i}$ forman
+	sistemas de representantes de las clases en $R/(\pi)$. Si $e\geq 1$,
+	entonces
+	\begin{equation}
+		\label{eq:descomposiciondelacoclasedoblematricesbis}
+		\cal{O}_{0}(\pi^{e}R)^{\times}
+			\begin{bmatrix} \pi & \\ & 1 \end{bmatrix}
+				\cal{O}_{0}(\pi^{e}R)^{\times}
+			\,=\,\bigsqcup_{i\in R/(\pi)}\,
+				\cal{O}_{0}(\pi^{e}R)^{\times}
+			\begin{bmatrix} \pi & \\
+				c_{i}\pi^{e} & 1\end{bmatrix}
+		\text{ .}
+	\end{equation}
+\end{propoDescomposicionDeLaCoclaseDobleMatrices}
+
+\begin{proof}
+	Sea $e\geq 0$ y sea $\Gamma=\cal{O}_{0}(\pi^{e}R)^{\times}$. Para
+	obtener un sistema de representantes de
+	\begin{math}
+		\Gamma\backslash\Gamma\varpi\Gamma
+	\end{math}
+	basta con multiplicar a izquierda por $\varpi$ los elementos en un
+	sistema de representantes de
+	\begin{math}
+		(\varpi^{-1}\Gamma\varpi)\cap\Gamma\backslash\Gamma
+	\end{math}~.
+	En particular, partiendo de los representantes de la proposici\'{o}n
+	\ref{thm:descomposicionencoclasesaderecha},
+	\begin{align*}
+		\begin{bmatrix} \pi & \\ & 1 \end{bmatrix}
+			\begin{bmatrix} 1 & \\ c_{i}\pi^{e} & 1 \end{bmatrix}
+		& \,=\,\begin{bmatrix} \pi & \\ c\pi^{e} & 1 \end{bmatrix}
+		\text{ .}
+	\end{align*}
+	%
+	En el caso $e=0$,
+	\begin{align*}
+		\begin{bmatrix} & 1 \\ 1 & \end{bmatrix}
+			\begin{bmatrix} \pi & \\ & 1 \end{bmatrix}
+		\begin{bmatrix} & 1 \\ 1 & \end{bmatrix} & \,=\,
+			\begin{bmatrix} 1 & \\ & \pi \end{bmatrix}
+		\text{ .}
+	\end{align*}
+	%
+	La descomposici\'{o}n \eqref{eq:descomposiciondelacoclasedoblematrices}
+	se deduce de que
+	\begin{math}
+		\left[\begin{smallmatrix} & 1 \\ 1 & \end{smallmatrix}\right]
+			\in\GL_{2}(R)
+	\end{math}~.
+	Para obtener la segunda descomposici\'{o}n en el caso $e=0$, se parte
+	del conjunto de representantes de la proposici\'{o}n
+	\ref{thm:descomposicionencoclasesaderechasubgrupoconjugado}.
+\end{proof}
+
+\begin{propoDescomposicionDeLaCoclaseDobleAIzqYADer}%
+	\label{thm:descomposiciondelacoclasedobleaizyader}
+	Sea $\{d_{i}\}_{i}$ un sistema de representantes de las clases en
+	$R/(\pi)$, con $d_{i}$ perteneneciente a la clase $i$. Entonces
+	\begin{equation}
+		\label{eq:descomposiciondelacoclasedobleaizqyader}
+		\begin{aligned}
+			& \GL_{2}(R)\begin{bmatrix} \pi & \\ & 1 \end{bmatrix}
+				\GL_{2}(R) \\
+			& \qquad\qquad\,=\,
+			\bigsqcup_{i\in R/(\pi)}\,\GL_{2}(R)
+				\begin{bmatrix} 1 & d_{i} \\
+					d_{i} & \pi + d_{i}^{2} \end{bmatrix}
+			\,\sqcup\,\GL_{2}(R)
+				\begin{bmatrix} \pi & \\ & 1 \end{bmatrix} \\
+			& \qquad\qquad\,=\,
+			\bigsqcup_{i\in R/(\pi)}\,
+				\begin{bmatrix} 1 & d_{i} \\
+					d_{i} & \pi + d_{i}^{2} \end{bmatrix}
+						\GL_{2}(R) \,\sqcup\,
+				\begin{bmatrix} \pi & \\ & 1 \end{bmatrix}
+					\GL_{2}(R)
+			\text{ .}
+		\end{aligned}
+	\end{equation}
+	%
+\end{propoDescomposicionDeLaCoclaseDobleAIzqYADer}
+
+\begin{proof}
+	Sea $\Gamma=\GL_{2}(R)$ y, para cada $i\in R/(\pi)$, sea
+	\begin{math}
+		\gamma_{i}=\begin{bmatrix} & 1 \\ 1 & d_{i} \end{bmatrix}
+	\end{math}~.
+	Por el corolario
+	\ref{coro:descomposicionencoclasesaderechasubgrupoconjugado},
+	\begin{align*}
+		\Gamma\varpi\Gamma & \,=\,\bigsqcup_{i\in R/(\pi)}\,
+			\Gamma\varpi\gamma_{i}
+				\,\sqcup\,\Gamma\varpi
+			\quad\text{y} \\
+		\Gamma\varpi^{-1}\Gamma & \,=\,\bigsqcup_{i\in R/(\pi)}\,
+			\Gamma\varpi^{-1}\gamma_{i}^{-1}
+				\,\sqcup\,\Gamma\varpi^{-1}
+		\text{ .}
+	\end{align*}
+	%
+	De la segunda descomposici\'{o}n, se deduce
+	\begin{align*}
+		\Gamma\varpi\Gamma & \,=\,\bigsqcup_{i\in R/(\pi)}\,
+			\gamma_{i}\varpi\Gamma
+				\,\sqcup\,\varpi\Gamma
+		\text{ .}
+	\end{align*}
+	%
+	Ahora bien, $\varpi\in\Gamma\varpi\cap\varpi\Gamma$ y, por lo tanto,
+	\begin{math}
+		\gamma_{j}\varpi\gamma_{j}\in\Gamma\varpi\gamma_{j}\cap
+			\gamma_{j}\varpi\Gamma
+	\end{math}~.
+	Este producto es igual a
+	\begin{align*}
+		\begin{bmatrix} & 1 \\ 1 & d_{j} \end{bmatrix}
+			\begin{bmatrix} \pi & \\ & 1 \end{bmatrix}
+		\begin{bmatrix} & 1 \\ 1 & d_{j} \end{bmatrix} & \,=\,
+			\begin{bmatrix} 1 & d_{j} \\
+				d_{j} & \pi + d_{j}^{2}\end{bmatrix}
+		\text{ .}
+	\end{align*}
+	%
+\end{proof}

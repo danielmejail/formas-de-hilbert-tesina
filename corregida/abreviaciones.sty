@@ -1,0 +1,121 @@
+\ProvidesPackage{abreviaciones}
+
+\newcommand{\setmin}{\ensuremath{\smallsetminus}}
+% \newcommand{\Empty}{\ensuremath{\varnothing}}
+\newcommand{\bb}[1]{\ensuremath{\mathbb{#1}}}
+\renewcommand{\frak}[1]{\ensuremath{\mathfrak{#1}}}
+\renewcommand{\cal}[1]{\ensuremath{\mathcal{#1}}}
+%
+\newcommand{\Endo}[1][]{\ensuremath{\mathrm{End}_{#1}}}
+\newcommand{\Auto}{\ensuremath{\mathrm{Aut}}}
+\renewcommand{\ker}{\ensuremath{\mathrm{ker}}}
+\newcommand{\img}{\ensuremath{\mathrm{img}}}
+\newcommand{\centre}{\ensuremath{\mathrm{Z}}}
+\newcommand{\wmpoli}[2]{\ensuremath{\mathit{P}_{#1}\left(#2\right)}}
+\newcommand{\wpoli}[1]{\ensuremath{\mathit{P}_{#1}}}
+\newcommand{\Hom}[2][]{\ensuremath{\mathrm{Hom}_{#1}\left(#2\right)}}
+\newcommand{\Sym}[2][]{\ensuremath{\mathrm{S}^{#1}\left(#2\right)}}
+\newcommand{\cociclos}[2][]{\ensuremath{\mathit{Z}^{#1}(#2)}}
+\newcommand{\cobordes}[2][]{\ensuremath{\mathit{B}^{#1}(#2)}}
+\newcommand{\cohomolo}[2][]{\ensuremath{\mathit{H}^{#1}(#2)}}
+\renewcommand{\dim}[1][]{\ensuremath{\mathrm{dim}_{#1}}}
+\newcommand{\dual}[1]{\ensuremath{#1 ^{*}}}
+\newcommand{\tensor}[1][]{\ensuremath{\otimes_{#1}}}
+%
+\newcommand{\modulo}{\ensuremath{\mathrm{mod}\,}}
+\renewcommand{\Re}{\ensuremath{\mathrm{Re}}}
+\renewcommand{\Im}{\ensuremath{\mathrm{Im}}}
+\renewcommand{\det}{\ensuremath{\mathrm{det}\,}}
+\newcommand{\hP}{\ensuremath{\frak{h}}}
+\newcommand{\traza}[1][]{\ensuremath{\mathrm{Tr}_{#1}}}
+\newcommand{\norma}[1][]{\ensuremath{\mathrm{Nm}_{#1}}}
+\renewcommand{\cos}{\ensuremath{\mathrm{cos}\,}}
+\renewcommand{\sin}{\ensuremath{\mathrm{sen}\,}}
+\newcommand{\grado}[1][]{\ensuremath{\mathrm{gr}_{#1}}}
+\newcommand{\signo}{\ensuremath{\mathrm{sgn}}}
+\newcommand{\quatalg}[2][]{\ensuremath{\{#2\}_{#1}}}
+\newcommand{\varquatalg}[2][]{\ensuremath{(#2)_{#1}}}
+\newcommand{\generado}[2][]{\ensuremath{\left\langle #2\right\rangle_{#1}}}
+%
+\newcommand{\oka}[1]{\ensuremath{\frak{o}_{#1}}}
+\newcommand{\diferente}[1][]{\ensuremath{\frak{d}_{#1}}}
+\newcommand{\Class}[2][]{\ensuremath{\mathrm{Cl}^{#1}(#2)}}
+\newcommand{\pClass}[1]{\ensuremath{{\Class[+]{#1}}}}
+\newcommand{\ideales}[1]{\ensuremath{\cal{I}\left(#1\right)}}
+\newcommand{\ppales}[1]{\ensuremath{\cal{P}\left(#1\right)}}
+\newcommand{\idnorm}{\ensuremath{\mathbb{N}}}
+\newcommand{\discriminante}[1]{\mathrm{disc}\left(#1\right)}
+%
+\newcommand{\MM}{\ensuremath{\mathrm{M}}}
+\newcommand{\SL}{\ensuremath{\mathrm{SL}}}
+\newcommand{\SLZ}{\ensuremath{\SL_{2}\left(\bb{Z}\right)}}
+\newcommand{\PGL}{\ensuremath{\mathrm{PGL}}}
+\newcommand{\PGLtp}{\ensuremath{\mathrm{PGL}^{+}}}
+\newcommand{\GL}{\ensuremath{\mathrm{GL}}}
+\newcommand{\GLtp}{\ensuremath{\mathrm{GL}^{+}}}
+\newcommand{\GLR}{\ensuremath{\GL_{2}\left(\bb{R}\right)}}
+\newcommand{\SO}[1]{\ensuremath{\mathrm{SO}(#1)}}
+%
+\newcommand{\modular}[3][]{\ensuremath{\cal{M}^{#1}_{#2}\left(#3\right)}}
+\newcommand{\spitz}[3][]{\ensuremath{\cal{S}^{#1}_{#2}\left(#3\right)}}
+\newcommand{\oude}{\ensuremath{\mathrm{old}}}
+\newcommand{\neue}{\ensuremath{\mathrm{new}}}
+\newcommand{\peso}[1]{\ensuremath{\underline{#1}}}
+\newcommand{\modularH}[3][]{\modular[#1]{\peso{#2}}{#3}}
+\newcommand{\spitzH}[3][]{\spitz[#1]{\peso{#2}}{#3}}
+% \newcommand{\barra}[2]{\ensuremath{\big|_{#1} #2}}
+\newcommand{\doblebarra}[2]{\ensuremath{\big|\!\big|_{#1} #2}}
+\newcommand{\operadormatrices}[2]{\ensuremath{\big|_{#1}{#2}}}
+\newcommand{\operadorcoclases}[2]{\ensuremath{\Big|_{#1}{[#2]}}}
+\newcommand{\ES}{\ensuremath{\mathrm{ES}}}
+\newcommand{\conmensurable}{\ensuremath{\approx}}
+%
+\newcommand{\diamante}[1]{\ensuremath{\langle{#1}\rangle}}
+%
+\newcommand{\lugares}[2][]{\ensuremath{V_{#1}^{#2}}}
+\newcommand{\hhat}[1]{\ensuremath{\widehat{#1}}}
+\newcommand{\adeles}[1]{\ensuremath{\bb{A}_{#1}}}
+% \newcommand{\Adfin}[1]{\adeles{#1,f}}
+\newcommand{\Adfin}[1]{\ensuremath{\hhat{#1}}}
+\newcommand{\Adinf}[1]{\ensuremath{{#1}_{\infty}}}
+\newcommand{\ideles}[1]{\ensuremath{\bb{A}_{#1}^{\times}}}
+\newcommand{\Idfin}[1]{\ensuremath{\hhat{#1}^{\times}}}
+\newcommand{\Idinf}[1]{\ensuremath{{#1}_{\infty}^{\times}}}
+%
+\newcommand{\shimura}[2][]{\ensuremath{\mathit{X}_{0}^{#1}(#2)}}
+\newcommand{\cuadradointegrables}[1]{\ensuremath{%
+	\mathit{L}^{2}\big(\GL_{2}(F)\backslash\GL_{2}(\adeles{F}),{#1}\big)}}
+\newcommand{\cuadradocuspidales}[1]{\ensuremath{%
+	\mathit{L}^{2}_{0}\big(\GL_{2}(F)\backslash\GL_{2}(\adeles{F}),%
+		{#1}\big)}}
+%
+\newcommand{\nrd}{\ensuremath{\mathrm{nrd}}}
+\newcommand{\trd}{\ensuremath{\mathrm{trd}}}
+\newcommand{\drd}[1]{\ensuremath{\mathrm{d}_{#1}}}
+\newcommand{\conj}[1]{\ensuremath{\bar{#1}}}
+\newcommand{\lconj}[1]{\ensuremath{\overline{#1}}}
+\newcommand{\Oizq}{\ensuremath{\cal{O}_{\mathit{izq}}}}
+\newcommand{\Oder}{\ensuremath{\cal{O}_{\mathit{der}}}}
+\newcommand{\lClass}[1]{\ensuremath{\mathrm{Cl}_{\mathit{izq}}\left(#1\right)}}
+\newcommand{\rClass}[1]{\ensuremath{\mathrm{Cl}_{\mathit{der}}\left(#1\right)}}
+\newcommand{\Genus}[1]{\ensuremath{\mathrm{Gen}\left(#1\right)}}
+\newcommand{\Brandt}[1]{\ensuremath{\mathscr{B}\left(#1\right)}}
+\newcommand{\Pic}[2][]{\ensuremath{\mathrm{Pic}_{#1}\left(#2\right)}}
+\newcommand{\normalizador}[2][]{\ensuremath{\cal{N}_{#1}\left(#2\right)}}
+\newcommand{\Ram}{\ensuremath{\mathrm{Ram}}}
+%%
+
+% \def\lista{\@ifstar\@lista\@@lista}
+% \def\@lista#1#2{\ensuremath{{#1}^{1},\,\dots,\,{#1}^{#2}}}
+% \def\@@lista#1#2{\ensuremath{{#1}_{1},\,\dots,\,{#1}_{#2}}}
+\def\lista{\@ifstar\@lista\@@lista}
+\def\@lista{\@ifnextchar[{\@listawith}{\@listawithout}}
+\def\@listawith[#1]#2#3{\ensuremath{{#2}^{#1},\,\dots,\,{#2}^{#3}}}
+\def\@listawithout#1#2{\ensuremath{{#1}^{1},\,\dots,\,{#1}^{#2}}}
+\def\@@lista{\@ifnextchar[{\@@listawith}{\@@listawithout}}
+\def\@@listawith[#1]#2#3{\ensuremath{{#2}_{#1},\,\dots,\,{#2}_{#3}}}
+\def\@@listawithout#1#2{\ensuremath{{#1}_{1},\,\dots,\,{#1}_{#2}}}
+
+\newcommand{\id}[1][]{\ensuremath{\mathsf{id}_{#1}}}
+\newcommand{\inc}[1][]{\ensuremath{\iota_{#1}}}
+\newcommand{\indica}{\ensuremath{\mathbf{1}}}

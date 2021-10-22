@@ -1,0 +1,147 @@
+Sea $K$ un anillo conmutativo con $1$ y sea $\Gamma$ un grupo. Empezamos
+repasando la definici\'{o}n de los grupos de cohomolog\'{\i}a de $\Gamma$ con
+coeficientes en un $K[\Gamma]$-m\'{o}dulo. Dado un $K[\Gamma]$-m\'{o}dulo a
+derecha $M$ y dado $i\geq 1$, denotamos por $C^{i}(\Gamma,M)$ el $K$-m\'{o}dulo
+de funciones $\Gamma\times\cdots\times\Gamma\rightarrow M$ definidas en el
+producto de $i$ copias de $\Gamma$ que toman valores en $M$. Si $i=0$,
+$C^{0}(\Gamma,M)=M$. Para cada $i\geq 1$, sea
+\begin{math}
+	\partial:\,C^{i}(\Gamma,M)\rightarrow C^{i+1}(\Gamma,M)
+\end{math}
+el morfismo dado por
+\begin{align*}
+	\big(\partial u\big)(\lista{\gamma}{i}) & \,=\,
+		u(\lista[2]{\gamma}{i})\,+\,
+		\sum_{j=1}^{i}\,(-1)^{j}\,u(\lista{\gamma}{j-1},
+			\gamma_{j}\lista[j+1]{\gamma}{i+1}) \\
+	& \qquad\,+\,(-1)^{i+1}\,u(\lista{\gamma}{i})\cdot\gamma_{i+1}
+\end{align*}
+%
+en $u\in C^{i}(\Gamma,M)$. Si $i=0$, se define, para $x\in M$,
+\begin{align*}
+	\big(\partial x\big)(\gamma) & \,=\,
+		x\cdot(1-\gamma)
+	\text{ .}
+\end{align*}
+%
+La composici\'{o}n $\partial\circ\partial$ es cero y los $K$-m\'{o}dulos
+$C^{i}(\Gamma,M)$, junto con los morfismos $\partial$, definen un complejo de
+cocadenas. Para cada $i\geq 0$, denotamos los subm\'{o}dulos de
+$C^{i}(\Gamma,M)$ conformados por los cociclos y conformados por los cobordes
+por
+\begin{align*}
+	\cociclos[i]{\Gamma,M} \,=\,\ker(\partial) & \quad\text{y}\quad
+	\cobordes[i]{\Gamma,M}\,=\,\img(\partial)
+	\text{ ,}
+\end{align*}
+%
+respectivamente, y definimos el \emph{$i$-\'{e}simo grupo de cohomolog\'{\i}a %
+de $\Gamma$ con coeficientes en $M$} como
+\begin{align*}
+	\cohomolo[i]{\Gamma,M} & \,=\,
+		\cociclos[i]{\Gamma,M}/\cobordes[i]{\Gamma,M}
+	\text{ .}
+\end{align*}
+%
+
+\begin{obsCohomologiaBaja}\label{obs:cohomologiabaja}
+	Si
+	\begin{math}
+		M^{\Gamma}=\big\{x\in M\,:\,
+			x\cdot\gamma=x,\,\forall\gamma\in\Gamma\big\}
+	\end{math}
+	denota el subm\'{o}dulo maximal en donde $\Gamma$ act\'{u}a de manera
+	trivial,
+	\begin{align*}
+		\cohomolo[0]{\Gamma,M} & \,=\,\cociclos[0]{\Gamma,M}\,=\,
+			M^{\Gamma}
+		\text{ .}
+	\end{align*}
+	%
+	De las definiciones de cociclos y cobordes,
+	\begin{align*}
+		\cociclos[1]{\Gamma,M} & \,=\,\big\{
+			f:\,\Gamma\rightarrow M\,:\,
+				f(\gamma\delta)=f(\gamma)\cdot\delta+f(\delta)
+			\big\} \quad\text{y} \\
+		\cobordes[1]{\Gamma,M} & \,=\,\big\{
+			f:\,\Gamma\rightarrow M\,:\,
+				f(\gamma)=x-x\cdot\gamma\text{ para cierto }
+				x\in M\big\}
+		\text{ .}
+	\end{align*}
+	%
+	Todo cociclo $f\in\cociclos[1]{\Gamma,M}$ verifica
+	\begin{equation}
+		\label{eq:propiedadesdeloscociclos}
+		\begin{aligned}
+			f(e) & \,=\,0\text{ ,} \\
+			f(\gamma^{-1}) & \,=\,-f(\gamma)\cdot\gamma^{-1}
+				\quad\text{y} \\
+			f(\gamma\delta\gamma^{-1})\cdot\gamma & \,=\,
+				f(\delta) \,-\, f(\gamma)\cdot (1 - \delta)
+			\text{ ,}
+		\end{aligned}
+		%
+	\end{equation}
+	%
+	si $\gamma,\delta\in\Gamma$ y si $e\in \Gamma$ denota el elemento
+	neutro.
+\end{obsCohomologiaBaja}
+
+Buscamos asociarle, a una forma $f\in\spitzH[B]{k}{\frak{N},\frak{a}}$, un
+elemento en la cohomolog\'{\i}a $\cohomolo[1]{\Gamma_{\frak{a}},M}$ del grupo
+$\Gamma_{\frak{a}}=\iota_{\infty}\big(\cal{O}^{\times}_{\frak{a},+}\big)$. La
+construcci\'{o}n que hacemos a continuaci\'{o}n se encuentra, con algunas
+modificaciones en \cite[Ch.~8]{ShimuraIntroduction}.
+
+Primero, ser\'{a} necesario especificar el m\'{o}dulo de coeficientes. Con ese
+objetivo, profundizamos en la definici\'{o}n dada en la
+Secci\'{o}n~\ref{sec:cuaternionicasunbxmodulo}. Seguimos denotando por $K$ un
+anillo conmutativo con unidad. Sean $w,m\in\bb{Z}$ y $w\geq 0$ y sea $G$ el
+grupo $G=\GL_{2}(K)$. Dado un polinomio $p$ en las variables $X$ e $Y$, con
+coeficientes en el anillo $K$, homog\'{e}neo de grado $w$ y dada
+\begin{math}
+	\gamma=\begin{bmatrix} a & b \\ c & d \end{bmatrix}\in G
+\end{math}~, definimos un nuevo polinomio $p\cdot\gamma$ por:
+\begin{align*}
+	(p\cdot\gamma) (X,Y) & \,=\,\det(\gamma)^{m}\,p(dX-cY,-bX+aY)
+	\text{ .}
+\end{align*}
+%
+El polinomio $p\cdot\gamma$ es homog\'{e}neo del mismo grado que $p$ y
+$(p,\gamma)\mapsto p\cdot\gamma$ determina una estructura de $G$-m\'{o}dulo a
+derecha en los polinomios homog\'{e}neos de grado $w$ en dos indeterminadas con
+coeficientes en $K$. Denotamos este m\'{o}dulo por $\wmpoli{w}{m}(K)$. Los
+elementos centrales, $a\in K^{\times}$, act\'{u}an por multiplicaci\'{o}n por
+una potencia del escalar correspondiente: $p\cdot a=a^{2m+w}\,p$.
+
+Dado un peso $\peso{k}=(\lista{k}{n})\in\bb{Z}^{n}$, definimos el $G^{n}$-%
+m\'{o}dulo
+\begin{align*}
+	L_{\peso{k}}(K) & \,=\,\wmpoli{w_{1}}{m_{1}}(K)\,\otimes\,\cdots\,
+		\otimes\,\wmpoli{w_{n}}{m_{n}}(K)
+	\text{ ,}
+\end{align*}
+%
+donde, como en la Secci\'{o}n~\ref{sec:cuaternionicasunbxmodulo}, 
+\begin{align*}
+	k_{0} \,=\, \max_{i}\,k_{i} & \quad\text{,}\quad
+	m_{i} \,=\, \frac{k_{0}-k_{i}}{2} \quad\text{y}\quad
+	w_{i} \,=\, k_{i}\,-\,2
+	\text{ .}
+\end{align*}
+%
+Si $K=\bb{C}$, $L_{\peso{k}}(\bb{C})$ es un producto del m\'{o}dulo
+$W_{\peso{k}}(\bb{C})$, el codominio de una forma modular cuaterni\'{o}nica.
+El espacio $L_{\peso{k}}(\bb{C})$ se convierte en un $B^{\times}$-m\'{o}dulo
+v\'{\i}a inmersiones $\iota_{i}:\,B^{\times}\hookrightarrow\GL_{2}(\bb{C})$.
+Si $x\in L_{\peso{k}}(\bb{C})$ y $t\in F^{\times}$, entonces
+$x\cdot t=\norma(t)^{k_{0}-2}\,x$. En particular, si $2\mid k_{0}$, tiene
+sentido hablar del $\Gamma_{\frak{a}}$-m\'{o}dulo $L_{\peso{k}}(\bb{C})$.
+% En general, los elementos de norma $1$ act\'{u}an trivialmente. 
+
+% \begin{obsParidadDelPeso}\label{obs:paridaddelpeso}
+	% El problema de la paridad del peso $\peso{k}$ s\'{o}lo aparece si
+	% existe una unidad en $\oka{F}^{\times}$ de norma negativa.
+% \end{obsParidadDelPeso}

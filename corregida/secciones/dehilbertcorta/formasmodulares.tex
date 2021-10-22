@@ -1,0 +1,403 @@
+% 
+% En la secci\'{o}n \ref{subsec:cuaternionicasformasmodulares}, definimos formas
+% modulares cuaterni\'{o}nicas de peso $\peso{k}$ y nivel $\frak{N}$ para un
+% \'{a}lgebra de cuaterniones de divisi\'{o}n $B$ y vimos c\'{o}mo el espacio
+% $\modularH[B]{k}{\frak{N}}$ se descompon\'{\i}a, reflejando la
+% descomposici\'{o}n de la variedad de Shimura $\shimura[B]{\frak{N}}$. En esta
+% secci\'{o}n, procedimos en el sentido inverso, asociando, en primer lugar, a
+% cada par $(\frak{N},\frak{a})$ el grupo $\Gamma_{0}(\frak{N},\frak{a})$ y, en
+% segunda instancia, a este grupo el espacio de formas modulares
+% $\modularH{k}{\frak{N},\frak{a}}$. Mencionamos tambi\'{e}n que las variedades
+% $\shimura[B]{\frak{N}}$ son compactas, pero que la variedad
+% $Y_{0}(\frak{N})$ asociada por un procedimiento an\'{a}logo al
+% \'{a}lgebra de matrices $\MM_{2\times 2}(F)$ no lo es. Aun as\'{\i},
+% vimos que es posible compactificarla agregando una cantidad finita de
+% puntos, que denominamos c\'{u}spides. A diferencia lo que sucede con las
+% formas modulares el\'{\i}pticas, la holomorf\'{\i}a en las c\'{u}spides
+% estaba garantizada por el pricipio de Koecher; pero esto no les restaba
+% importancia. La existencia de estas c\'{u}spides la relacionamos con la
+% existencia de expansiones de Fourier para las formas
+% $f\in\modularH{k}{\frak{N},\frak{a}}$. Finalmente, estas expansiones nos
+% permitieron identificar los subespacios $\spitzH{k}{\frak{N},\frak{a}}$
+% de formas cuspidales. Llegamos entonces a la definici\'{o}n central de
+% esta secci\'{o}n.
+
+Hemos mencionado al comienzo de esta secci\'{o}n que un orden de Eichler
+$\cal{O}\subset\MM_{2\times 2}(F)$ de nivel $\frak{N}$ tiene asociada cierta
+variedad $Y_{0}(\frak{N})$. Esta variedad no es conexa, pero es una uni\'{o}n
+disjunta de componentes conexas $Y_{0}(\frak{N},\frak{a})$ indexadas por el
+grupo de clases estrictas del cuerpo $F$. En general, dado un subgrupo de
+congruencia $\Gamma\subset\GLtp_{2}(F)$, la variedad
+$Y(\Gamma)=\Gamma\backslash\hP^{n}$ no es compacta, pero es posible
+compactificarla agregando una cantidad finita de puntos, que hemos denominado
+c\'{u}spides. A diferencia de lo que sucede con las formas modulares
+el\'{\i}pticas, la holomorf\'{\i}a en las c\'{u}spides est\'{a} garantizada por
+el principio de Koecher; pero esto no les resta importancia. La existencia de
+estas c\'{u}spides la hemos relacionado con la existencia de expansiones de
+Fourier para las formas $f\in\modularH{k}{\Gamma}$. Finalmente, estas
+expansiones nos han permitido identificar los subespacios $\spitzH{k}{\Gamma}$.
+% Llegamos, entonces, a la definici\'{o}n central de esta secci\'{o}n.
+
+\begin{defFormaModularDeHilbertDeNivelN}%
+	\label{def:formamodulardehilbertdeniveln}
+	Una \emph{forma de Hilbert} de peso $\peso{k}$ y nivel $\frak{N}$
+	es una funci\'{o}n
+	\index{forma modular!de Hilbert}
+	\begin{align*}
+		f & \,:\,(\hP^{\pm})^{n}
+			\,\times\,(\GL_{2}(\Adfin{F})/\Idfin{\cal{O}})
+			\,\rightarrow\,\bb{C}
+	\end{align*}
+	%
+	holomorfa en la primera variable y localmente constante en la
+	segunda tal que $f\operadormatrices{\peso{k}}{\gamma}=f$ para toda
+	matriz $\gamma\in\GL_{2}(F)$, donde
+	\begin{equation}
+		\label{eq:matricesoperadordepesokcompleto}
+		\big(f\operadormatrices{\peso{k}}{\gamma}\big)
+			(z,\hhat{\alpha}\Idfin{\cal{O}})
+		\,=\,\bigg(\prod_{i=1}^{n}\,
+			\frac{\det(\gamma_{i})^{k_{i}+m_{i}-1}}{%
+				j(\gamma_{i},z_{i})^{k_{i}}}
+			\bigg)\,f(\gamma z,\gamma\hhat{\alpha}\Idfin{\cal{O}})
+	\end{equation}
+	%
+	y los valores $m_{i}$ est\'{a}n dados por \eqref{eq:pesomatrices}.
+	Denotamos este espacio por $\modularH{k}{\frak{N}}$. Como en las
+	secciones anteriores, usaremos la notaci\'{o}n
+	\begin{math}
+		J_{i}(\gamma_{i},z_{i})=
+			\frac{\det(\gamma_{i})^{k_{i}+m_{i}-1}}{%
+				j(\gamma_{i},z_{i})^{k_{i}}}
+	\end{math}~.
+\end{defFormaModularDeHilbertDeNivelN}
+
+\begin{obsEleccionDelFactorParaAdelicas}%
+	\label{obs:elecciondelfactorparaadelicas}
+	En relaci\'{o}n con la Observaci\'{o}n~\ref{obs:elecciondelfactor},
+	podemos definir, m\'{a}s en general,
+	$f\operadormatrices{\peso{k},\peso{m}}{\gamma}$ por la misma
+	expresi\'{o}n \eqref{eq:matricesoperadordepesokcompleto}, pero con
+	$\peso{k}\in\bb{Z}^{n}$ y $\peso{m}\in\bb{R}^{n}$ arbitrarios, y
+	$\modular{\peso{k},\peso{m}}{\frak{N}}$ como el espacio de aquellas
+	funciones que cumplen $f\operadormatrices{\peso{k},\peso{m}}{\gamma}=f$
+	siempre que $\gamma\in\GL_{2}(F)$. Este espacio es trivial, a menos que
+	$(\peso{k},\peso{m})$ sea un peso razonable. Si $h\in\bb{R}$, entonces
+	\begin{align*}
+		f\operadormatrices{\peso{k},\peso{m}+h\cdot\peso{1}}{\gamma} &
+			\,=\,\norma(\det\,\gamma)^{h}\,
+			f\operadormatrices{\peso{k},\peso{m}}{\gamma}
+		\text{ ,}
+	\end{align*}
+	%
+	con lo cual, si $f\in\modular{\peso{k},\peso{m}}{\frak{N}}$, la
+	funci\'{o}n
+	\begin{math}
+		\tilde{f}(z,\hhat{\alpha}\Idfin{\cal{O}})=
+			\big(\signo(\Im\,z)\,
+			|\det\,\hhat{\alpha}|_{\adeles{F}}\big)^{h}\,
+			f(z,\hhat{\alpha}\Idfin{\cal{O}})
+	\end{math} verifica
+	\begin{align*}
+		\tilde{f}(\gamma z,\gamma\hhat{\alpha}\Idfin{\cal{O}}) & \,=\,
+			\big(\signo(\norma(\det\,\gamma))\,
+				|\det\,\gamma_{0}|_{\adeles{F}}\big)^{h}\,
+			\bigg(\prod_{i=1}^{n}\,
+				\frac{j(\gamma_{i},z_{i})^{k_{i}}}{%
+					\det(\gamma_{i})^{k_{i}+m_{i}-1}}
+				\bigg)\,
+				\tilde{f}(z,\hhat{\alpha}\Idfin{\cal{O}}) \\
+		& \,=\,\norma(\det\,\gamma)^{-h}\,\bigg(\prod_{i=1}^{n}\,
+				\frac{j(\gamma_{i},z_{i})^{k_{i}}}{%
+					\det(\gamma_{i})^{k_{i}+m_{i}-1}}
+				\bigg)\,
+				\tilde{f}(z,\hhat{\alpha}\Idfin{\cal{O}})
+		\text{ ,}
+	\end{align*}
+	%
+	donde $\gamma_{0}$ denota la proyecci\'{o}n de $\gamma$ a
+	$\GL_{2}(\Adfin{F})$. Es decir, $f\mapsto\tilde{f}$ es una
+	biyecci\'{o}n entre $\modular{\peso{k},\peso{m}}{\frak{N}}$ y
+	$\modular{\peso{k},\peso{m}+h\cdot\peso{1}}{\frak{N}}$.
+\end{obsEleccionDelFactorParaAdelicas}
+
+Consideraremos exclusivamente formas de Hilbert en el sentido de la
+Definici\'{o}n~\ref{def:formamodulardehilbertdeniveln}.
+
+\begin{propoDescomposicionDelEspacioDeFormasModularesDeHilbert}%
+	\label{thm:descomposiciondelespaciodeformasmodularesdehilbert}
+	Existe un isomorfismo
+	\begin{equation}
+		\label{eq:descomposicionmodularesmatrices}
+		\modularH{k}{\frak{N}} \,\simeq\, \bigoplus_{\frak{a}}\,
+			\modularH{k}{\frak{N},\frak{a}}
+		\text{ ,}
+	\end{equation}
+	%
+	donde $\frak{a}$ recorre un sistema de representantes de las clases
+	estrictas en $\pClass{F}$.
+\end{propoDescomposicionDelEspacioDeFormasModularesDeHilbert}
+
+\begin{proof}
+	En primer lugar, por el Corolario~\ref{coro:normaclasesestrictas}, la
+	norma reducida induce una biyecci\'{o}n
+	\begin{align*}
+		\GLtp_{2}(F)\backslash\GL_{2}(\Adfin{F})/\Idfin{\cal{O}}
+			& \,\simeq\,
+			F_{+}^{\times}\backslash\Idfin{F}/\Idfin{\oka{F}}
+			\,\simeq\,\pClass{F}
+		\text{ .}
+	\end{align*}
+	%
+	Eligiendo un sistema de representantes $\{\frak{a}\}$ de las clases
+	estrictas de $F$, v\'{\i}a \eqref{eq:ideleasociadomatrices} y
+	\eqref{eq:matrizasociadaaidelematrices} queda determinado un conjunto
+	$\{\hhat{\alpha}\}_{\frak{a}}$ que constituye un sistema de
+	representantes de las clases en
+	\begin{math}
+		\GLtp_{2}(F)\backslash\GL_{2}(\Adfin{F})/\Idfin{\cal{O}}
+	\end{math}~,
+	en correspondencia con $\{\frak{a}\}$.
+	% y, en particular, contiene un sistema de representantes, si se
+	% permiten matrices con determinante no necesariamente totalmente
+	% positivo.
+	En consecuencia, dada $\hhat{\alpha}'\in\GL_{2}(\Adfin{F})$, existen un
+	representante $\hhat{\alpha}$ y una matriz $\gamma\in\GLtp_{2}(F)$
+	tales que
+	\begin{math}
+		\gamma\hhat{\alpha}'\Idfin{\cal{O}}=
+			\hhat{\alpha}\Idfin{\cal{O}}
+	\end{math}~.
+	En segundo lugar, notamos que, por la
+	Observaci\'{o}n~\ref{obs:eichlernorma}, existen matrices
+	$\lista{\rho}{n}\in \GL_{2}(F)$ tales que
+	\begin{math}
+		\det(\inc[i](\rho_{j}))>0
+	\end{math} para $i\not=j$ y
+	\begin{math}
+		\det(\inc[j](\rho_{j}))<0
+	\end{math}~. Usando estas matrices, podemos ver que toda
+	$f\in\modularH{k}{\frak{N}}$ est\'{a} determinada por los valores que
+	toma en el producto de los semiplanos superiores $\hP^{n}$.
+	% Entonces
+	% \begin{align*}
+		% f(z,\hhat{\alpha}'\Idfin{\cal{O}}) & \,=\,
+			% \big(f\operadormatrices{\peso{k}}{\gamma}\big)
+				% (z,\hhat{\alpha}'\Idfin{\cal{O}})
+		% \,=\,\bigg(\prod_{i=1}^{n}\,J_{i}(\gamma_{i},z_{i})^{-1}
+			% \bigg)\,f(\gamma z, \hhat{\alpha}\Idfin{\cal{O}})
+		% \text{ .}
+	% \end{align*}
+	% %
+	De estas dos observaciones, se deduce que $f\in\modularH{k}{\frak{N}}$
+	est\'{a} determinada por los valores que toma en pares
+	$(z,\hhat{\alpha}\Idfin{\cal{O}})$, con $z\in\hP^{n}$ y $\hhat{\alpha}$
+	tomado del conjunto de representantes $\{\hhat{\alpha}\}_{\frak{a}}$.
+
+	Ahora, dada $f\in\modularH{k}{\frak{N}}$ y uno de los representantes
+	$\frak{a}$, sea $f_{\frak{a}}:\,\hP^{n}\rightarrow\bb{C}$ la
+	funci\'{o}n
+	\begin{align*}
+		f_{\frak{a}}(z) & \,=\,f(z,\hhat{\alpha}\Idfin{\cal{O}})
+		\text{ .}
+	\end{align*}
+	%
+	Esta funci\'{o}n $f_{\frak{a}}$ es holomorfa, porque $f$ lo es y, si
+	$\gamma\in\Gamma_{0}(\frak{N},\frak{a})$, entonces
+	\begin{align*}
+		\big(f_{\frak{a}}\operadormatrices{\peso{k}}{\gamma}\big)(z)
+		& \,=\,\bigg(\prod_{i=1}^{n}\,J_{i}(\gamma_{i},z_{i})^{-1}
+			\bigg)\,f(\gamma z,\hhat{\alpha}\Idfin{\cal{O}})
+			\,=\,\big(f\operadormatrices{\peso{k}}{\gamma}\big)
+				(z,\gamma^{-1}\hhat{\alpha}\Idfin{\cal{O}}) \\
+		& \,=\,\big(f\operadormatrices{\peso{k}}{\gamma}\big)
+			(z,\hhat{\alpha}\Idfin{\cal{O}})
+			\,=\,f(z,\hhat{\alpha}\Idfin{\cal{O}})
+			\,=\,f_{\frak{a}}(z)
+		\text{ .}
+	\end{align*}
+	%
+	La aplicaci\'{o}n $f\mapsto f_{\frak{a}}$ es lineal e induce una
+	transformaci\'{o}n
+	\begin{math}
+		\modularH{k}{\frak{N}}\rightarrow\bigoplus_{\frak{a}}\,
+			\modularH{k}{\frak{N},\frak{a}}
+	\end{math}~.
+	El argumento del p\'{a}rrafo anterior muestra que
+	$f\mapsto (f_{\frak{a}})_{\frak{a}}$ es inyectiva. Rec\'{\i}procamente,
+	dadas $f_{\frak{a}}\in\modularH{k}{\frak{N},\frak{a}}$, las condiciones
+	\begin{align*}
+		f(z,\hhat{\alpha}\Idfin{\cal{O}}) & \,=\,f_{\frak{a}}(z)
+			\qquad\text{si } z\in\hP^{n} \quad\text{y} \\
+		f\operadormatrices{\peso{k}}{\gamma} & \,=\,f
+			\qquad\text{si }\gamma\in\GL_{2}(F)
+	\end{align*}
+	%
+	determinan un\'{\i}vocamente una funci\'{o}n
+	\begin{math}
+		f:\,(\hP^{\pm})^{n}\times(\GL_{2}(\Adfin{F})/\Idfin{\cal{O}})
+			\rightarrow\bb{C}
+	\end{math}~.
+	Veamos esto: si
+	\begin{math}
+		(z,\hhat{\alpha}'\Idfin{\cal{O}})\in
+			(\hP^{\pm})^{n}\times\GL_{2}(\Adfin{F})/\Idfin{\cal{O}}
+	\end{math}~,
+	podemos tomar alg\'{u}n producto de las matrices $\rho_{j}$,
+	llam\'{e}moslo $\rho$, de manera que $\rho\,z\in\hP^{n}$. Ahora, porque
+	$\{\hhat{\alpha}\}_{\frak{a}}$ es un sistema de representantes de
+	\begin{math}
+		\GLtp_{2}(F)\backslash\GL_{2}(\Adfin{F})/\Idfin{\cal{O}}
+	\end{math}~,
+	existen $\gamma\in\GLtp_{2}(F)$ y $\hhat{\alpha}$ en dicho conjunto,
+	tales que
+	\begin{math}
+		\gamma\rho\hhat{\alpha}'\Idfin{\cal{O}}=
+			\hhat{\alpha}\Idfin{\cal{O}}
+	\end{math}~.
+	Entonces $f(z,\hhat{\alpha}'\Idfin{\cal{O}})$ es igual a
+	$f(\gamma\rho\,z,\hhat{\alpha}\Idfin{\cal{O}})$, m\'{o}dulo alguna
+	constante. Esta funci\'{o}n es una forma modular de Hilbert: es
+	holomorfa en la primera variable porque las $f_{\frak{a}}$ lo son,
+	es localmente constante porque, dado $\hhat{\alpha}'$, es constante en
+	el entorno $\hhat{\alpha}'\Idfin{\cal{O}}$ y verifica, por
+	definici\'{o}n, la condici\'{o}n de invarianza.
+\end{proof}
+
+\begin{defFormaDeHilbertCuspidalDeNivelN}%
+	\label{def:formadehilbertcuspidaldeniveln}
+	Una forma de Hilbert $f=(f_{\frak{a}})_{\frak{a}}\in%
+	\modularH{k}{\frak{N}}$ es una \emph{forma cuspidal}, si
+	\index{forma modular!de Hilbert!cuspidal}
+	$f_{\frak{a}}\in\spitzH{k}{\frak{N},\frak{a}}$ para cada
+	representante $\frak{a}$ de las clases estrictas de $F$.
+	El subespacio de formas cuspidales lo denotamos
+	$\spitzH{k}{\frak{N}}$ y vale
+	\begin{equation}
+		\label{eq:descomposicioncuspidalesmatrices}
+		\spitzH{k}{\frak{N}} \,\simeq\, \bigoplus_{\frak{a}}\,
+			\spitzH{k}{\frak{N},\frak{a}}
+		\text{ .}
+	\end{equation}
+	%
+\end{defFormaDeHilbertCuspidalDeNivelN}
+
+\begin{obsMockProductoInterno}\label{obs:mockproductointerno}
+	Teniendo en cuenta el isomorfismo
+	\eqref{eq:descomposicioncuspidalesmatrices}, se podr\'{\i}a definir un
+	producto interno en $\spitzH{k}{\frak{N}}$ por
+	\begin{math}
+		\langle f,g\rangle =\sum_{\frak{a}}\,
+		\langle f_{\frak{a}},g_{\frak{a}}\rangle_{\frak{a}}
+	\end{math}~,
+	donde
+	\begin{math}
+		\langle\cdot,\cdot\rangle_{\frak{a}}=
+		\langle\cdot,\cdot\rangle_{\Gamma_{0}(\frak{N},\frak{a})}
+	\end{math}~.
+	Pero esta expresi\'{o}n \emph{depende de los representantes}
+	$\{\frak{a}\}$. Si $\{\frak{a_{1}}\}$ es otra elecci\'{o}n y
+	$[\frak{a}_{1}]=[\frak{a}]$, entonces existen
+	$\gamma_{\frak{a},\frak{a}_{1}}\in\GLtp_{2}(F)$ que verifican
+	\begin{math}
+		\hhat{\alpha}_{1}\Idfin{\cal{O}}=
+		\gamma_{\frak{a},\frak{a}_{1}}^{-1}\hhat{\alpha}\Idfin{\cal{O}}
+	\end{math}~.%
+	\footnote{
+		Si $\lambda_{\frak{a},\frak{a}_{1}}\in F_{+}^{\times}$ verifica
+		$\lambda_{\frak{a},\frak{a}_{1}}\,\frak{a}_{1}=\frak{a}$,
+		podemos elegir la matriz diagonal
+		\begin{math}
+			\left[\begin{smallmatrix}
+				\lambda_{\frak{a},\frak{a}_{1}} & \\
+				& 1
+			\end{smallmatrix}\right]
+		\end{math}~.
+	}
+	En particular,
+	\begin{math}
+		\det(\gamma_{\frak{a},\frak{a}_{1}})\,\frak{a}_{1}=\frak{a}
+	\end{math}~y, por la Proposici\'{o}n~\ref{propo:peterssonpropiedades}
+	(i),
+	\begin{align*}
+		\langle f_{\frak{a}_{1}},g_{\frak{a}_{1}}
+			\rangle_{\frak{a}_{1}} & \,=\,
+		\langle f_{\frak{a}}\operadormatrices{\peso{k}}{%
+				\gamma_{\frak{a},\frak{a}_{1}}},
+		g_{\frak{a}}\operadormatrices{\peso{k}}{%
+			\gamma_{\frak{a},\frak{a}_{1}}}\rangle_{\frak{a}_{1}}
+		\,=\,\norma(
+			\det(\gamma_{\frak{a},\frak{a}_{1}}))^{k_{0}-2}\,
+		\langle f_{\frak{a}},g_{\frak{a}}\rangle_{\frak{a}}
+		\text{ .}
+	\end{align*}
+	%
+	Para obtener un producto invariante, se debe definir
+	\begin{equation}
+		\label{eq:productointernodepeterssondehilbert}
+		\langle f,g\rangle \,:=\,\sum_{\frak{a}}\,
+			\idnorm(\frak{a})^{k_{0}-2}\,\langle f_{\frak{a}},
+				g_{\frak{a}}\rangle_{\frak{a}}
+		\text{ .}
+	\end{equation}
+	%
+	Esta definici\'{o}n quedar\'{a} mejor justificada una vez realizada la
+	interpretaci\'{o}n automorfa de las formas de Hilbert
+	(\S~\ref{subsec:enlosadelescuadradointegrable}).
+\end{obsMockProductoInterno}
+
+Sea $f\in\modularH{k}{\frak{N}}$. Cada componente $f_{\frak{a}}$ admite un
+desarrollo de Fourier, que, por el Teorema~\ref{thm:principiodekoecher}, es de
+la forma
+\begin{align*}
+	f_{\frak{a}}(z) & \,=\,a_{0}(f_{\frak{a}})+
+		\sum_{\nu\frak{a}^{\perp},\,\nu\gg 0}\,a_{\nu}(f_{\frak{a}})\,
+			e^{2\pi i\traza(\nu z)}
+	\text{ .}
+\end{align*}
+%
+Los coeficientes de $f_{\frak{a}}$ verifican
+\begin{math}
+	a_{\nu\epsilon}(f_{\frak{a}})=
+		\big(\prod_{i=1}^{n}\,\epsilon_{i}^{m_{i}+k_{i}-1}\big)\,
+		a_{\nu}(f_{\frak{a}})
+\end{math}~,
+para toda unidad totalmente positiva $\epsilon\in\oka{F,+}^{\times}$. En
+particular, el valor de la expresi\'{o}n
+\begin{equation}
+	\label{eq:coeficientesdefouriertilde}
+	\tilde{c}(\nu,f_{\frak{a}}) \,=\,
+		\bigg(\prod_{i=1}^{n}\,\nu_{i}^{m_{i}+k_{i}-1}\bigg)^{-1}\,
+			a_{\nu}(f_{\frak{a}})
+\end{equation}
+%
+es invariante por multiplicar $\nu$ por una unidad totalmente positiva.
+
+Por otro lado, como el conjunto $\{\frak{a}\}$ es un sistema de representantes
+del grupo de clases estrictas de $F$, el conjunto $\{\frak{a}\diferente\}$
+(donde $\diferente$ denota el diferente de $F$) tambi\'{e}n lo es. Dado un
+ideal fraccionario $\frak{m}$ de $\oka{F}$, existe un \'{u}nico representante
+$\frak{a}$ tal que $[\frak{m}]=[\frak{a}\diferente]$ en $\pClass{F}$, es decir,
+existe $\nu\gg 0$ tal que $\frak{m}=\nu\frak{a}\diferente$. Si $\frak{m}$ es
+\'{\i}ntegro, $\nu\frak{a}\diferente\subset\oka{F}$, de lo que se deduce que
+$\nu\in(\frak{a}\diferente)^{-1}=\frak{a}^{\perp}$. Definimos, entonces, una
+funci\'{o}n en ideales
+\begin{equation}
+	\label{eq:coeficientesdefourierformamodular}
+	c(\frak{m},f) \,:=\,
+		\begin{cases}
+			\tilde{c}(\nu,f_{\frak{a}}) & \quad\text{si }
+					\frak{m}=\nu\cdot\frak{a}\diferente
+					\text{ (\phantom)}
+					\nu\in\frak{a}^{\perp},\,\nu\gg 0
+					\text{\phantom()} \\
+			0 & \quad\text{si }\frak{m}\text{ no es \'{\i}ntegro}
+		\end{cases}
+	\text{ .}
+\end{equation}
+%
+Llamamos \emph{coeficientes de Fourier de $f$} a los valores de esta
+funci\'{o}n \cite{ShimuraSpecialValuesOfZeta}.
+Dado que $\tilde{c}(\nu\epsilon,f_{\frak{a}})=\tilde{c}(\nu,f_{\frak{a}})$,
+si $\epsilon\in\oka{F,+}^{\times}$, los coeficientes de Fourier est\'{a}n bien
+definidos.

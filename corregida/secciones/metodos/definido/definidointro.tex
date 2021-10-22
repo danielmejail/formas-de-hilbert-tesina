@@ -1,0 +1,339 @@
+% El problema an\'{a}logo a \ref{prob:formasindefinida} para un \'{a}lgebra
+% totalmente definida $B/F$ admite una soluci\'{o}n. La descripci\'{o}n dada en
+% \S~\ref{sec:cuaternionicasheckedefinida} es lo suficientemente
+% expl\'{\i}cita como para ser implementada.
+% 
+% ?`Mencionar los m\'{e}todos necesarios para llevar esto a cabo? C\'{a}lculo de
+% un orden de Eichler, representantes de las clases de ideales, \'{o}rdenes a
+% izquierda de estos ideales, sus grupos de unidades; calcular los conjuntos
+% $\mathscr{T}_{\frak{p}}(I)$.
+% 
+Sea $B/F$ un \'{a}lgebra totalmente definida y sea $\cal{O}\subset B$ un orden
+de Eichler. Denotamos por $\ideales{\cal{O}}$ el conjunto de ideales
+(invertibles) $I$ de $B$ cuyo orden a derecha es $\Oder(I)=\cal{O}$. Sea
+$H=\#\lClass{\cal{O}}$ y fijemos un sistema de representantes $\{I_{t}\}_{t}$
+de las clases a izquierda. Dado un ideal $I\in\ideales{\cal{O}}$, denotamos por
+$[I]$, tanto su clase en $\lClass{\cal{O}}$, como la funci\'{o}n
+caracter\'{\i}stica de la misma. El \emph{estabilizador} de un ideal $I$ es el
+grupo
+\begin{align*}
+	\Gamma_{I} & \,:=\,\big\{b\in B^{\times}\,:\,bI=I\big\} \,=\,
+		\Oizq(I)^{\times}
+	\text{ .}
+\end{align*}
+%
+Los elementos centrales contenidos en este grupo son precisamente
+$\Gamma_{I}\cap F^{\times}=\oka{F}^{\times}$. Las inmersiones reales de $F$
+determinan una inclusi\'{o}n discreta en un compacto:
+\begin{align*}
+	& \Gamma_{I}/\oka{F}^{\times}\,\hookrightarrow\,
+		\Idinf{B}/\centre(\bb{R})
+		% \,\simeq\,(\bb{H}^{\times}/\bb{R}^{\times})^{n}
+		\,\simeq\,(S^{3})^{n}
+	\text{ ,}
+\end{align*}
+%
+de donde se deduce que
+\begin{align*}
+	w_{I} & \,:=\, \big|\Gamma_{I}/\oka{F}^{\times}\big|\,<\,\infty
+	\text{ .}
+\end{align*}
+%
+Todo ideal invertible de $B$ es localmente principal y la correspondecia
+$\Idfin{B}/\Idfin{\cal{O}}\xrightarrow{\sim}\ideales{\cal{O}}$ est\'{a}
+determinada por
+% dada por $\hhat{\alpha}\Idfin{\cal{O}}\mapsto I$, si
+$I=\hhat{\alpha}\Adfin{\cal{O}}\cap B$.%
+\footnote{
+	ver \S~\ref{sec:clasesdeideales}
+}
+Sean $\hhat{\alpha}_{t}\in\Idfin{B}$ tales que
+$I_{t}=\hhat{\alpha}_{t}\Adfin{\cal{O}}\cap B$. Si
+$I=\hhat{\alpha}\Adfin{\cal{O}}\cap B$, escribimos
+$[\hhat{\alpha}\Idfin{\cal{O}}]$ para indicar la clase, o bien la funci\'{o}n
+caracter\'{\i}stica en $\Idfin{B}/\Idfin{\cal{O}}$, correspondiente a $[I]$.
+
+Una forma modular cuaterni\'{o}nica para $B$ de nivel $\cal{O}$ y peso
+$\peso{k}$ es una funci\'{o}n
+\begin{math}
+	f:\,\Idfin{B}/\Idfin{\cal{O}}\rightarrow W_{\peso{k}}(\bb{C})
+\end{math}
+tal que
+\begin{align*}
+	f(\gamma\hhat{\alpha}\Idfin{\cal{O}}) & \,=\,
+		f(\hhat{\alpha}\Idfin{\cal{O}})^{\gamma^{-1}}
+	\text{ .}
+\end{align*}
+%
+Alternativamente, una forma modular es una funci\'{o}n
+$f:\,\ideales{\cal{O}}\rightarrow W_{\peso{k}}(\bb{C})$ equivariante respecto
+de la acci\'{o}n a izquierda de $B^{\times}$. Esta equivalencia permite dar una
+descripci\'{o}n alternativa de los operadores de Hecke.
+
+Seg\'{u}n \eqref{eq:cuaternionicasoperadorcoclase},
+\begin{align*}
+	\big(T_{\frak{p}}f\big)(\hhat{\alpha}\Idfin{\cal{O}}) & \,=\,
+		\sum_{i}\,f(\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}})
+	\text{ .}
+\end{align*}
+%
+Fijado $\hhat{\alpha}\Idfin{\cal{O}}$, para cada $\hhat{\pi}_{i}$ existe un
+\'{u}nico $t\in [\![1,H]\!]$ tal que
+\begin{math}
+	[\hhat\alpha\hhat\pi_i^{-1}\Idfin{\cal O}]=
+		[\hhat\alpha_t\Idfin{\cal O}]
+\end{math}. Existe, entonces, un elemento $\rho_{i}\in B^{\times}$ que verifica
+\begin{equation}
+	\label{eq:cuaternionicadefinidaidealesequivalentes}
+	\rho_{i}\hhat{\alpha}\hhat{\pi}_{i}^{-1}\Idfin{\cal{O}} \,=\,
+		\hhat{\alpha}_{t}\Idfin{\cal{O}}
+	\text{ .}
+\end{equation}
+%
+Entonces podemos comprobar que
+\begin{align*}
+	\big(T_{\frak p}f\big)(\hhat\alpha\Idfin{\cal O}) & \,=\,
+		\sum_{t=1}^H\,\sum_i\,f(\hhat\alpha_t\Idfin{\cal O})^{\rho_i}\,
+			[\hhat\alpha_t\Idfin{\cal O}]
+				(\hhat\alpha\hhat\pi_i^{-1}\Idfin{\cal O})
+	\text{ .}
+\end{align*}
+%
+Si $\rho_{i}'\in B^\times$ cumple con
+\eqref{eq:cuaternionicadefinidaidealesequivalentes}, entonces
+\begin{math}
+	\rho_i^{-1}\hhat\alpha_t\Idfin{\cal O}=
+		{\rho_i'}^{-1}\hhat\alpha_t\Idfin{\cal O}
+\end{math}, lo que significa que $\rho_i$ y $\rho_i'$ difieren en una unidad
+del orden $\cal{O}_{t}=\Oizq(I_{t})$:
+\begin{align*}
+	\rho_i' & \,\in\,\Gamma_t\,\rho_i
+	\text{ .}
+\end{align*}
+%
+% ($\rho_{i}'\rho_{i}^{-1}\in\Gamma_{t}$).
+
+Sea $\hhat\pi\in\frak I(\frak p)$, es decir, $\hhat\pi\in\Adfin{\cal O}$ que
+cumple $\nrd(\hhat\pi)\in\hhat p\Idfin{\oka F}$. Como antes, existe un
+\'{u}nico $t\in [\![1,H]\!]$ y un $\rho\in B^\times$ tales que
+$\rho\hhat\alpha\hhat\pi^{-1}\Idfin{\cal O}=\hhat\alpha_t\Idfin{\cal O}$. El
+elemento $\rho$ es \'{u}nico m\'{o}dulo multiplicar a izquierda por
+$\Gamma_t$. Notamos que
+\begin{align*}
+	\rho & \,\in\,\hhat\alpha_t\Idfin{\cal O}\hhat\pi\hhat\alpha^{-1}
+		\,\cap\,B^\times
+	\text{ .}
+\end{align*}
+%
+Llamamos $I=\hhat\alpha\Adfin{\cal O}\cap B$,
+$I_t=\hhat\alpha_t\Adfin{\cal O}\cap B$ y definimos
+\begin{align*}
+	L & \,=\,II_t^{-1}\rho \,=\,
+		\hhat\alpha\Adfin{\cal O}\hhat\alpha_t^{-1}\rho\,\cap\,B \,=\,
+		\big(\hhat\alpha\Adfin{\cal O}\hhat\alpha^{-1}\big)\,
+			(\hhat\alpha\hhat\pi\hhat\alpha^{-1})\,\cap\,B
+	\text{ .}
+\end{align*}
+%
+Cambiando $\rho$ por $\rho'\in\Gamma_t\rho$, se obtiene el mismo ret\'{\i}culo
+$L$ en $B$ y cambiando $\hhat\pi$ por $\hhat\pi'\in\Idfin{\cal O}\hhat\pi$,
+tambi\'{e}n. Este ret\'{\i}culo de $B$ (no necesariamente es un $\cal O$-ideal
+a derecha) cumple:
+\begin{align*}
+	\Oizq(L)\,=\,\Oizq(I) & \quad\text{,}\quad
+		L\,\subset\,\Oizq(L) \quad\text{y}\quad
+		\nrd(L)\,=\,\frak p
+	\text{ .}
+\end{align*}
+%
+Rec\'{\i}procamente, si $L\subset B$ posee estas propiedades, entonces
+\begin{math}
+	L=\big(\hhat\alpha\Adfin{\cal O}\hhat\alpha^{-1}\big)\,
+		(\hhat\alpha\hhat\pi\hhat\alpha^{-1})\cap B
+\end{math} para cierto $\hhat\pi\in\frak I(\frak p)$. Desandando los pasos
+previos, vemos que existe un \'{u}nico $t\in[\![1,H]\!]$ tal que
+\begin{math}
+	[\hhat\alpha\hhat\pi^{-1}\Idfin{\cal O}]=
+		[\hhat\alpha_t\Idfin{\cal O}]
+\end{math} y existe un $\rho\in B^\times$ tal que
+\begin{math}
+	\rho\hhat\alpha\hhat\pi^{-1}\Idfin{\cal O}=
+		\hhat\alpha_t\Idfin{\cal O}
+\end{math}; es decir,
+\begin{math}
+	\rho\in\hhat\alpha_t\Idfin{\cal O}\hhat\pi\hhat\alpha^{-1}
+\end{math} y
+\begin{align*}
+	L & \,=\,\big(\hhat\alpha\Adfin{\cal O}\hhat\alpha_t^{-1}\big)\,
+		\big(\hhat\alpha_t\Idfin{\cal O}\hhat\pi\hhat\alpha^{-1}\big)
+		\,\cap\,B \,=\,II_t^{-1}\rho
+	\text{ .}
+\end{align*}
+%
+
+Para expresar la conclusi\'{o}n del argumento anterior de manera simple,
+introducimos la siguiente notaci\'{o}n:
+\begin{align*}
+	\Theta(\frak p) & \,=\,\Idfin{\cal O}\backslash\frak I(\frak p) \,=\,
+		\Idfin{\cal O}\backslash
+			\Big\{\hhat\pi\in\Adfin{\cal O}\,:\,
+				\nrd(\hhat\pi)\in\hhat p\Idfin{\oka F}\Big\}
+		\text{ ,} \\
+	\mathscr R_{\frak p}(I)_t & \,=\,\Gamma_t\backslash
+		\Big\{\rho\in I_tI^{-1}\,:\,\nrd(II_t^{-1}\rho)=\frak p\Big\}
+		\quad\text{y} \\
+	\mathscr L_{\frak p}(I) & \,=\,\Big\{L\subset B \text{ ret\'{\i}culo completo}
+		\,:\,L\subset\Oizq(L)=\Oizq(I),\,\nrd(L)=\frak p
+		\Big\}
+	\text{ .}
+\end{align*}
+%
+Entonces, obtenemos biyecciones
+\begin{equation}
+	\label{eq:biyeccionesheckedefinida}
+	\Theta(\frak p) \,\leftrightarrow\,
+		\bigsqcup_{t=1}^{H}\,\mathscr R_{\frak p}(I)_t
+			\,\leftrightarrow\,
+		\mathscr L_{\frak p}(I)
+	\text{ ,}
+\end{equation}
+%
+dadas por
+\begin{math}
+	\hhat\pi\in\frak I(\frak p)\mapsto\Gamma_t\rho
+\end{math} --donde $t$ y $\rho\in B^\times$ cumplen que
+\begin{math}
+	\rho\hhat\alpha\hhat\pi^{-1}\Idfin{\cal O}=
+		\hhat\alpha_t\Idfin{\cal O}
+\end{math}-- y por
+\begin{math}
+	\rho\mapsto L=II_t^{-1}\rho
+\end{math}.
+
+Usando las biyecciones \eqref{eq:biyeccionesheckedefinida}, para cada
+$t\in[\![1,H]\!]$ podemos reescribir
+\begin{align*}
+	\sum_i\,f(\hhat\alpha\hhat\pi_i^{-1}\Idfin{\cal O})\,
+		[\hhat\alpha_t\Idfin{\cal O}]
+			(\hhat\alpha\hhat\pi_i^{-1}\Idfin{\cal O}) & \,=\,
+		\sum_{\mathscr R_{\frak p}(I)_t}\,
+			f(\hhat\alpha_t\Idfin{\cal O})^{\rho} \,=\,
+		\sum_{\mathscr R_{\frak p}(I)_t}\,f(I_t)^\rho
+	\text{ .}
+\end{align*}
+%
+Las sumatorias de la derecha, son sobre representantes de
+$\mathscr R_{\frak p}(I)_t$ y, como vale que
+$f(I_t)^{\lambda\rho}=f(\lambda^{-1} I_t)^\rho=f(I_t)^\rho$, si
+$\lambda\in\Gamma_t$, entonces las mismas est\'{a}n bien definidas.
+Reemplazando id\`{e}les por ideales, obtenemos la siguiente expresi\'{o}n para
+$T_{\frak p}$:
+\begin{equation}
+	\label{eq:heckeparadefinidosconidealesyelementosglobales}
+	\big(T_{\frak p}f\big)(I) \,=\,\sum_{t=1}^{H}\,
+		\sum_{\mathscr R_{\frak p}(I)_t}\,f(I_t)^\rho
+\end{equation}
+%
+
+Buscamos ahora una expresi\'{o}n para $T_{\frak p}$ en t\'{e}rminos de ideales
+en $\ideales{\cal O}$. Definimos el siguiente conjunto asociado a
+$I\in\ideales{\cal O}$:
+\begin{align*}
+	\mathscr T_{\frak p}(I) & \,=\,\Big\{J\in\ideales{\cal O}\,:\,
+		J\supset I,\,\nrd(I)=\frak p\cdot\nrd(J)\Big\}
+	\text{ .}
+\end{align*}
+%
+%
+% Si $L\in\mathscr L_{\frak p}(I)$, entonces
+% $J=L^{-1}I\in\mathscr T_{\frak p}(I)$: $\Oder(J)=\Oder(I)=\cal O$ y, por
+% multiplicatividad, $\nrd(I)=\frak p\cdot\nrd(J)$. Resta ver que $J\supset I$,
+% pero
+% \begin{align*}
+	% J & \,=\,L^{-1}I\,\supset\,\Oizq(L)^{-1}I\,=\,\Oizq(I)I\,=\,I
+	% \text{ .}
+% \end{align*}
+% %
+% Rec\'{\i}procamente, si $J\in\mathscr T_{\frak p}(I)$, entonces
+% $L=IJ^{-1}\in\mathscr L_{\frak p}(I)$: porque $\Oizq(L)=\Oizq(I)$ y
+% $\nrd(L)=\frak p$. Resta ver que $L$ es \'{\i}ntegro, pero
+% \begin{align*}
+	% L & \,=\,IJ^{-1} \,\subset\,II^{-1}\,=\,\Oizq(L)
+	% \text{ .}
+% \end{align*}
+% %
+% En definitiva, obtenemos aplicaciones
+Este conjunto est\'{a} en biyecci\'{o}n con $\mathscr L_{\frak p}(I)$ v\'{\i}a:
+\begin{math}
+	\big(L\mapsto L^{-1}I\big)\,:\,\mathscr L_{\frak p}(I)\rightarrow
+		\mathscr T_{\frak p}(I)
+\end{math}.
+% \begin{equation}
+	% \label{eq:biyeccionesheckereticuloseideales}
+	% \begin{aligned}
+		% \big(L\,\mapsto\,L^{-1}I\big) \,:\,
+			% \mathscr L_{\frak p}(I)\,\rightarrow\,
+				% \mathscr T_{\frak p}(I) % \quad\text{y}\quad
+		% \big(J\,\mapsto\,IJ^{-1}\big) \,:\,
+			% \mathscr T_{\frak p}(I)\,\rightarrow\,
+				% \mathscr L_{\frak p}(I)
+	% \end{aligned}
+	% \text{ .}
+% \end{equation}
+%
+% inversas una de la otra.
+% 
+% Ahora bien, $\mathscr T_{\frak p}(I)$ se parte como uni\'{o}n disjunta en
+% funci\'{o}n de las clases en $\lClass{\cal O}$: si definimos
+% \begin{math}
+	% \mathscr T_{\frak p}(I)_s:=\mathscr T_{\frak p}(I)\cap\{J\sim I_s\}
+% \end{math}, entonces
+% \begin{align*}
+	% \mathscr T_{\frak p}(I) & \,=\,\bigsqcup_{t=1}^{H}\,
+		% \mathscr T_{\frak p}(I)_t
+	% \text{ .}
+% \end{align*}
+% %
+Por otra parte, la composici\'{o}n
+\begin{math}
+	\bigsqcup_t\,\mathscr R_{\frak p}(I)_t\rightarrow
+		\mathscr L_{\frak p}(I)\rightarrow\mathscr T_{\frak p}(I)
+\end{math} est\'{a} dada por
+\begin{align*}
+	& \Gamma_t\rho\,\mapsto\, II_t^{-1}\rho\,\mapsto\,
+		\big(II_t^{-1}\rho\big)^{-1}I\,=\,\rho^{-1}I_t
+\end{align*}
+%
+% e induce una correspondencia
+% \begin{math}
+	% \mathscr R_{\frak p}(I)_t\leftrightarrow
+		% \mathscr T_{\frak p}(I)_t
+% \end{math}.
+As\'{\i}, concluimos que
+\begin{equation}
+	\label{eq:heckeparadefinidosconideales}
+	\big(T_{\frak p}f\big)(I) \,=\,\sum_{t=1}^{H}\,
+		\sum_{\mathscr R_{\frak p}(I)_t}\,f(\rho^{-1}I_t) \,=\,
+		% \sum_{t=1}^{H}\,\sum_{J\in\mathscr T_{\frak p}(I)_t}\, f(J)
+		\sum_{J\in\mathscr T_{\frak p}(I)}\, f(J)
+	\text{ .}
+\end{equation}
+%
+
+Si $\peso{k}\not =(\lista[\null]{2}{\null})$, toda forma modular para $B$
+de peso $\peso{k}$ determina una forma cuspidal v\'{\i}a la correspondencia de
+Jacquet-Langlands. En este caso, definimos
+$\spitzH[B]{k}{\frak{N}}:=\modularH[B]{k}{\frak{N}}$. En cambio, cuando
+$\peso{k}=(\lista[\null]{2}{\null})$, no toda forma
+$f\in\modular[B]{(\lista[\null]{2}{\null})}{\frak{N}}$ tiene asociada una forma
+de Hilbert cuspidal. A continuaci\'{o}n, definimos el espacio de formas
+cuspidales de peso paralelo $2$ para un \'{a}lgebra de cuaterniones totalmente
+definida y demostramos que los operadores de Hecke $T_{\frak p}$,
+$\frak p\nmid\frak D\frak N$ son normales.
+% La expresi\'{o}n \eqref{eq:heckeparadefinidosconideales}
+% para los operadores de Hecke es v\'{a}lida, sin embargo, para un peso
+% arbitrario. Para terminar con la descripci\'{o}n del m\'{e}todo definido,
+% definimos el espacio $\spitz[B]{(\lista[\null]{2}{\null})}{\frak{N}}$ y
+% proporcionamos una descripci\'{o}n m\'{a}s detallada de los operadores
+% $T_{\frak{p}}$ actuando en este espacio.
+% 

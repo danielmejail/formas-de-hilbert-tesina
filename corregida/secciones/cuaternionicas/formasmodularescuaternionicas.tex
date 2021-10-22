@@ -1,0 +1,256 @@
+En lo que resta de esta secci\'{o}n, asumimos, salvo que se indique lo
+contrario, que $B/F$ es un \'{a}lgebra de cuaterniones \emph{de %
+divisi\'{o}n} sobre el cuerpo de n\'{u}meros totalmente real $F$ de grado $n$,
+que $r\geq 0$ indica la cantidad de lugares arquimedianos no ramificados y que
+los lugares arquimedianos $\lista{v}{n}$ est\'{a}n ordenados de forma tal que
+$v_{i}$ sea no ramificado, si y s\'{o}lo si $i\leq r$. Fijamos un peso
+$\peso{k}=(\lista{k}{n})\in\bb{Z}^{n}$ y escribimos $W_{\peso{k}}$ en lugar de
+$W_{\peso{k}}(\bb{C})$. Fijamos tambi\'{e}n inclusiones
+\begin{math}
+	(\gamma\mapsto\gamma_{j}):\,
+		B_{v_{j}}^{\times}\hookrightarrow\GL_{2}(\bb{C})
+\end{math}~para $j\geq r+1$, de manera que quede inducida una acci\'{o}n de
+$B^{\times}$ en el $\GL_{2}(\bb{C})^{n-r}$-m\'{o}dulo $W_{\peso{k}}$, que
+denotamos $x\cdot\gamma=x^{\gamma}$, si $\gamma\in B^{\times}$ y
+$x\in W_{\peso{k}}$.
+
+\subsection{Caso indefinido}%
+	% \label{subsec:formascuaternionicascasoindefinidobis}
+Supongamos que $B$ es un \'{a}lgebra indefinida (en este caso, $r\geq 1$) y
+sea $\cal{O}\subset B$ un orden de Eichler. En analog\'{\i}a con las formas
+modulares el\'{\i}pticas y teniendo en cuenta la definici\'{o}n
+\eqref{eq:descomposicionvariedaddeshimuraindefinida} de la variedad de Shimura
+asociada a $B$ y al orden $\cal{O}$, las formas modulares que definiremos a
+continuaci\'{o}n son funciones de la forma
+\begin{math}
+	f:\,(\hP^{\pm})^{r}\times(\Idfin{B}/\Idfin{\cal{O}})\rightarrow W
+\end{math}
+que verifican condiciones de regularidad e invarianza con respecto a una
+acci\'{o}n del grupo $B^{\times}$.
+
+Para $i\in [\![1,r]\!]$, introducimos un \emph{factor de automorf\'{\i}a},
+\index{factor de automorfia@factor de automorf\'{\i}a}
+\begin{align*}
+	J_{i} & \,:\,B_{v_{i}}^{\times}\times\hP^{\pm}\,\rightarrow\,\bb{C}
+	\text{ ,}
+\end{align*}
+%
+por la expresi\'{o}n
+\begin{equation}
+	\label{eq:factorddeautomorfia}
+	J_{i}(\gamma,z) \,=\,\frac{j(\gamma,z)^{k_{i}}}{%
+			\det(\gamma)^{m_{i}+k_{i}-1}}
+	\text{ ,}
+\end{equation}
+%
+donde
+\begin{math}
+	j\big(\left[\begin{smallmatrix} a & b \\
+		c & d \end{smallmatrix}\right],z\big)=cz+d
+\end{math}~.
+Dado que $j(\gamma\gamma',z)=j(\gamma,\gamma'z)\cdot j(\gamma',z)$ para
+$\gamma,\gamma'\in\GL_{2}(\bb{R})$ y $z\in\hP^{\pm}$, las funciones $J_{i}$
+cumple con la propiedad an\'{a}loga
+\begin{equation}
+	\label{eq:factordeautomorfiacociclo}
+	J_{i}(\gamma\gamma',z) \,=\,
+		J_{i}(\gamma,\gamma'z)\cdot J_{i}(\gamma',z)
+	\text{ .}
+\end{equation}
+%
+Definimos un \emph{operador de peso $\peso{k}$} de la siguiente manera: dados
+\index{operador de peso@operador de peso $\peso{k}$}
+un elemento $\gamma\in B^{\times}$ y una funci\'{o}n
+\begin{math}
+	f:\,(\hP^{\pm})^{r}\times(\Idfin{B}/\Idfin{\cal{O}})\rightarrow
+		W_{\peso{k}}
+\end{math}~,
+sea $f\operadormatrices{\peso{k}}{\gamma}$ la funci\'{o}n
+\begin{equation}
+	\label{eq:indefinidaoperadordepesok}
+	\big(f\operadormatrices{\peso{k}}{\gamma}\big)
+		(z,\hhat{\alpha}\Idfin{\cal{O}}) \,=\,
+		\bigg(\prod_{i=1}^{r}\,J_{i}(\gamma_{i},z_{i})^{-1}\bigg)\,
+		f(\gamma z,\gamma\hhat{\alpha}\Idfin{\cal{O}})^{\gamma}
+	\text{ .}
+\end{equation}
+%
+
+\begin{defFormaCuaternionicaCasoIndefinido}%
+	\label{def:formacuaternionicacasoindefinido}
+	Dada un \'{a}lgebra de cuaterniones indefinida $B$ de divisi\'{o}n,
+	sobre un cuerpo de n\'{u}meros totalmente real $F$ y dado un orden
+	de Eichler $\cal{O}\subset B$ de nivel $\frak{N}$, una
+	\emph{forma modular cuaterni\'{o}nica}
+	\index{forma modular!cuaternionica@cuaterni\'{o}nica}
+	de peso $\peso{k}$ y nivel $\Idfin{\cal{O}}$ (o, tambi\'{e}n, de nivel
+	$\frak{N}$) para $B$ es una funci\'{o}n
+	\begin{align*}
+		f & \,:\, (\hP^{\pm})^{r}\times (\Idfin{B}/
+			\Idfin{\cal{O}})\rightarrow W_{\peso{k}}(\bb{C})
+	\end{align*}
+	%
+	holomorfa en la primera variable y localmente constante en la segunda
+	tal que $f\operadormatrices{\peso{k}}{\gamma}=f$ para toda
+	$\gamma\in B^{\times}$. Estas funciones constituyen un
+	$\bb{C}$-espacio vectorial que denotamos $\modularH[B]{k}{\frak{N}}$.
+\end{defFormaCuaternionicaCasoIndefinido}
+
+% \begin{obsFormaCuaternionicaCasoIndefinido}
+	% \label{obs:formacuaternionicacasoindefinido}
+	% En general, si $f\operadormatrices{\peso{k}}{\gamma}=f$ para toda
+	% $\gamma\in B^{\times}$, entonces $f$ queda determinada por su
+	% restricci\'{o}n a $\hP^{r}$, en la primera variable (Teorema
+	% \ref{thm:eichlernorma}).
+% \end{obsFormaCuaternionicaCasoIndefinido}
+
+La descomoposici\'{o}n \eqref{eq:descomposicionvariedaddeshimuraindefinida} de
+$\shimura[B]{\frak{N}}$ se ve reflejada en una descomposici\'{o}n an\'{a}loga
+del espacio $\modularH[B]{k}{\frak{N}}$. En primer lugar, si $\frak{a}$ es un
+representante de las clases estrictas de $F$ y $\Gamma_{\frak{a}}$ es el grupo
+de unidades asociado seg\'{u}n \eqref{eq:ordenasociadocuaterniones},
+entonces podemos definir una acci\'{o}n de $\Gamma_{\frak{a}}$ en funciones
+$f:\,\hP^{r}\rightarrow W_{\peso{k}}$ de la siguiente manera: si
+$\gamma\in\Gamma_{\frak{a}}$, sea $f\operadormatrices{\peso{k}}{\gamma}$ la
+funci\'{o}n dada por
+\begin{align*}
+	\big(f\operadormatrices{\peso{k}}{\gamma}\big)(z) & \,=\,
+		\bigg(\prod_{i=1}^{r}\,J_{i}(\gamma_{i},z_{i})^{-1}\bigg)\,
+			f(\gamma z)^{\gamma}
+	\text{ .}
+\end{align*}
+%
+Luego definimos los espacios de funciones holomorfas invariantes por esta
+acci\'{o}n de $\Gamma_{\frak{a}}$:
+\begin{align*}
+	\modularH[B]{k}{\frak{N},\frak{a}} & \,=\,
+		\Big\{ f:\,\hP^{r}\rightarrow W_{\peso{k}}(\bb{C}) \,:\,
+			f\text{ es holomorfa y }
+			f\operadormatrices{\peso{k}}{\gamma}=f\,
+			\forall\gamma\in\Gamma_{\frak{a}}
+			\Big\}
+	\text{ .}
+\end{align*}
+%
+Entonces la aplicaci\'{o}n $f\mapsto (f_{\frak{a}})_{\frak{a}}$, donde
+$f_{\frak{a}}(z)=f(z,\hhat{\alpha}\Idfin{\cal{O}})$, determina una
+transformaci\'{o}n lineal
+\begin{equation}
+	\label{eq:descomposicionmodularesindefinida}
+	\modularH[B]{k}{\frak{N}}\,\rightarrow\,
+		\bigoplus_{\frak{a}}\,\modularH[B]{k}{\frak{N},\frak{a}}
+	\text{ ,}
+\end{equation}
+%
+pues, si $\gamma\in\Gamma_{\frak{a}}$,
+\begin{align*}
+	\big(f_{\frak{a}}\operadormatrices{\peso{k}}{\gamma}\big)(z)
+	& \,=\,\bigg(\prod_{i=1}^{r}\,J_{i}(\gamma_{i},z_{i})^{-1}
+		\bigg)\,f(\gamma z,\hhat{\alpha}\Idfin{\cal{O}})^{\gamma}
+		\,=\, \big(f\operadormatrices{\peso{k}}{\gamma}\big)
+			(z,\gamma^{-1}\hhat{\alpha}\Idfin{\cal{O}}) \\
+	& \,=\, f(z,\gamma^{-1}\hhat{\alpha}\Idfin{\cal{O}})
+		\,=\, f(z,\hhat{\alpha}\Idfin{\cal{O}})
+		\,=\, f_{\frak{a}}(z)
+	\text{ .}
+\end{align*}
+%
+Esta transformaci\'{o}n es un isomorfismo de $\bb{C}$-espacios vectoriales.
+El argumento es an\'{a}logo al de la demostraci\'{o}n de la Proposici\'{o}n
+\ref{thm:descomposiciondelespaciodeformasmodularesdehilbert}, con la salvedad
+de que, en este caso, hay que tener en cuenta la acci\'{o}n de $B^{\times}$
+en $W_{\peso{k}}$.
+% y la Observaci\'{o}n \ref{obs:formacuaternionicacasoindefinido}.
+El isomorfismo \eqref{eq:descomposicionmodularesindefinida} depende de la
+elecci\'{o}n de los representantes $\frak{a}$ de las clases estrictas de $F$,
+de los id\`{e}les $\hhat{a}\in\Adfin{\oka{F}}$ que cumplen
+\eqref{eq:ideleintegroasociado} y de los elementos $\hhat{\alpha}$ tales que
+$\nrd(\hhat{\alpha})=\hhat{a}$.
+
+\subsection{Caso definido}%
+	% \label{subsec:formascuaternionicascasodefinido}
+Si $B$ es un \'{a}lgebra definida, no hay acci\'{o}n sobre el semiplano
+complejo.
+
+\begin{defFormaCuaternionicaCasoDefinido}%
+	\label{def:formacuaternionicacasodefinido}
+	Sea $B$ un \'{a}lgebra de cuaterniones definida, sobre un cuerpo de
+	n\'{u}meros totalmente real $F$ y sea $\cal{O}\subset B$ un orden de
+	Eichler de nivel $\frak{N}$. Una \emph{forma modular cuaterni\'{o}nica}
+	%\index{forma modular cuaternionica@forma modular cuaterni\'{o}nica}
+	de peso $\peso{k}$ y nivel $\Idfin{\cal{O}}$ (o, tambi\'{e}n, de nivel
+	$\frak{N}$) para $B$ es una funci\'{o}n
+	\begin{align*}
+		f & \,:\,\Idfin{B}/\Idfin{\cal{O}}\,\rightarrow\,
+			W_{\peso{k}}(\bb{C})
+	\end{align*}
+	%
+	que satisface, para toda $\gamma\in B^{\times}$,
+	\begin{equation}
+		\label{eq:definidaoperadordepesok}
+		\big(f\operadormatrices{\peso{k}}{\gamma}\big)
+			(\hhat{\alpha}\Idfin{\cal{O}})
+			\,:=\, f(\gamma\hhat{\alpha}\Idfin{\cal{O}})^{\gamma}
+			\,=\, f(\hhat{\alpha}\Idfin{\cal{O}})
+		\text{ .}
+	\end{equation}
+	%
+	El espacio de formas modulares correspondientes lo denotamos
+	$\modularH[B]{k}{\frak{N}}$.
+\end{defFormaCuaternionicaCasoDefinido}
+
+El grupo de unidades $B^{\times}$ act\'{u}a en el conjunto de ideales
+$I$ de $B$ con $\Oder(I)=\cal{O}$ por multiplicaci\'{o}n a izquierda.
+Una forma modular $f$ para $B$ es entonces una funci\'{o}n equivariante
+respecto de esta acci\'{o}n. Si $I=\hhat{\alpha}\Idfin{\cal{O}}\cap B$,
+el estabilizador de $I$ es el grupo de unidades de su orden a izquierda:
+\begin{align*}
+	\Gamma_{\hhat{\alpha}} & \,=\,
+		(\hhat{\alpha}\Idfin{\cal{O}}\hhat{\alpha}^{-1})
+			\,\cap\,B^{\times}
+		\,=\, \left\lbrace b\in B^{\times} \,:\, bI=I \right\rbrace
+	\text{ .}
+\end{align*}
+%
+De esta manera, tomando un sistema de representantes de las clases en
+$\lClass{\cal{O}}$, se obtiene un isomorfismo
+\begin{equation}
+	\label{eq:descomposicionmodularesdefinida}
+	\modularH[B]{k}{\frak{N}}\,\xrightarrow{\sim}\,
+		\bigoplus_{[I]\in\lClass{\cal{O}}}\,
+			W_{\peso{k}}(\bb{C})^{\Gamma_{\hhat{\alpha}}} \\
+\end{equation}
+%
+dado por
+\begin{math}
+	f \mapsto(f(\hhat{\alpha}\Idfin{\cal{O}}))_{[I]\in\lClass{\cal{O}}}
+\end{math}~.
+%
+% \begin{align*}
+	% \modularH[B]{k}{\frak{N}} \,=\, & \left\lbrace
+	% f:\,\Idfin{B}/\Idfin{\cal{O}}\rightarrow W_{\peso{k}}(\bb{C})
+	% \,:\,f\barra{\peso{k}}{\gamma}=f\,\forall\gamma\in B^{\times}
+	% \right\rbrace \\
+	% \left(f\barra{\peso{k}}{\gamma}\right)(\hhat{\alpha}\Idfin{\cal{O}})
+	% \,=\, &
+	% f(\gamma\hhat{\alpha}\Idfin{\cal{O}})^{\gamma}
+% \end{align*}
+% %
+% Sea $\hhat{\alpha}\in\Idfin{B}$ y sea $I=\hhat{\alpha}\Idfin{\cal{O}}\cap B$
+% el ideal de $B$ correspondiente. Evaluando, se obtiene un punto
+% $x=f(\hhat{\alpha}\Idfin{\cal{O}})\in W_{\peso{k}}(\bb{C})$ que
+% cumple con $x^{\gamma}=f(\gamma^{-1}\hhat{\alpha}\Idfin{\cal{O}})=x$
+% para todo $\gamma\in\Gamma_{\hhat{\alpha}}=%
+% \hhat{\alpha}\Idfin{\cal{O}}\hhat{\alpha}^{-1}\cap B$.
+% Si $(x_{\hhat{\alpha}})_{\hhat{\alpha}}\in%
+% \bigoplus_{[I]\in\lClass{\cal{O}}}\,%
+% W_{\peso{k}}(\bb{C})^{\Gamma_{\hhat{\alpha}}}$, definimos
+% $f(\hhat{\alpha}\Idfin{\cal{O}}):=x_{\hhat{\alpha}}$. Si
+% $\hhat{\beta}\in\Idfin{B}$, existen $\hhat{\alpha}$ y $\rho\in B^{\times}$
+% tales que $\rho\hhat{\beta}\Idfin{\cal{O}}=\hhat{\alpha}\Idfin{\cal{O}}$.
+% Entonces $f(\hhat{\beta}\Idfin{\cal{O}})=%
+% f(\rho\hhat{\beta}\Idfin{\cal{O}})^{\rho}=%
+% f(\hhat{\alpha}\Idfin{\cal{O}})^{\rho}$ determina
+% $f\in\modularH[B]{k}{\frak{N}}$. As\'{\i}, se obtiene el isomorfismo
+% de arriba.
+

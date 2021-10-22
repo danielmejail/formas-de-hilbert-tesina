@@ -1,0 +1,391 @@
+% Con esta motivaci\'{o}n,
+% %?`Cu\'al era la motivaci\'on? ?`relaci\'oncon representaciones y curvas
+% %el\'{\i}pticas? ?`cambio de base? ?`puntos racionales en curvas?
+% el objetivo de este trabajo es la descripci\'{o}n de
+% dos m\'{e}todos utilizados en el c\'{a}lculo de las formas de Hilbert y algunos
+% de los problemas que se presentan. En las secciones \S\S~\ref{cap:dehilbert} y
+% \ref{cap:cuaternionicas}, se desarrollan algunos aspectos de la teor\'{\i}a de
+% formas de Hilbert y de formas modulares cuaterni\'{o}ncas, en la medida en que
+% sean necesarios para entender los m\'{e}todos presentados en
+% \S~\ref{cap:metodos}.
+%
+%Se incluir\'an ejemplos para ilustrar los m\'{e}todos y comparar variantes
+%dentro de cada clase, talvez.
+%
+Sea $F$ un cuerpo de n\'{u}meros de grado $[F:\bb{Q}]=n$ sobre $\bb{Q}$. La
+extensi\'{o}n $F/\bb{Q}$ se dice \emph{totalmente real}, si
+$F\otimes_{\bb{Q}}\bb{R}\simeq\bb{R}^{n}$, es decir, si las $n$ inmersiones no
+equivalentes $\inc[i]:\,F\hookrightarrow\bb{C}$ tienen imagen en $\bb{R}$. Sea
+$x\in F$ y sean $x_{i}=\inc[i](x)$, $i=1,\,\cdots,\,n$. Se dice que $x$ es
+\emph{totalmente positivo}, si $x_{i}>0$ para todo $i$. Abreviamos esto por
+$x\gg 0$. En general, dado un cuerpo de n\'{u}meros $F$ con anillo de enteros
+$\oka{F}$, un ideal fraccionario de $F$ (o de $\oka{F}$) es un $\oka{F}$-%
+subm\'{o}dulo finitamente generado de $F$. Los ideales fraccionarios (no nulos)
+conforman un grupo con la operaci\'{o}n de multiplicaci\'{o}n de ideales y el
+elemento neutro es $\oka{F}$. Dado un ideal fraccionario $\frak{a}\subset F$,
+su inverso est\'{a} dado por
+\index{totalmente real}\index{totalmente positivo}
+\begin{align*}
+	\frak{a}^{-1} & \,=\,\left\lbrace x\in F \,:\, x\frak{a}\subset
+		\oka{F}\right\rbrace
+	\text{ .}
+\end{align*}
+%
+Dos ideales fraccionarios $\frak{a}$ y $\frak{b}$ se dicen equivalentes, si
+existe $x\in F$ tal que $\frak{a}=x\frak{b}$. Las clases de equivalencia
+constituyen un grupo, el \emph{grupo de clases} de $F$, denotado $\Class{F}$.
+El \emph{n\'{u}mero de clases de $F$} es el cardinal $h=h(F)$ del grupo
+$\Class{F}$.\index{ideales equivalentes}\index{grupo de clases}
+
+Si $F$ es un cuerpo de n\'{u}meros totalmente real, podemos distinguir una
+relaci\'{o}n m\'{a}s fuerte: los ideales $\frak{a}$ y $\frak{b}$ son
+\emph{equivalentes en sentido estricto}, si existe $x\in F$ totalmente positivo
+tal que $\frak{a}=x\frak{b}$. En este caso, las clases tambi\'{e}n constituyen
+un grupo, denotado por $\pClass{F}$, denominado \emph{grupo de clases %
+estrictas} de $F$. El cardinal de este grupo es el \emph{n\'{u}mero de clases %
+estrictas de $F$} y ser\'{a} denotado por $h^{+}=h^{+}(F)$. Usando cada una de
+las inmersiones de $F$ en $\bb{R}$, podemos mirar el grupo $\GL_{2}(F)$ dentro
+de $\GL_{2}(\bb{R})$ v\'{\i}a
+\index{ideales equivalentes!en sentido estricto}
+\index{grupo de clases!estrictas}
+\begin{align*}
+	& \gamma=\left[\begin{matrix} a & b \\ c & d \end{matrix}\right]
+		\,\mapsto\,\gamma_{i} \,=\,\inc[i](\gamma)\,=\,
+		\left[\begin{matrix} \inc[i](a) & \inc[i](b) \\
+		\inc[i](c) & \inc[i](d) \end{matrix}\right]
+	\text{ .}
+\end{align*}
+%
+Si nos restringimos al subgrupo
+\begin{align*}
+	\GLtp_{2}(F) & \,=\,\big\lbrace\gamma\in\GL_{2}(F)\,:\,
+		\det(\gamma)\gg 0\big\rbrace
+	\text{ ,}
+\end{align*}
+%
+las matrices de determinante totalmente positivo, entonces $\GLtp_{2}(F)$
+act\'{u}a en el producto $\hP^{n}$ de $n$ copias del semiplano de Poincar\'{e}
+por
+\begin{align*}
+	\left[\begin{matrix} a & b \\ c & d \end{matrix}\right]\cdot\mathbf{z}
+		& \,=\,
+	\left(\frac{a_{1}z_{1}+b_{1}}{c_{1}z_{1}+d_{1}},\,\dots,\,
+	\frac{a_{n}z_{n}+b_{n}}{c_{n}z_{n}+d_{n}}\right)
+	\text{ ,}
+\end{align*}
+%
+donde $\mathbf{z}=(\lista{z}{n})\in\hP^{n}$ y
+\begin{math}
+	\left[\begin{matrix} a & b \\ c & d \end{matrix}\right]
+		\in\GLtp_{2}(F)
+\end{math}~.
+Dado un ideal \'{\i}ntegro $\frak{N}\subset\oka{F}$ consideramos subgrupos
+de $\GLtp_{2}(F)$ an\'{a}logos a los subgrupos de congruencia
+$\Gamma_{0}(N)$, $N>1$, de $\SLZ$. Una diferencia importante con el grupo
+modular, es que es necesario considerar \emph{varios} subgrupos a la vez.
+Dado un ideal fraccionario $\frak{a}$ de $F$, definimos
+\begin{align*}
+	% \cal{O} \,=\, & \begin{bmatrix} \oka{F} & \oka{F} \\
+		% \oka{F} & \oka{F} \end{bmatrix} \,=\,
+	% \left\lbrace \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+	% \,:\,a,b,c,d\in\oka{F}\right\rbrace
+	% \text{ ,} \\
+	% \cal{O}_{\frak{a}} \,=\, & \begin{bmatrix} \oka{F} & \frak{a}^{-1} \\
+		% \frak{a} & \oka{F} \end{bmatrix} \,=\,
+	% \left\lbrace \begin{bmatrix} a & b \\ c & d \end{bmatrix}
+	% \,:\,a,d\in\oka{F},\,b\in\frak{a}^{-1},\,c\in\frak{a}\right\rbrace
+	% \text{ ,} \\
+	% \SL(\oka{F}\oplus\frak{a}) \,=\, &
+	% \left\lbrace\begin{bmatrix} a & b \\ c & d \end{bmatrix} \,:\,
+	% a,d\in\oka{F},\,b\in\frak{a}^{-1},\,c\in\frak{a},\,
+	% ad-bc=1\right\rbrace \\
+	% \,=\, & \cal{O}_{\frak{a}}\cap\SL_{2}(F)
+	% \text{ ,} \\
+	% \GLtp(\oka{F}\oplus\frak{a}) \,=\, &
+	% \left\lbrace \begin{bmatrix} a & b \\ c & d \end{bmatrix} \,:\,
+	% a,d\in\oka{F},\,b\in\frak{a}^{-1},\,c\in\frak{a},\,
+	% ad-bc\in\oka{F,+}^{\times}\right\rbrace
+	% \text{ ,} \\
+	% \Gamma_{0}(\frak{N},\frak{a}) \,=\, &
+	% \left\lbrace \begin{bmatrix} a & b \\ c & d \end{bmatrix}\in
+	% \GLtp(\oka{F}\oplus\frak{a})\,:\, c\in\frak{N}\frak{a}
+	% \right\rbrace
+	\Gamma_{0}(\frak{N},\frak{a}) &\,=\,
+		\left\lbrace \left[\begin{matrix} a & b \\
+			c & d \end{matrix}\right]\in\GLtp_{2}(F) \,:\,
+			a,d\in\oka{F},\,b\in\frak{a},\,
+			c\in\frak{N}\frak{a}^{-1},\,
+			ad-bc\in\oka{F,+}^{\times}\right\rbrace
+	\text{ .}
+\end{align*}
+%
+
+Una forma de Hilbert \emph{cl\'{a}sica} es, en analog\'{\i}a con una forma
+modular el\'{\i}ptica, una funci\'{o}n holomorfa $f:\,\hP^{n}\rightarrow\bb{C}$
+que satisface una regla de transformaci\'{o}n
+\index{forma de Hilbert clasica@forma de Hilbert cl\'{a}sica}
+\index{regla de transformacion@regla de transformaci\'{o}n}
+\begin{align*}
+	f\operadormatrices{\peso{k}}{\gamma} & \,=\, \chi(\gamma)f
+	\text{ ,}
+\end{align*}
+%
+para toda $\gamma$ en alg\'{u}n subgrupo de congruencia de $\GLtp_{2}(F)$
+y alg\'{u}n car\'{a}cter $\chi$, donde $\peso{k}=(\lista{k}{n})\in\bb{Z}^{n}$
+es el \emph{peso} de la forma modular. Espec\'{\i}ficamente, nos concetraremos
+en el caso en que el car\'{a}cter $\chi=1$ es trivial y el subgrupo de
+congruencia es uno de los grupos $\Gamma_{0}(\frak{N},\frak{a})$. La regla de
+transformaci\'{o}n se suele presentar de distintas maneras; la definici\'{o}n
+usual es
+\begin{equation}
+	\label{eq:operadormatricesusual}
+	f\operadormatrices{\peso{k}}{\gamma} (z) \,=\,
+		\bigg(\prod_{i=1}^{n}\,\frac{\det(\gamma_{i})^{k_{i}/2}}{%
+			j(\gamma_{i},z_{i})^{k_{i}}}\bigg)\,f(\gamma z)
+	\text{ ,}
+\end{equation}
+%
+donde $j:\,\GLtp_{2}(\bb{R})\times\hP\rightarrow\bb{C}^{\times}$ es el factor
+de automorf\'{\i}a dado por $j(\gamma,z)=cz+d$. Siguiendo \cite{DembeleVoight},
+nosotros definiremos
+\begin{align*}
+	f\operadormatrices{\peso{k}}{\gamma} (z) & \,=\,
+		\bigg(\prod_{i=1}^{n}\,
+		\frac{\det(\gamma_{i})^{m_{i}+k_{i}-1}}{%
+			j(\gamma_{i},z_{i})^{k_{i}}}\bigg)\,f(\gamma z)
+	\text{ ,}
+\end{align*}
+%
+con una elecci\'{o}n particular de valores (\emph{enteros}) $m_{i}$.
+
+Si bien muchas de las definiciones y propiedades se generalizan f\'{a}cilmente
+desde la situaci\'{o}n de formas modulares a formas de Hilbert, muchas otras
+no. La definici\'{o}n de los operadores de Hecke en los espacios de formas de
+Hilbert cuando $h^{+}>1$, por ejemplo, presenta algunas dificultades desde el
+punto de vista cl\'{a}sico. Estas dificultades se resuelven pensando a las
+formas de Hilbert como funciones ad\'{e}licas, es decir, funciones en
+$\GL_{2}(F)\backslash\GL_{2}(\adeles{F})$%
+\footnote{
+	En general, si $F$ es un cuerpo de n\'{u}meros, el \emph{anillo de %
+	ad\`{e}les} es el producto directo restringido
+	$\adeles{F}=\prod_{v}'\,F_{v}$ de las completaciones $F_{v}$ del cuerpo
+	en cada lugar $v$, con respecto a los abiertos compactos $\oka{F,v}$
+	--los subanillos compactos maximales-- definidos para los lugares
+	finitos. Ver la Definici\'{o}n \ref{def:adelesidelesnumeros}.
+	Escribimos tambi\'{e}n $\adeles{F}=\Adinf{F}\times\Adfin{F}$, donde
+	$\Adinf{F}=\prod_{v\in\lugares[\infty]{F}}\,F_{v}$ denota el producto
+	sobre los lugares arquimedianos y
+	$\Adfin{F}=\prod_{v\in\lugares[f]{F}}'\,F_{v}$  denota el producto
+	restringido \'{u}nicamente sobre los lugares finitos.
+	% En general, si $F$ es un cuerpo de n\'{u}meros, escribimos
+	% $\lugares{F}$, $\lugares[\infty]{F}$ y $\lugares[f]{F}$ para denotar,
+	% respectivamente, los conjuntos de lugares, de lugares arquimedianos y
+	% de lugares no arquimedianos de $F$. Si $v\in\lugares{F}$, $F_{v}$
+	% denota la completaci\'{o}n de $F$ en el lugar $v$; si, adem\'{a}s,
+	% $v\in\lugares[f]{F}$, denotamos por $\oka{F,v}$ el anillo de enteros
+	% del cuerpo $F_{v}$, el subanillo compacto maximal. El \emph{anillo de %
+	% ad\`{e}les} del cuerpo $F$, denotado $\adeles{F}$, es el anillo
+	% topol\'{o}gico definido como el producto directo restringido de la
+	% familia $\{F_{v}\}_{v}$ ($v$ arbitrario) con respecto a los compactos
+	% $\oka{F,v}$ para los lugares finitos. Escribimos
+	% $\adeles{F}=\Adinf{F}\times\Adfin{F}$, donde $\Adinf{F}$ denota el
+	% producto de las completaciones sobre los lugares arquimedianos y
+	% $\Adfin{F}$ denota el producto directo restringido \'{u}nicamente sobre
+	% los lugares finitos. Ver la Definici\'{o}n
+	% \ref{def:adelesidelesnumeros}.
+	% \index{anillo de adeles@anillo de ad\`{e}les}\index{adeles@ad\`{e}les}
+}
+que verifican ciertas condiciones de regularidad y tienen un comportamiento
+adecuado respecto de la acci\'{o}n de un subgrupo compacto de
+$\GL_{2}(\adeles{F})$ y del centro $\centre(\adeles{F})$.
+\index{funciones adelicas@funciones ad\'{e}licas}
+
+Por otro lado, cocientes de la forma
+\begin{align*}
+	& G(F)\backslash G(\adeles{F})
+\end{align*}
+%
+para un cuerpo de n\'{u}meros $F/\bb{Q}$ y un grupo algebraico $G$ definido
+sobre $F$ (una manera coherente de asignar un grupo a cada $F$-\'{a}lgebra)
+suele clasificar objetos geom\'{e}tricos. Por ejemplo, si $F=\bb{Q}$ y
+$G={\GL_{2}}_{/\bb{Q}}$, se sabe que el cociente
+\begin{align*}
+	& G(\bb{Q})\backslash G(\adeles{\bb{Q}})/
+		\centre(\bb{R})\SO{2} G(\Adfin{\bb{Z}})
+	\text{ ,}
+\end{align*}
+%
+donde $\centre\subset G$ es el centro (las martices escalares) y
+$\Adfin{\bb{Z}}=\prod_{p}\,\bb{Z}_{p}$ es el producto directo sobre los lugares
+finitos, clasifica curvas el\'{\i}pticas m\'{o}dulo isomorfismo.%
+\footnote{
+	Notemos que $\GL_{2}(\Adfin{\bb{Z}})$ es un grupo abierto y compacto de
+	la parte no arquimediana $\GL_{2}(\Adfin{\bb{Q}})$ y que $\SO{2}$ es el
+	subgrupo compacto (conexo) maximal de $\GL_{2}(\bb{R})$. El producto
+	\begin{align*}
+		\SO{2}\GL_{2}(\Adfin{\bb{Z}}) & \,\subset\,
+			\GL_{2}(\bb{R})\GL_{2}(\Adfin{\bb{Q}}) \,=\,
+			\GL_{2}(\adeles{\bb{Q}})
+	\end{align*}
+	%
+	es un subgrupo compacto.
+	% Si se reemplaza $\SO{2}$ por el grupo de matrices
+	% ortogonales $\mathrm{O}(2)$, se obtiene un subgrupo compacto maximal.
+}
+Un poco m\'{a}s en general, dado $N>1$ un entero, definimos un subgrupo abierto
+y compacto de $\GL_{2}(\Adfin{\bb{Q}})$ de la siguiente manera: para cada lugar
+finito $v\in\lugares[f]{\bb{Q}}$, si el primo $p$ correspondiente a $v$ no
+divide a $N$, definimos $K_{0}(N)_{v}:=\GL_{2}(\bb{Z}_{v})$. En cambio, si $p$
+divide a $N$, $K_{0}(N)_{v}$ es el subgrupo de $\GL_{2}(\bb{Z}_{v})$ de
+matrices con coordenada inferior izquierda en el ideal $N\bb{Z}_{v}$. Esto
+determina un subgrupo compacto abierto de $\GL_{2}(\Adfin{\bb{Q}})$:
+\begin{align*}
+	K_{0}(N) & \,=\,\prod_{v\in\lugares[f]{\bb{Q}}}\,K_{0}(N)_{v}
+	% \,=\, \prod_{v\in\lugares[f]{\bb{Q}}}\,
+	% (\cal{O}\otimes_{\bb{Z}}\bb{Z}_{v})^{\times}
+	% \text{ ,}
+	\text{ .}
+\end{align*}
+%
+Dado que el determinante define un morfismo sobreyectivo
+$\det:\,K_{0}(N)_{v}\rightarrow\bb{Z}_{v}^{\times}$, por aproximaci\'{o}n
+fuerte (Teorema~\ref{thm:aproxfuerte}), tenemos que%
+\footnote{
+	Si $g\in\GL_{2}(\adeles{\bb{Q}})$, existen $\lambda\in\bb{Q}^{\times}$
+	y $r\in\Idfin{\bb{Z}}$ tales que $\det(g)=\lambda\,r$, pues
+	\begin{math}
+		\bb{Q}^{\times}\backslash\Idfin{\bb{Q}}/\Idfin{\bb{Z}}\simeq
+			\Class{\bb{Q}}=\{1\}
+	\end{math}~. Entonces, por ejemplo,
+	\begin{math}
+		g=\left[\begin{smallmatrix} \lambda & \\
+			& 1 \end{smallmatrix}\right]\,g_1\,
+			\left[\begin{smallmatrix} r & \\
+			& 1 \end{smallmatrix}\right]
+	\end{math}~, donde $g_1\in\SL_{2}(\adeles{\bb{Q}})$ tiene determinante
+	$1$ y
+	\begin{math}
+		\left[\begin{smallmatrix} r & \\ & 1 \end{smallmatrix}\right]
+	\end{math} pertenece a $K_{0}(N)$.
+}
+\index{aproximacion fuerte@aproximaci\'{o}n fuerte}
+\begin{equation}
+	\label{eq:aproximacionfuerteintro}
+	\GL_{2}(\adeles{\bb{Q}}) \,=\,
+		\GL_{2}(\bb{Q})\,\GL_{2}(\bb{R})\,K_{0}(N)
+	\text{ .}
+\end{equation}
+%
+Dado que $\GL_{2}(\bb{Q})$ contiene elementos de determinante negativo, podemos
+reemplazar $\GL_{2}(\bb{R})$ por $\GLtp_{2}(\bb{R})$ en la igualdad anterior.
+En particular, la inclusi\'{o}n
+\begin{math}
+	\GLtp_{2}(\bb{R})\hookrightarrow\GL_{2}(\adeles{\bb{Q}})
+\end{math}
+seguida de la proyecci\'{o}n en el doble cociente
+\begin{math}
+	\GL_{2}(\bb{Q})\backslash\GL_{2}(\adeles{\bb{Q}})/K_{0}(N)
+\end{math}
+es sobreyectiva y el n\'{u}cleo de esta composici\'{o}n es el subgrupo
+$\Gamma_{0}(N)$.
+% (ver, por ejemplo, \cite[Prop.~3.3.1]{Bump}).
+Es decir,
+\begin{align*}
+	\Gamma_{0}(N)\backslash\GLtp_{2}(\bb{R}) & \,\simeq\,
+		\GL_{2}(\bb{Q})\backslash\GL_{2}(\adeles{\bb{Q}})/K_{0}(N)
+	\text{ .}
+\end{align*}
+%
+Tomando el cociente por los centros, se deduce que
+\begin{align*}
+	\centre(\bb{R})^{+}\,\Gamma_{0}(N)\backslash\GLtp_{2}(\bb{R})
+		& \,\simeq\, \centre(\adeles{\bb{Q}})\,\GL_{2}(\bb{Q})
+		\backslash\GL_{2}(\adeles{\bb{Q}})/K_{0}(N)
+	\text{ .}
+\end{align*}
+%
+El grupo $\centre(\bb{R})^{+}$ consiste en las matrices escalares con
+coeficientes reales positivos. Simplificando y dividiendo por $\SO{2}$,
+\begin{equation}
+	\label{eq:curvamodularglqadeles}
+	\Gamma_{0}(N)\backslash\SL_{2}(\bb{R})/\SO{2} \,\simeq\,
+		\centre(\adeles{\bb{Q}})\,\GL_{2}(\bb{Q})\backslash
+			\GL_{2}(\adeles{\bb{Q}})/K_{0}(N)\,\SO{2}
+	\text{ .}
+\end{equation}
+%
+Pero el cociente de la izquierda se identifica con la curva modular $Y_{0}(N)$.
+En este caso, el cociente ad\'{e}lico clasifica curvas el\'{\i}pticas teniendo
+en cuenta informaci\'{o}n de la $N$-torsi\'{o}n.
+
+% Las formas modulares son funciones en $G(F)\backslash G(\adeles{F})$ para
+% una elecci\'{o}n concreta de cuerpo $F$ y grupo $G$ y constituyen una
+% fuente natural de informaci\'{o}n sobre este espacio.
+Podr\'{\i}amos decir que, en general, una forma modular es una funci\'{o}n en
+$G(F)\backslash G(\adeles{F})$. Claro que, en cada caso, es necesario hallar
+condiciones sobre esta familia de funciones para poder extraer de ella un
+\emph{espacio de formas modulares} adecuado.
+Las formas modulares para el subgrupo de congruencia $\Gamma_{0}(N)$ se
+corresponden con cierto espacio de funciones en $\GL_{2}(\adeles{\bb{Q}})$
+(Proposici\'{o}n~\ref{propo:introequivformaglq}) y, m\'{a}s generalmente, las
+formas modulares de Hilbert para un cuerpo totalmente real $F$ se pueden ver
+como funciones asociadas al grupo ${\GL_{2}}_{/F}$
+(\S~\ref{sec:dehilbertfuncionesenlosadeles}). De manera similar, el grupo de
+unidades de un \'{a}lgebra de cuaterniones $B/F$ definida sobre una cuerpo de
+n\'{u}meros totalmente real tiene asociada una noci\'{o}n de forma modular
+(\S~\ref{sec:cuaternionicasfuncionesenlosadeles}).
+
+% En elas formas modulares asociadas a un \'{a}lgebra de cuaterniones
+% de divisi\'{o}n, $B/F$, el grupo en cuesti\'{o}n es (tambi\'{e}n) el grupo de
+% unidades del \'{a}lgebra, $B^{\times}$.
+En este contexto, la correspondencia de Jacquet-Langlands es fundamental en
+tanto que establece una relaci\'{o}n entre formas de Hilbert cuspidales y
+formas cuaterni\'{o}nicas. Sea $\frak{D}$ el producto de los primos finitos en
+donde $B$ ramifica (el \emph{discriminante} de $B$, ver
+\S~\ref{sec:ordeneseideales}) y sea $\frak{N}'\subset\oka{F}$ un ideal
+\'{\i}ntegro coprimo con $\frak{D}$. Denotamos por $\spitzH{k}{\frak{N}}$ y por
+$\spitzH[B]{k}{\frak{N}}$ los espacios de formas de Hilbert cuspidales y,
+respectivamente, de formas cuaterni\'{o}nicas para el \'{a}lgebra $B$ de nivel
+$\frak{N}$. El resultado es, entonces, el siguiente.
+%
+\begin{teoJacquetLanglandsIntro}[Jacquet-Langlands]%
+	\label{thm:correspondenciajlintro}
+	Existe un morfismo inyectivo
+	\begin{align*}
+		& \spitzH[B]{k}{\frak{N}'}\,
+			\hookrightarrow\,\spitzH{k}{\frak{D}\frak{N}'}
+	\end{align*}
+	%
+	que preserva la acci\'{o}n de Hecke y cuya imagen es el subespacio
+	$\spitzH{k}{\frak{D}\frak{N}'}^{\frak{D}-\neue}$ de formas nuevas en
+	todo ideal primo divisor de $\frak{D}$.
+\end{teoJacquetLanglandsIntro}
+%
+Como en el caso de las formas modulares el\'{\i}pticas, existe, en esta
+situaci\'{o}n, una teor\'{\i}a de formas nuevas y formas viejas, lo que
+permite, en conjunci\'{o}n con el Teorema~\ref{thm:correspondenciajlintro},
+reducir el problema de calcular $\spitzH{k}{\frak{N}}$ a trabajar con espacios
+de formas cuaterni\'{o}nicas, amenos para relizar c\'{a}lculos expl\'{\i}citos.
+Aun as\'{\i}, en la pr\'{a}ctica, se presenta un inconveniente: dado que los
+primos que componen a $\frak{D}$ son todos distintos, el \'{a}lgebra $B$
+estar\'{a} limitada por el grado de la extensi\'{o}n $F/\bb{Q}$ y el nivel
+$\frak{N}$ (\S~\ref{sec:correspondenciadejl}).
+% ?`Explicar esto en detalle ac\'a?
+
+El Teorema~\ref{thm:correspondenciajlintro} pone de manifiesto que los espacios
+$\spitzH[B]{k}{\frak{N}}$ deben ser considerados en conjunto. Sin embargo,
+conceptualmente, las funciones que los conforman son de naturaleza distinta.
+Espec\'{\i}ficamente, si $B$ es un \'{a}lgebra indefinida, tiene asociada una
+variedad compleja, de dimensi\'{o}n igual a la cantidad de lugares
+arquimedianos no ramificados del \'{a}lgebra, y las formas cuaterni\'{o}nicas
+para $B$ son ciertas formas (diferenciales holomorfas) sobre dicha variedad;
+si, en cambio, $B$ es totalmente definida, el objeto an\'{a}logo es un conjunto
+finito de puntos y una forma modular es, simplemente, una funci\'{o}n definida
+en este conjunto. Esta diferencia se ve reflejada en los m\'{e}todos utilizados
+para calcular formas de Hilbert mediante su relaci\'{o}n con las \'{a}lgebras
+de cuaterniones.
+
+En lo que resta de esta introducci\'{o}n, intentaremos mostrar,
+restringi\'{e}ndonos a la situaci\'{o}n en la que el cuerpo de base es
+$\bb{Q}$, algunos puntos de la teor\'{\i}a que desarrollaremos m\'{a}s adelante
+en un contexto m\'{a}s general.

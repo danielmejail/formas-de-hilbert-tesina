@@ -1,0 +1,151 @@
+Sea $\frak{p}\subset\oka{F}$ un primo $\frak{p}\nmid\frak{N}$ y sean
+$f,g\in\spitzH{k}{\frak{N}}$. Por definici\'{o}n del producto interno de
+Petersson,
+\begin{math}
+	\langle T_{\frak{p}}f,g\rangle=\sum_{\frak{a}}\,
+		\langle\big(T_{\frak{p}}f\big)_{\frak{a}},g_{\frak{a}}
+			\rangle_{\frak{a}}
+\end{math}~.
+
+Para cada representante $\frak{a}$, sea $\frak{b}$ el representante que cumple
+$[\frak{a}]=[\frak{b}\frak{p}]$ en $\pClass{F}$. Sea
+$\gamma\in\frak{I}(\frak{p})_{\frak{a},\frak{b}}$ un elemento arbitrario, de
+manera que
+\begin{math}
+	\frak{I}(\frak{p})_{\frak{a},\frak{b}}=
+		\Gamma_{\frak{b}}\gamma\Gamma_{\frak{a}}
+\end{math}~.
+El grupo $\Gamma_{\frak{b}}$ act\'{u}a a izquierda en este conjunto y las
+\'{o}rbitas por dicha acci\'{o}n (las coclases a derecha de $\Gamma_{\frak{b}}$
+contenidas en el mismo) est\'{a}n en biyecci\'{o}n con las clases en
+\begin{math}
+	\big(\Gamma_{\frak{a}}\cap\gamma^{-1}\Gamma_{\frak{b}}\gamma\big)
+		\backslash\Gamma_{\frak{a}}
+\end{math}~.
+En t\'{e}rminos de representantes, un conjunto $\{\gamma_{i}\}_{i}$ verifica
+\begin{math}
+	\Gamma_{\frak{b}}\gamma\Gamma_{\frak{a}}=
+		\bigsqcup_{i}\,\Gamma_{\frak{b}}\gamma_{i}
+\end{math}~,
+si y s\'{o}lo si $\{\delta_{i}\}_{i}$ verifica
+\begin{math}
+	\Gamma_{\frak{a}}=\bigsqcup_{i}\,\big(\Gamma_{\frak{a}}\cap
+		\gamma^{-1}\Gamma_{\frak{b}}\gamma\big)\,\delta_{i}
+\end{math}~,
+donde $\delta_{i}=\gamma^{-1}\gamma_{i}$. De manera an\'{a}loga, el grupo
+$\Gamma_{\frak{a}}$ act\'{u}a a derecha en la coclase doble
+$\Gamma_{\frak{b}}\gamma\Gamma_{\frak{a}}$ y las \'{o}rbitas por dicha
+acci\'{o}n est\'{a}n en biyecci\'{o}n con las clases en
+\begin{math}
+	\Gamma_{\frak{b}}/\big(\gamma\Gamma_{\frak{a}}\gamma^{-1}\cap
+		\Gamma_{\frak{b}}\big)
+\end{math}~.
+Un conjunto $\{\tilde{\gamma}_{j}\}_{j}$ cumple con
+\begin{math}
+	\Gamma_{\frak{b}}\gamma\Gamma_{\frak{a}}=
+		\bigsqcup_{j}\,\gamma_{j}\Gamma_{\frak{a}}
+\end{math}~,
+si y s\'{o}lo si $\{\tilde{\delta}_{j}\}_{j}$ cumple con
+\begin{math}
+	\Gamma_{\frak{b}}=\bigsqcup_{j}\,\tilde{\delta}_{j}\,\big(
+		\gamma\Gamma_{\frak{a}}\gamma^{-1}\cap\Gamma_{\frak{b}}\big)
+\end{math}~.
+Ahora bien, dado que
+\begin{math}
+	\mu\big(\Gamma_{\frak{a}}\backslash\hP^{n}\big)=
+		\mu\big(\Gamma_{\frak{b}}\backslash\hP^{n}\big)
+\end{math}~,
+vale que
+\begin{math}
+	\big|\Gamma_{\frak{b}}:\gamma\Gamma_{\frak{a}}\gamma^{-1}\cap
+		\Gamma_{\frak{b}}\big|=
+	\big|\Gamma_{\frak{a}}:\Gamma_{\frak{a}}\cap\gamma^{-1}
+		\Gamma_{\frak{b}}\gamma\big|
+\end{math}~.
+Por lo tanto, es posible hallar un sistema de representantes com\'{u}n a
+ambas descomposiciones de la coclase doble, es decir, un conjunto
+$\{\eta_{i}\}_{i}\subset\frak{I}(\frak{p})_{\frak{a},\frak{b}}$ tal que
+\begin{align*}
+	\Gamma_{\frak{b}}\gamma\Gamma_{\frak{a}} & \,=\,
+		\bigsqcup_{i}\,\Gamma_{\frak{b}}\eta_{i} \,=\,
+		\bigsqcup_{i}\,\eta_{i}\Gamma_{\frak{a}}
+	\text{ .}
+\end{align*}
+%
+Sean $\{\delta_{i}\}_{i}\subset\Gamma_{\frak{a}}$ y
+$\{\tilde{\delta}_{i}\}_{i}\subset\Gamma_{\frak{b}}$ tales que
+$\eta_{i}=\tilde{\delta}_{i}\gamma\delta_{i}$.
+
+Volviendo a $T_{\frak{p}}$, sabemos que
+\begin{math}
+	\big(T_{\frak{p}}f\big)_{\frak{a}}=
+		\sum_{i}\,f_{\frak{b}}\operadormatrices{\peso{k}}{\eta_{i}}
+\end{math}~.
+Entonces, por las observaciones del p\'{a}rrafo anterior, las propiedades del
+producto de Petersson (Proposici\'{o}n~\ref{propo:peterssonpropiedades}),
+\begin{align*}
+	& \Big\langle\sum_{i}\,f_{\frak{b}}\operadormatrices{\peso{k}}{%
+			\eta_{i}},g_{\frak{a}}\Big\rangle_{\frak{a}} \,=\,
+	\Big\langle\sum_{i}\,\big(f_{\frak{b}}\operadormatrices{\peso{k}}{%
+		\gamma}\big)\operadormatrices{\peso{k}}{\delta_{i}},
+		g_{\frak{a}}\Big\rangle_{\frak{a}} \,=\,
+	\big|\Gamma_{\frak{a}}:\Gamma_{\frak{a}}\cap\gamma^{-1}
+		\Gamma_{\frak{b}}\gamma\big|\,\big\langle f_{\frak{b}}
+		\operadormatrices{\peso{k}}{\gamma},g_{\frak{a}}
+		\big\rangle_{\Gamma_{\frak{a}}\cap\gamma^{-1}\Gamma_{\frak{b}}%
+			\gamma} \\
+	&\qquad\qquad\,=\,
+	\big|\Gamma_{\frak{b}}:\gamma\Gamma_{\frak{a}}\gamma^{-1}
+		\cap\Gamma_{\frak{b}}\big|\,\big\langle f_{\frak{b}},
+		g_{\frak{a}}\operadormatrices{\peso{k}}{\gamma^\iota}
+		\big\rangle_{\gamma\Gamma_{\frak{a}}\gamma^{-1}\cap%
+			\Gamma_{\frak{b}}} \,=\,
+	\Big\langle f_{\frak{b}},\sum_{i}\,\big(g_{\frak{a}}
+		\operadormatrices{\peso{k}}{\gamma^\iota}\big)
+		\operadormatrices{\peso{k}}{\tilde{\delta}_{i}^\iota}
+		\Big\rangle_{\frak{b}} \\
+	& \qquad\qquad\,=\,
+	\Big\langle f_{\frak{b}},\sum_{i}\,g_{\frak{a}}
+		\operadormatrices{\peso{k}}{\eta_{i}^\iota}
+		\Big\rangle_{\frak{b}}
+	\text{ .}
+\end{align*}
+%
+Finalmente, reescribimos la sumatoria del \'{u}ltimo t\'{e}rmino:
+\begin{align*}
+	\sum_{i}\,\big(g_{\frak{a}}\operadormatrices{\peso{k}}{\eta_{i}^\iota}
+		\big)(z) & \,=\,
+		\sum_{i}\,J(\eta_{i}^\iota,z)^{-1}\,
+			g_{\frak{a}}(\eta_{i}^\iota z) \,=\,
+		\sum_{i}\,J(\eta_{i}^\iota,z)^{-1}\,g(\eta_{i}^\iota z,
+			\hhat{\alpha}\Idfin{\cal{O}}) \\
+	& \,=\,\sum_{i}\,g(z,\eta_{i}^{-\iota}\hhat{\alpha}\Idfin{\cal{O}})
+		\,=\,\sum_{i}\,g(z,\hhat{\beta}\hhat{b}^{-1}\hhat{a}
+			(\hhat{\beta}^{-1}\eta_{i}\hhat{\alpha})^{\iota (-1)}
+				\Idfin{\cal{O}}) \\
+	& \,=\,\big(T_{\frak{p}}g\big)(z,\hhat{\beta}\hhat{b}^{-1}\hhat{a}
+		\Idfin{\cal{O}}) \,=\,
+		\big(S_{\frak{p}}^{-1}T_{\frak{p}}g\big)(z,\lambda^{-1}
+			\hhat{\beta}\Idfin{\cal{O}})
+	\text{ ,}
+\end{align*}
+%
+donde $\det(\eta_{i})=\lambda\xi_{i}$, con $\xi_{i}\in\oka{F,+}^{\times}$ y
+$J(\eta,z)$ denota el producto de los factores de automorf\'{\i}a. La
+\'{u}ltima expresi\'{o}n es igual a
+\begin{math}
+	\norma(\lambda)^{k_{0}-2}\,\big(S_{\frak{p}}^{-1}T_{\frak{p}}g
+		\big)_{\frak{b}}(z)
+\end{math}~.
+En definitiva,
+\begin{align*}
+	\langle T_{\frak{p}}f,g\rangle & \,=\,\sum_{\frak{a}}\,
+		\big\langle \big(T_{\frak{p}}f\big)_{\frak{a}},g_{\frak{a}}
+			\big\rangle_{\frak{a}} \,=\,
+		\sum_{\frak{b}}\,\norma(\lambda)^{k_{0}-2}\,
+		\big\langle f_{\frak{b}},\big(S_{\frak{p}}^{-1}T_{\frak{p}}g
+			\big)_{\frak{b}}
+			\big\rangle_{\frak{b}}
+	\text{ .}
+\end{align*}
+%

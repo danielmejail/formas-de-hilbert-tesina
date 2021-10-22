@@ -1,0 +1,267 @@
+Sea $B=\varquatalg[\bb{Q}]{-1,-11}$ el \'{a}lgebra de cuaterniones de
+discriminante $11$ sobre $\bb{Q}$, generada por elementos $\{1,i,j,k\}$ que
+verifican $i^2=-1$, $j^2=-11$ y $k=ij=-ji$.
+A modo de ejemplo, calculamos el espacio $\spitz[B]{2}{1}:=\Theta_0(11,1)'$.
+
+En primer lugar, buscamos un orden maximal en $B$. El ret\'{\i}culo
+$\cal{R}=\generado{1,i,j,k}$ es un orden en $B$, pero no es maximal
+% , pues el discriminante de la $\bb{Z}$-base de $\cal{R}$ es igual a
+($\discriminante{1,i,j,k}=4^2\,11^2$).
+% Si $\cal{R}'$ es un orden generado como ret\'{\i}culo por una base que se
+% obtiene a partir de $\cal{R}$ por una matriz $A$, entonces
+% $\discriminante{\cal{R}'}=\det(A)^{2}\,\discriminante{\cal{R}}$.
+Si definimos $\rho=\frac{1+i+j+k}{2}$ y $z=\frac{1+j}{2}$, entonces los
+ret\'{\i}culos $\cal{R}'=\generado{1,i,j,\rho}$ y
+$\cal{O}=\generado{1,i,z,iz}$ son \'{o}rdenes y se cumple
+$\cal{O}\supset\cal{R}'\supset\cal{R}$, con inclusiones estrictas.
+El orden $\cal{O} = \generado{1,i,z,iz}$ es maximal y, llamando $q_{\cal{O}}$ a
+la forma cuadr\'{a}tica asociada,
+\begin{align*}
+	q_{\cal{O}}(u,v,w,t) & \,=\,\nrd(u\cdot 1+v\cdot i+w\cdot z+t\cdot iz)
+		\\
+	& \,=\,\big(u+\tfrac{w}{2}\big)^{2}
+		+ 11\,\big(\tfrac{w}{2}\big)^{2}
+		+ \big(v+\tfrac{t}{2}\big)^{2}
+		+ 11\,\big(\tfrac{t}{2}\big)^{2} \\
+	& \,=\,u^{2}+uw+3\,w^{2} + v^{2} +vt + 3\,t^{2}
+	\text{ ,}
+\end{align*}
+%
+las unidades del orden $\cal{O}$ son los elementos
+$x=u\,1+v\,i+w\,z+t\,iz\in\cal{O}$ tales que $q_{\cal{O}}(u,v,w,t)=1$
+(al ser $B$ definida, la forma es positiva). Se comprueba que
+$\big|\cal{O}^{\times}\big|=4$.
+
+En general, dado un ideal
+\begin{math}
+	I=\generado{\alpha_{1},\,\alpha_{2},\,\alpha_{3},\,\alpha_{4}}
+\end{math}
+de $B$, definimos la forma cuadr\'{a}tica $q_{I}(u,v,w,t)=\nrd(x)/\nrd(I)$,
+donde
+\begin{math}
+	x=u\alpha_{1}+v\alpha_{2}+w\alpha_{3}+t\alpha_{4}
+\end{math}~.
+Definimos, tambi\'{e}n, el n\'{u}mero de representaci\'{o}n $n_{I}(p)$ como la
+cantidad de soluciones a la ecuaci\'{o}n $q_{I}=p$. Si $\cal{O}$ es el orden a
+derecha de $I$ y llamamos $\cal{O}_{I}$ a su orden a izquierda, entonces el
+cociente
+\begin{math}
+	n_{I}(p)/\big|\cal{O}_{I}^{\times}\big|
+\end{math}
+es igual al n\'{u}mero de ideales de norma $p$, contenidos en el orden
+$\cal{O}$ y pertenecientes a la clase del ideal $I$.%
+\footnote{
+	Una inclusi\'{o}n $J=b\,I\subset\cal{O}$ equivale a
+	$b\,\cal{O}_{I}\subset I^{-1}$. Pero $I^{-1}=\nrd(I)^{-1}\,\conj{I}$,
+	donde $\conj{I}$ es el ideal que se obtiene conjugando los elementos de
+	$I$ (ver \cite[Propo.~1.17]{PizerAlgo} o el
+	Corolario~\ref{coro:localmenteinvertibleesinvertible} del presente
+	trabajo). En consecuencia, vale $b\,I\subset\cal{O}$, si y s\'{o}lo si
+	$\cal{O}_{I}\,\big(\conj{b}\,\nrd(I)\big)\subset I$, ya que los
+	\'{o}rdenes son estables por tomar conjugado. Pero
+	$q_{I}(\conj{b}\,\nrd(I))=\nrd(b\,I)$ y dos representaciones
+	$\cal{O}_{I}\,h=\cal{O}_{I}\,h'$ difieren en una unidad en
+	$\cal{O}_{I}^{\times}$.
+}
+Si $p$ no divide al discriminante del \'{a}lgebra, entonces, eligiendo
+representantes $\{\lista{I}{H}\}$ de $\lClass{\cal{O}}$,
+\begin{align*}
+	p+1 & \,=\,\sum_{i=1}^{H}\,\frac{n_{i}(p)}{%
+		\big|\cal{O}_{i}^{\times}\big|}
+\end{align*}
+%
+($n_{i}=n_{I_{i}}$, $q_{i}=q_{I_{i}}$ y $\cal{O}_{i}=\cal{O}_{I_{i}}$).
+
+Volviendo al ejemplo, sea $p=2$. Entonces, se verifica que $n_{\cal{O}}(2)=4$
+y que, de los tres ideales \'{\i}ntegros de norma $2$, s\'{o}lo uno es
+principal. Por lo tanto, debe haber, al menos, otra clase en
+$\lClass{\cal{O}}$. Antes de empezar a buscar otros ideales, observamos que el
+elemento $1+i\in\cal{O}$ tiene norma reducida $\nrd(1+i)=2$ y que el ideal
+\'{\i}ntegro de norma $2$ correspondiente a la clase principal es
+$(1+i)\,\cal{O}$. Observamos tambi\'{e}n que, si dos ideales $I,J$ cumplen
+$J\subset I$, entonces $\nrd(I)\mid\nrd(J)$. Buscamos, entonces, un ideal
+$I\subset\cal{O}$ de norma $2$ que no sea principal. Para encontrarlo, notamos
+que $\nrd(2)=\nrd(z-i)=4$. Entonces, los ideales principales $2\,\cal{O}$ y
+$(i-z)\,\cal{O}$ tienen norma $4$ y son distintos. Consideramos
+$I=2\,\cal{O}+(z-i)\,\cal{O}$. Calculando los productos de $(z-i)$ contra los
+elementos de la base de $\cal{O}$ y ordenando los coeficientes, se puede
+corroborar que $I=\generado{1-zi,i+z,i-z,1+zi}$. En particular,
+$2\,\cal{O},(z-i)\,\cal{O}\subset I\subset\cal{O}$, con inclusiones estrictas e
+$I\not=(1+i)\,\cal{O}$. Hemos encontrado dos ideales \'{\i}ntegros de norma $2$
+pertenecientes a clases distintas. La forma cuadr\'{a}tica asociada a $I$ es
+\begin{align*}
+	q_{I}(u,v,w,t) % & \,=\,\tfrac{1}{2}\Big(
+		% \big(u+t+\tfrac{v-w}{2}\big)^{2}
+		% +\big(\tfrac{u-t}{2}+v+w\big)^{2}
+		% +11\,\big(v-w\big)^{2} +11\,\big(-u+t\big)^{2}\Big) \\
+	& \,=\,2\big(u^{2}+v^{2}+w^{2}+t^{2}\big)+uv-2\,ut-2\,vw-wt
+	\text{ .}
+\end{align*}
+%
+Debemos hallar $\big|\cal{O}_{I}^{\times}\big|$ y $n_{I}(2)$. En primer lugar,
+$n_{I}(2)=12$. En cuanto a las unidades a izquierda,
+% las relaciones
+% \begin{align*}
+	% (1\pm zi)\,i & \,=\,(i\mp z)
+% \end{align*}
+% %
+% implican que, para hallar el orden a izquierda $\cal{O}_{I}$, alcanza con
+% determinar los elementos $\alpha\in B$ tales que $\alpha (i\mp z)\in I$. Se
+% cumple que $(1+zi)\,(i\mp z)\in 2\,I$, de lo que se deduce que
+% $\tau=\frac{1+zi}{2}\in\cal{O}_{I}$. M\'{a}s aun, $\nrd(\tau)=1$, es decir,
+% $\tau\in\cal{O}_{I}^{\times}$. Se verifica tambi\'{e}n que
+% $(i\pm z)\in\cal{O}_{I}$ y que el ret\'{\i}culo $\generado{1,\tau,i-z,i+z}$
+% es un orden. El discriminante es $\discriminante{1,\tau,i-z,i+z}=11^{2}$, con
+% lo que
+$\cal{O}_{I}=\generado{1,\tau,i-z,-i+z}$,
+con $\tau = \frac{1+zi}{2}$.
+% pues preserva $I$ y es maximal.
+La forma cuadr\'{a}tica correspondiente est\'{a} dada por
+\begin{align*}
+	q_{\cal{O}_{I}} % & \,=\,\big(u+\tfrac{-v+w+t}{2}\big)^{2}
+		% +\big(v+w+\tfrac{t}{4}\big)^{2}
+		% +11\,\big(\tfrac{-v+w}{2}\big)^{2}
+		% +11\,\big(\tfrac{t}{4}\big)^{2} \\
+	& \,=\,u^{2}+4\,\big(v^{2}+w^{2}\big)+t^{2}-uv+uw+ut-4\,vw+wt
+	\text{ .}
+\end{align*}
+%
+El grupo de unidades
+% de $\cal{O}_{I}$
+tiene orden $\big|\cal{O}_{I}^{\times}\big|=6$. Verificamos la igualdad
+\begin{align*}
+	\frac{n_{\cal{O}}(2)}{\big|\cal{O}^{\times}\big|}
+		\,+\,\frac{n_{I}(2)}{\big|\cal{O}_{I}^{\times}\big|}
+		& \,=\,3
+\end{align*}
+%
+Esto no quiere decir que $[\cal{O}]$ y $[I]$ sean las \'{u}nicas clases en
+$\lClass{\cal{O}}$. Para determinar el n\'{u}mero de clases, recurrimos a la
+f\'{o}rmula de masa:%
+\footnote{
+	ver \cite[Propo.~25]{PizerArithmeticII}, o \cite[\S~5]{KirschmerVoight}
+	para el caso de un cuerpo de n\'{u}meros
+}
+% dado que
+si $B$ ramifica en un \'{u}nico lugar finito, $l$, y $\cal{O}$ es un
+orden maximal, en este caso se debe cumplir que
+\begin{align*}
+	\frac{l-1}{12} & \,=\,\sum_{i=1}^{H}\,\frac{1}{%
+		\big|\cal{O}_{i}^{\times}:\bb{Z}^{\times}\big|}
+	\text{ .}
+\end{align*}
+%
+De esta igualdad (con $l=11$) y habiendo determinado los \'{o}rdenes
+$|\cal{O}^{\times}|=4$ y $|\cal{O}_{I}^{\times}|=6$, se deduce que $H=2$ y un
+conjunto de representantes est\'{a} dado por $\{[\cal{O}],[I]\}$.
+
+En cuanto a los ideales \'{\i}ntegros de norma $2$, s\'{o}lo uno de ellos
+pertenece a $[\cal{O}]$ y la clase $[I]$ da cuenta de los otros dos ideales.
+Inmediatamente, deducimos que
+\begin{align*}
+	B_{2}[\cal{O}] & \,=\,[\cal{O}]+2\,[I]
+	\text{ ,}
+\end{align*}
+%
+donde $B_p=B_{0}(p)$ (no el \'{a}lgebra sobre $\bb{Q}_{p}$). Para calcular el
+valor del operador $B_2$ en la clase $[I]$, basta con contar la cantidad de
+ideales principales de norma $2\,\nrd(I)$ contenidos en $I$, ya que s\'{o}lo
+hay dos clases de equivalencia y el total de ideales de norma $2$ contenidos en $I$ es $2+1=3$. Pero
+\begin{align*}
+	\#\Big\{J\subset I\,:\,\nrd(J)=2\,\nrd(I),\, [J]=[\cal{O}]\Big\}
+		& \,=\,	\frac{n_{I}(2)}{\big|\cal{O}^{\times}\big|}
+\end{align*}
+%
+(los ideales contabilizados son $b\,\cal{O}\subset I$ con $\nrd(b)=2\,\nrd(I)$
+y $b\,\cal{O}=b'\,\cal{O}$, si y s\'{o}lo si $b^{-1}b'\in\cal{O}^{\times}$).
+Seg\'{u}n las cuentas realizadas anteriormente,
+\begin{align*}
+	B_{2}[I] & \,=\,3\,[\cal{O}]
+	\text{ .}
+\end{align*}
+%
+
+Del c\'{a}lculo de $B_{2}$ deducimos, adem\'{a}s, que, para calcular $B_{p}$,
+con $p\not=11$, basta con determinar el n\'{u}mero de representaci\'{o}n
+$n_{\cal{O}}(p)$, pues, en general, si $J=\cal{O}$ o $J=I$,
+\begin{align*}
+	B_{p}[J] \,=\,\alpha\,[\cal{O}]+\beta\,[I]
+	\text{ ,}
+\end{align*}
+%
+donde $\alpha +\beta=p+1$, $\alpha=n_{J}(p)/|\cal{O}^{\times}|$ y,
+si $J=I$,
+\begin{math}
+	p+1=\frac{n_{\cal{O}}(p)}{|\cal{O}^{\times}|}
+		+\frac{n_{I}(p)}{|\cal{O}_{I}^{\times}|}
+\end{math}~.
+As\'{\i}, por ejemplo, usando la forma $q_{\cal{O}}$, calculamos
+$n_{\cal{O}}(p)$ para $p\leq 17$:
+\begin{center}
+	\begin{tabular}{c|cccccc}
+		$p$ & $2$ & $3$ & $5$ & $7$ & $13$ & $17$ \\
+		\hline
+		$n_{\cal{O}}(p)$ & $4$ & $8$ & $16$ & $16$ & $40$ & $40$
+	\end{tabular}
+\end{center}
+Esto nos permite expresar los operadores $B_{p}$ para $p\leq 17$, $p\not=11$,
+en la base $\{[\cal{O}],[I]\}$:
+\begin{align*}
+	B_{2}\,=\,\begin{bmatrix} 1 & 2 \\ 3 & 0 \end{bmatrix} & \text{ ,}\quad
+		B_{3}\,=\,\begin{bmatrix} 2 & 2 \\ 3 & 1 \end{bmatrix}
+			\text{ ,}\quad
+		B_{5}\,=\,\begin{bmatrix} 4 & 2 \\ 3 & 3 \end{bmatrix}
+			\text{ ,}\quad
+		B_{7}\,=\,\begin{bmatrix} 4 & 4 \\ 6 & 2 \end{bmatrix}
+			\text{ ,} \\
+	& \qquad
+	B_{13}\,=\,\begin{bmatrix} 10 & 4 \\ 6 & 8 \end{bmatrix}
+			\quad\text{y}\quad
+		B_{17}\,=\,\begin{bmatrix} 10 & 8 \\ 12 & 6 \end{bmatrix}
+	\text{ .}
+\end{align*}
+%
+
+La matriz $B_{2}$ tiene autovalores: $3$ y $-2$, con autovectores
+$e_1=\frac{1}{2}\,[\cal{O}]+\frac{1}{3}\,[I]$ y $f_1=[I]-[\cal{O}]$,
+respectivamente. El espacio $\spitz[B]{2}{1}$ admite un producto interno
+(\emph{producto interno de Petersson}), con respecto al cual las formas $e_1$ y
+$f_1$ son ortogonales (ver \eqref{eq:peterssonpesoparalelodosdefinida}).
+% 
+% La forma $e_1$ es la funci\'{o}n $\ideales{\cal{O}}\rightarrow\bb{C}$ dada por
+% \eqref{eq:eisensteincuaternionicas} ($\pClass{\bb{Q}}=1$ y $[\frak{a}]=[1]$).
+% Por otro lado, con respecto al producto interno de Petersson
+% \begin{align*}
+	% \langle e_1,e_1\rangle \,=\,\frac{1}{2}+\frac{1}{3} & \text{ ,}\quad
+		% \langle f_1,f_1\rangle \,=\,3+2 \quad\text{y}\quad
+		% \langle f_1,e_1\rangle \,=\,0
+	% \text{ .}
+% \end{align*}
+% %
+% Observamos que $\langle e_1,e_1\rangle$ es, simplemente, la masa del orden
+% maximal $\cal{O}$ y, tambi\'{e}n, que $f_1\in\spitz[B]{2}{1}$.
+% 
+El espacio de formas cuspidales tiene dimensi\'{o}n $1$ y $f_1$ es un
+generador. La forma $f_1$ es autofunci\'{o}n para los operadores
+$B_{2},B_{3},B_{5},\dots$ con autovalores $a_p=-2,-1,1,\,\dots$
+% $a_p=-2,-1,1,-2,4,-2,\,\dots$
+Por la correspondencia de Jacquet-Langlands, el espacio
+$\spitz{2}{11}^{11-\neue}$ es de dimensi\'{o}n $1$, generado por una
+autofunci\'{o}n para los operadores de Hecke con autovalores
+$\{a_p\}_{p\not=11}$. Usando las relaciones para los operadores de Hecke,
+obtenemos los primeros t\'{e}rminos para la correspondiente autoforma
+normalizada:
+\begin{align*}
+	F_1 & \,=\,q-2\,q^2-q^3+2\,q^4+q^5+2\,q^6-2\,q^7
+		-2\,q^9-2\,q^{10} + O(q^{11})
+	\text{ .}
+\end{align*}
+%
+% 
+% Como podemos ver ya en este ejemplo sencillo, para poder aprovechar el
+% m\'{e}todo definido para el c\'{a}lculo de formas de Hilbert, es necesario
+% contar con una serie de algoritmos adicionales que permitan explorar la
+% estructura aritm\'{e}tica de los \'{o}rdenes e ideales en las \'{a}lgebras de
+% cuaterniones totalmente definidas. Muchos de los resultados necesarios se
+% pueden encontrar en \cite{PacettiSirolli}, \cite{KirschmerVoight} y en
+% \cite{VoightIdentifying}.

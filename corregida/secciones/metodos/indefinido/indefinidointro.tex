@@ -1,0 +1,218 @@
+Sea $B/F$ un \'{a}lgebra indefinida, distinta de matrices, y sea $\cal{O}$ un
+orden de Eichler de nivel $\frak{N}$ en $B$. Empecemos describiendo el
+m\'{o}dulo de Hecke $\spitzH[B]{k}{\frak{N}}$. La variedad de Shimura
+$\shimura[B]{\frak{N}}$ es compacta%
+\footnote{
+	ver \S~\ref{sec:cuaternionicasvariedadesdeshimura}
+}
+y no tiene c\'{u}spides. Tiene sentido decir, entonces, que toda forma modular
+para $B$ es cuspidal, es decir, definimos
+\begin{math}
+	\spitzH[B]{k}{\frak{N}}:=\modularH[B]{k}{\frak{N}}
+\end{math}~.
+Asumimos dado un sistema de representantes $\{\frak{a}\}$ del grupo de clases
+estrictas de $F$; para cada representante $\frak{a}$, elegimos
+$\hhat{a}\in\Idfin{F}$ tal que $\frak{a}=\hhat{a}\Adfin{\oka{F}}\cap F$ y
+$\hhat{\alpha}\in\Idfin{B}$ tal que $\nrd(\hhat{\alpha})=\hhat{a}$.
+Utilizaremos la siguiente notaci\'{o}n:
+\begin{align*}
+	\Adfin{\cal{O}}_{\frak{a}} \,=\,
+		\hhat{\alpha}\Adfin{\cal{O}}\hhat{\alpha}^{-1} & \text{ ,}\quad
+		\cal{O}_{\frak{a}}\,=\,\Adfin{\cal{O}}_{\frak{a}}\cap B
+			\quad\text{y}\quad
+		\Gamma_{\frak{a}}\,=\,\cal{O}_{\frak{a},+}^{\times}\,=\,
+			\cal{O}_{\frak{a}}^{\times}\cap B_{+}^{\times}
+	\text{ .}
+\end{align*}
+%
+
+El espacio $\spitzH[B]{k}{\frak{N}}$ se descompone como suma directa de
+$\spitzH[B]{k}{\frak{N},\frak{a}}$ v\'{\i}a el isomorfismo
+\eqref{eq:descomposicionmodularesindefinida}, dado por
+$f\mapsto(f_{\frak{a}})_{\frak{a}}$ donde
+$f_{\frak{a}}(z)=f(z,\hhat{\alpha}\Idfin{\cal{O}})$. Los operadores de Hecke
+act\'{u}an permutando estos subespacios. Sea $\frak{b}$ el representante de las
+clases estrictas que verifica $[\frak{b}]=[\frak{a}\frak{p}^{-1}]$. Entonces,
+para cada representante $\hhat{\pi}$ de las \'{o}rbitas en $\Theta(\frak{p})$,
+el ret\'{\i}culo
+\begin{math}
+	\hhat{\alpha}\hhat{\pi}^{-1}\Adfin{\cal{O}}\hhat{\beta}^{-1}\cap B
+\end{math}
+es un ideal de $B$ cuyo orden a derecha es $\cal{O}_{\frak{b}}$ y su norma
+reducida es un ideal en la clase (estricta) principal. En consecuencia,
+%por aproximaci\'{o}n fuerte,
+existe $\varpi\in B_{+}^{\times}$ tal que
+\begin{math}
+	\hhat{\alpha}\hhat{\pi}^{-1}\Adfin{\cal{O}}\hhat{\beta}^{-1}\cap B=
+		\varpi^{-1}\cal{O}_{\frak{b}}
+\end{math}
+y una unidad $\hhat{u}\in\Idfin{\cal{O}}$ tal que
+\begin{math}
+	\hhat{\alpha}\hhat{\pi}^{-1}\hhat{u}\hhat{\beta}^{-1}=\varpi^{-1}
+\end{math}~.
+Si ahora miramos las componentes de la forma $T_{\frak{p}}f$ se deduce que,
+usando la invarianza de $f$,
+\begin{align*}
+	(T_{\frak{p}}f)_{\frak{a}}(z) & \,=\,
+		\sum_{\hhat{\pi}\in\Theta(\frak{p})}\,
+			f(z,\hhat{\alpha}\hhat{\pi}^{-1}\Idfin{\cal{O}})
+		\,=\, \sum_{\varpi}\,
+			f(z,\varpi^{-1}\hhat{\beta}\Idfin{\cal{O}})
+		\,=\, \sum_{\varpi}\,\big(
+			f_{\frak{b}}\operadormatrices{\peso{k}}{\varpi}\big)(z)
+	\text{ .}
+\end{align*}
+%
+Si bien esto muestra que la descripci\'{o}n de $T_{\frak{p}}$ en t\'{e}rminos
+de la descomposici\'{o}n de $\spitzH[B]{k}{\frak{N}}$ es sencilla, la utilidad
+de la igualdad
+\begin{math}
+	\big(T_{\frak{p}}f\big)_{\frak{a}}=
+		\sum_{\varpi}\,f_{\frak{b}}\operadormatrices{\peso{k}}{\varpi}
+\end{math}
+depende de poder hallar todos aquellos elementos $\varpi$ cuya existencia
+est\'{a} garantizada por aproximaci\'{o}n fuerte. Estos elementos se pueden
+caracterizar globalmente. La sumatoria se realiza sobre un sistema de
+representantes de
+\begin{align*}
+	\Theta(\frak{p})_{\frak{a},\frak{b}} & \,=\,
+		\Gamma_{\frak{b}}\backslash\Big\{\varpi\in
+			I_{\frak{b}}I_{\frak{a}}^{-1}\cap B_{+}^{\times}\,:\,
+			\nrd(\varpi)\frak{a}\frak{p}^{-1}=\frak{b}
+		\Big\}
+	\text{ ,}
+\end{align*}
+%
+donde $I_{\frak{a}}=\hhat{\alpha}\Adfin{\cal{O}}\cap B$ e
+$I_{\frak{b}}=\hhat{\beta}\Adfin{\cal{O}}\cap B$. El argumento es similar al
+dado en la Observaci\'{o}n \ref{obs:idelesdenormapporglobales}. El resultado
+\ref{propo:descomposicioninducedescomposicion} tambi\'{e}n es v\'{a}lido en
+este caso, es decir, siendo $B$ un \'{a}lgebra de divisi\'{o}n indefinida.%
+\footnote{
+	\cite[Propo.~2.3]{ShimuraDirichletSeriesAbelianVarieties}
+}
+
+\begin{obsHeckeParaIndefinidosPorBloques}%
+	\label{obs:heckeparaindefinidosporbloques}
+	Los operadores de Hecke act\'{u}an por bloques en
+	$\spitzH[B]{k}{\frak{N}}$, permutando en cierto sentido los sumandos
+	$\spitzH[B]{k}{\frak{N},\frak{a}}$: dados
+	$\frak{p}\nmid\frak{D}\frak{N}$ primo y $\frak{a}$ y $\frak{b}$ tales
+	que $[\frak{b}]=[\frak{a}\frak{p}^{-1}]$, definimos
+	\begin{math}
+		\big(T_{\frak{p}}\big)_{\frak{a},\frak{b}}:\,
+			\spitzH[B]{k}{\frak{N},\frak{b}}\rightarrow
+			\spitzH[B]{k}{\frak{N},\frak{a}}
+	\end{math}
+	%
+	por
+	\begin{align*}
+		\big(T_{\frak{p}}\big)_{\frak{a},\frak{b}}f_{\frak{b}} & \,=\,
+		\sum_{\varpi\in\Theta(\frak{p})_{\frak{a},\frak{b}}}\,
+			f_{\frak{b}}\operadormatrices{\peso{k}}{\varpi}
+		\text{ .}
+	\end{align*}
+	%
+	Entonces el operador $T_{\frak{p}}$ act\'{u}a como la matriz de
+	operadores
+	\begin{math}
+		\big[\big(T_{\frak{p}}\big)_{\frak{a},\frak{b}}
+			\big]_{\frak{a},\frak{b}}
+	\end{math}~,
+	donde $\frak{a}$ y $\frak{b}$ recorren los representantes de las
+	clases estrictas de $F$ y $(T_{\frak{p}})_{\frak{a},\frak{b}}$ es
+	el operador reci\'{e}n definido, si $[\frak{a}]=[\frak{b}\frak{p}]$, y
+	es igual a $0$, en caso contrario.
+\end{obsHeckeParaIndefinidosPorBloques}
+
+El m\'{e}todo indefinido se basa en poder resolver el siguiente problema de
+manera expl\'{\i}cita.
+
+\begin{probFormasIndefinida}\label{prob:formasindefinida}
+	Dado un cuerpo de n\'{u}meros totalmente real $F$ de grado
+	$n=[F:\bb{Q}]$, un \'{a}lgebra de cuaterniones indefinida $B/F$, un
+	ideal $\frak{N}$ de $F$ coprimo con el discriminante $\frak{D}$ de $B$
+	y un peso $\peso{k}\in\bb{Z}^{n}$, calcular los posibles
+	sistemas de autovalores de los operadores de Hecke $T_{\frak{p}}$
+	actuando en $\spitzH[B]{k}{\frak{N}}$ para
+	$(\frak{p},\frak{D}\frak{N})=1$.
+\end{probFormasIndefinida}
+
+En el caso en que el \'{a}lgebra $B/F$ ramifica en $n-1$ lugares arquimedianos
+y el peso verifica $\peso{k}\in (2\bb{Z}_{\geq 1})^{n}$, este problema admite
+una soluci\'{o}n mediante el c\'{a}lculo en la cohomolog\'{\i}a de curvas de
+Shimura.%
+\footnote{
+	\cite{GreenbergVoight} y \cite{VoightComputingOverArbitrary}
+}
+En particular, si el grado de la extensi\'{o}n, $n$, es impar, eligiendo $B$ de
+discriminante $\frak{D}=1$, es decir, $B$ ramifica exactamente en $n-1$ lugares
+arquimedianos (y en ning\'{u}n lugar finito), por la correspondencia de
+Jacquet-Langlands, se obtiene un algoritmo que permite calcular los sistemas de
+autovalores en el espacio de formas de Hilbert cuspidales de nivel $\frak{N}$
+de los operadores de Hecke coprimos con el nivel.
+
+Sean $F$, $B$, $\frak{N}$ y $\peso{k}$ como en el enunciado del problema y sean
+$\lista{v}{n}$ los lugares arquimedianos de $F$. Supongamos que $B$ ramifica en
+$v_{i}$ para $i\geq 2$. En tal caso,
+\begin{math}
+	B_{\infty}\simeq\MM_{2\times 2}(\bb{R})\times\bb{H}^{n-1}
+\end{math}~.
+Supongamos, tambi\'{e}n, que contamos con un orden de Eichler $\cal{O}$ en $B$
+de nivel $\frak{N}$, coprimo con $\frak{D}$. Existe una descomposici\'{o}n de la variedad de Shimura asociada
+a $B$ y a $\cal{O}$ dada por
+\begin{align*}
+	\shimura[B]{\frak{N}}(\bb{C}) & \,=\,\bigsqcup_{\frak{a}}\,
+		\Gamma_{\frak{a}}\backslash\hP
+	\text{ ,}
+\end{align*}
+%
+donde cada componente
+\begin{math}
+	\shimura[B]{\frak{N},\frak{a}}(\bb{C})=\Gamma_{\frak{a}}\backslash\hP
+\end{math}
+es una \emph{curva} conexa y compacta.
+En lo que resta de esta secci\'{o}n, reservamos la notaci\'{o}n
+$\Gamma_{\frak{a}}$ para la imagen de $\cal{O}_{\frak{a},+}^{\times}$ en
+$\PGL_{2}(\bb{R})$. Fijamos una inmersi\'{o}n
+\begin{math}
+	\iota_{1}:\,B^{\times}\rightarrow\GL_{2}(\bb{R})
+\end{math}~,
+asociada al lugar arquimediano en donde $B$ es no ramificada, y denotamos por
+$\iota_{\infty}$ la imagen de $\iota_{1}$ en el cociente.
+%$\PGL_{2}(\bb{R})$.
+Entonces
+\begin{align*}
+	\Gamma_{\frak{a}} & \,:=\,\iota_{\infty}\big(
+		\cal{O}_{\frak{a},+}^{\times}\big) \,\subset\,
+		\PGLtp_{2}(\bb{R})
+		% \,\simeq\,\cal{O}_{\frak{a},+}^{\times}/\oka{F}^{\times}
+	\text{ .}
+\end{align*}
+%
+
+Si $f\in\spitzH[B]{k}{\frak{N}}$, las componentes
+$f_{\frak{a}}:\,\hP\rightarrow W_{\peso{k}}(\bb{C})$ est\'{a}n dadas por
+$f_{\frak{a}}(z)=f(z,\hhat{\alpha}\Idfin{\cal{O}})$ y verifican
+\begin{equation}
+	\label{eq:indefinidaoperadordepesokmetodos}
+	\big(f_{\frak{a}}\operadormatrices{\peso{k}}{\gamma}\big)(z) \,:=\,
+		\frac{\det(\gamma_{1})^{m_{1}+k_{1}-1}}{%
+			j(\gamma_{1},z_{1})^{k_{1}}}\,
+		f_{\frak{a}}(\gamma_{1} z)^{\gamma} \,=\,f_{\frak{a}}(z)
+\end{equation}
+%
+para toda $\gamma\in\cal{O}_{\frak{a},+}^{\times}$. Si
+$\peso{k}\in(2\bb{Z})^{n}$ es par, entonces la expresi\'{o}n anterior tiene
+sentido tomando $\gamma\in\Gamma_{\frak{a}}$ e identificando
+$\Gamma_{\frak{a}}\simeq\cal{O}_{\frak{a},+}^{\times}/\oka{F}^{\times}$.
+
+Los espacios de formas cuaterni\'{o}nicas $\spitzH[B]{k}{\frak{N}}$ se realizan
+en la cohomolog\'{\i}a de las curvas $\Gamma_{\frak{a}}\backslash\hP$ a
+trav\'{e}s de los isomorfismos de Eichler-Shimura
+\cite[Propo.~4.4]{MatsushimaShimura}. Esto permite estudiar la
+estructura del m\'{o}dulo de Hecke de formas modulares cuaterni\'{o}nicas,
+utilizando algoritmos espec\'{\i}ficos para el c\'{a}lculo en cohomolog\'{\i}a.
+Es necesario, entonces, entender c\'{o}mo se traslada la acci\'{o}n de los
+operadores de Hecke a una acci\'{o}n en cohomolog\'{\i}a.
+

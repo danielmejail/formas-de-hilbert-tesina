@@ -1,0 +1,255 @@
+En base a los resultados enunciados anteriormente, concluimos que es posible
+realizar los espacios de formas cuaterni\'{o}nicas $\spitzH[B]{k}{\frak{N}}$
+en la cohomolog\'{\i}a de los grupos $\Gamma_{\frak{a}}$.
+% Esto permite dar una descripci\'{o}n de los operadores de Hecke
+% $\big\{T(\frak{p})\,:\,\frak{p}\nmid\frak{D}\frak{N}\big\}$ actuando en
+% \begin{math}
+	% H^{+}=\bigoplus_{\frak{a}}\,\cohomolo[1]{%
+		% \Gamma_{\frak{a}},L_{\peso{k}}(\bb{C})}
+% \end{math}
+% usando t\'{e}cnicas de \'{a}lgebra lineal.
+Expresar este pasaje en forma algor\'{\i}tmica presenta sus propias
+dificultades. Para concluir la descripci\'{o}n del m\'{e}todo indefinido,
+mencionamos algunos de los pasos involucrados y los problemas que presentan. Se
+puede encontrar una descripci\'{o}n m\'{a}s detallada en
+\cite{GreenbergVoight}.
+
+Asumimos dadas instancias concretas del cuerpo $F$ de grado $n$, del
+\'{a}lgebra $B/F$ de discriminante $\frak{D}$ que ramifica en $n-1$ lugares
+arquimedianos y del ideal $\frak{N}$ coprimo con el discriminante. La primera
+reducci\'{o}n consiste en hallar un \emph{splitting} de $B$, es decir, una
+extensi\'{o}n galoisiana $K/F$, de manera que
+$B\otimes_{F}K\simeq\MM_{2\times 2}(K)$. Todos los c\'{a}lculos se realizan,
+entonces, de manera exacta sobre el cuerpo $K$. Restringiendo a los m\'{o}dulos
+$L_{\peso{k}}(K)$, la acci\'{o}n de los operadores de Hecke se determina en el
+$K$-espacio vectorial
+\begin{align*}
+	H & \,=\,\bigoplus_{\frak{a}}\,\cohomolo[1]{%
+		\Gamma_{\frak{a}},L_{\peso{k}}(K)}
+	\text{ .}
+\end{align*}
+%
+Para poder llevar esto a cabo, es necesario hallar una descripci\'{o}n de este
+espacio en t\'{e}rminos de alguna base conveniente.
+
+Supongamos dado, entonces, un orden de Eichler $\cal{O}$ de nivel $\frak{N}$ en
+$B$. En primer lugar, se obtiene un sistema de representantes $\{\frak{a}\}$ de
+las clases estrictas. Esto se realiza con el requerimiento adicional de que los
+representantes sean \'{\i}ntegros y coprimos con el discriminante $\frak{D}$ y
+con el nivel $\frak{N}$. Habiendo hecho esto, se busca un conjunto
+$\{I_{\frak{a}}\}_{\frak{a}}$ de ideales del \'{a}lgebra $B$ tal que
+\begin{align*}
+	I_{\frak{a}}\,\subset\,\cal{O} & \quad\text{,}\quad
+		\Oder(I_{\frak{a}})=\cal{O} \quad\text{y}\quad
+		\nrd(I_{\frak{a}})=\frak{a}
+\end{align*}
+%
+para cada representante $\frak{a}$.%
+\footnote{
+	ver \cite[Ch.~II, Thm.~2.3]{Vigneras} y
+	\cite[Lemma 7.2]{KirschmerVoight}
+}
+Notamos que, entonces $I_{\frak{a}}=\hhat{\alpha}\Adfin{\cal{O}}\cap B$ para
+alg\'{u}n $\hhat{\alpha}\in\Adfin{\cal{O}}$ y que los \'{o}rdenes
+``compa\~{n}eros'' $\cal{O}_{\frak{a}}$ est\'{a}n dados por
+\begin{align*}
+	\cal{O}_{\frak{a}} & \,=\,\Oizq(I_{\frak{a}})
+	\text{ .}
+\end{align*}
+%
+% El paso siguiente es, pues, determinar los \'{o}rdenes a izquierda
+% $\cal{O}_{\frak{a}}$.
+
+Usando los algoritmos descriptos en \cite{VoightFuchsian} se pueden hallar
+presentaciones $\Gamma_{\frak{a}}=\langle S_{\frak{a}}|R_{\frak{a}}\rangle$
+finitas minimales para cada representante $\frak{a}$ junto con una soluci\'{o}n
+al problema de la palabra para dichas presentaciones. \'{E}ste es el paso
+m\'{a}s costoso,%
+\footnote{
+	\cite{GreenbergVoight}
+}
+pero es lo que permite realizar los c\'{a}lculos de manera expl\'{\i}cita.
+
+%
+% \begin{obsCohomologiaCeroExplicita}\label{obs:cohomolgiaceroexplicita}
+	% Si $S\subset\Gamma$ es un conjunto de generadores, entonces
+	% $M^{\Gamma}$ est\'{a} compuesto por los elementos de $M$ que verifican
+	% $x\cdot s=x$ para todo $s\in S$, o, lo que es lo mismo,
+	% \begin{align*}
+		% M^{\Gamma} & \,=\,\bigcap_{s\in S}\,\ker(1-s)
+		% \text{ ,}
+	% \end{align*}
+	% %
+	% viendo $K[\Gamma]$ como subanillo de $\Endo_{K}(M)$.
+% \end{obsCohomologiaCeroExplicita}
+%%
+%% observaciones acerca de la implementaci\'on (?)
+% \begin{obsCohomologiaUnoExplicita}\label{obs:cohomologiaunoexplicita}
+	% Sea $\Gamma$ un grupo, $K$ un anillo conmutativo con unidad y sea
+	% $M$ un $K[\Gamma]$-m\'{o}dulo. Sea $\Gamma=\langle S|R\rangle$ una
+	% presentaci\'{o}n de $\Gamma$ y sea $V$ el $K[\Gamma]$-m\'{o}dulo de
+	% funciones $S\rightarrow M$.
+	% % Supongamos que el conjunto de generadores $S$ es finito.
+	% Entonces
+	% \begin{align*}
+		% V & \,=\,\prod_{s\in S}\,M_{s}
+		% \text{ ,}
+	% \end{align*}
+	% %
+	% donde $M_{s}=M$, identificando una funci\'{o}n $u:\,S\rightarrow M$ con
+	% el conjunto indexado $(u(s))_{s\in S}$. La inclusi\'{o}n
+	% $S\subset\Gamma$ determina un morfismo
+	% \begin{math}
+		% C^{1}(\Gamma,M) \rightarrow V
+	% \end{math}
+	% por restricci\'{o}n y, en particular, existe un morfismo
+	% \begin{align*}
+		% \cociclos[1]{\Gamma,M} &\,\rightarrow\,V \\
+		% \qquad f & \,\mapsto\,(f(s))_{s\in S}
+	% \end{align*}
+	% %
+	% Afirmamos que este morfismo es inyectivo. Dada una funci\'{o}n $f\in V$
+	% es posible extenderla a una funci\'{o}n $F(S)\rightarrow M$, donde
+	% $F(S)$ denota el grupo libre en $S$, de manera que se verifique la
+	% condici\'{o}n de cociclo y, adem\'{a}s, tal extensi\'{o}n es \'{u}nica.
+	% El grupo libre $F(S)$ act\'{u}a en $M$ a derecha v\'{\i}a el
+	% epimorfismo $F(S)\rightarrow F(S)/N\simeq\Gamma$, donde $N$ es el
+	% subgrupo normal generado en $F(S)$ por el conjunto de relaciones $R$.
+	% Si $s\in S$, el valor $f(s)$ est\'{a} definido y se define
+	% \begin{align*}
+		% f(e) \,:=\,0 & \quad\text{y}\quad
+			% f(s^{-1}) \,:=\,-f(s)\cdot s^{-1}\text{ .}
+	% \end{align*}
+	% %
+	% Inductivamente, si $k\geq 1$ y $\lista{s}{k+1}\in S\cup S^{-1}$,
+	% \begin{align*}
+		% f(s_{1}\cdots s_{k+1}) & \,:=\,
+			% f(s_{1}\cdots s_{k})\cdot s_{k+1}\,+\,f(s_{k+1})
+		% \text{ .}
+	% \end{align*}
+	% %
+	% (ver \cite[Ch.~IV, \S\S~1, 2]{MacLaneHomology}). De las ecuaciones
+	% \eqref{eq:propiedadesdeloscociclos}, con $F(S)$ en lugar de $\Gamma$,
+	% $\delta=r\in R$ y $\gamma=w\in F(S)$,
+	% \begin{align*}
+		% f(wrw^{-1})\cdot w & \,=\,f(r) \,-\, f(w)\cdot(1-r)\,=\, f(r)
+		% \text{ .}
+	% \end{align*}
+	 % %
+	% En particular, $f=0$ en el subgrupo $N$, si y s\'{o}lo si $f(r)=0$ para
+	% todo $r\in R$. Si ahora $w,w'\in F(S)$ son dos palabras en
+	% $S\cup S^{-1}$ que representan el mismo elemento de $\Gamma$, es decir,
+	% $w^{-1}w'=n\in N$, entonces
+	% \begin{align*}
+		% f(w') & \,=\,f(w\,w^{-1}w')\,=\,f(w)\cdot n\,+\,f(n)\,=\,
+			% f(w)\,+\,f(n)
+		% \text{ .}
+	% \end{align*}
+	% %
+	% De esto se deduce que $f$ define una funci\'{o}n en $\Gamma$, si y
+	% s\'{o}lo si $f(r)=0$ para todo $r\in R$. En particular, el cociclo en
+	% $F(S)$ que se obtiene a partir de $(f(s))_{s\in S}\in V$, con
+	% $f\in\cociclos[1]{\Gamma,M}$, coincide con $f$. En definitiva, el
+	% morfismo $\cociclos[1]{\Gamma,M}\rightarrow V$ es inyectivo y su imagen
+	% es el subm\'{o}dulo de funciones $f:\,S\rightarrow M$ tales que, luego
+	% de extenderlas a $F(S)$ como cociclos, verifican $f(r)=0$ para
+	% $r\in R$. Es decir,
+	% \begin{align*}
+		% \cociclos[1]{\Gamma,M} & \,\simeq\,
+			% \big\{f(r)=0\,\forall r\in R\big\}\,\subset\,
+			% \cociclos[1]{F(S),M}\,\simeq\,V
+		% \text{ .}
+	% \end{align*}
+	% %
+% 
+	% De manera similar, es posible caracterizar $\cobordes[1]{\Gamma,M}$
+	% como subm\'{o}dulo de $V$. Una funci\'{o}n $f:\,\Gamma\rightarrow M$ es
+	% un coborde, si y s\'{o}lo si existe $x\in M$ tal que $f=\partial x$.
+	% En tal caso, $f(s)=x-x\cdot s$ para todo elemento $s\in S$ del conjunto
+	% generador. Rec\'{\i}procamente, si $f\in V$ es tal que
+	% $f(s)=x-x\cdot s$ para todo $s\in S$, entonces el morfismo cruzado en
+	% $F(S)$ determinado por $f$ cumple que
+	% \begin{align*}
+		% f(s_{1}s_{2}) & \,=\,f(s_{1})\cdot s_{2}\,+\,f(s_{2}) \\
+		% & \,=\,(x-x\cdot s_{1})\cdot s_{2}\,+\,(x-x\cdot s_{2})
+			% \,=\,x-x\cdot (s_{1}s_{2})
+		% \text{ ,}
+	% \end{align*}
+	% %
+	% e, inductivamente, si $w=s_{1}\cdots s_{k+1}$, $f(w)=x-x\cdot w$. En
+	% particular, $f(r)=0$ para toda $r\in R$ y $f\in\cociclos[1]{\Gamma,M}$.
+	% M\'{a}s aun, $f(\gamma)=x-x\cdot\gamma$ implica que $f$ es un coborde.
+	% As\'{\i}, se comprueba que $\cobordes[1]{\Gamma,M}$ es el subm\'{o}dulo
+	% de $V$ compuesto por las funciones de la forma $f(s)=x-x\cdot s$ para
+	% cierto $x\in M$.
+% \end{obsCohomologiaUnoExplicita}
+% 
+% A partir de haber hallado presentaciones
+% \begin{math}
+	% \Gamma_{\frak{a}}=\generado{S_{\frak{a}}\mid R_{\frak{a}}}
+% \end{math}~,
+% los cociclos $\cociclos[1]{\Gamma_{\frak{a}},L_{\peso{k}}(K)}$ se identifican
+% con subespacios
+% \begin{align*}
+	% \cociclos[1]{\Gamma_{\frak{a}},L_{\peso{k}}(K)} & \,\subset\,
+		% \bigoplus_{s\in S_{\frak{a}}}\,L_{\peso{k}}(K)_{s}
+% \end{align*}
+% %
+% v\'{\i}a $f\mapsto (f(s))_{s\in S_{\frak{a}}}$; las ecuaciones lineales que los
+% definen se obtienen de las condiciones $f(r)=0$ con $r\in R_{\frak{a}}$,
+% escribiendo cada elemento $r$ en t\'{e}rminos de los generadores. De manera
+% similar, se encuentran los subespacios correspondientes a los cobordes
+% $\cobordes[1]{\Gamma_{\frak{a}},L_{\peso{k}}(K)}$ y se calcula una base del
+% cociente $\cohomolo[1]{\Gamma_{\frak{a}},L_{\peso{k}}(K)}$, para cada
+% $\frak{a}$.
+% 
+% Las presentaciones de los grupos $\Gamma_{\frak{a}}$ resultan esenciales,
+% tambi\'{e}n, para calcular las matrices de los operadores $T(\frak{p})$ y
+% $W_{\infty}$. Tanto los operadores $T(\frak{p})$ como $W_{\infty}$ act\'{u}an
+% por bloques, posiblemente permutando las componentes de $H$. Para cada
+% representante $\frak{a}$ de las clases estrictas, se determinan, en primera
+% instancia, los representantes $\frak{b}$ y $\frak{a}'$ que verifican
+% \begin{math}
+	% [\frak{a}\frak{p}^{-1}]=[\frak{b}]
+% \end{math}
+% y
+% \begin{math}
+	% [\frak{a}\frak{m}]=[\frak{a}']
+% \end{math}~.
+% La matriz de $T(\frak{p})$ es entonces la matriz por bloques compuesta por
+% las matrices asociadas a los operadores parciales
+% \begin{align*}
+	% T(\frak{p})_{\frak{a},\frak{b}} & \,:\,\cohomolo[1]{%
+		% \Gamma_{\frak{b}},L_{\peso{k}}(K)}\,\rightarrow\,
+		% \cohomolo[1]{\Gamma_{\frak{a}},L_{\peso{k}}(K)}
+	% \text{ .}
+% \end{align*}
+% %
+% An\'{a}logamente, los bloques de la matriz de $W_{\infty}$ son las matrices de
+% los operadores
+% \begin{align*}
+	% W_{\infty,\frak{a},\frak{a}'} & \,:\,\cohomolo[1]{%
+		% \Gamma_{\frak{a}'},L_{\peso{k}}(K)}\,\rightarrow\,
+		% \cohomolo[1]{\Gamma_{\frak{a}},L_{\peso{k}}(K)}
+	% \text{ .}
+% \end{align*}
+% %
+% Seg\'{u}n \eqref{eq:involucionencomponentesmetodos}, para obtener la matriz de
+% $W_{\infty,\frak{a},\frak{a}'}$, es necesario expresar el elemento
+% \begin{align*}
+	% & f(\mu_{\frak{a},\frak{a}'}\,s\,\mu_{\frak{a},\frak{a}'}^{-1})^{%
+		% \mu_{\frak{a},\frak{a}'}}
+% \end{align*}
+% %
+% en la base de la componente en $\frak{a}$, para cada generador
+% $s\in S_{\frak{a}}$ de $\Gamma_{\frak{a}}$ y $f$ en la base de la componente en
+% $\frak{a}'$. Similarmente, por \eqref{eq:heckeencohomologia}, para cada
+% $s\in S_{\frak{a}}$, se calculan la permutaci\'{o}n $\varpi\mapsto\varpi_{s}$ y
+% los elementos $\delta_{\varpi}$ que verifican
+% \eqref{eq:permutacionnormapmetodos} y se expresa, luego,
+% \begin{align*}
+	% & \sum_{\varpi}\,f(\delta_{\varpi})^{\varpi_{s}}
+% \end{align*}
+% %
+% en la base de la componente en $\frak{a}$ para cada $f$ perteneciente a la base
+% de la componente en $\frak{b}$.

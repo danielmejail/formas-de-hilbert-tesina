@@ -1,0 +1,143 @@
+Sea $K$ un cuerpo. Sea $B/K$ un espacio vectorial de dimensi\'{o}n cuatro con
+base $\{1,i,j,k\}$ y sean $a,b\in K\setmin \{0\}$. Bajo las relaciones $ji=k$,
+$1\cdot h=h$ para todo $h\in B$,
+\begin{align*}
+	i^2 \,=\,1\cdot a & \quad\text{,}\quad
+		j^2 \,=\,1\cdot b\quad\text{y}\quad
+		ij \,=\,-ji
+	\text{ ,}
+\end{align*}
+%
+el espacio $B$ se vuelve una $K$-\'{a}lgebra. Si la caracter\'{\i}stica de $K$
+es distinta de $2$, un \'{a}lgebra definida de esta manera es un
+\emph{\'{a}lgebra de cuaterniones sobre $K$}. En tal caso escribimos
+$B=\varquatalg[K]{a,b}$. Toda \'{a}lgebra de cuaterniones sobre un cuerpo $K$
+es un \'{a}lgebra central simple (sobre $K$); rec\'{\i}procamente, toda
+\'{a}lgebra central simple de dimensi\'{o}n cuatro sobre $K$ es un \'{a}lgebra
+de cuaterniones. De ahora en m\'{a}s, todo cuerpo ser\'{a} de
+caracter\'{\i}stica cero, y esta descripci\'{o}n de las \'{a}lgebras de
+cuaterniones ser\'{a} suficiente.%
+\footnote{
+	Si la caracter\'{\i}stica de $K$ es $2$, se obtiene un \'{a}lgebra de
+	cuaterniones imponiendo las relaciones
+	\begin{align*}
+		i^2 + i\,=\, 1\cdot a & \quad\text{,}\quad
+		j^2\,=\,1\cdot b \quad\text{y}\quad
+		ij\,=\,j\,(i+1)
+		\text{ .}
+	\end{align*}
+	%
+}
+\index{algebra de cuaterniones@\'{a}lgebra de cuaterniones}
+
+Sea $B=\varquatalg[K]{a,b}$ un \'{a}lgebra de cuaterniones sobre el cuerpo $K$.
+La \emph{conjugaci\'{o}n} en $B$ es la transformaci\'{o}n $K$-lineal $\iota$ de
+$B$ determinada por
+\index{conjugacion@conjugaci\'{o}n}\index{conjugado}
+\begin{equation}
+	\label{eq:conjugacioncuaterniones}
+	\iota(x_{1}+i\,x_{2}+j\,x_{3}+k\,x_{4}) \,=\,
+		x_{1}-i\,x_{2}-j\,x_{3}-k\,x_{4}
+	\text{ .}
+\end{equation}
+%
+Denotamos el \emph{conjugado} $\iota(h)$ de $h$ en $B$ por $\conj{h}$. La
+\emph{norma reducida} de un elemento $b\in B$ se define como
+$\nrd(h)=h\conj{h}$ y su \emph{traza reducida} es $\trd(h)=h+\conj{h}$.
+\index{norma reducida}\index{traza reducida}
+En coordenadas,
+% Si $h=x_{1}+ix_{2}+jx_{3}+kx_{4}$, entonces
+\begin{equation}
+	\label{eq:normaytrazacuaterniones}
+		\nrd(h) \,=\,x_{1}^{2}- ax_{2}^{2}-bx_{3}^{2}+abx_{4}^{2}
+			\quad\text{y}\quad
+		\trd(h) \,=\,2x_{1}
+		\text{ .}
+\end{equation}
+%
+En particular, $\nrd(h)$ y $\trd(h)$ son elementos del cuerpo $K$. Todo
+elemento $h\in B$ es soluci\'{o}n de un polinomio cuadr\'{a}tico con
+coeficientes en $K$:
+\begin{align*}
+	\mathsf{m}_{h} & \,=\,X^{2}-\trd(h)\,X+\nrd(h) \,=\,(X-h)\,(X-\conj{h})
+	\text{ ,}
+\end{align*}
+%
+su \emph{polinomio minimal}.\index{polinomio minimal}
+
+\begin{lemaNormaYTrazaCuaterniones}\label{lema:normaytrazacuaterniones}
+	Las unidades del \'{a}lgebra $B$ son, exactamente, los elementos de
+	norma reducida no nula:
+	\begin{align*}
+		B^{\times} & \,=\,\big\{\nrd\not=0\big\}
+		\text{ .}
+	\end{align*}
+	%
+	Adem\'{a}s, la restricci\'{o}n a $B^{\times}$ determina un morfismo de
+	grupos $\nrd :\,B^{\times}\rightarrow K^{\times}$, al que tambi\'{e}n
+	se denomina \emph{norma reducida}. Por otra parte, la traza reducida es
+	una transformaci\'{o}n $K$-lineal $\trd:\,B\rightarrow K$ y la
+	aplicaci\'{o}n
+	\begin{align*}
+		\phi(h,h_{1}) & \,=\,\trd(hh_{1})
+	\end{align*}
+	%
+	es una forma $K$-bilineal no degenerada.
+\end{lemaNormaYTrazaCuaterniones}
+
+%\paragraph{Ejemplo}
+\begin{ejemploMatrices}\label{ejemplo:matrices}
+	El \'{a}lgebra de matrices $B=\MM_{2\times 2}(K)$ con coeficientes en
+	un cuerpo $K$ es un \'{a}lgebra de cuaterniones sobre $K$. El cuerpo
+	$K$ se identifica con las matrices escalares $I\cdot a$. Dada un matriz
+	\begin{math}
+		\gamma=\begin{bmatrix} a & b \\ c & d \end{bmatrix}
+	\end{math}~,
+	la adjunta de $\gamma$ es la matriz
+	\begin{align*}
+		\gamma^\iota & \,=\,
+			\begin{bmatrix} d & -b \\
+			-c & a \end{bmatrix}
+		\text{ .}
+	\end{align*}
+	%
+	Vale que $\gamma\gamma^\iota=\det(\gamma)$ y que
+	$\gamma+\gamma^\iota=\traza(\gamma)$. El polinomio caracter\'{\i}stico
+	de $\gamma$ est\'{a} dado por
+	\begin{math}
+		(X-\gamma)\,(X-\gamma^\iota)=
+			X^{2}-\traza(\gamma)\,X+\det(\gamma)
+	\end{math}~. En particular, $\gamma$ y $\gamma^\iota$ poseen los mismos
+	autovalores y son similares. Tomando
+	\begin{align*}
+		i\,=\,\begin{bmatrix} -1 & \\ & 1 \end{bmatrix} &
+			\quad\text{y}\quad
+		j \,=\,\begin{bmatrix} & 1 \\ 1 & \end{bmatrix}
+		\text{ ,}
+	\end{align*}
+	%
+	se obtiene una estructura de \'{a}lgebra de cuaterniones en el espacio
+	de matrices.%
+	\footnote{
+		Si la caracter\'{\i}stica de $K$ es $2$, tomamos
+		\begin{align*}
+			i\,=\,\begin{bmatrix} 1 & 1 \\ 1 & \end{bmatrix}
+				& \quad\text{y}\quad
+			j\,=\,\begin{bmatrix} & 1 \\ 1 & \end{bmatrix}
+			\text{ .}
+		\end{align*}
+		%
+	}
+	Notamos que el conjugado, la norma reducida y la traza reducida se
+	realizan, respectivamente, como la matriz adjunta, el determinante y la
+	traza usuales.
+\end{ejemploMatrices}
+
+Sea $F/K$ una extensi\'{o}n finita de cuerpos y sea $B=\varquatalg[K]{a,b}$ un
+\'{a}legbra de cuaterniones sobre $K$. Tomando producto tensorial sobre $K$, se
+obtiene un \'{a}lgebra de cuaterniones sobre $F$:
+$B\tensor[K]F=\varquatalg[K]{a,b}\otimes_{K}F$. Denotamos este \'{a}lgebra por
+$B_{F}$. Se cumple que
+\begin{math}
+	B_{F}=\varquatalg[F]{a,b}
+\end{math}~.
